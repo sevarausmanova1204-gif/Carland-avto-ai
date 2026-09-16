@@ -47,11 +47,46 @@ def search_cars(query: str, limit: int = 30):
 _NORMALIZE_RE = re.compile(r"[^\w'ʻʼ]+", re.UNICODE)
 _APOSTROPHE_RE = re.compile(r"['ʻʼ’`]")
 
+# Bazadagi barcha mashina/mahsulot nomlari lotin yozuvida saqlangan, lekin
+# ko'p foydalanuvchi (ayniqsa AI erkin-matn chatida) kirill yozuvida yozadi
+# (masalan "Валволин мой кия сонетге тогри келадими?"). Kirillcha matnni
+# qidirishdan OLDIN lotinchaga o'girmasak, bazada aniq mavjud bo'lgan
+# "Kia Sonet" yoki "Valvoline" kabi nomlar umuman topilmay qolardi. Bu
+# — standart o'zbekcha kirill-lotin harf almashinuvi (rasmiy imlo
+# qoidalariga yaqin, botga real foydalanuvchi yozuvlari asosida moslashtirilgan).
+_CYRILLIC_TO_LATIN = {
+    "а": "a", "б": "b", "в": "v", "г": "g", "д": "d", "е": "e", "ё": "yo",
+    "ж": "j", "з": "z", "и": "i", "й": "y", "к": "k", "л": "l", "м": "m",
+    "н": "n", "о": "o", "п": "p", "р": "r", "с": "s", "т": "t", "у": "u",
+    "ф": "f", "х": "x", "ц": "ts", "ч": "ch", "ш": "sh", "щ": "sht",
+    "ъ": "'", "ы": "i", "ь": "", "э": "e", "ю": "yu", "я": "ya",
+    "ғ": "g'", "қ": "q", "ҳ": "h", "ў": "o'",
+}
+
+
+def transliterate_cyrillic(text: str) -> str:
+    """Kirill yozuvidagi matnni lotinchaga o'giradi — agar matnda kirill
+    harflari bo'lmasa, matnni o'zgarishsiz qaytaradi (lotincha matnga
+    tegmaydi)."""
+    if not any(ch.lower() in _CYRILLIC_TO_LATIN for ch in text):
+        return text
+    out = []
+    for ch in text:
+        lower = ch.lower()
+        if lower in _CYRILLIC_TO_LATIN:
+            repl = _CYRILLIC_TO_LATIN[lower]
+            out.append(repl.upper() if ch.isupper() and repl else repl)
+        else:
+            out.append(ch)
+    return "".join(out)
+
 
 def _normalize(s: str) -> str:
     """Tinish belgilari/qavslar farqi tufayli aniq moslik o'tkazib
     yubormaslik uchun (masalan 'Captiva 2 va 3, 2.4L' vs bazadagi
-    'Captiva 2 va 3 2.4L') matnni solishtirish oldidan soddalashtiradi."""
+    'Captiva 2 va 3 2.4L') matnni solishtirish oldidan soddalashtiradi.
+    Kirillcha yozuvni ham avval lotinchaga o'giradi."""
+    s = transliterate_cyrillic(s)
     return re.sub(r"\s+", " ", _NORMALIZE_RE.sub(" ", s.lower())).strip()
 
 
@@ -87,6 +122,14 @@ GENERIC_WORD_STOPLIST = {
     "variant", "variantdagi", "variantlari",
     "ozing", "sizning", "uchun", "kerak", "qancha", "necha", "pul",
     "summa", "summasi", "qiymati", "narxi", "narxlari", "ber", "bering", "beradi",
+    # AI erkin-matn chatida "mos keladimi?" kabi moslik savollarida tez-tez
+    # uchraydigan yordamchi so'zlar — bular brend/mahsulot nomi EMAS, shu
+    # sabab mahsulot nomi bo'yicha qidiruvda ular hisobga olinmaydi (aks
+    # holda tasodifan biror mahsulot nomida shunga o'xshash harflar
+    # ketma-ketligi bo'lib qolsa, noto'g'ri "moslik" topilib qolishi mumkin).
+    "togri", "keladi", "keladimi", "keladigan", "kelarmikan",
+    "mosmi", "moslik", "moslikami", "yarasa", "yarasadimi",
+    "boladimi", "bolarmikan", "qanaqa", "qanday",
 }
 
 
@@ -114,23 +157,48 @@ def find_car_by_text(text: str):
     if best:
         return get_car(best["id"])
 
+    latin_text = transliterate_cyrillic(text)
     words = sorted(
         {
-            w for w in re.split(r"[^\w'ʻʼ]+", text, flags=re.UNICODE)
+            w for w in re.split(r"[^\w'ʻʼ]+", latin_text, flags=re.UNICODE)
             if len(w) >= 3 and normalize_word(w) not in GENERIC_WORD_STOPLIST
         },
         key=len,
         reverse=True,
     )
     for w in words:
-        matches = search_cars(w, limit=5)
+        matches = _search_cars_with_suffix_stripping(w)
         if len(matches) == 1:
             return get_car(matches[0]["id"])
     for w in words:
-        matches = search_cars(w, limit=5)
+        matches = _search_cars_with_suffix_stripping(w)
         if matches:
             return get_car(matches[0]["id"])
     return None
+
+
+def search_cars_fuzzy(word: str, limit: int = 5):
+    """`_search_cars_with_suffix_stripping`ning tashqi (boshqa modullardan
+    chaqirish uchun) ochiq nomi — o'zbekcha qo'shimchali so'zlar bilan ham
+    mashina qidiradi (masalan 'sonetge' -> 'Sonet')."""
+    return _search_cars_with_suffix_stripping(word, limit=limit)
+
+
+def _search_cars_with_suffix_stripping(word: str, limit: int = 5):
+    """O'zbek tilida qo'shimchalar (-ga/-ge, -ni, -dan, -da va h.k.) so'z
+    OXIRIGA qo'shiladi (masalan 'sonetge' = 'Sonet' + '-ge'). Shu sabab
+    to'liq so'z bo'yicha moslik topilmasa, so'z oxiridan bittalab harf
+    kesib, qisqarayotgan variant bilan qayta qidiradi — shu bilan
+    'sonetge' kabi yozuv ham bazadagi 'Sonet' modelini topa oladi."""
+    matches = search_cars(word, limit=limit)
+    if matches:
+        return matches
+    for end in range(len(word) - 1, max(len(word) - 6, 3), -1):
+        candidate = word[:end]
+        matches = search_cars(candidate, limit=limit)
+        if matches:
+            return matches
+    return []
 
 
 _PACK_SUFFIX_RE = re.compile(r"\s*\(?\b\d+\s*/\s*1\s*L\)?\s*$|\s*\(?\b\d+\s*L\)?\s*$|\s*\(?\b\d+\s*л\)?\s*$", re.IGNORECASE)
