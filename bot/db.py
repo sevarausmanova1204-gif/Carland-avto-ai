@@ -180,36 +180,84 @@ def get_oil_products(viscosities: list[str], category: str):
     return deduped
 
 
+_ROMAN_TO_ARABIC = {
+    "I": "1", "II": "2", "III": "3", "IV": "4", "V": "5",
+    "VI": "6", "VII": "7", "VIII": "8", "IX": "9",
+}
+_ATF_SPEC_RE = re.compile(r"\bATF\s*-?\s*(\d+|[IVX]+)\b", re.IGNORECASE)
+
+
+def _extract_atf_spec(text: str):
+    """Matnda 'ATF' + raqam YOKI rim raqami (masalan 'ATF6', 'ATF 6',
+    'ATF-6', 'ATF VI') ko'rinishidagi spetsifikatsiya bor-yo'qligini
+    tekshiradi va uni bazadagi kanonik shaklga ('ATF6' kabi, bazaning
+    `viscosity` ustunidagi format bilan bir xil) keltiradi. Shuningdek,
+    shu spetsifikatsiya so'zi olib tashlangan "qoldiq" matnni (brend/nom
+    qidiruvi uchun) qaytaradi. Mos kelmasa (None, asl matn) qaytaradi.
+
+    Bu ayniqsa muhim, chunki bazadagi mahsulot NOMI ko'pincha spetsifikatsiyani
+    boshqacha yozadi (masalan "KORELUX ATF DX 6" yoki "VALVOLINE ATF VI...")
+    — shu sabab faqat nom matni bo'yicha izlash "Korelux Atf6" yoki "valvoline
+    atf6" kabi so'rovlarni topa olmas edi. `viscosity` ustuni esa har doim
+    aniq kanonik kod ("ATF6") bilan saqlangan, shu bilan solishtiramiz."""
+    m = _ATF_SPEC_RE.search(text)
+    if not m:
+        return None, text
+    raw = m.group(1).upper()
+    num = raw if raw.isdigit() else _ROMAN_TO_ARABIC.get(raw)
+    if num is None:
+        return None, text
+    remainder = text[:m.start()] + " " + text[m.end():]
+    return f"ATF{num}", remainder
+
+
 def search_oil_by_name(keyword: str, category: str, limit: int = 20):
     """Mijoz moy nomini (yoki brendini) yozganda, kategoriya bo'yicha
     (motor yoki karobka/reduktor) barcha moylar orasidan nomi mos
-    kelganlarini qidiradi — car/viscosity bilan cheklanmaydi, shu sabab
-    "Valvoline" kabi brend nomi bo'yicha ham topib beradi."""
+    kelganlarini qidiradi. Ikki usulda mos kelishni tekshiradi: (1) barcha
+    so'zlar nomda (tartibsiz) uchraydimi — "Valvoline" kabi oddiy brend
+    qidiruvi uchun; (2) so'rovda ATF spetsifikatsiyasi (masalan "Atf6"
+    yoki "ATF VI") aniqlansa, uni bazaning `viscosity` ustuni bilan
+    solishtiradi — bu nom matnida spetsifikatsiya boshqacha yozilgan
+    (masalan "ATF DX 6") hollarda ham topib beradi."""
+    spec, remainder = _extract_atf_spec(keyword)
+    spec_words = [w for w in re.split(r"\s+", remainder.strip()) if len(w) >= 2]
+    all_words = [w for w in re.split(r"\s+", keyword.strip()) if len(w) >= 2]
+
     with get_conn() as conn:
         if category == "gearbox":
             cats = ("Transmission oils", "Transmission fluid")
             cat_ph = ",".join("?" * len(cats))
-            sql = (
-                f"SELECT name, category, price, viscosity, pack_size FROM products "
-                f"WHERE category IN ({cat_ph}) AND name LIKE ? ORDER BY price ASC LIMIT ?"
-            )
-            params = (*cats, f"%{keyword}%", limit)
+            sql = f"SELECT name, category, price, viscosity, pack_size FROM products WHERE category IN ({cat_ph})"
+            params = cats
         else:
-            sql = (
-                "SELECT name, category, price, viscosity, pack_size FROM products "
-                "WHERE category='Motor oils' AND name LIKE ? ORDER BY price ASC LIMIT ?"
-            )
-            params = (f"%{keyword}%", limit)
+            sql = "SELECT name, category, price, viscosity, pack_size FROM products WHERE category='Motor oils'"
+            params = ()
         rows = [dict(r) for r in conn.execute(sql, params).fetchall()]
+
+    matched = []
+    for r in rows:
+        name_up = r["name"].upper()
+        name_word_match = bool(all_words) and all(w.upper() in name_up for w in all_words)
+        spec_match = False
+        if spec:
+            visc = (r.get("viscosity") or "").upper().replace(" ", "").replace("-", "")
+            if visc == spec:
+                spec_match = not spec_words or all(w.upper() in name_up for w in spec_words)
+        if name_word_match or spec_match:
+            matched.append(r)
+    matched.sort(key=lambda r: r["price"])
 
     seen = {}
     deduped = []
-    for r in rows:
+    for r in matched:
         key = _base_name(r["name"])
         if key in seen:
             continue
         seen[key] = True
         deduped.append(r)
+        if len(deduped) >= limit:
+            break
     return deduped
 
 
