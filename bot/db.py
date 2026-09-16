@@ -97,6 +97,23 @@ def normalize_word(w: str) -> str:
     return _APOSTROPHE_RE.sub("", w.lower())
 
 
+def is_generic_filler_word(word: str) -> bool:
+    """So'zni GENERIC_WORD_STOPLIST'dagi umumiy atama deb hisoblaydi —
+    hatto unga o'zbekcha qo'shimcha qo'shilgan bo'lsa ham (masalan
+    'narxi' -> 'narxini', 'narxidan'). Buning uchun so'z oxiridan
+    bittalab harf kesib, qisqarayotgan variantni ro'yxatdan qidiradi
+    (xuddi mashina nomini qidirishda qo'llanilgan usul kabi). Shu bilan
+    foydalanuvchi to'liq savol shaklida yozsa ham ("castrol moyi narxini
+    ayting"), haqiqiy brend/mahsulot so'zlaridan ajratib olinadi."""
+    w = normalize_word(word)
+    if w in GENERIC_WORD_STOPLIST:
+        return True
+    for end in range(len(w) - 1, max(len(w) - 6, 2), -1):
+        if w[:end] in GENERIC_WORD_STOPLIST:
+            return True
+    return False
+
+
 # Umumiy avtomobil/moy/bot atamalari — bular ASLIDA mashina nomi EMAS,
 # shu sabab erkin matnda mashina qidirishda (fallback bosqichida)
 # e'tiborga olinmaydi. Aks holda, masalan, foydalanuvchi botning o'zi
@@ -130,6 +147,16 @@ GENERIC_WORD_STOPLIST = {
     "togri", "keladi", "keladimi", "keladigan", "kelarmikan",
     "mosmi", "moslik", "moslikami", "yarasa", "yarasadimi",
     "boladimi", "bolarmikan", "qanaqa", "qanday",
+    # Moy nomi/brendi bo'yicha qidiruvda ("🔎 Moy nomi bo'yicha qidirish"
+    # tugmasi orqali yoki AI chatda) foydalanuvchi ko'pincha faqat brend
+    # nomini emas, to'liq savol shaklida yozadi (masalan "castrol narxi
+    # qancha", "menga valvoline moyi narxini ayting/aytib bering"). Bu
+    # yordamchi so'zlar mahsulot NOMI emas, shu sabab qidiruvda hisobga
+    # olinmasligi kerak (aks holda "barcha so'z nomda uchrashi kerak"
+    # qoidasi hech qanday mahsulotga to'g'ri kelmay, "topilmadi" deb
+    # noto'g'ri javob berardi).
+    "ayting", "ayt", "aytib", "et", "etib", "eting", "etsin",
+    "sotib", "olsam", "olaman", "kerakmi", "bormi", "bor",
 }
 
 
@@ -308,9 +335,21 @@ def search_oil_by_name(keyword: str, category: str, limit: int = 20):
     yoki "ATF VI") aniqlansa, uni bazaning `viscosity` ustuni bilan
     solishtiradi — bu nom matnida spetsifikatsiya boshqacha yozilgan
     (masalan "ATF DX 6") hollarda ham topib beradi."""
+    # Mijoz ko'pincha faqat brend nomini emas, to'liq savol shaklida
+    # yozadi (masalan "castrol narxi qancha", "valvoline moyi narxini
+    # ayting") — "narxi", "qancha" kabi yordamchi so'zlar mahsulot NOMI
+    # emas, shu sabab ular "hamma so'z nomda uchrashi kerak" talabidan
+    # chiqarib tashlanadi (aks holda hech qanday mahsulot mos kelmay,
+    # "topilmadi" deb noto'g'ri javob berardi).
     spec, remainder = _extract_atf_spec(keyword)
-    spec_words = [w for w in re.split(r"\s+", remainder.strip()) if len(w) >= 2]
-    all_words = [w for w in re.split(r"\s+", keyword.strip()) if len(w) >= 2]
+    spec_words = [
+        w for w in re.split(r"\s+", remainder.strip())
+        if len(w) >= 2 and not is_generic_filler_word(w)
+    ]
+    all_words = [
+        w for w in re.split(r"\s+", keyword.strip())
+        if len(w) >= 2 and not is_generic_filler_word(w)
+    ]
 
     with get_conn() as conn:
         if category == "gearbox":
