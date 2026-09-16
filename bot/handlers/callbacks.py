@@ -279,10 +279,16 @@ async def _render_oil_price(query, kind, car_id):
         # summa bermaymiz.
         parts = []
         if car["gearbox_liters"]:
+            # Mijoz mashina turini (Avtomat/Mexanika/Variator/Robotlashtirilgan)
+            # DARHOL ko'rishi kerak — aks holda, masalan, "Cobalt" (Mexanika
+            # varianti) va "Cobalt MSM" (Avtomat varianti) kabi bir xil nomga
+            # o'xshash, lekin turi boshqa mashinalarda, mijoz nega 75W90
+            # (mexanika moyi) chiqqanini tushunmasligi mumkin edi.
+            kind_label = f" ({car['gearbox_kind']})" if car.get("gearbox_kind") else ""
             products = db.get_oil_products(car["gearbox_oil_types"], "gearbox")
-            parts.append(fmt.oil_products_text(f"⚙️ Karobka moyi — {car['model']}", car["gearbox_liters"], products))
+            parts.append(fmt.oil_products_text(f"⚙️ Karobka moyi{kind_label} — {car['model']}", car["gearbox_liters"], products))
         else:
-            parts.append("⚙️ *Karobka moyi*: bu mashina rusumida karobka (ATF) qismi mavjud emas yoki bazada ma'lumot yo'q.")
+            parts.append("⚙️ *Karobka moyi*: bu mashina rusumida karobka qismi mavjud emas yoki bazada ma'lumot yo'q.")
 
         if car["reductor_liters"]:
             products = db.get_oil_products(car["reductor_oil_types"], "gearbox")

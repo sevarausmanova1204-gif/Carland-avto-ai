@@ -97,11 +97,17 @@ def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str |
         viscosities = car.get("reductor_oil_types") or []
         category = "gearbox"
         label = "🛞 Reduktor moyi"
-    else:  # "gearbox" — karobka (ATF/avtomat quti)
+    else:  # "gearbox" — karobka (mashinaning o'zida qanday quti bo'lsa, shuning moyi)
         liters = car.get("gearbox_liters")
         viscosities = car.get("gearbox_oil_types") or []
         category = "gearbox"
-        label = "⚙️ Karobka moyi"
+        # Mashina turini (Avtomat/Mexanika/Variator/Robotlashtirilgan) darhol
+        # ko'rsatamiz — aks holda, masalan, "Cobalt" (Mexanika) va "Cobalt MSM"
+        # (Avtomat) kabi bir-biriga o'xshash nomli, lekin turi boshqa
+        # mashinalarda, mijoz nega 75W90 (mexanika moyi) chiqqanini
+        # tushunmay qolishi mumkin edi.
+        kind_label = f" ({car['gearbox_kind']})" if car.get("gearbox_kind") else ""
+        label = f"⚙️ Karobka moyi{kind_label}"
 
     if not liters or not viscosities:
         # Karobka va reduktor — alohida qism, ikkalasi ham har doim
