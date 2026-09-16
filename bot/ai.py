@@ -17,7 +17,7 @@ xatti-harakat — erkin AI suhbati — davom etadi.
 """
 import re
 
-from . import config, db
+from . import config, db, matching
 from . import format as fmt
 
 SYSTEM_PROMPT = """Sen "Carland" avtomobil moylari va ehtiyot qismlar do'konining Telegram botidagi AI yordamchisisan.
@@ -173,6 +173,96 @@ def _try_deterministic_calc(user_text: str) -> str | None:
         blocks.append("")
     blocks.append("_Narxlar joriy narxlar asosida, filialda tasdiqlang._")
     return "\n".join(blocks).strip()
+
+
+# --- Moy bilan bog'liq bo'lmagan boshqa mahsulotlar (shina, akkumulyator,
+# antifriz, svecha, tormoz kolodkasi) haqidagi savollarni aniqlash ---
+
+_TIRE_KW = ("balon", "shina", "guma")
+_BATTERY_KW = ("akkumulyator", "akkumlyator", "batareya", "akkum")
+_ANTIFREEZE_KW = ("antifriz", "tosol")
+_SPARK_KW = ("svecha",)
+_BRAKE_KW = ("kolodka", "tormoz")
+
+
+def _car_keyword_for(car: dict | None) -> str | None:
+    return matching.extract_keyword(car["model"]) if car else None
+
+
+def _try_other_category_answer(user_text: str) -> str | None:
+    """AI erkin-matn chatida moy (motor/karobka/reduktor) bilan bog'liq
+    BO'LMAGAN boshqa mahsulotlar — shina/balon, akkumulyator, antifriz,
+    svecha, tormoz kolodkasi — so'ralganda, botning tegishli menyu
+    bo'limi ishlatadigan XUDDI SHU bazaviy funksiyalar orqali
+    TO'G'RIDAN-TO'G'RI javob beradi.
+
+    MUHIM: bu tekshiruv moy bilan bog'liq funksiyalardan (_try_product_answer)
+    OLDIN ishga tushiriladi — aks holda, masalan, shina o'lchamidagi
+    raqamlar ("195/60R15") "Transmission fluid" kategoriyasiga manba
+    PDF xatosi bilan yozilib qolgan svecha/kolodka nomlaridagi artikul
+    raqamlariga tasodifan mos kelib, mutlaqo noto'g'ri (moy yoki svecha)
+    javob qaytarilishiga sabab bo'lishi mumkin edi — bu haqiqatda sodir
+    bo'lgan xato."""
+    latin_text = db.transliterate_cyrillic(user_text)
+    low = latin_text.lower()
+    car = db.find_car_by_text(user_text)
+
+    if any(k in low for k in _TIRE_KW):
+        size = db.parse_tire_size(latin_text)
+        if size:
+            rows = db.search_tires_by_size(size)
+            if rows:
+                lines = [f"🛞 *{size}* o'lchamdagi shinalar:", ""]
+                for r in rows:
+                    lines.append(f"• {r['name']} — {fmt.money(r['price'])}")
+                return "\n".join(lines)
+            if not car:
+                return (
+                    f"🛞 *{size}* o'lchamdagi shina bazada topilmadi. "
+                    "Boshqa o'lcham bilan urinib ko'ring yoki mashina rusumini yozing."
+                )
+        kw = _car_keyword_for(car)
+        if kw:
+            rows = db.get_tires_for_model(kw)
+            if rows:
+                return f"🚗 *{car['model']}*\n\n" + fmt.tires_text(rows)
+            return f"🚗 *{car['model']}* uchun bazada shina o'lchami topilmadi. Aniq o'lchamni (masalan 195/65 R15) yozing."
+        return "🛞 Shina uchun aniq o'lchamni (masalan 195/65 R15) yoki mashina rusumini yozing — shunda mos variantlarni topib beraman."
+
+    if any(k in low for k in _SPARK_KW):
+        kw = _car_keyword_for(car)
+        if kw:
+            rows = db.get_spark_plug_for_model(kw)
+            product_rows = db.get_spark_plug_products_for_model(kw)
+            text = fmt.spark_text(rows, product_rows)
+            return f"🚗 *{car['model']}*\n\n{text}"
+        return "🔌 Svecha uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+
+    if any(k in low for k in _BATTERY_KW):
+        kw = _car_keyword_for(car)
+        if kw:
+            data = db.get_batteries_for_model(car["model"], kw, car.get("engine_oil_liters"))
+            text = fmt.batteries_text(data)
+            return f"🚗 *{car['model']}*\n\n{text}"
+        return "🔋 Akkumulyator uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+
+    if any(k in low for k in _ANTIFREEZE_KW):
+        kw = _car_keyword_for(car)
+        if kw:
+            rows = db.get_antifreeze_for_model(kw)
+            text = fmt.antifreeze_text(rows)
+            return f"🚗 *{car['model']}*\n\n{text}"
+        return "❄️ Antifriz uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+
+    if any(k in low for k in _BRAKE_KW):
+        kw = _car_keyword_for(car)
+        if kw:
+            rows = db.get_brake_pads_for_model(kw)
+            text = fmt.brake_pads_text(rows)
+            return f"🚗 *{car['model']}*\n\n{text}"
+        return "🔩 Tormoz kolodkasi uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+
+    return None
 
 
 def _norm_visc(v: str | None) -> str:
@@ -362,6 +452,15 @@ async def ask_ai(user_text: str) -> str:
     calc_answer = _try_deterministic_calc(user_text)
     if calc_answer:
         return calc_answer
+
+    # Moy bilan bog'liq bo'lmagan boshqa mahsulotlar (shina/balon,
+    # akkumulyator, antifriz, svecha, tormoz kolodkasi) — bu tekshiruv
+    # OIL bilan bog'liq funksiyalardan OLDIN, chunki aks holda shina
+    # o'lchami kabi raqamlar moy nomlariga tasodifan mos kelib qolishi
+    # mumkin edi.
+    other_answer = _try_other_category_answer(user_text)
+    if other_answer:
+        return other_answer
 
     # Erkin chatda "bu brend/mahsulot mos keladimi?" yoki "shu moy bormi?"
     # kabi savollar — bazadan TO'G'RIDAN-TO'G'RI, LLM'ga yubormasdan javob

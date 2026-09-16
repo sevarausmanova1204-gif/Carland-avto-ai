@@ -365,6 +365,13 @@ def search_oil_by_name(keyword: str, category: str, limit: int = 20):
     matched = []
     for r in rows:
         name_up = r["name"].upper()
+        # "Transmission fluid" kategoriyasida manba PDF xatosi tufayli
+        # svecha/tormoz kolodkasi kabi MOY BO'LMAGAN qatorlar ham bor
+        # (_NON_OIL_MARKERS). Bular tasodifan raqam/harf mos kelib qolsa
+        # (masalan shina o'lchami so'ralganda), noto'g'ri "moy" sifatida
+        # qaytarilib ketmasligi uchun bu yerda ham chiqarib tashlanadi.
+        if any(marker in name_up for marker in _NON_OIL_MARKERS):
+            continue
         name_word_match = bool(all_words) and all(w.upper() in name_up for w in all_words)
         spec_match = False
         if spec:
@@ -505,6 +512,37 @@ def get_tires_for_model(keyword: str):
                 d["sizes"].append({"size": size, "options": [dict(p) for p in priced]})
             out.append(d)
         return out
+
+
+_TIRE_SIZE_RE = re.compile(
+    r"(\d{3})\s*[/\\]?\s*(\d{2})\s*[-rR]?\s*(\d{2})\b"
+)
+
+
+def parse_tire_size(text: str) -> str | None:
+    """Matndan '195/65R15', '195 65 15', '195/65-15' kabi shina o'lchamini
+    topib, bazadagi kanonik shaklga ('195/65R15') keltiradi. Mos kelmasa
+    None qaytaradi."""
+    m = _TIRE_SIZE_RE.search(text)
+    if not m:
+        return None
+    width, profile, rim = m.groups()
+    return f"{width}/{profile}R{rim}"
+
+
+def search_tires_by_size(size_key: str, limit: int = 10):
+    """Aniq shina o'lchami (masalan '195/65R15') bo'yicha, mashina/model
+    ko'rsatilmagan bo'lsa ham, to'g'ridan-to'g'ri mahsulotlar katalogidan
+    qidiradi — foydalanuvchi "195/60R15 shu razmerda balon kerak" kabi
+    faqat o'lcham bilan so'rasa ham javob topilishi uchun."""
+    size_key = size_key.replace(" ", "").upper()
+    with get_conn() as conn:
+        rows = conn.execute(
+            "SELECT DISTINCT name, price FROM products WHERE category='Tires' "
+            "AND REPLACE(UPPER(name),' ','') LIKE ? ORDER BY price ASC LIMIT ?",
+            (f"{size_key}%", limit),
+        ).fetchall()
+        return [dict(r) for r in rows]
 
 
 # Bazada atigi 30 ta akkumulyator bor va ularning "cars" roYXati (manba
