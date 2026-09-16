@@ -200,6 +200,11 @@ def _try_product_answer(user_text: str) -> str | None:
     Hech qanday mahsulot/brend so'zi aniqlanmasa, None qaytaradi — bu holda
     chaqiruvchi kod odatdagidek umumiy AI/LLM suhbatiga o'tadi."""
     latin_text = db.transliterate_cyrillic(user_text)
+    # "ATF 6", "ATF-6", "ATF VI" kabi bo'sh joy bilan ajratilgan
+    # spetsifikatsiyalarni bitta "ATF6" so'ziga birlashtiramiz — aks holda
+    # keyingi so'z-so'z bo'lish bosqichida "6" kabi bir xonali qoldiq juda
+    # qisqa deb tashlab yuborilib, butun ATF belgisi yo'qolib ketardi.
+    latin_text = db.normalize_atf_spec_spacing(latin_text)
     raw_words = re.split(r"[^\w'ʻʼ]+", latin_text, flags=re.UNICODE)
     candidate_words = [
         w for w in raw_words
@@ -208,13 +213,21 @@ def _try_product_answer(user_text: str) -> str | None:
     if not candidate_words:
         return None
 
+    # Har bir mahsulot nechta ALOHIDA kalit so'z (brend, spetsifikatsiya
+    # va h.k.) bo'yicha topilganini ham sanaymiz — masalan "ATF 6 Korelux"
+    # so'rovida "korelux" so'zi o'zi ko'plab (ATF bo'lmagan) Korelux moylarini
+    # ham topadi, lekin FAQAT "atf6" VA "korelux" ikkalasiga ham mos kelgan
+    # mahsulot haqiqatda so'ralgan aniq mahsulotdir — shu sabab natijalar
+    # ro'yxatida yuqoriga chiqarilishi kerak.
     found: dict[tuple, dict] = {}
+    match_counts: dict[tuple, int] = {}
     for w in candidate_words:
         for cat in ("motor", "gearbox"):
             for p in db.search_oil_by_name(w, cat):
                 key = (cat, p["name"])
                 if key not in found:
                     found[key] = {**p, "_cat": cat}
+                match_counts[key] = match_counts.get(key, 0) + 1
 
     if not found:
         return None
@@ -223,8 +236,12 @@ def _try_product_answer(user_text: str) -> str | None:
     car = db.find_car_by_text(user_text)
 
     if not car:
+        ranked = sorted(
+            products,
+            key=lambda p: (-match_counts[(p["_cat"], p["name"])], p["price"]),
+        )
         lines = ["🔎 Bazada topilgan mos mahsulotlar:", ""]
-        for p in sorted(products, key=lambda r: r["price"])[:10]:
+        for p in ranked[:10]:
             pack = f" ({p['pack_size']})" if p.get("pack_size") else ""
             lines.append(f"• {p['name']}{pack} — {fmt.money(p['price'])}/litr")
         return "\n".join(lines)

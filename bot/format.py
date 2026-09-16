@@ -55,6 +55,14 @@ def _tier_for(index: int, total: int) -> str:
     return TIER_LABELS[2]
 
 
+def _is_priority_brand(name: str) -> bool:
+    """Foydalanuvchi (Carland xo'jayini) talabi bo'yicha: Valvoline (va
+    kelajakda config.PRIORITY_BRANDS'ga qo'shilishi mumkin bo'lgan boshqa
+    brendlar) har doim "🔴 Premium" segmentida ko'rinib turishi kerak."""
+    name_up = (name or "").upper()
+    return any(b in name_up for b in config.PRIORITY_BRANDS)
+
+
 def _pick_representatives(products: list[dict], per_tier: int = 4):
     """To'liq (deduplangan, narx bo'yicha o'sish tartibidagi) ro'yxatdan har
     bir narx segmentidan (arzon/standart/premium) bir nechta namuna
@@ -62,7 +70,11 @@ def _pick_representatives(products: list[dict], per_tier: int = 4):
     yetarlicha variant ko'rsatish uchun (ro'yxat kichik bo'lsa HAMMASI,
     katta bo'lsa har segmentdan bir nechtadan namuna beriladi). Kerakli
     brend (masalan aniq nomi) ro'yxatda ko'rinmasa, "🔎 Nomi bo'yicha
-    qidirish" tugmasi orqali alohida qidirilishi mumkin."""
+    qidirish" tugmasi orqali alohida qidirilishi mumkin.
+
+    Premium segmentda ustuvor brend (masalan Valvoline) bo'lsa, u albatta
+    ko'rsatiladigan ro'yxatga kiritiladi — uzun ro'yxatda oddiy kesish
+    (slicing) natijasida chetda qolib ketmasligi uchun."""
     n = len(products)
     if n <= 12:
         # Kichik ro'yxat — sun'iy qisqartirmasdan hammasini ko'rsatamiz
@@ -73,15 +85,38 @@ def _pick_representatives(products: list[dict], per_tier: int = 4):
         buckets[tier_idx].append(p)
     out = []
     for idx in range(3):
-        for p in buckets[idx][:per_tier]:
+        bucket = buckets[idx]
+        if idx == 2:
+            bucket = _ensure_priority_brand_first(bucket, products)
+        for p in bucket[:per_tier]:
             out.append((TIER_LABELS[idx], p))
     return out
+
+
+def _ensure_priority_brand_first(bucket: list[dict], all_products: list[dict]) -> list[dict]:
+    """Berilgan (Premium) segment ro'yxatida ustuvor brend mahsuloti bo'lsa,
+    uni ro'yxat boshiga chiqaradi (keyingi kesishda (slicing) chetda qolib
+    ketmasligi uchun). Segmentning o'zida bunday mahsulot bo'lmasa-yu, lekin
+    butun ro'yxatda (boshqa segmentda) mavjud bo'lsa — o'sha eng "premium"ga
+    yaqin (eng qimmat) variantni shu segmentga qo'shib qo'yadi, chunki
+    foydalanuvchi talabi bo'yicha bu brend narx segmentidan qat'iy nazar
+    Premium ro'yxatida ko'rinib turishi shart."""
+    priority_in_bucket = [p for p in bucket if _is_priority_brand(p["name"])]
+    if priority_in_bucket:
+        rest = [p for p in bucket if p not in priority_in_bucket]
+        return priority_in_bucket + rest
+    priority_anywhere = [p for p in all_products if _is_priority_brand(p["name"])]
+    if priority_anywhere:
+        best = max(priority_anywhere, key=lambda p: p["price"])
+        return [best] + bucket
+    return bucket
 
 
 def three_segment_picks(products: list[dict]):
     """Ixcham joylarda (masalan AI erkin-matn chatida) ko'rsatish uchun har
     bir narx segmentidan (Arzon/Standart/Premium) bittadan (segmentdagi eng
-    arzoni) tanlaydi — ko'pi bilan 3 ta qator qaytaradi."""
+    arzoni) tanlaydi — ko'pi bilan 3 ta qator qaytaradi. Premium segmentda
+    ustuvor brend (Valvoline) mavjud bo'lsa, aynan o'sha tanlanadi."""
     n = len(products)
     if n == 0:
         return []
@@ -93,8 +128,16 @@ def three_segment_picks(products: list[dict]):
         buckets[idx].append(p)
     out = []
     for idx in range(3):
-        if buckets[idx]:
-            out.append((TIER_LABELS[idx], buckets[idx][0]))
+        if not buckets[idx]:
+            continue
+        if idx == 2:
+            priority = [p for p in buckets[idx] if _is_priority_brand(p["name"])]
+            if not priority:
+                priority = [p for p in products if _is_priority_brand(p["name"])]
+            chosen = min(priority, key=lambda p: p["price"]) if priority else buckets[idx][0]
+        else:
+            chosen = buckets[idx][0]
+        out.append((TIER_LABELS[idx], chosen))
     return out
 
 

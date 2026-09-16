@@ -279,6 +279,26 @@ def _extract_atf_spec(text: str):
     return f"ATF{num}", remainder
 
 
+def normalize_atf_spec_spacing(text: str) -> str:
+    """'ATF 6', 'ATF-6', 'ATF VI' kabi bo'sh joy/chiziqcha bilan yozilgan
+    ATF spetsifikatsiyalarini 'ATF6' kabi BITTA so'zga birlashtiradi.
+
+    Bu, masalan, AI erkin-matn chatida foydalanuvchi matni so'z-so'z
+    (bo'shliq bo'yicha) bo'laklarga ajratilganda kerak: aks holda 'atf' va
+    '6' ALOHIDA ikkita so'z bo'lib qolib, '6' juda qisqa (uzunligi 1)
+    bo'lgani uchun so'z filtridan o'tmay tashlab yuboriladi va butun ATF
+    spetsifikatsiyasi signali yo'qolib ketadi — natijada 'ATF 6 Korelux'
+    kabi so'rov hech narsa topmay, foydalanuvchi menyuga yo'naltirilib
+    qolardi. Oldindan shu funksiya bilan birlashtirilsa, 'atf6' bitta
+    so'z sifatida saqlanib qoladi va keyingi qidiruv to'g'ri ishlaydi."""
+    def _repl(m: re.Match) -> str:
+        raw = m.group(1).upper()
+        num = raw if raw.isdigit() else _ROMAN_TO_ARABIC.get(raw, raw)
+        return f"ATF{num}"
+
+    return _ATF_SPEC_RE.sub(_repl, text)
+
+
 def search_oil_by_name(keyword: str, category: str, limit: int = 20):
     """Mijoz moy nomini (yoki brendini) yozganda, kategoriya bo'yicha
     (motor yoki karobka/reduktor) barcha moylar orasidan nomi mos

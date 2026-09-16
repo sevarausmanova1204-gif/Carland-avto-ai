@@ -70,3 +70,10 @@ EUROPEAN_OIL_BRANDS = {
     "STARK", "AVENO", "ELF", "ARAL", "BP", "EUROL", "RAVENOL", "NESTE",
 }
 
+# Foydalanuvchi (Carland xo'jayini) aniq talabi bo'yicha: Valvoline brendiga
+# doim ko'proq urg'u berilishi kerak — har bir qism (motor/karobka/reduktor)
+# uchun narx ro'yxati ko'rsatilganda, agar shu brendning mos mahsuloti
+# mavjud bo'lsa, u albatta "🔴 Premium" segmentida ko'rinib turishi lozim
+# (ro'yxat uzun bo'lgani uchun kesib tashlanib qolmasligi kerak).
+PRIORITY_BRANDS = {"VALVOLINE"}
+
