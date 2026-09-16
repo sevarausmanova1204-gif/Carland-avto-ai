@@ -51,6 +51,49 @@ _EXPENSIVE_KW = ("qimmat", "premium", "yuqori sifat")
 _CALC_TRIGGER_KW = ("hisobla", "necha pul", "qancha", "narxi", "summ", "qiymati")
 
 
+def _resolve_car(user_text: str, context=None) -> dict | None:
+    """Joriy matndan mashinani topishga harakat qiladi. Topilmasa-yu,
+    `context` berilgan bo'lsa, foydalanuvchi OLDINGI xabarida so'ragan
+    mashinani (shu suhbat davomida "session xotirasi" sifatida saqlangan)
+    ishlatadi — shunda "AVENO ECO 10W40 ... shunisidan hisobla" kabi,
+    mashina nomini qayta yozmaydigan davomli savollar ham ishlaydi.
+    Mashina joriy matndan topilsa, keyingi savollar uchun ham
+    context.user_data['last_car_id']ga saqlab qo'yiladi."""
+    car = db.find_car_by_text(user_text)
+    if car:
+        if context is not None:
+            context.user_data["last_car_id"] = car["id"]
+        return car
+    if context is not None:
+        last_id = context.user_data.get("last_car_id")
+        if last_id:
+            return db.get_car(last_id)
+    return None
+
+
+def _detect_brand_keyword(text: str, category: str, exclude_words: set[str] = frozenset()) -> str | None:
+    """Matnda ma'lum bir brend/mahsulot nomi tilga olinganini aniqlaydi —
+    masalan "aveno moyidan ... hisoblab ber" so'rovida "aveno"ni topib,
+    hisob-kitobni FAQAT o'sha brendga cheklash uchun ishlatiladi (aks
+    holda brend nomi e'tiborsiz qoldirilib, botning standart 3 segmentli
+    ro'yxati — mutlaqo boshqa brendlar bilan — qaytarilardi). Mashina
+    modeli so'zlari (`exclude_words`) chalkashmasligi uchun chiqarib
+    tashlanadi. Bu ham umumiy — bazadagi BARCHA brend/mahsulot uchun
+    ishlaydi, oldindan sanab chiqilgan nomlarga bog'liq emas."""
+    latin_text = db.transliterate_cyrillic(text)
+    latin_text = db.normalize_atf_spec_spacing(latin_text)
+    raw_words = re.split(r"[^\w'ʻʼ]+", latin_text, flags=re.UNICODE)
+    for w in raw_words:
+        if len(w) < 3:
+            continue
+        norm = db.normalize_word(w)
+        if norm in exclude_words or norm in db.GENERIC_WORD_STOPLIST or db.is_generic_filler_word(w):
+            continue
+        if db.search_oil_by_name(w, category):
+            return w
+    return None
+
+
 def _parse_calc_targets(text: str) -> dict:
     """Matnni jumla/qatorlarga bo'lib, har birida motor/karobka so'rovi
     borligini va unga qo'shilgan modifikatorlarni (davlat kelib chiqishi,
@@ -86,7 +129,9 @@ def _parse_calc_targets(text: str) -> dict:
     return targets
 
 
-def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str | None) -> str:
+def _compute_target_calc(
+    car: dict, target: str, origin: str | None, tier: str | None, brand_keyword: str | None = None
+) -> str:
     if target == "engine":
         liters = car.get("engine_oil_liters")
         viscosities = car.get("engine_oil_types") or []
@@ -124,39 +169,67 @@ def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str |
         products = db.filter_oils_by_origin(products, origin)
         origin_note = ", Yevropa" if origin == "europe" else ", boshqa davlat"
 
-    if not products:
-        return f"{label} ({liters} L{origin_note}) — mos moy topilmadi."
+    # Foydalanuvchi aniq brend/mahsulot nomini aytgan bo'lsa (masalan
+    # "aveno moyidan ... hisoblab ber"), hisob-kitob FAQAT o'sha brendga
+    # cheklanadi — aks holda brend e'tiborsiz qoldirilib, mutlaqo boshqa
+    # (so'ralmagan) brendlar bilan standart 3 segmentli ro'yxat
+    # qaytarilardi, bu haqiqatda sodir bo'lgan xato edi.
+    brand_note = ""
+    if brand_keyword:
+        brand_up = brand_keyword.upper()
+        brand_products = [p for p in products if brand_up in p["name"].upper()]
+        if brand_products:
+            products = brand_products
+            brand_note = f", {brand_keyword.upper()}"
 
-    # Aniq tier so'ralganda (arzon/qimmat) FAQAT bitta variant, aks holda
-    # 3 ta narx segmentidan (Arzon/Standart/Premium) bittadan — har biri
-    # qisqa, bitta qatorli yozuv sifatida.
-    if tier == "cheap":
+    if not products:
+        return f"{label} ({liters} L{origin_note}{brand_note}) — mos moy topilmadi."
+
+    if brand_note:
+        # Brend aniq so'ralgan va topilgan — sun'iy 3 segmentga
+        # bo'linmasdan, shu brendning barcha mos variantlari ko'rsatiladi
+        # (mijoz aynan shu brend narxini bilishni so'ragan).
+        chosen = products
+        tier_note = ""
+    elif tier == "cheap":
         chosen, tier_note = [products[0]], ", eng arzon"
     elif tier == "expensive":
         chosen, tier_note = [products[-1]], ", eng yaxshi"
     else:
+        # Aniq tier so'ralganda (arzon/qimmat) FAQAT bitta variant, aks
+        # holda 3 ta narx segmentidan (Arzon/Standart/Premium) bittadan —
+        # har biri qisqa, bitta qatorli yozuv sifatida.
         chosen = [p for _, p in fmt.three_segment_picks(products)]
         tier_note = ""
 
-    lines = [f"{label} — {liters} L{origin_note}{tier_note}:"]
+    lines = [f"{label} — {liters} L{origin_note}{brand_note}{tier_note}:"]
     for p in chosen:
         total = p["price"] * liters
         lines.append(f"• {p['name']} — {fmt.money(p['price'])}/l × {liters} = {fmt.money(total)}")
-    if not tier and len(products) > len(chosen):
+    if not tier and not brand_note and len(products) > len(chosen):
         lines.append(f"  (yana {len(products) - len(chosen)} ta variant — \"Mahsulotlar\" bo'limida)")
     return "\n".join(lines)
 
 
-def _try_deterministic_calc(user_text: str) -> str | None:
+def _try_deterministic_calc(user_text: str, context=None) -> str | None:
     low = user_text.lower()
     if not any(k in low for k in _CALC_TRIGGER_KW):
         return None
     targets = _parse_calc_targets(user_text)
     if not targets:
         return None
-    car = db.find_car_by_text(user_text)
+    car = _resolve_car(user_text, context)
     if not car:
         return None
+
+    # Foydalanuvchi matnda aniq brend/mahsulot nomini ham aytgan bo'lsa
+    # (masalan "aveno moyidan cobaltga hisoblab ber matoriga"), shu
+    # brendni har bir kategoriya (motor/karobka) uchun alohida aniqlaymiz
+    # — mashina modeli so'zlari bilan adashtirmaslik uchun ular chiqarib
+    # tashlanadi.
+    car_words = {db.normalize_word(w) for w in re.split(r"\s+", car["model"]) if w}
+    brand_motor = _detect_brand_keyword(user_text, "motor", car_words)
+    brand_gearbox = _detect_brand_keyword(user_text, "gearbox", car_words)
 
     blocks = [f"🚗 *{car['model']}*", ""]
     needs_service_fee = False
@@ -166,7 +239,8 @@ def _try_deterministic_calc(user_text: str) -> str | None:
         if target in ("gearbox", "reductor"):
             needs_service_fee = True
         mods = targets[target]
-        blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier")))
+        brand_kw = brand_motor if target == "engine" else brand_gearbox
+        blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier"), brand_kw))
         blocks.append("")
     if needs_service_fee:
         blocks.append(config.SERVICE_FEE_NOTE)
@@ -189,7 +263,7 @@ def _car_keyword_for(car: dict | None) -> str | None:
     return matching.extract_keyword(car["model"]) if car else None
 
 
-def _try_other_category_answer(user_text: str) -> str | None:
+def _try_other_category_answer(user_text: str, context=None) -> str | None:
     """AI erkin-matn chatida moy (motor/karobka/reduktor) bilan bog'liq
     BO'LMAGAN boshqa mahsulotlar — shina/balon, akkumulyator, antifriz,
     svecha, tormoz kolodkasi — so'ralganda, botning tegishli menyu
@@ -205,7 +279,7 @@ def _try_other_category_answer(user_text: str) -> str | None:
     bo'lgan xato."""
     latin_text = db.transliterate_cyrillic(user_text)
     low = latin_text.lower()
-    car = db.find_car_by_text(user_text)
+    car = _resolve_car(user_text, context)
 
     if any(k in low for k in _TIRE_KW):
         size = db.parse_tire_size(latin_text)
@@ -269,7 +343,7 @@ def _norm_visc(v: str | None) -> str:
     return (v or "").upper().replace(" ", "").replace("-", "")
 
 
-def _try_product_answer(user_text: str) -> str | None:
+def _try_product_answer(user_text: str, context=None) -> str | None:
     """AI erkin-matn chatida "bu brend/mahsulot mos keladimi?", "Valvoline
     bormi?" kabi savollarga LLM ga umuman yubormasdan, TO'G'RIDAN-TO'G'RI
     bazadan javob beradi.
@@ -323,7 +397,7 @@ def _try_product_answer(user_text: str) -> str | None:
         return None
 
     products = list(found.values())
-    car = db.find_car_by_text(user_text)
+    car = _resolve_car(user_text, context)
 
     if not car:
         ranked = sorted(
@@ -364,19 +438,39 @@ def _try_product_answer(user_text: str) -> str | None:
     lines = [f"🚗 *{car['model']}* uchun:"]
     any_match = bool(engine_matches or gearbox_matches or reductor_matches)
 
+    # Mijoz ko'pincha brend/mahsulot nomi bilan BIRGA "hisoblab ber" kabi
+    # so'z ham ishlatadi — shu sabab topilgan har bir moslikda, kerakli
+    # hajm (litr) bazada bor bo'lsa, umumiy summa (narx × litr) ham
+    # darhol ko'rsatiladi, faqat 1 litr narxi emas.
+    def _line(p: dict, liters) -> str:
+        if liters:
+            total = p["price"] * liters
+            return f"• {p['name']} — {fmt.money(p['price'])}/litr × {liters} = {fmt.money(total)}"
+        return f"• {p['name']} — {fmt.money(p['price'])}/litr"
+
+    # Eng ko'p KALIT SO'ZGA mos kelgan mahsulot (masalan mijoz aynan
+    # "AVENO ECO 10W40..." deb to'liq nom yozgan bo'lsa) ro'yxat boshida
+    # chiqishi kerak — shu sabab faqat narx bo'yicha emas, avval
+    # match_counts (necha so'z mos kelgani), keyin narx bo'yicha
+    # saralanadi (aks holda arzonroq, lekin faqat bitta umumiy so'z —
+    # masalan "10W40" — bilan mos kelgan boshqa brend tasodifan tepaga
+    # chiqib ketardi).
+    def _rank(p: dict):
+        return (-match_counts[(p["_cat"], p["name"])], p["price"])
+
     if engine_matches:
         lines += ["", "✅ *Motor moyi* uchun mos keladi:"]
-        for p in sorted(engine_matches, key=lambda r: r["price"])[:5]:
-            lines.append(f"• {p['name']} — {fmt.money(p['price'])}/litr")
+        for p in sorted(engine_matches, key=_rank)[:5]:
+            lines.append(_line(p, car.get("engine_oil_liters")))
     if gearbox_matches:
         kind_label = f" ({car['gearbox_kind']})" if car.get("gearbox_kind") else ""
         lines += ["", f"✅ *Karobka moyi{kind_label}* uchun mos keladi:"]
-        for p in sorted(gearbox_matches, key=lambda r: r["price"])[:5]:
-            lines.append(f"• {p['name']} — {fmt.money(p['price'])}/litr")
+        for p in sorted(gearbox_matches, key=_rank)[:5]:
+            lines.append(_line(p, car.get("gearbox_liters")))
     if reductor_matches:
         lines += ["", "✅ *Reduktor moyi* uchun mos keladi:"]
-        for p in sorted(reductor_matches, key=lambda r: r["price"])[:5]:
-            lines.append(f"• {p['name']} — {fmt.money(p['price'])}/litr")
+        for p in sorted(reductor_matches, key=_rank)[:5]:
+            lines.append(_line(p, car.get("reductor_liters")))
 
     if not any_match:
         req_parts = []
@@ -403,7 +497,7 @@ def _try_product_answer(user_text: str) -> str | None:
             "",
             "Topilgan boshqa variantlar (turi ko'rsatilgan, filialda tekshiring):",
         ]
-        for p in sorted(relevant_products, key=lambda r: r["price"])[:5]:
+        for p in sorted(relevant_products, key=_rank)[:5]:
             lines.append(f"• {p['name']} ({p.get('viscosity') or '?'}) — {fmt.money(p['price'])}/litr")
     elif gearbox_matches or reductor_matches:
         lines += ["", config.SERVICE_FEE_NOTE]
@@ -448,8 +542,13 @@ def _build_context(user_text: str) -> str:
     return "MA'LUMOTLAR BAZASIDAN:\n" + "\n".join(parts)
 
 
-async def ask_ai(user_text: str) -> str:
-    calc_answer = _try_deterministic_calc(user_text)
+async def ask_ai(user_text: str, context=None) -> str:
+    # `context` — Telegram ContextTypes.DEFAULT_TYPE (ixtiyoriy): berilsa,
+    # foydalanuvchining OLDINGI xabarida so'ragan mashinasi session
+    # xotirasida saqlanadi va keyingi, mashina nomini takrorlamaydigan
+    # davomli savollarda ("AVENO ECO 10W40 ... shunisidan hisobla" kabi)
+    # ham ishlatiladi (_resolve_car orqali).
+    calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
         return calc_answer
 
@@ -458,7 +557,7 @@ async def ask_ai(user_text: str) -> str:
     # OIL bilan bog'liq funksiyalardan OLDIN, chunki aks holda shina
     # o'lchami kabi raqamlar moy nomlariga tasodifan mos kelib qolishi
     # mumkin edi.
-    other_answer = _try_other_category_answer(user_text)
+    other_answer = _try_other_category_answer(user_text, context)
     if other_answer:
         return other_answer
 
@@ -466,7 +565,7 @@ async def ask_ai(user_text: str) -> str:
     # kabi savollar — bazadan TO'G'RIDAN-TO'G'RI, LLM'ga yubormasdan javob
     # beriladi (barcha brend/mahsulot uchun umumiy ishlaydi, Kirill yozuvi
     # va o'zbekcha qo'shimchalar bilan yozilgan bo'lsa ham).
-    product_answer = _try_product_answer(user_text)
+    product_answer = _try_product_answer(user_text, context)
     if product_answer:
         return product_answer
 

@@ -41,7 +41,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # beramiz (faqat "search" rejimi alohida ushlab qolinadi, yuqorida).
     thinking = await update.message.reply_text("💭 O'ylayapman...")
     try:
-        answer = await ai.ask_ai(text)
+        answer = await ai.ask_ai(text, context)
     except Exception as e:  # noqa: BLE001
         answer = f"AI xizmatida xatolik yuz berdi: {e}"
     await thinking.edit_text(answer, reply_markup=keyboards.main_menu(context.user_data.get("lang", "uz")))
