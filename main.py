@@ -1,69 +1,30 @@
-"""
-Carland AI Telegram Bot - Asosiy Ishga Tushirish Fayli (main.py)
-aiogram 3.x asosida
-"""
-
-import asyncio
 import logging
-import sys
-from pathlib import Path
 
-# Joriy papkani sys.path ga qo'shish
-current_dir = Path(__file__).resolve().parent
-if str(current_dir) not in sys.path:
-    sys.path.insert(0, str(current_dir))
+from telegram.ext import Application, CallbackQueryHandler, CommandHandler, MessageHandler, filters
 
-from aiogram import Bot, Dispatcher
-from aiogram.enums import ParseMode
-from aiogram.client.default import DefaultBotProperties
+from bot import config
+from bot.handlers.callbacks import route
+from bot.handlers.start import start
+from bot.handlers.text import handle_text
 
-from config import BOT_TOKEN
-from handlers import router as main_router
-
-# Loggingni sozlash
 logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s - [%(levelname)s] - %(name)s - %(message)s",
-    handlers=[
-        logging.StreamHandler(sys.stdout)
-    ]
+    format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
-logger = logging.getLogger(__name__)
 
 
-async def main():
-    """Botni ishga tushirish funksiyasi"""
-    if not BOT_TOKEN:
-        logger.error("XATOLIK: BOT_TOKEN ko'rsatilmagan! Iltimos, .env faylini to'ldiring.")
-        return
+def main():
+    if not config.TELEGRAM_BOT_TOKEN:
+        raise SystemExit("TELEGRAM_BOT_TOKEN topilmadi. .env faylni to'ldiring (.env.example ga qarang).")
 
-    logger.info("Carland AI Telegram boti ishga tushirilmoqda...")
+    app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).build()
 
-    # Bot va Dispatcher obyektlarini yaratish
-    bot = Bot(
-        token=BOT_TOKEN,
-        default=DefaultBotProperties(parse_mode=ParseMode.HTML)
-    )
-    dp = Dispatcher()
+    app.add_handler(CommandHandler("start", start))
+    app.add_handler(CallbackQueryHandler(route))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
 
-    # Routerlarni ulash
-    dp.include_router(main_router)
-
-    # Eski kutilmagan update'larni tozalash va pollingni boshlash
-    try:
-        await bot.delete_webhook(drop_pending_updates=False)
-        bot_info = await bot.get_me()
-        logger.info(f"Bot muvaffaqiyatli ishga tushdi: @{bot_info.username} ({bot_info.first_name})")
-        await dp.start_polling(bot)
-    except Exception as e:
-        logger.error(f"Botni ishga tushirishda xatolik: {e}")
-    finally:
-        await bot.session.close()
-        logger.info("Bot to'xtatildi.")
+    logging.info("Carland bot ishga tushdi.")
+    app.run_polling(allowed_updates=["message", "callback_query"])
 
 
 if __name__ == "__main__":
-    try:
-        asyncio.run(main())
-    except (KeyboardInterrupt, SystemExit):
-        logger.info("Bot foydalanuvchi tomonidan to'xtatildi.")
+    main()

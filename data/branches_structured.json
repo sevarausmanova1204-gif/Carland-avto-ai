@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Lunacharskiy",
+    "city": "Toshkent",
+    "address": "Buyuk Ipak Yo'li ko'chasi 268",
+    "directions": "Lunacharskiy - Mirzo Ulug'bek rovdadan o'tgandan keyin o'ng qo'lda TTZ dan kelganda avtoritet moykadan o'tgandan keyin tabakani ro'parasida chap qo'lda keladi."
+  },
+  {
+    "id": 2,
+    "name": "Taxtapul",
+    "city": "Toshkent",
+    "address": "Ko'rgazmalar zali, Kichik halqa yo'li 74A",
+    "directions": "Malikadan kelganda Taxtapul mostdan o'tgandan o'ng qo'lda, severniy olmazordan kelganda Taxtapul mostga yetmasdan chap qo'lda Turk Market yonida."
+  },
+  {
+    "id": 3,
+    "name": "Yunusobod",
+    "city": "Toshkent",
+    "address": "Kulolqo'rg'on 6-tor ko'chasi",
+    "directions": "Uchqahramon krugidan kelganda 271-maktab ro'parasida I WASH moyka oldida chapda. Yunusobod krugdan kelganda BYD servisdan o'tganda keyin I WASH moyka yonida o'ng qo'lda."
+  },
+  {
+    "id": 4,
+    "name": "Samarqand Darvoza",
+    "city": "Toshkent",
+    "address": "Qoratosh ko'chasi 5A",
+    "directions": "Chorsudan kelishda INTRAN zapravkadan o'tgandan keyin The Chuchvara ro'parasida o'ng qo'lda."
+  },
+  {
+    "id": 5,
+    "name": "General Uzoqov",
+    "city": "Toshkent",
+    "address": "Chimboy 2-tor ko'chasi, 48",
+    "directions": "Orzu chorrahadan o'tgandan keyin VISOL to'yxonasidan sal pastroqda chap qo'lda."
+  },
+  {
+    "id": 6,
+    "name": "Chig'atoy",
+    "city": "Toshkent",
+    "address": "Chig'atoy tumani",
+    "directions": "Chig'atoy masjiddan kelganda Tuning House'dan o'tib o'ng qo'lda keladi. Uzgaradok chorrahasidan Chimboyga qarab kelishda VOyah servis yonida chap qo'lda."
+  },
+  {
+    "id": 7,
+    "name": "Do'mbirobod",
+    "city": "Toshkent",
+    "address": "Do'mbirobod street 162",
+    "directions": "Mustang zapravkadan kirganda Grand Hoteldan o'tib chap qo'lda. 16-Balnitsa chorrahasidan kirganda Do'mbirobod haykaldan o'tib, 2-Svetafordan o'ngda."
+  },
+  {
+    "id": 8,
+    "name": "Yangibozor",
+    "city": "Toshkent",
+    "address": "Navoiy ko'chasi, Optim market ro'parasida",
+    "directions": "Navoiy ko'chada joylashgan, Optim marketni ro'parasida."
+  },
+  {
+    "id": 9,
+    "name": "Yangi yo'l",
+    "city": "Toshkent",
+    "address": "Yangi yo'l massivi",
+    "directions": "Zangiotadan kelganda Massivda joylashgan, yangi yo'l tarafdan kelganda taxta ko'prikdan o'tganda o'ng qo'lda keladi."
+  },
+  {
+    "id": 10,
+    "name": "Samarqand filiali",
+    "city": "Samarqand",
+    "address": "Kovola Mahalla, 69-uy",
+    "directions": "Samarqand shahar, Kovola Mahalla, 69-uy, Seliskiy tomonda, 16-maktab orqasi, Registanskiy ko'chasi bilan ketilganda."
+  },
+  {
+    "id": 11,
+    "name": "Buxoro filiali",
+    "city": "Buxoro",
+    "address": "Sanoatchilar ko'chasi 3-dom",
+    "directions": "Buxoro shahar, Sanoatchilar 3-dom, Buxoro arxitektura texnikumi to'g'risida, 2-lyukoyil zapravka yonida."
+  },
+  {
+    "id": 12,
+    "name": "Index",
+    "city": "Toshkent",
+    "address": "Sergili, Index bozori, Yangihayot, blok C01",
+    "directions": "Index bozordan kirishda oxiriga borganda chapga qayrilasiz, Sergili Index bozori."
+  },
+  {
+    "id": 13,
+    "name": "Qarshi filiali",
+    "city": "Qarshi",
+    "address": "Farangiz do'koni yaqinida",
+    "directions": "Orientir: 5-hammom yaqinida, Farangiz do'konining to'g'risida."
+  },
+  {
+    "id": 14,
+    "name": "Chirchiq filiali",
+    "city": "Chirchiq",
+    "address": "10-mikrorayon, Karvon bozori oldida",
+    "directions": "Orientir: Karvon bozori oldida, 10-mikrorayon."
+  },
+  {
+    "id": 15,
+    "name": "Olmaliq filiali",
+    "city": "Olmaliq",
+    "address": "Olmaliq zavodi yo'nalishi, Hamkorbank ro'parasida",
+    "directions": "Orientir: Olmaliq zavodiga ketaverishda Hamkorbank to'g'risida."
+  }
+]

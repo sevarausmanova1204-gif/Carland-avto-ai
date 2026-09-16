@@ -1,0 +1,385 @@
+[
+  {
+    "battery": "Емкость АКБ Ah",
+    "brand": "Марка",
+    "price": "",
+    "cars": [
+      "Наименование Автомобиля"
+    ]
+  },
+  {
+    "battery": "STARTER 40B19R 35Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "620 000,00",
+    "cars": [
+      "CHEVROLET DAMAS",
+      "CHEVROLET MATIZ MX",
+      "DAEWOO TICO"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB M42S (40Ah) B19 AKKUM",
+    "brand": "SOLITE",
+    "price": "950 000,00",
+    "cars": [
+      "BYD CHAMPION",
+      "BYD SEAGULL",
+      "BYD SONG PLUS",
+      "BYD YUAN",
+      "HONGQI",
+      "VOYAH FREE"
+    ]
+  },
+  {
+    "battery": "STARTER CMF54464 44Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "760 000,00",
+    "cars": [
+      "CHEVROLET MATIZ BEST"
+    ]
+  },
+  {
+    "battery": "STARTER 55B24LS 45L AH AKKUM L",
+    "brand": "STARTER EX",
+    "price": "850 000,00",
+    "cars": [
+      "CHANGAN",
+      "DONGFENG EP008",
+      "GEELY GEOMERTY",
+      "HONQI",
+      "SHINERAY X30L"
+    ]
+  },
+  {
+    "battery": "STARTER 55B24RS 45R AH AKKUM R",
+    "brand": "STARTER EX",
+    "price": "850 000,00",
+    "cars": [
+      "AION EV",
+      "AIQAR ARRIZO",
+      "AIQAR EQ7"
+    ]
+  },
+  {
+    "battery": "STARTER CMF55066 50Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "810 000,00",
+    "cars": [
+      "AEOLUS HUGE DONGFENG",
+      "CHEVROLET COBALT",
+      "CHEVROLET SPARK"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB 50Ah AKKUM",
+    "brand": "SOLITE",
+    "price": "1 095 000,00",
+    "cars": [
+      "BMW I3",
+      "BYD CHAMPION",
+      "BYD SONG PLUS",
+      "BYD YUAN",
+      "FENGON 508",
+      "HENGCHI 5",
+      "VOLKSWAGEN ID4",
+      "VOLKSWAGEN ID6"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB N55S 50Ah B24 AKKUM",
+    "brand": "SOLITE",
+    "price": "1 060 000,00",
+    "cars": [
+      "CHANGAN",
+      "DONGFENG EP008",
+      "HONQI",
+      "TESLA MODEL 3",
+      "TESLA MODEL Y"
+    ]
+  },
+  {
+    "battery": "SOLITE AGM 60 AKKUM",
+    "brand": "SOLITE",
+    "price": "2 040 000,00",
+    "cars": [
+      "CHEVROLET BOLT EV",
+      "CHEVROLET COBALT",
+      "HAVAL M6",
+      "HYUNDAI ACCENT",
+      "HYUNDAI ELANTRA",
+      "KIA SELTOS",
+      "KIA SPORTAGE"
+    ]
+  },
+  {
+    "battery": "STARTER CMF 60AL 60Ah AKKUM L",
+    "brand": "STARTER EX/SOLITE",
+    "price": "855 000,00",
+    "cars": [
+      "AEOLUS HUGE DONGFENG",
+      "CHERRY TIGGO 7 PRO",
+      "CHEVROLET COBALT",
+      "CHEVROLET NEXIA 1/2",
+      "HAVAL JOLION"
+    ]
+  },
+  {
+    "battery": "STARTER CMF 60AR 60Ah AKKUM R",
+    "brand": "STARTER EX/SOLITE",
+    "price": "855 000,00",
+    "cars": [
+      "CHEVROLET GENTRA",
+      "CHEVROLET LACETTI 1.8",
+      "CHEVROLET LACETTI1.5",
+      "CHEVROLET NEXIA 3"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB 60Ah AKKUM",
+    "brand": "SOLITE",
+    "price": "1 260 000,00",
+    "cars": [
+      "CHERRY ARRIZO 6 PRO",
+      "CHEVROLET BOLT EV",
+      "CHEVROLET COBALT",
+      "CHEVROLET NEXIA 1/2",
+      "HYUNDAI ACCENT",
+      "HYUNDAI ELANTRA",
+      "KIA SELTOS",
+      "KIA SPORTAGE",
+      "SWM G05 PRO"
+    ]
+  },
+  {
+    "battery": "VARTA AKKUMULYATOR MF56219 D43 62 AH R",
+    "brand": "VARTA",
+    "price": "880 000,00",
+    "cars": [
+      "AEOLUS HUGE DONGFENG",
+      "JETOUR X70 restyling",
+      "SWM G05 PRO"
+    ]
+  },
+  {
+    "battery": "SOLITE AGM 70 AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "2 215 000,00",
+    "cars": [
+      "AUDI",
+      "BAW M7",
+      "BMW",
+      "CHEVROLET CAPTIVA 2/3/4",
+      "CHEVROLET EQUINOX",
+      "CHEVROLET MALIBU 1/2",
+      "CHEVROLET ONIX",
+      "CHEVROLET TRACKER 1/2",
+      "HAVAL DARGO",
+      "HYUNDAI SONATA",
+      "KIA K5",
+      "MERCEDES-BENZ",
+      "VOLVO"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB 70Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 425 000,00",
+    "cars": [
+      "212 T01",
+      "CHEVROLET CAPTIVA 2/3/4",
+      "CHEVROLET MALIBU 1/2",
+      "CHEVROLET ONIX",
+      "CHEVROLET TRACKER 1/2",
+      "FOTON TUNLAND G90",
+      "HONGQI HS5",
+      "HYUNDAI SONATA",
+      "KIA K5"
+    ]
+  },
+  {
+    "battery": "STARTER CMF57412 L 74Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 140 000,00",
+    "cars": [
+      "CHEVROLET CAPTIVA 2/3/4",
+      "CHEVROLET MALIBU 1",
+      "CHEVROLET ONIX",
+      "CHEVROLET TRACKER 1/2",
+      "JETOUR X70 restyling"
+    ]
+  },
+  {
+    "battery": "STARTER CMF57413 R 74Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 140 000,00",
+    "cars": [
+      "CHEVROLET CAPTIVA 1",
+      "CHEVROLET EPICA",
+      "HYUNDAI H1",
+      "ISUZU АВТОБУСЫ",
+      "ISUZU D-MAX"
+    ]
+  },
+  {
+    "battery": "STARTER 105D26 L",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 200 000,00",
+    "cars": [
+      "HYUNDAI CRETA",
+      "HYUNDAI PORTER",
+      "KIA PORTER",
+      "TOYOTA PRADO 120",
+      "TOYOTA PRADO 150"
+    ]
+  },
+  {
+    "battery": "STARTER CMF58014 80Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 390 000,00",
+    "cars": [
+      "CHEVROLET MALIBU 2",
+      "CHEVROLET TRAILBLAZER"
+    ]
+  },
+  {
+    "battery": "SOLITE EFB 80 AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 660 000,00",
+    "cars": [
+      "CADILAC ESCALADE",
+      "CHEVROLET TAHOE",
+      "CHEVROLET TRAILBLAZER",
+      "CHEVROLET TRAVERSE",
+      "GMC YUKON",
+      "HYUNDAI PALISADE",
+      "HYUNDAI SANTAFE",
+      "TOYOTA 300"
+    ]
+  },
+  {
+    "battery": "SOLITE UEFB T110 85Ah D31 AKKUM",
+    "brand": "SOLITE",
+    "price": "1 580 000,00",
+    "cars": [
+      "LEXUS 470",
+      "LEXUS 570",
+      "TOYOTA 200",
+      "TOYOTA PRADO 120",
+      "TOYOTA PRADO 15O"
+    ]
+  },
+  {
+    "battery": "STARTER CMF59042 90 AH AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 360 000,00",
+    "cars": [
+      "Старые AUDI",
+      "Старые BMW",
+      "Старые MERCEDES-BENZ",
+      "Тракторы",
+      "DFAM-244",
+      "DONGFENG DF-244",
+      "DONGFENG-300 (2WD)",
+      "ISUZU грузовики",
+      "JINMA JM-244",
+      "LIUGONG CLG365A мини-экскаватор",
+      "LONKING CDM306 мини-погрузчик",
+      "SANY SY16C мини-экскаватор",
+      "WEITUO TY254",
+      "XCMG XT740 мини-погрузчик",
+      "YTO-MF304"
+    ]
+  },
+  {
+    "battery": "SOLITE 105D31L 90 Ah",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 330 000,00",
+    "cars": [
+      "KIA KARNIVAL",
+      "LEXUS 470",
+      "LEXUS 570",
+      "TOYOTA 200",
+      "TOYOTA PRADO 120",
+      "TOYOTA PRADO 150"
+    ]
+  },
+  {
+    "battery": "STARTER CMF 105D31 R 90AH STARTER",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 360 000,00",
+    "cars": [
+      "Японские и Корейские джипы",
+      "NISSAN PATROL"
+    ]
+  },
+  {
+    "battery": "STARTER EFB95 95Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 850 000,00",
+    "cars": [
+      "AUDI A7",
+      "AUDI Q7",
+      "BMW X5",
+      "BMW X7",
+      "HAVAL H9",
+      "MERCEDES-BENZ GALENDWAGEN",
+      "MERCEDES-BENZ W222",
+      "MERCEDES-BENZ W223",
+      "VOLVO"
+    ]
+  },
+  {
+    "battery": "STARTER EFB95 95Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 850 000,00",
+    "cars": [
+      "Экскаватор SAMSUNG"
+    ]
+  },
+  {
+    "battery": "STARTER CMF60038 100Ah AKKUM",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 450 000,00",
+    "cars": [
+      "Каток НАММ HD 12",
+      "Старые AUDI",
+      "Старые BMW",
+      "Старые MERCEDES-BENZ",
+      "Трактор МТЗ-82.1",
+      "Тракторы",
+      "ISUZU грузовики"
+    ]
+  },
+  {
+    "battery": "CMF N100 (100Ah) STARTER EX",
+    "brand": "STARTER EX/SOLITE",
+    "price": "1 565 000,00",
+    "cars": [
+      "LIUGONG и другие погрузчики"
+    ]
+  },
+  {
+    "battery": "EFB 110 (110Ah) SOLITE 24",
+    "brand": "SOLITE",
+    "price": "1 960 000,00",
+    "cars": [
+      "AUDI",
+      "BMW X5",
+      "BMW X7",
+      "MERCEDES BENZ GALENDWAGEN",
+      "MERCEDES BENZ W222",
+      "MERCEDES BENZ W223"
+    ]
+  },
+  {
+    "battery": "CMF 140 (140Ah) STARTER EX",
+    "brand": "STARTER EX/SOLITE",
+    "price": "2 165 000,00",
+    "cars": [
+      "Автокран ZOOMLION QY25V",
+      "CLASS DOMINATOR 130",
+      "LIUGONG CLG835",
+      "NEW HOLLAND TD5.110"
+    ]
+  }
+]

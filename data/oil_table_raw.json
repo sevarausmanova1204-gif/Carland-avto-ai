@@ -1,0 +1,749 @@
+[
+  {
+    "model": "Damas eski",
+    "engine_oil_volume_raw": "3 litr",
+    "gearbox_volume_raw": "Mexanika 1,3litr 75w90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "20 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Damas yangi",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "2,5 litr 75w90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "20 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Labo",
+    "engine_oil_volume_raw": "3 litr",
+    "gearbox_volume_raw": "Mexanika 1,3litr 75w90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "20 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Matiz oddiy 3 slindir",
+    "engine_oil_volume_raw": "2,7 litr",
+    "gearbox_volume_raw": "2 litr 75w90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "20 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Matiz best 4 slindir",
+    "engine_oil_volume_raw": "3 litr",
+    "gearbox_volume_raw": "2,5 litr 75w90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "20 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Cobalt",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "Mexanika 2,5litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Cobalt MSM",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "Avtomat 7 litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "0w20,5w30, 5w40,",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Nexia 1",
+    "engine_oil_volume_raw": "Song-3 litr sonsgibrid- 3,5 litr dons-3,8 litr",
+    "gearbox_volume_raw": "Mexanika-2 litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Nexia 2",
+    "engine_oil_volume_raw": "Song-3 litr sonsgibrid- 3,5 litr dons-3,8litr",
+    "gearbox_volume_raw": "Mexanika-2 litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Nexia 3",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "MKPP 2 litr 75w-90. AKPP 7 litr ATF6.",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "75w90 ATF"
+  },
+  {
+    "model": "Lacetti 1,6",
+    "engine_oil_volume_raw": "3,5 - 3,8 litr",
+    "gearbox_volume_raw": "2 litr 75w-90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "praklatka filtr almashadi",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Lacetti 1,8",
+    "engine_oil_volume_raw": "3,5 - 3,8 litr",
+    "gearbox_volume_raw": "2 litr 75w-90",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": "75w90"
+  },
+  {
+    "model": "Gentra",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "MKPP 2 litr 75w-90. 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "25 000",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": "75w90 ATF6"
+  },
+  {
+    "model": "Malibu 1",
+    "engine_oil_volume_raw": "4,5 litr yoki 5 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "50 000",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Malibu 2",
+    "engine_oil_volume_raw": "5 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "110 000",
+    "engine_oil_type_raw": "0w20",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Tracker 1",
+    "engine_oil_volume_raw": "4 - 4,5 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "50 000",
+    "engine_oil_type_raw": "0w20 ,5w30",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Tracker 2",
+    "engine_oil_volume_raw": "4 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "40 000",
+    "engine_oil_type_raw": "0w20,5w30",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Captiva 1",
+    "engine_oil_volume_raw": "3.2 = 7 litr",
+    "gearbox_volume_raw": "6 litr ATF3",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "55 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "ATF 3"
+  },
+  {
+    "model": "Captiva 2 va 3",
+    "engine_oil_volume_raw": "2.4 = 4,5 litr. 3.0 = 6 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "45 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "ATF 6"
+  },
+  {
+    "model": "Captiva 4",
+    "engine_oil_volume_raw": "2.4 = 4,5 litr",
+    "gearbox_volume_raw": "7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "50 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "ATF 6"
+  },
+  {
+    "model": "Captiva 5",
+    "engine_oil_volume_raw": "1,5 TURBINA-4,5LI TR",
+    "gearbox_volume_raw": "6 - 6,5 litr CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "95 000",
+    "engine_oil_type_raw": "5w30,5w40, 10w40",
+    "gearbox_oil_type_raw": "ATF 6"
+  },
+  {
+    "model": "Kia k5",
+    "engine_oil_volume_raw": "2.0 = 4 litr 2.5 = 6 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "0w20,5w30",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Kia Sorento",
+    "engine_oil_volume_raw": "2,5-3,5 matorligi-6 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "0w20,5w30",
+    "gearbox_oil_type_raw": "ATF6"
+  },
+  {
+    "model": "Kia K8",
+    "engine_oil_volume_raw": "3,5 = 6 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Kia Sonet",
+    "engine_oil_volume_raw": "1.5 = 3,5 / 3,8 litr",
+    "gearbox_volume_raw": "6 litr CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": "CVT"
+  },
+  {
+    "model": "Kia Sportage",
+    "engine_oil_volume_raw": "2 motorli-4,5 litr 2,5 motorli-6 litr",
+    "gearbox_volume_raw": "6 - 7 litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "0w20,5w30",
+    "gearbox_oil_type_raw": "ATF esp4"
+  },
+  {
+    "model": "Kia Seltos",
+    "engine_oil_volume_raw": "4 litr",
+    "gearbox_volume_raw": "6 litr CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "0w20,5w30",
+    "gearbox_oil_type_raw": "CVT"
+  },
+  {
+    "model": "Hyundai santafe",
+    "engine_oil_volume_raw": "2,4 = 4,5 litr 2,5 = 6 litr 3,5 = 6 litr",
+    "gearbox_volume_raw": "6 - 7 litr",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": "ATF6CVT"
+  },
+  {
+    "model": "Hyundai I 30",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Hyundai Tucson",
+    "engine_oil_volume_raw": "2,0 = 4,5 litr 2,5 = 6 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Hyundai Elantra",
+    "engine_oil_volume_raw": "1,5 = 3,5 litr 1,6 = 3,5 litr 2,0 = 4,5 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Hyundai Creta",
+    "engine_oil_volume_raw": "1,6 = 3,5 litr 2,0 = 4,5 litr",
+    "gearbox_volume_raw": "6 - 7 litr ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Tiggo 2 Pro",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "6L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Tiggo 4 Pro",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Tiggo 7 Pro",
+    "engine_oil_volume_raw": "5 litr",
+    "gearbox_volume_raw": "6 L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Tiggo 8 Pro",
+    "engine_oil_volume_raw": "4,5 L",
+    "gearbox_volume_raw": "6 L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Tiggo 9",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery ARRIZO 6 PRO",
+    "engine_oil_volume_raw": "5 litr",
+    "gearbox_volume_raw": "6 L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Tahoe",
+    "engine_oil_volume_raw": "5,2 = 7,5 litr",
+    "gearbox_volume_raw": "9 L ATF-8",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Equinox",
+    "engine_oil_volume_raw": "2.0 = 5,5 litr",
+    "gearbox_volume_raw": "7L ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Traverse",
+    "engine_oil_volume_raw": "3,6 = 6 litr",
+    "gearbox_volume_raw": "7L ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Monza 320T",
+    "engine_oil_volume_raw": "1,5 ATMO 3,5L",
+    "gearbox_volume_raw": "4L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Monza 330T",
+    "engine_oil_volume_raw": "1,3 turbo = 5 litr",
+    "gearbox_volume_raw": "7L ATF6",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Skoda Kodiak",
+    "engine_oil_volume_raw": "5,5 litr",
+    "gearbox_volume_raw": "5,5 L DSG",
+    "reductor_volume_raw": "2,5 litr Castrol-D2",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "5w30",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Song Plus ➤ DM-i (gibrid) ➤ EV (elektro)",
+    "engine_oil_volume_raw": "3,5L MOTORGA",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,2-3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Song Pro ➤ DM-i ➤ ICE (eski)",
+    "engine_oil_volume_raw": "3,5L MOTORGA",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Song L ➤ EV ➤ DM-i",
+    "engine_oil_volume_raw": "3,5 litr",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Yuan Plus (Atto3) ➤ EV",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Yuan Up ➤ EV (reduktorli)",
+    "engine_oil_volume_raw": "3,5L MOTORGA",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Qin Plus ➤ DM-i ➤ EV",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L OLD 1L ORQA EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Han ➤ EV ➤ DM-p (AWD gibrid)",
+    "engine_oil_volume_raw": "3,5L MOTORGA",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "OLDI 1L ORQA 2L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Dolphin",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Seal",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Seal U",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD E2",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BYD Destroyer 05(Champion)",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,5 L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Voyah Free ➤ Hybrid (motorli) ➤ Full electric",
+    "engine_oil_volume_raw": "4L",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,5L-3,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Voyah Passion",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Voyah Dream",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor T03",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor C01",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor C11",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor C10",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor B10",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Leapmotor D19",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,3L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Dongfeng Eπ 007",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Dongfeng E5",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Dongfeng 008",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Dongfeng Aeolus Shine",
+    "engine_oil_volume_raw": "4L",
+    "gearbox_volume_raw": "4L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Zeekr 001",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,2L ORQA 2L OLD ATF6",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Zeekr X",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,2L ORQA 2L OLD ATF6",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Aito M9 ➤ Range extender(gibrid)",
+    "engine_oil_volume_raw": "4L",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Jetour Dashing",
+    "engine_oil_volume_raw": "4,5L",
+    "gearbox_volume_raw": "5,5L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Jetour X90",
+    "engine_oil_volume_raw": "5L",
+    "gearbox_volume_raw": "6L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Haval H6",
+    "engine_oil_volume_raw": "4,5L-6L",
+    "gearbox_volume_raw": "5L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Haval Jolion",
+    "engine_oil_volume_raw": "4,5L",
+    "gearbox_volume_raw": "5L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Haval M6",
+    "engine_oil_volume_raw": "4,5L",
+    "gearbox_volume_raw": "5L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Bestune T55",
+    "engine_oil_volume_raw": "4L",
+    "gearbox_volume_raw": "4L DCT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Lada Vesta Cross",
+    "engine_oil_volume_raw": "4L-4,5L",
+    "gearbox_volume_raw": "5,5L CVT",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Hongqi EQM5",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5 L ATF6",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "GAC Aion V",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "0,7 L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "BMW i3, i4, i5.",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2,5 L 75W-90",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Volkswagen Caddy",
+    "engine_oil_volume_raw": "4 L",
+    "gearbox_volume_raw": "2 L 75W-85",
+    "reductor_volume_raw": "",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
+  }
+]

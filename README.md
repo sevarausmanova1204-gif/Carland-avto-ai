@@ -1,72 +1,123 @@
-# 🚗 Carland AI Telegram Bot & Mashina Moylari Kalkulyatori
+# Carland Telegram Bot
 
-Carland avtoservis va do'koni uchun yaratilgan, sun'iy intellekt (**Google Gemini AI**) bilan ishlaydigan va avtomobillarga ketadigan moylarni aniq hisoblab beruvchi Telegram bot.
+Mashinalar uchun moy hisoblash, mahsulotlar katalogi, filiallar va AI yordamchidan
+iborat Telegram bot. Ma'lumotlar bazasi Carland kompaniyasining PDF/Excel
+fayllaridan avtomatik chiqarib olingan (`data/` papkasiga qarang).
 
----
+## Imkoniyatlari
 
-## 🌟 Asosiy Imkoniyatlari
+1. **🛢 Moy hisoblash** — mashina rusumini tanlaysiz, bot motor va
+   karobka/reduktor uchun kerakli moy hajmini, tavsiya etilgan moy turini va
+   ombordagi mos mahsulotlarni **narxi bilan (litriga ko'paytirilgan holda)**
+   ko'rsatadi.
+2. **🔧 Mahsulotlar** — havo/moy/salon/yoqilg'i filtri, avtokimyo, ehtiyot
+   qismlar, akkumulyator, antifriz, svecha, shina — mashina rusumi bo'yicha
+   qidiriladi.
+3. **🖼 Infografika** — har bir mashina uchun motor/karobka/reduktor moy
+   ma'lumotlarini ko'rsatuvchi avtomatik chiziladigan sxematik rasm (PNG).
+4. **📍 Filiallar** — 15 ta filial manzili + Yandex Xaritada ochish tugmasi.
+5. **🎉 Aksiyalar** — faol aksiya paketlari (Shell, Korelux, Lukoil va h.k.).
+6. **💬 AI yordamchi** — Claude yoki OpenAI orqali erkin savol-javob
+   (bazadagi aniq raqamlar asosida, taxmin qilib javob bermaydi).
 
-1. **🧮 Avtomobillar uchun Moy Hisoblagich (Kalkulyator):**
-   - 60 dan ortiq avtomobil modellari (Chevrolet, Kia, Hyundai, BYD, Chery, Changan, Haval, Jetour, Zeekr, Leapmotor, Dongfeng, Voyah, BMW, VW, Skoda va boshqalar);
-   - Mator moyi hajmi (litrda) va tavsiya etiladigan moy turi (0w20, 5w30, 5w40, 10w40);
-   - Karobka moyi hajmi va turi (Mexanika 75w90, Avtomat ATF6, CVT variator, DCT, DSG);
-   - Reduktor moyi hajmi (Elektromobil va gibridlar uchun EV moylar);
-   - Filtr almashtirish oralig'i (km da);
-   - Do'konda mavjud mashhur moylar (Shell, Castrol, Liqui Moly, Valvoline, Aveno, XTeer, ZIC) narxlarining ko'rinishi.
+## O'rnatish
 
-2. **💬 Carland AI Maslahatchi:**
-   - Carland ning 15 ta filiali manzillari, shaharlari va yo'l mo'ljallari (Toshkent, Samarqand, Buxoro, Qarshi, Chirchiq, Olmaliq va boshqalar);
-   - Ehtiyot qismlar, svechalar (GM, Bosch, NGK, Torch, Irizon), filtrlar (moy, havo, salon, karobka, yonilg'i), tormoz kolodkalari (Fourgreen, Hardron, Brembo), antifriz va akkumulyatorlar bo'yicha to'liq ma'lumot;
-   - Maxsus terminlar (moy filtr -> Oil filter, salon filtr -> Cabin filter, pampers, babina va h.k.);
-   - Suhbat tarixini eslab qolish (kontekst) va istalgan payt tozalash (`/reset`).
-
-3. **📱 Qulay Foydalanuvchi Interfeysi:**
-   - Asosiy menyu (ReplyKeyboardMarkup): `🧮 Moy hisoblash`, `📍 Carland filiallari`, `💬 AI Maslahatchi`, `⚡ Tezkor narxlar`, `📞 Biz haqimizda & Aloqa`;
-   - Interaktiv Inline menyular (Markalar -> Modellar -> Natija);
-   - Matnli qidiruv (masalan: *"Cobaltga qancha moy ketadi?"*, *"BYD Song Plus matori"* deb yozsa ham avtomatik taniy oladi).
-
----
-
-## 📁 Loyiha Fayllari
-
-```text
-carland_bot/
-├── config.py             # Muhit o'zgaruvchilari (BOT_TOKEN, GEMINI_API_KEY)
-├── car_data.py           # 60+ avtomobil texnik ma'lumotlar bazasi
-├── carland_knowledge.py  # 15 ta filial, maxsus terminlar va narxlar
-├── calculator.py         # Moy hisoboti formatlovchi kalkulyator
-├── ai_service.py         # Google Gemini AI integratsiyasi va fallback tizimi
-├── keyboards.py          # Reply va Inline tugmalar menyusi
-├── handlers.py           # Telegram handlerlari (buyruqlar, xabarlar, callbacklar)
-├── main.py               # Botni ishga tushiruvchi asosiy modul
-├── requirements.txt      # Kutubxonalar ro'yxati
-└── .env.example          # Namuna konfiguratsiya
-```
-
----
-
-## 🚀 Ishga Tushirish Bo'yicha Qo'llanma
-
-### 1. Kutubxonalarni o'rnatish:
-Loyiha virtual muhiti (`venv`) orqali:
 ```bash
-source ../venv/bin/activate
+cd carland_bot
+python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+cp .env.example .env   # keyin .env faylni to'ldiring
 ```
 
-### 2. Sozlash (`.env`):
-`.env` faylida quyidagi kalitlar to'ldirilgan bo'lishi kerak:
-```env
-BOT_TOKEN=sizning_bot_tokeningiz
-GEMINI_API_KEY=AIzaSy...sizning_gemini_api_kalitingiz
-```
-*(Agar asosiy `n28/.env` faylida ushbu kalitlar allaqachon mavjud bo'lsa, bot avtomatik ravishda ulardan foydalanadi).*
+`.env` faylida to'ldirish kerak:
 
-### 3. Botni ishga tushirish:
+- `TELEGRAM_BOT_TOKEN` — Telegram'da [@BotFather](https://t.me/BotFather) ga
+  yozib, `/newbot` orqali oling.
+- `AI_PROVIDER` — `anthropic` yoki `openai`.
+- `ANTHROPIC_API_KEY` — https://console.anthropic.com/settings/keys
+- `OPENAI_API_KEY` — https://platform.openai.com/api-keys
+
+## Ishga tushirish
+
 ```bash
 python3 main.py
 ```
-yoki venv orqali:
+
+## Ma'lumotlar bazasini qayta yig'ish
+
+Baza tayyor holda `data/carland.db` sifatida keladi. Agar manba fayllar
+(narxlar, yangi mashina rusumlari) yangilansa:
+
 ```bash
-../venv/bin/python3 main.py
+cd data
+pip install -r requirements.txt   # pymupdf, pandas, openpyxl
+python3 extract_raw.py            # PDF/XLSX -> xom JSON fayllar
+python3 build_database.py         # xom JSON -> carland.db
+```
+
+Yangi manba fayllarni `data/raw/` papkasiga joylashtiring va
+`extract_raw.py` ichidagi fayl nomlarini moslang.
+
+## Ma'lumotlar tuzilishi va cheklovlar (MUHIM)
+
+Manba PDF 246 sahifadan iborat bo'lib, Excel'dan PDF'ga eksport qilingan —
+bu ba'zi joylarda formatlash nomukammalliklariga olib kelgan. Quyidagilarga
+e'tibor bering:
+
+- **Moy jadvali** (83 ta asosiy qator, ba'zi ko'p-dvigatelli modellar
+  variantlarga bo'lingandan keyin 92 ta): mashina rusumi, motor/karobka/
+  reduktor moy hajmi, moy turi va almashtirish oralig'i **to'g'ridan-to'g'ri
+  manba jadvalidan** olingan. Ba'zi yangi/elektromobil rusumlari (BYD,
+  Zeekr, Voyah, Leapmotor va h.k.) uchun manba jadvalida ayrim maydonlar
+  (masalan almashtirish oralig'i) bo'sh — bot bunday hollarda "ma'lumot
+  yo'q" deb ko'rsatadi, taxmin qilib raqam to'qib chiqarmaydi.
+- **Mahsulotlar katalogi** (3900+ dona): filtr/moy/ehtiyot qism nomlari
+  katalogda **faqat mashina modeli nomi bilan** yozilgan (masalan
+  "AIR FILTER ... SORENTO", "CF COBALT, MALIBU..."), marka ko'rsatilmagan.
+  Bot mashina rusumidan kalit so'z (masalan "Kia Sorento" → "sorento")
+  ajratib, shu so'z bo'yicha qidiradi. **Bu — aniq artikul bo'yicha emas,
+  kalit so'z bo'yicha moslashtirish**, shuning uchun bot bir nechta variant
+  ko'rsatadi va mosligini nomidan tekshirish tavsiya etiladi (`bot/matching.py`
+  da batafsil izoh bor).
+- **Antifriz**: manbada 3 ta brend (VALESCO, FELIX ROSSIYA, ZITRON — oxirgisi
+  faqat qizil rangda) bir xil mashina ro'yxati bilan alohida narxlangan;
+  bularning barchasi `brand` ustuni bilan alohida saqlangan.
+- **Infografika**: bu haqiqiy mashina/detal fotosi EMAS — texnik
+  ma'lumotlarni (hajm, moy turi) ko'rsatadigan avtomatik chiziladigan
+  sxematik diagramma. Haqiqiy detal fotosi kerak bo'lsa, `assets/`
+  papkasiga rasm qo'shib, `bot/infographic.py` ni shunga moslab
+  o'zgartirish mumkin.
+- **Yandex Xarita**: filiallar uchun aniq GPS koordinatasi manbada yo'q
+  (faqat matnli yo'nalish tavsifi bor), shuning uchun bot Yandex Maps'da
+  manzil bo'yicha **qidiruv havolasi** yaratadi (API kalitsiz ishlaydi).
+  Aniqroq bo'lishi uchun har bir filial uchun `data/branches_structured.json`
+  ga haqiqiy GPS koordinatalarini (lat/lon) qo'shish tavsiya etiladi.
+
+## Loyiha tuzilishi
+
+```
+carland_bot/
+  main.py                    # bot kirish nuqtasi
+  requirements.txt
+  .env.example
+  bot/
+    config.py                # sozlamalar (.env dan o'qiydi)
+    db.py                    # SQLite so'rovlari
+    matching.py               # mashina nomidan qidiruv kalit so'zi
+    format.py                 # Telegram xabar matnlarini shakllantirish
+    infographic.py             # PNG infografika generatori
+    maps.py                    # Yandex Maps havola generatori
+    ai.py                      # Claude/OpenAI integratsiyasi
+    keyboards.py                # inline tugmalar
+    handlers/
+      start.py                 # /start
+      callbacks.py              # asosiy navigatsiya
+      text.py                   # qidiruv va AI erkin matn rejimi
+  data/
+    raw/                       # manba PDF/XLSX fayllar
+    extract_raw.py              # 1-qadam: PDF/XLSX -> xom JSON
+    build_database.py            # 2-qadam: xom JSON -> carland.db
+    carland.db                   # yakuniy SQLite baza
+    *_raw.json                   # oraliq (tekshirish/audit uchun saqlangan)
+  assets/fonts/                # DejaVu Sans (ochiq litsenziyali shrift)
 ```

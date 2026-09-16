@@ -1,0 +1,208 @@
+from . import config
+
+
+def money(n) -> str:
+    if n is None:
+        return "narx ko'rsatilmagan"
+    return f"{int(n):,}".replace(",", " ") + " so'm"
+
+
+def oil_calc_text(car: dict) -> str:
+    lines = [f"🚗 *{car['model']}*", ""]
+
+    lines.append("🔧 *Motor moyi*")
+    if car["engine_oil_liters"]:
+        lines.append(f"Hajmi: {car['engine_oil_liters']} litr")
+        if car["engine_oil_types"]:
+            lines.append(f"Tavsiya etilgan tur: {', '.join(car['engine_oil_types'])}")
+        lines.append(f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['motor']}")
+    else:
+        lines.append("Hajmi: bazada ko'rsatilmagan (elektromotor bo'lishi mumkin)")
+    lines.append("")
+
+    lines.append("⚙️ *Karobka / Transmissiya*")
+    lines.append(car["gearbox_kind"] or "Turi ko'rsatilmagan")
+    if car["gearbox_liters"]:
+        lines.append(f"Hajmi: {car['gearbox_liters']} litr")
+        if car["gearbox_oil_types"]:
+            lines.append(f"Tavsiya etilgan tur: {', '.join(car['gearbox_oil_types'])}")
+        lines.append(f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['gearbox']}")
+
+    if car["reductor_liters"]:
+        lines.append("")
+        lines.append("🛞 *Reduktor*")
+        lines.append(f"Hajmi: {car['reductor_liters']} litr")
+        if car.get("reductor_oil_types"):
+            lines.append(f"Tavsiya etilgan tur: {', '.join(car['reductor_oil_types'])}")
+        lines.append(f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['reductor']}")
+
+    return "\n".join(lines)
+
+
+TIER_LABELS = ("🟢 Arzon", "🟡 O'rtacha", "🟠 Qimmat", "🔴 Premium")
+
+
+def _tier_for(index: int, total: int) -> str:
+    if total <= 1:
+        return TIER_LABELS[0]
+    ratio = index / (total - 1)
+    if ratio < 0.25:
+        return TIER_LABELS[0]
+    if ratio < 0.5:
+        return TIER_LABELS[1]
+    if ratio < 0.75:
+        return TIER_LABELS[2]
+    return TIER_LABELS[3]
+
+
+def _pick_representatives(products: list[dict], per_tier: int = 4):
+    """To'liq (deduplangan, narx bo'yicha o'sish tartibidagi) ro'yxatdan har
+    bir narx darajasidan (arzon/o'rtacha/qimmat/premium) bir nechta namuna
+    tanlaydi — foydalanuvchiga 50+ ta o'xshash qatorni emas, har darajadan
+    yetarlicha variant ko'rsatish uchun (avval juda kam — atigi 4-5 ta —
+    ko'rsatilardi, endi ro'yxat kichik bo'lsa HAMMASI, katta bo'lsa har
+    darajadan bir nechtadan namuna beriladi)."""
+    n = len(products)
+    if n <= 16:
+        # Kichik ro'yxat — sun'iy qisqartirmasdan hammasini ko'rsatamiz
+        return [(_tier_for(i, n), p) for i, p in enumerate(products)]
+    buckets = {0: [], 1: [], 2: [], 3: []}
+    for i, p in enumerate(products):
+        tier_idx = TIER_LABELS.index(_tier_for(i, n))
+        buckets[tier_idx].append(p)
+    out = []
+    for idx in range(4):
+        for p in buckets[idx][:per_tier]:
+            out.append((TIER_LABELS[idx], p))
+    return out
+
+
+def oil_products_text(title: str, liters: float, products: list[dict], filter_price: int | None = None) -> str:
+    if not products:
+        return f"*{title}*\n\nAfsuski, bu tur moy uchun bazada mos mahsulot topilmadi."
+    total_found = len(products)
+    lines = [
+        f"*{title}* — kerakli hajm: {liters} litr",
+        f"_(jami {total_found} xil variant topildi, har narx darajasidan namuna ko'rsatilmoqda)_",
+        "",
+    ]
+    for tier, p in _pick_representatives(products):
+        oil_total = p["price"] * liters
+        pack = f" ({p['pack_size']})" if p.get("pack_size") else ""
+        entry = f"{tier} — *{p['name']}*{pack}\n  {money(p['price'])}/litr × {liters} litr = *{money(oil_total)}*"
+        if filter_price is not None:
+            grand = oil_total + filter_price
+            entry += f"\n  + moy filtri {money(filter_price)} = *{money(grand)}* (to'liq almashtirish)"
+        lines.append(entry)
+    return "\n\n".join(lines)
+
+
+def filter_products_text(title: str, products: list[dict]) -> str:
+    if not products:
+        return f"*{title}*\n\nBazada mos nom topilmadi. Filialdan so'rab ko'ring."
+    lines = [f"*{title}* — topilgan variantlar:", "_(nomi mos kelishini tekshirib tanlang)_", ""]
+    for p in products[:12]:
+        lines.append(f"• {p['name']} — {money(p['price'])}")
+    return "\n".join(lines)
+
+
+def tires_text(rows: list[dict]) -> str:
+    if not rows:
+        return "Bazada bu model uchun shina o'lchami topilmadi."
+    lines = ["🛞 *Shina o'lchamlari va narxlari*", ""]
+    for r in rows:
+        lines.append(f"*{r['model']}* ({r['years']})")
+        for s in r["sizes"]:
+            lines.append(f"\n_{s['size']}_")
+            if s["options"]:
+                for opt in s["options"]:
+                    lines.append(f"  • {opt['name']} — {money(opt['price'])}")
+            else:
+                lines.append("  (bu o'lcham uchun bazada narx topilmadi)")
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
+def batteries_text(data: dict) -> str:
+    exact = data.get("exact") or []
+    estimated = data.get("estimated") or []
+    target_ah = data.get("target_ah")
+
+    if not exact and not estimated:
+        return "Bazada akkumulyator ma'lumoti topilmadi."
+
+    lines = ["🔋 *Akkumulyator variantlari*", ""]
+
+    if exact:
+        lines.append("✅ *Aniq mos keladigan variantlar:*")
+        for r in exact:
+            ah = f" — {r['ah']}Ah" if r.get("ah") else ""
+            lines.append(f"• {r['name']}{ah} ({r['brand']}) — {money(r['price'])}")
+        lines.append("")
+
+    if estimated:
+        header = "🧭 *Taxminiy tavsiya" + (f" (~{target_ah}Ah)*" if target_ah else "*")
+        lines.append(header)
+        lines.append(
+            "_(bazada shu model to'g'ridan-to'g'ri ko'rsatilmagan, shuning uchun "
+            "dvigatel hajmiga qarab yaqin amperdagi variantlar taklif qilinmoqda — "
+            "o'rnatishdan oldin filialda o'lchami/qutb joylashuvini (+/-) tekshirtiring)_"
+        )
+        for r in estimated:
+            ah = f" — {r['ah']}Ah" if r.get("ah") else ""
+            lines.append(f"• {r['name']}{ah} ({r['brand']}) — {money(r['price'])}")
+
+    return "\n".join(lines)
+
+
+def antifreeze_text(rows: list[dict]) -> str:
+    if not rows:
+        return "Bazada bu model uchun antifriz ma'lumoti topilmadi."
+    lines = ["❄️ *Antifriz variantlari*", ""]
+    for r in rows:
+        kok = f" / ko'k: {money(r['summa_kok'])}" if r.get("summa_kok") else ""
+        lines.append(f"• *{r['brand'].split()[0]}* ({r['model']}, {r['liters']} L) — qizil: {money(r['summa_qizil'])}{kok}")
+    return "\n".join(lines)
+
+
+def spark_text(rows: list[dict], product_rows: list[dict] | None = None) -> str:
+    product_rows = product_rows or []
+    if not rows and not product_rows:
+        return "Bazada bu model uchun svecha ma'lumoti topilmadi."
+    lines = ["🔌 *Svecha*", ""]
+    for r in rows:
+        lines.append(f"• {r['model']}: {r['qty']} dona — {money(r['price'])}")
+    for r in product_rows:
+        lines.append(f"• {r['name']} — {money(r['price'])}")
+    return "\n".join(lines)
+
+
+def brake_pads_text(rows: list[dict]) -> str:
+    if not rows:
+        return "Bazada bu model uchun tormoz kolodkasi topilmadi. Filialdan so'rab ko'ring."
+    lines = ["🔩 *Tormoz kolodkalari* — topilgan variantlar:", "_(nomi mos kelishini tekshirib tanlang)_", ""]
+    for r in rows:
+        lines.append(f"• {r['name']} — {money(r['price'])}")
+    return "\n".join(lines)
+
+
+def promo_text(rows: list[dict]) -> str:
+    if not rows:
+        return "Bu model uchun hozircha faol aksiya topilmadi."
+    lines = ["🎉 *Faol aksiya paketlari*", ""]
+    for r in rows:
+        lines.append(f"*{r['package_title']}*")
+        lines.append(f"Moy: {r['oil_liters']} litr — {money(r['oil_price'])}")
+        for k, v in r["details"].items():
+            if v not in (None, "", 0):
+                lines.append(f"  {k}: {v}")
+        lines.append("")
+    return "\n".join(lines).strip()
+
+
+def branch_text(b: dict) -> str:
+    return (
+        f"📍 *{b['name']}* ({b['city']})\n\n"
+        f"Manzil: {b['address']}\n\n"
+        f"Yo'nalish: {b['directions']}"
+    )

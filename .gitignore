@@ -1,11 +1,4 @@
 .env
-venv/
 __pycache__/
 *.pyc
-downloads/
-*.mp4
-*.m4a
-*.mkv
-.DS_Store
-user_languages.json
-Aksiya SENTABR CALL SENTR SENTABR
+.venv/

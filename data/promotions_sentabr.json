@@ -1,0 +1,2650 @@
+{
+  "SVECHA GM": {
+    "title": "GM SVECHALAR",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "SVECHA FIRMA": "autozip OE006T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 35000,
+        "SONI": 3,
+        "USLUGA": 50000,
+        "ITOG": 155000
+      },
+      {
+        "AVTO": "MATIZ BEST",
+        "SVECHA FIRMA": "autozip OE006T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 35000,
+        "SONI": 4,
+        "USLUGA": 60000,
+        "ITOG": 200000
+      },
+      {
+        "AVTO": "DAMAS",
+        "SVECHA FIRMA": "autozip OE006T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 35000,
+        "SONI": 3,
+        "USLUGA": 60000,
+        "ITOG": 165000
+      },
+      {
+        "AVTO": "COBALT",
+        "SVECHA FIRMA": "ACDELCO gm svecha 96990231 orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": 40000,
+        "SONI": 4,
+        "USLUGA": 70000,
+        "ITOG": 230000
+      },
+      {
+        "AVTO": "COBALT",
+        "SVECHA FIRMA": "autozip OE199T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": "130000 komplekti",
+        "SONI": 4,
+        "USLUGA": 70000,
+        "ITOG": 200000
+      },
+      {
+        "AVTO": "LACETTI 1,6-1,8",
+        "SVECHA FIRMA": "autozip OE089T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 70000,
+        "SONI": 4,
+        "USLUGA": 60000,
+        "ITOG": 340000
+      },
+      {
+        "AVTO": "GENTRA",
+        "SVECHA FIRMA": "ACDELCO gm svecha 96990231 orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": 40000,
+        "SONI": 4,
+        "USLUGA": 70000,
+        "ITOG": 230000
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "SVECHA FIRMA": "ACDELCO gm svecha 96990231 orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": 40000,
+        "SONI": 4,
+        "USLUGA": 70000,
+        "ITOG": 230000
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "SVECHA FIRMA": "ACDELCO gm svecha 96990231 orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": 40000,
+        "SONI": 4,
+        "USLUGA": 100000,
+        "ITOG": 260000
+      },
+      {
+        "AVTO": "NEXIA 1  2",
+        "SVECHA FIRMA": "autozip OE006T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 35000,
+        "SONI": 4,
+        "USLUGA": 60000,
+        "ITOG": 200000
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "SVECHA FIRMA": "ACDELCO gm svecha 96990231 orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": 40000,
+        "SONI": 4,
+        "USLUGA": 70000,
+        "ITOG": 230000
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "SVECHA FIRMA": "TORCH iridium QH5RIU13",
+        "GARANTIYA": "10 000 km garantiya",
+        "SVECHA NARXI": 85000,
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 420000
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "SVECHA FIRMA": "AUTOZIP CCH9299",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 200000,
+        "SONI": 6,
+        "USLUGA": 200000,
+        "ITOG": 1400000
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "SVECHA FIRMA": "ACDLECO GM svecha 92220447  orginal",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "1300000 komplekt",
+        "SONI": 6,
+        "USLUGA": 200000,
+        "ITOG": 1500000
+      },
+      {
+        "AVTO": "MALIBU  1",
+        "SVECHA FIRMA": "IRIZON iridium IR38D147",
+        "GARANTIYA": "10 000 km garantiya",
+        "SVECHA NARXI": "245000 komplekti",
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 325000
+      },
+      {
+        "AVTO": "MALIBU  2 turbo",
+        "SVECHA FIRMA": "ACDELCO gm svecha orginal 12681659",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "850000 komplekti",
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 930000
+      },
+      {
+        "AVTO": "MALIBU  2 XL",
+        "SVECHA FIRMA": "ACDELCO gm svecha orginal 55504354",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "750000 komplekti",
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 830000
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "SVECHA FIRMA": "AUTOZIP OE077T10",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": "350000 komplekti",
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 430000
+      },
+      {
+        "AVTO": "TRACKER 2 xitoy",
+        "SVECHA FIRMA": "ACDELCO svecha 24113395",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "485000 komplekti",
+        "SONI": 3,
+        "USLUGA": 60000,
+        "ITOG": 545000
+      },
+      {
+        "AVTO": "TRACKER 2 uzb",
+        "SVECHA FIRMA": "ACDELCO gm svecha orginal 12706611",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "350000 komplekti",
+        "SONI": 3,
+        "USLUGA": 60000,
+        "ITOG": 410000
+      },
+      {
+        "AVTO": "TRAILBLAZER",
+        "SVECHA FIRMA": "AUTOZIP CCH9299",
+        "GARANTIYA": "3 oy",
+        "SVECHA NARXI": 200000,
+        "SONI": 6,
+        "USLUGA": 200000,
+        "ITOG": 1400000
+      },
+      {
+        "AVTO": "TRAVERSE",
+        "SVECHA FIRMA": "faqat spes zakaz asosida",
+        "GARANTIYA": null,
+        "SVECHA NARXI": null,
+        "SONI": 6,
+        "USLUGA": 200000,
+        "ITOG": 200000
+      },
+      {
+        "AVTO": "EQUINOX",
+        "SVECHA FIRMA": "ACDELCO gm svecha orginal 55504354",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "750000 komplekti",
+        "SONI": 4,
+        "USLUGA": 80000,
+        "ITOG": 830000
+      },
+      {
+        "AVTO": "ONIX",
+        "SVECHA FIRMA": "ACDELCO gm svecha orginal 12706611",
+        "GARANTIYA": "servisdan qoyib beriladi boldi garantiya yoq",
+        "SVECHA NARXI": "350000 komplekti",
+        "SONI": 3,
+        "USLUGA": 60000,
+        "ITOG": 410000
+      }
+    ]
+  },
+  "ANTFRIZ UMUMIY": {
+    "title": "VALESCO  UZB ANTFRIZ BOYICHA",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 4,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 320000,
+        "SUMMA KOK": 300000
+      },
+      {
+        "AVTO": "MATIZ BEST",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 4.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 335000,
+        "SUMMA KOK": 310000
+      },
+      {
+        "AVTO": "DAMAS",
+        "BACHOK ANTFREZEE": 50000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 4.5,
+        "USLUGA": 60000,
+        "SUMMA QIZIL": 245000,
+        "SUMMA KOK": 225000
+      },
+      {
+        "AVTO": "COBALT",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 410000,
+        "SUMMA KOK": 385000
+      },
+      {
+        "AVTO": "LACETTI 1,6-1,8",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 440000,
+        "SUMMA KOK": 405000
+      },
+      {
+        "AVTO": "GENTRA",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 440000,
+        "SUMMA KOK": 405000
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "BACHOK ANTFREZEE": 195000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": 380000
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 395000,
+        "SUMMA KOK": 375000
+      },
+      {
+        "AVTO": "NEXIA 1  2",
+        "BACHOK ANTFREZEE": 170000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 420000,
+        "SUMMA KOK": 390000
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": 370000
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 468000,
+        "SUMMA KOK": 435000
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 498000,
+        "SUMMA KOK": 460000
+      },
+      {
+        "AVTO": "MALIBU  1",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 295000,
+        "SUMMA KOK": 265000
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 495000,
+        "SUMMA KOK": 465000
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 455000,
+        "SUMMA KOK": 425000
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 465000,
+        "SUMMA KOK": 435000
+      },
+      {
+        "AVTO": "TRAILBLAZER",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7.5,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 545000,
+        "SUMMA KOK": 510000
+      },
+      {
+        "AVTO": "TRAVERSE",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 325000,
+        "SUMMA KOK": 290000
+      },
+      {
+        "AVTO": "EQUINOX",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 7,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 330000,
+        "SUMMA KOK": 295000
+      },
+      {
+        "AVTO": "ONIX",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": 25000,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 420000,
+        "SUMMA KOK": 395000
+      },
+      {
+        "AVTO": "FELIX ROSSIYA ANTFRIZ BOYICHA",
+        "BACHOK ANTFREZEE": null,
+        "ANTFREZEE  RED": null,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": null,
+        "USLUGA": null,
+        "SUMMA QIZIL": null,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "AVTO",
+        "BACHOK ANTFREZEE": "BACHOK ANTFREZEE",
+        "ANTFREZEE  RED": "ANTFREZEE  RED",
+        "ANTFREZEE BLUE": "ANTFREZEE BLUE",
+        "LITRAJ": "LITRAJ",
+        "USLUGA": "USLUGA",
+        "SUMMA QIZIL": "SUMMA QIZIL",
+        "SUMMA KOK": "SUMMA KOK"
+      },
+      {
+        "AVTO": "MATIZ",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 4,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 360000,
+        "SUMMA KOK": 340000
+      },
+      {
+        "AVTO": "MATIZ BEST",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 4.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 380000,
+        "SUMMA KOK": 360000
+      },
+      {
+        "AVTO": "DAMAS",
+        "BACHOK ANTFREZEE": 50000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 4.5,
+        "USLUGA": 60000,
+        "SUMMA QIZIL": 290000,
+        "SUMMA KOK": 270000
+      },
+      {
+        "AVTO": "COBALT",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 460000,
+        "SUMMA KOK": 435000
+      },
+      {
+        "AVTO": "LACETTI 1,6-1,8",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 510000,
+        "SUMMA KOK": 475000
+      },
+      {
+        "AVTO": "GENTRA",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 510000,
+        "SUMMA KOK": 475000
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "BACHOK ANTFREZEE": 195000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 445000,
+        "SUMMA KOK": 425000
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 440000,
+        "SUMMA KOK": 420000
+      },
+      {
+        "AVTO": "NEXIA 1  2",
+        "BACHOK ANTFREZEE": 170000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 480000,
+        "SUMMA KOK": 450000
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 460000,
+        "SUMMA KOK": 430000
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 533000,
+        "SUMMA KOK": 500000
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 573000,
+        "SUMMA KOK": 535000
+      },
+      {
+        "AVTO": "MALIBU  1",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 360000,
+        "SUMMA KOK": 330000
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 560000,
+        "SUMMA KOK": 530000
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 520000,
+        "SUMMA KOK": 490000
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 530000,
+        "SUMMA KOK": 500000
+      },
+      {
+        "AVTO": "TRAILBLAZER",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7.5,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 620000,
+        "SUMMA KOK": 580000
+      },
+      {
+        "AVTO": "TRAVERSE",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": 360000
+      },
+      {
+        "AVTO": "EQUINOX",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 7,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": 365000
+      },
+      {
+        "AVTO": "ONIX",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 40000,
+        "ANTFREZEE BLUE": 35000,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 470000,
+        "SUMMA KOK": 445000
+      },
+      {
+        "AVTO": "ZITRON ROSSIYA ANTFRIZ FAQAT QIZILI",
+        "BACHOK ANTFREZEE": null,
+        "ANTFREZEE  RED": null,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": null,
+        "USLUGA": null,
+        "SUMMA QIZIL": null,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "AVTO",
+        "BACHOK ANTFREZEE": "BACHOK ANTFREZEE",
+        "ANTFREZEE  RED": "ANTFREZEE  RED",
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": "LITRAJ",
+        "USLUGA": "USLUGA",
+        "SUMMA QIZIL": "SUMMA QIZIL",
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "MATIZ",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 4,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 320000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "MATIZ BEST",
+        "BACHOK ANTFREZEE": 120000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 4.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 335000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "DAMAS",
+        "BACHOK ANTFREZEE": 50000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 4.5,
+        "USLUGA": 60000,
+        "SUMMA QIZIL": 245000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "COBALT",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 410000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "LACETTI 1,6-1,8",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 440000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "GENTRA",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 440000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "BACHOK ANTFREZEE": 195000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 4.5,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 395000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "NEXIA 1  2",
+        "BACHOK ANTFREZEE": 170000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 420000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "BACHOK ANTFREZEE": 150000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6,
+        "USLUGA": 70000,
+        "SUMMA QIZIL": 400000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 468000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "BACHOK ANTFREZEE": 173000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 498000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "MALIBU  1",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 295000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 495000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "BACHOK ANTFREZEE": 180000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 455000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 6.5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 465000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "TRAILBLAZER",
+        "BACHOK ANTFREZEE": 200000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7.5,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 545000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "TRAVERSE",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7.5,
+        "USLUGA": 100000,
+        "SUMMA QIZIL": 325000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "EQUINOX",
+        "BACHOK ANTFREZEE": 0,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 7,
+        "USLUGA": 120000,
+        "SUMMA QIZIL": 330000,
+        "SUMMA KOK": null
+      },
+      {
+        "AVTO": "ONIX",
+        "BACHOK ANTFREZEE": 190000,
+        "ANTFREZEE  RED": 30000,
+        "ANTFREZEE BLUE": null,
+        "LITRAJ": 5,
+        "USLUGA": 80000,
+        "SUMMA QIZIL": 420000,
+        "SUMMA KOK": null
+      }
+    ]
+  },
+  "AKKUMULATOR": {
+    "title": "Емкость АКБ Ah",
+    "rows": [
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET MATIZ MX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DAEWOO TICO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB M42S (40Ah) B19 AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 950000.0,
+        "CHEVROLET DAMAS": "BYD CHAMPION"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD SEAGULL"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD SONG PLUS"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD YUAN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HONGQI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "VOYAH FREE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF54464 44Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 760000.0,
+        "CHEVROLET DAMAS": "CHEVROLET MATIZ BEST"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER 55B24LS 45L AH AKKUM L",
+        "STARTER EX/SOLITE": "STARTER EX",
+        "620000.0": 850000.0,
+        "CHEVROLET DAMAS": "CHANGAN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DONGFENG EP008"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "GEELY GEOMERTY"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HONQI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "SHINERAY X30L"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER 55B24RS 45R AH  AKKUM   R",
+        "STARTER EX/SOLITE": "STARTER EX",
+        "620000.0": 850000.0,
+        "CHEVROLET DAMAS": "AION EV"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "AIQAR ARRIZO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "AIQAR EQ7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF55066 50Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 810000.0,
+        "CHEVROLET DAMAS": "AEOLUS HUGE DONGFENG"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET COBALT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET SPARK"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB 50Ah AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 1095000.0,
+        "CHEVROLET DAMAS": "BMW I3"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD CHAMPION"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD SONG PLUS"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BYD YUAN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "FENGON 508"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HENGCHI 5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "VOLKSWAGEN ID4"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "VOLKSWAGEN ID6"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB N55S 50Ah B24 AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 1060000.0,
+        "CHEVROLET DAMAS": "CHANGAN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DONGFENG EP008"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HONQI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TESLA MODEL 3"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TESLA MODEL Y"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE AGM 60 AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 2040000.0,
+        "CHEVROLET DAMAS": "CHEVROLET BOLT EV"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET COBALT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HAVAL M6"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI ACCENT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI ELANTRA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA SELTOS"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA SPORTAGE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF 60AL 60Ah AKKUM      L",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 855000.0,
+        "CHEVROLET DAMAS": "AEOLUS HUGE DONGFENG"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHERRY TIGGO 7 PRO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET COBALT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET NEXIA 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HAVAL JOLION"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF 60AR 60Ah AKKUM    R",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 855000.0,
+        "CHEVROLET DAMAS": "CHEVROLET GENTRA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET LACETTI 1.8"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET LACETTI1.5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET NEXIA 3"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB 60Ah AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 1260000.0,
+        "CHEVROLET DAMAS": "CHERRY ARRIZO 6 PRO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET BOLT EV"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET COBALT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET NEXIA 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI ACCENT"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI ELANTRA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA SELTOS"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA SPORTAGE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "SWM G05 PRO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "VARTA AKKUMULYATOR  MF56219   D43  62 AH  R",
+        "STARTER EX/SOLITE": "VARTA",
+        "620000.0": 880000.0,
+        "CHEVROLET DAMAS": "AEOLUS HUGE DONGFENG"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "JETOUR X70 restyling"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "SWM G05 PRO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE AGM 70 AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 2215000.0,
+        "CHEVROLET DAMAS": "AUDI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BAW M7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BMW"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET CAPTIVA 2/3/4"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET EQUINOX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET MALIBU 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET ONIX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRACKER 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HAVAL DARGO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI SONATA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA K5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES-BENZ"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "VOLVO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB 70Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1425000.0,
+        "CHEVROLET DAMAS": "212 T01"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET CAPTIVA 2/3/4"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET MALIBU 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET ONIX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRACKER 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "FOTON TUNLAND G90"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HONGQI HS5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI SONATA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA K5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF57412 L 74Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1140000.0,
+        "CHEVROLET DAMAS": "CHEVROLET CAPTIVA 2/3/4"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET MALIBU 1"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET ONIX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRACKER 1/2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "JETOUR X70 restyling"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF57413 R 74Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1140000.0,
+        "CHEVROLET DAMAS": "CHEVROLET CAPTIVA 1"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET EPICA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI H1"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "ISUZU АВТОБУСЫ"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "ISUZU D-MAX"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER 105D26 L",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1200000.0,
+        "CHEVROLET DAMAS": "HYUNDAI CRETA"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI PORTER"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "KIA PORTER"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 120"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 150"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF58014 80Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1390000.0,
+        "CHEVROLET DAMAS": "CHEVROLET MALIBU 2"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRAILBLAZER"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE EFB 80 AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1660000.0,
+        "CHEVROLET DAMAS": "CADILAC ESCALADE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TAHOE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRAILBLAZER"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CHEVROLET TRAVERSE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "GMC YUKON"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI PALISADE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HYUNDAI SANTAFE"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA 300"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE UEFB T110 85Ah D31 AKKUM",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 1580000.0,
+        "CHEVROLET DAMAS": "LEXUS 470"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LEXUS 570"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA 200"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 120"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 15O"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER  CMF59042 90 AH AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1360000.0,
+        "CHEVROLET DAMAS": "Старые AUDI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Старые BMW"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Старые MERCEDES-BENZ"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Тракторы"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DFAM-244"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DONGFENG DF-244"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "DONGFENG-300 (2WD)"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "ISUZU грузовики"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "JINMA JM-244"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LIUGONG CLG365A мини-экскаватор"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LONKING CDM306 мини-погрузчик"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "SANY SY16C мини-экскаватор"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "WEITUO TY254"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "XCMG XT740 мини-погрузчик"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "YTO-MF304"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "SOLITE 105D31L  90 Ah",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1330000.0,
+        "CHEVROLET DAMAS": "KIA KARNIVAL"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LEXUS 470"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LEXUS 570"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA 200"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 120"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "TOYOTA PRADO 150"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER  CMF 105D31 R 90AH STARTER",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1360000.0,
+        "CHEVROLET DAMAS": "Японские и Корейские джипы"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "NISSAN PATROL"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER EFB95 95Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1850000.0,
+        "CHEVROLET DAMAS": "AUDI A7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "AUDI Q7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BMW X5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BMW X7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "HAVAL H9"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES-BENZ GALENDWAGEN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES-BENZ W222"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES-BENZ W223"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "VOLVO"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER EFB95 95Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1850000.0,
+        "CHEVROLET DAMAS": "Экскаватор SAMSUNG"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "STARTER CMF60038 100Ah AKKUM",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1450000.0,
+        "CHEVROLET DAMAS": "Каток НАММ HD 12"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Старые AUDI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Старые BMW"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Старые MERCEDES-BENZ"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Трактор МТЗ-82.1"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "Тракторы"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "ISUZU грузовики"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "CMF N100 (100Ah) STARTER EX",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 1565000.0,
+        "CHEVROLET DAMAS": "LIUGONG и другие погрузчики"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "EFB 110 (110Ah) SOLITE 24",
+        "STARTER EX/SOLITE": "SOLITE",
+        "620000.0": 1960000.0,
+        "CHEVROLET DAMAS": "AUDI"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BMW X5"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "BMW X7"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES BENZ GALENDWAGEN"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES BENZ W222"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "MERCEDES BENZ W223"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": "CMF 140 (140Ah) STARTER EX",
+        "STARTER EX/SOLITE": "STARTER EX/SOLITE",
+        "620000.0": 2165000.0,
+        "CHEVROLET DAMAS": "Автокран ZOOMLION QY25V"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "CLASS DOMINATOR 130"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "LIUGONG CLG835"
+      },
+      {
+        "STARTER 40B19R 35Ah AKKUM": null,
+        "STARTER EX/SOLITE": null,
+        "620000.0": null,
+        "CHEVROLET DAMAS": "NEW HOLLAND TD5.110"
+      }
+    ]
+  },
+  "SHELL AKSIYA": {
+    "title": "АКЦИЯ PAKET-5 SHELL ULTRA 475 000 SUM",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "MOY": 3,
+        "MOY SUMMA": 380000,
+        "AIR FILTER BONUS": "VF 303 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "DAMAS",
+        "MOY": 3,
+        "MOY SUMMA": 380000,
+        "AIR FILTER BONUS": "VF 313 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "COBALT",
+        "MOY": 3.5,
+        "MOY SUMMA": 475000,
+        "AIR FILTER BONUS": "VF 312 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "GENTRA",
+        "MOY": 3.5,
+        "MOY SUMMA": 475000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "LACETTI 1,8",
+        "MOY": 3.8,
+        "MOY SUMMA": 500000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "MOY": 3.5,
+        "MOY SUMMA": 475000,
+        "AIR FILTER BONUS": "VF 302 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "MOY": 4,
+        "MOY SUMMA": 520000,
+        "AIR FILTER BONUS": "VF 342 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 1",
+        "MOY": 3,
+        "MOY SUMMA": 360000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,5)",
+        "MOY": 3.5,
+        "MOY SUMMA": 415000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,6)",
+        "MOY": 3.8,
+        "MOY SUMMA": 450000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "MOY": 3.5,
+        "MOY SUMMA": 475000,
+        "AIR FILTER BONUS": "VF 301 BONUS",
+        "SALON FILTER": "CF 401 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "MOY": 4.5,
+        "MOY SUMMA": 635000,
+        "AIR FILTER BONUS": "VF 324 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "MOY": 6,
+        "MOY SUMMA": 800000,
+        "AIR FILTER BONUS": "VF 325 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU 1",
+        "MOY": 5,
+        "MOY SUMMA": 685000,
+        "AIR FILTER BONUS": "AUTOZIP CAC 070 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 007 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "MOY": 5,
+        "MOY SUMMA": 700000,
+        "AIR FILTER BONUS": "VF 322 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "MOY": 4,
+        "MOY SUMMA": 580000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "MOY": 4.5,
+        "MOY SUMMA": 620000,
+        "AIR FILTER BONUS": "VF 314 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 006 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "ONIX",
+        "MOY": 4,
+        "MOY SUMMA": 580000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "VITA MOBILE OYNA SUVI": "BONUS",
+        "OSVIJITEL": "BONUS"
+      }
+    ]
+  },
+  "KORELUX AKSIYA": {
+    "title": "АКЦИЯ PAKET-1 KORELUX X500 5W30 10W40 280 000 SUM",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "MOY": 3,
+        "MOY SUMMA": 240000,
+        "AIR FILTER BONUS": "VF 303 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS"
+      },
+      {
+        "AVTO": "DAMAS",
+        "MOY": 3,
+        "MOY SUMMA": 240000,
+        "AIR FILTER BONUS": "VF 313 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS"
+      },
+      {
+        "AVTO": "COBALT",
+        "MOY": 3.5,
+        "MOY SUMMA": 280000,
+        "AIR FILTER BONUS": "VF 312 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "GENTRA",
+        "MOY": 3.5,
+        "MOY SUMMA": 280000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "LACETTI 1,8",
+        "MOY": 3.8,
+        "MOY SUMMA": 304000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "MOY": 3.5,
+        "MOY SUMMA": 280000,
+        "AIR FILTER BONUS": "VF 302 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "MOY": 4,
+        "MOY SUMMA": 320000,
+        "AIR FILTER BONUS": "VF 342 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 1",
+        "MOY": 3,
+        "MOY SUMMA": 240000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,5)",
+        "MOY": 3.5,
+        "MOY SUMMA": 280000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,6)",
+        "MOY": 3.8,
+        "MOY SUMMA": 304000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "MOY": 3.5,
+        "MOY SUMMA": 280000,
+        "AIR FILTER BONUS": "VF 301 BONUS",
+        "SALON FILTER": "CF 401 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "АКЦИЯ PAKET-3 KORELUX ATF VI MINHO ATF VI 750 000 SUM",
+        "MOY": null,
+        "MOY SUMMA": null,
+        "AIR FILTER BONUS": null,
+        "SALON FILTER": null,
+        "MOY FILTER": null
+      },
+      {
+        "AVTO": "AVTO",
+        "MOY": "MOY",
+        "MOY SUMMA": "MOY SUMMA",
+        "AIR FILTER BONUS": "VAZDUSH FILTER",
+        "SALON FILTER": "SALON FILTER",
+        "MOY FILTER": "DELFIN SOCHIQ"
+      },
+      {
+        "AVTO": "COBALT",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 312  BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "GENTRA",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 301 BONUS",
+        "SALON FILTER": "CF 401 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 326 BONUS",
+        "SALON FILTER": "CF 448  BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 325 BONUS",
+        "SALON FILTER": "CF 448  BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 322 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "ONIX",
+        "MOY": 7.5,
+        "MOY SUMMA": 750000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "АКЦИЯ PAKET-7 MINHO 0W20",
+        "MOY": null,
+        "MOY SUMMA": null,
+        "AIR FILTER BONUS": null,
+        "SALON FILTER": null,
+        "MOY FILTER": null
+      },
+      {
+        "AVTO": "AVTO",
+        "MOY": "MOY",
+        "MOY SUMMA": "MOY SUMMA",
+        "AIR FILTER BONUS": "MOY FILTER",
+        "SALON FILTER": "DELFIN SOCHIQ",
+        "MOY FILTER": "OSVIJITEL"
+      },
+      {
+        "AVTO": "COBALT",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "MF 002  BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU",
+        "MOY": 5,
+        "MOY SUMMA": 600000,
+        "AIR FILTER BONUS": "MF 048  BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER",
+        "MOY": 4,
+        "MOY SUMMA": 480000,
+        "AIR FILTER BONUS": "MF 048  BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "ONIX",
+        "MOY": 4,
+        "MOY SUMMA": 480000,
+        "AIR FILTER BONUS": "MF 048  BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "MONZA",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "GM MONZA OIL BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "BYD",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "KOR TEC 5737 OIL BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "DEEPAL S07",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "MF 003 BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "LEAPMATOR",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "MF 003 BONUS",
+        "SALON FILTER": "BONUS",
+        "MOY FILTER": "BONUS"
+      }
+    ]
+  },
+  "LUKOIL AKSIYA": {
+    "title": "LUKOIL GENESIS UNIVERSAL  10W40 SN/CF",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "MOY": 3,
+        "MOY SUMMA": 170000,
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "DAMAS",
+        "MOY": 3,
+        "MOY SUMMA": 170000,
+        "MOY FILTER": "BONUS"
+      },
+      {
+        "AVTO": "LABO",
+        "MOY": 3,
+        "MOY SUMMA": 170000,
+        "MOY FILTER": "BONUS"
+      }
+    ]
+  },
+  "HYUNDAI AKSIYA": {
+    "title": "АКЦИЯ PAKET-2 HYUNDAI G700 - KORELUX X-700 5W30 5W40 10W40 350 000 SUM",
+    "rows": [
+      {
+        "AVTO": "MATIZ",
+        "MOY": 3,
+        "MOY SUMMA": 300000,
+        "AIR FILTER BONUS": "VF 303 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS"
+      },
+      {
+        "AVTO": "DAMAS",
+        "MOY": 3,
+        "MOY SUMMA": 300000,
+        "AIR FILTER BONUS": "VF 313 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 003 BONUS"
+      },
+      {
+        "AVTO": "COBALT",
+        "MOY": 3.5,
+        "MOY SUMMA": 350000,
+        "AIR FILTER BONUS": "VF 312 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "GENTRA",
+        "MOY": 3.5,
+        "MOY SUMMA": 350000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "LACETTI 1,8",
+        "MOY": 3.8,
+        "MOY SUMMA": 380000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "MOY": 3.5,
+        "MOY SUMMA": 350000,
+        "AIR FILTER BONUS": "VF 302 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "MOY": 4,
+        "MOY SUMMA": 400000,
+        "AIR FILTER BONUS": "VF 342 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 1",
+        "MOY": 3,
+        "MOY SUMMA": 300000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,5)",
+        "MOY": 3.5,
+        "MOY SUMMA": 350000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,6)",
+        "MOY": 3.8,
+        "MOY SUMMA": 380000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS"
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "MOY": 3.5,
+        "MOY SUMMA": 350000,
+        "AIR FILTER BONUS": "VF 301 BONUS",
+        "SALON FILTER": "CF 401 BONUS",
+        "MOY FILTER": "MF 002 BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "MOY": 4.5,
+        "MOY SUMMA": 450000,
+        "AIR FILTER BONUS": "VF 324 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "MOY": 6,
+        "MOY SUMMA": 600000,
+        "AIR FILTER BONUS": "VF 325 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS"
+      },
+      {
+        "AVTO": "MALIBU 1",
+        "MOY": 5,
+        "MOY SUMMA": 500000,
+        "AIR FILTER BONUS": "AUTOZIP CAC 070 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 007 BONUS"
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "MOY": 5,
+        "MOY SUMMA": 500000,
+        "AIR FILTER BONUS": "VF 322 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 048 BONUS"
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "MOY": 4,
+        "MOY SUMMA": 400000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS"
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "MOY": 4.5,
+        "MOY SUMMA": 450000,
+        "AIR FILTER BONUS": "VF 314 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 006 BONUS"
+      },
+      {
+        "AVTO": "ONIX",
+        "MOY": 4,
+        "MOY SUMMA": 400000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS"
+      }
+    ]
+  },
+  "AVENO DEXOS 2 AKSIYA": {
+    "title": "АКЦИЯ PAKET-6 AVENO DX2 5W30",
+    "rows": [
+      {
+        "AVTO": "COBALT",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "VF 312 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "GENTRA",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "LACETTI 1,8",
+        "MOY": 3.8,
+        "MOY SUMMA": 456000,
+        "AIR FILTER BONUS": "VF 311 BONUS",
+        "SALON FILTER": "CF 411 BONUS",
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,25",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "VF 302 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "SPARK 1,0",
+        "MOY": 4,
+        "MOY SUMMA": 480000,
+        "AIR FILTER BONUS": "VF 342 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 1",
+        "MOY": 3,
+        "MOY SUMMA": 360000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,5)",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 2  (1,6)",
+        "MOY": 3.8,
+        "MOY SUMMA": 456000,
+        "AIR FILTER BONUS": "VF 321 BONUS",
+        "SALON FILTER": 0,
+        "MOY FILTER": "MF 001 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "NEXIA 3",
+        "MOY": 3.5,
+        "MOY SUMMA": 420000,
+        "AIR FILTER BONUS": "VF 301 BONUS",
+        "SALON FILTER": "CF 401 BONUS",
+        "MOY FILTER": "MF 002 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 2,4",
+        "MOY": 4.5,
+        "MOY SUMMA": 540000,
+        "AIR FILTER BONUS": "VF 324 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "CAPTIVA 3,0",
+        "MOY": 6,
+        "MOY SUMMA": 720000,
+        "AIR FILTER BONUS": "VF 325 BONUS",
+        "SALON FILTER": "CF 448 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU 1",
+        "MOY": 5,
+        "MOY SUMMA": 600000,
+        "AIR FILTER BONUS": "AUTOZIP CAC 070 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 007 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "MALIBU  2",
+        "MOY": 5,
+        "MOY SUMMA": 600000,
+        "AIR FILTER BONUS": "VF 322 BONUS",
+        "SALON FILTER": "CF 412 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER 2",
+        "MOY": 4,
+        "MOY SUMMA": 480000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "TRACKER 1",
+        "MOY": 4.5,
+        "MOY SUMMA": 540000,
+        "AIR FILTER BONUS": "VF 314 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 006 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      },
+      {
+        "AVTO": "ONIX",
+        "MOY": 4,
+        "MOY SUMMA": 480000,
+        "AIR FILTER BONUS": "VF 323 BONUS",
+        "SALON FILTER": "CF 413 BONUS",
+        "MOY FILTER": "MF 048 BONUS",
+        "DELFIN SOCHIQ": "BONUS",
+        "OSVIJITEL": "BONUS"
+      }
+    ]
+  }
+}
