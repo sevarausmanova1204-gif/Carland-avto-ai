@@ -36,8 +36,14 @@ QOIDALAR:
 
 # --- Erkin matnda aniq hisob-kitob so'ralganini aniqlash va bazadan hisoblash ---
 
+# Karobka (ATF/avtomat quti) va reduktor (differensial) — IKKI XIL, alohida
+# qism (ba'zi mashinalarda ikkalasi ham bor, ba'zilarida faqat bittasi) —
+# shu sabab ular ALOHIDA maqsad sifatida aniqlanadi, bittasiga tushib
+# qolmaydi (avval "reduktor" so'zi ham "karobka" bilan bitta guruhga tushib,
+# faqat bittasi hisoblanardi — bu tuzatildi).
 _ENGINE_KW = ("motor", "matorga", "matoriga", "motoriga", "dvigatel")
-_GEARBOX_KW = ("korobka", "karobka", "transmissiya", "akpp", "mkpp", "reduktor")
+_GEARBOX_KW = ("korobka", "karobka", "transmissiya", "akpp", "mkpp", "avtomat quti", "avtomat qutisi")
+_REDUCTOR_KW = ("reduktor", "reduktorga", "reduktori", "differensial")
 _EUROPE_KW = ("yevropa", "evropa", "european")
 _OTHER_ORIGIN_KW = ("osiyo", "xitoy", "koreys", "yevropa bo'lmagan", "boshqa davlat")
 _CHEAP_KW = ("budjet", "arzon")
@@ -56,6 +62,8 @@ def _parse_calc_targets(text: str) -> dict:
         low = chunk.lower()
         if any(k in low for k in _ENGINE_KW):
             target = "engine"
+        elif any(k in low for k in _REDUCTOR_KW):
+            target = "reductor"
         elif any(k in low for k in _GEARBOX_KW):
             target = "gearbox"
         else:
@@ -84,13 +92,24 @@ def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str |
         viscosities = car.get("engine_oil_types") or []
         category = "motor"
         label = "🔧 Motor moyi"
-    else:
-        liters = car.get("gearbox_liters") or car.get("reductor_liters")
-        viscosities = car.get("gearbox_oil_types") or car.get("reductor_oil_types") or []
+    elif target == "reductor":
+        liters = car.get("reductor_liters")
+        viscosities = car.get("reductor_oil_types") or []
+        category = "gearbox"
+        label = "🛞 Reduktor moyi"
+    else:  # "gearbox" — karobka (ATF/avtomat quti)
+        liters = car.get("gearbox_liters")
+        viscosities = car.get("gearbox_oil_types") or []
         category = "gearbox"
         label = "⚙️ Karobka moyi"
 
     if not liters or not viscosities:
+        # Karobka va reduktor — alohida qism, ikkalasi ham har doim
+        # bo'lavermaydi (masalan ba'zi elektromobillarda karobka umuman
+        # yo'q). Noto'g'ri/taxminiy summa bermaslik uchun, faqat bazada
+        # ANIQ ma'lumoti bor qism hisoblanadi — bo'lmasa shu aniq aytiladi.
+        if target in ("gearbox", "reductor"):
+            return f"{label}: bu mashina rusumida bu qism mavjud emas yoki bazada ma'lumot yo'q."
         return f"{label}: bazada hajm/moy turi yo'q, hisoblab bo'lmadi."
 
     products = db.get_oil_products(viscosities, category)
@@ -102,15 +121,16 @@ def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str |
     if not products:
         return f"{label} ({liters} L{origin_note}) — mos moy topilmadi."
 
-    # Matn juda uzun/chalkash bo'lib ketmasligi uchun: aniq tier so'ralganda
-    # (arzon/qimmat) FAQAT bitta variant, aks holda ham 3 tadan oshmasin —
-    # har biri qisqa, bitta qatorli yozuv sifatida.
+    # Aniq tier so'ralganda (arzon/qimmat) FAQAT bitta variant, aks holda
+    # 3 ta narx segmentidan (Arzon/Standart/Premium) bittadan — har biri
+    # qisqa, bitta qatorli yozuv sifatida.
     if tier == "cheap":
         chosen, tier_note = [products[0]], ", eng arzon"
     elif tier == "expensive":
         chosen, tier_note = [products[-1]], ", eng yaxshi"
     else:
-        chosen, tier_note = products[:3], ""
+        chosen = [p for _, p in fmt.three_segment_picks(products)]
+        tier_note = ""
 
     lines = [f"{label} — {liters} L{origin_note}{tier_note}:"]
     for p in chosen:
@@ -133,11 +153,17 @@ def _try_deterministic_calc(user_text: str) -> str | None:
         return None
 
     blocks = [f"🚗 *{car['model']}*", ""]
-    for target in ("engine", "gearbox"):
+    needs_service_fee = False
+    for target in ("engine", "gearbox", "reductor"):
         if target not in targets:
             continue
+        if target in ("gearbox", "reductor"):
+            needs_service_fee = True
         mods = targets[target]
         blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier")))
+        blocks.append("")
+    if needs_service_fee:
+        blocks.append(config.SERVICE_FEE_NOTE)
         blocks.append("")
     blocks.append("_Narxlar joriy narxlar asosida, filialda tasdiqlang._")
     return "\n".join(blocks).strip()

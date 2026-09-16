@@ -180,6 +180,39 @@ def get_oil_products(viscosities: list[str], category: str):
     return deduped
 
 
+def search_oil_by_name(keyword: str, category: str, limit: int = 20):
+    """Mijoz moy nomini (yoki brendini) yozganda, kategoriya bo'yicha
+    (motor yoki karobka/reduktor) barcha moylar orasidan nomi mos
+    kelganlarini qidiradi — car/viscosity bilan cheklanmaydi, shu sabab
+    "Valvoline" kabi brend nomi bo'yicha ham topib beradi."""
+    with get_conn() as conn:
+        if category == "gearbox":
+            cats = ("Transmission oils", "Transmission fluid")
+            cat_ph = ",".join("?" * len(cats))
+            sql = (
+                f"SELECT name, category, price, viscosity, pack_size FROM products "
+                f"WHERE category IN ({cat_ph}) AND name LIKE ? ORDER BY price ASC LIMIT ?"
+            )
+            params = (*cats, f"%{keyword}%", limit)
+        else:
+            sql = (
+                "SELECT name, category, price, viscosity, pack_size FROM products "
+                "WHERE category='Motor oils' AND name LIKE ? ORDER BY price ASC LIMIT ?"
+            )
+            params = (f"%{keyword}%", limit)
+        rows = [dict(r) for r in conn.execute(sql, params).fetchall()]
+
+    seen = {}
+    deduped = []
+    for r in rows:
+        key = _base_name(r["name"])
+        if key in seen:
+            continue
+        seen[key] = True
+        deduped.append(r)
+    return deduped
+
+
 def _is_european_brand(name: str) -> bool:
     """Nomda taniqli Yevropa brendi mavjudligini so'z chegarasi bilan
     tekshiradi. Faqat nomning BIRINCHI so'ziga qarash yetarli emas: ba'zi

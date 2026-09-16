@@ -39,41 +39,62 @@ def oil_calc_text(car: dict) -> str:
     return "\n".join(lines)
 
 
-TIER_LABELS = ("🟢 Arzon", "🟡 O'rtacha", "🟠 Qimmat", "🔴 Premium")
+# Foydalanuvchi so'rovi bo'yicha: 4 ta narx darajasi o'rniga 3 ta aniq
+# segment — Arzon / Standart / Premium — tavsiya qilinadi.
+TIER_LABELS = ("🟢 Arzon", "🟡 Standart", "🔴 Premium")
 
 
 def _tier_for(index: int, total: int) -> str:
     if total <= 1:
         return TIER_LABELS[0]
     ratio = index / (total - 1)
-    if ratio < 0.25:
+    if ratio < 1 / 3:
         return TIER_LABELS[0]
-    if ratio < 0.5:
+    if ratio < 2 / 3:
         return TIER_LABELS[1]
-    if ratio < 0.75:
-        return TIER_LABELS[2]
-    return TIER_LABELS[3]
+    return TIER_LABELS[2]
 
 
 def _pick_representatives(products: list[dict], per_tier: int = 4):
     """To'liq (deduplangan, narx bo'yicha o'sish tartibidagi) ro'yxatdan har
-    bir narx darajasidan (arzon/o'rtacha/qimmat/premium) bir nechta namuna
-    tanlaydi — foydalanuvchiga 50+ ta o'xshash qatorni emas, har darajadan
-    yetarlicha variant ko'rsatish uchun (avval juda kam — atigi 4-5 ta —
-    ko'rsatilardi, endi ro'yxat kichik bo'lsa HAMMASI, katta bo'lsa har
-    darajadan bir nechtadan namuna beriladi)."""
+    bir narx segmentidan (arzon/standart/premium) bir nechta namuna
+    tanlaydi — foydalanuvchiga 50+ ta o'xshash qatorni emas, har segmentdan
+    yetarlicha variant ko'rsatish uchun (ro'yxat kichik bo'lsa HAMMASI,
+    katta bo'lsa har segmentdan bir nechtadan namuna beriladi). Kerakli
+    brend (masalan aniq nomi) ro'yxatda ko'rinmasa, "🔎 Nomi bo'yicha
+    qidirish" tugmasi orqali alohida qidirilishi mumkin."""
     n = len(products)
-    if n <= 16:
+    if n <= 12:
         # Kichik ro'yxat — sun'iy qisqartirmasdan hammasini ko'rsatamiz
         return [(_tier_for(i, n), p) for i, p in enumerate(products)]
-    buckets = {0: [], 1: [], 2: [], 3: []}
+    buckets = {0: [], 1: [], 2: []}
     for i, p in enumerate(products):
         tier_idx = TIER_LABELS.index(_tier_for(i, n))
         buckets[tier_idx].append(p)
     out = []
-    for idx in range(4):
+    for idx in range(3):
         for p in buckets[idx][:per_tier]:
             out.append((TIER_LABELS[idx], p))
+    return out
+
+
+def three_segment_picks(products: list[dict]):
+    """Ixcham joylarda (masalan AI erkin-matn chatida) ko'rsatish uchun har
+    bir narx segmentidan (Arzon/Standart/Premium) bittadan (segmentdagi eng
+    arzoni) tanlaydi — ko'pi bilan 3 ta qator qaytaradi."""
+    n = len(products)
+    if n == 0:
+        return []
+    if n <= 3:
+        return [(_tier_for(i, n), p) for i, p in enumerate(products)]
+    buckets = {0: [], 1: [], 2: []}
+    for i, p in enumerate(products):
+        idx = TIER_LABELS.index(_tier_for(i, n))
+        buckets[idx].append(p)
+    out = []
+    for idx in range(3):
+        if buckets[idx]:
+            out.append((TIER_LABELS[idx], buckets[idx][0]))
     return out
 
 
@@ -95,6 +116,19 @@ def oil_products_text(title: str, liters: float, products: list[dict], filter_pr
             entry += f"\n  + moy filtri {money(filter_price)} = *{money(grand)}* (to'liq almashtirish)"
         lines.append(entry)
     return "\n\n".join(lines)
+
+
+def oil_search_results_text(query: str, products: list[dict]) -> str:
+    if not products:
+        return (
+            f"🔎 *\"{query}\"* nomiga mos moy topilmadi.\n"
+            "Boshqa nom bilan urinib ko'ring (masalan brend nomi: Valvoline, Castrol, Mobil...)."
+        )
+    lines = [f"🔎 *\"{query}\"* bo'yicha topilgan moylar:", ""]
+    for p in products[:15]:
+        pack = f" ({p['pack_size']})" if p.get("pack_size") else ""
+        lines.append(f"• {p['name']}{pack} — {money(p['price'])}/litr")
+    return "\n".join(lines)
 
 
 def filter_products_text(title: str, products: list[dict]) -> str:

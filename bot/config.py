@@ -55,6 +55,15 @@ OIL_BROWSE_CATEGORIES = {
     "gearoil": ("⚙️ Transmissiya moylari", ("Transmission oils", "Transmission fluid")),
 }
 
+# Karobka/reduktor moyi hisoblanganda har doim ko'rsatiladigan eslatma —
+# aniq mashina toifasiga bog'lamasdan, uchala narx oralig'ini ham ko'rsatib,
+# xodim bilan filialda aniqlashtirishni so'raydi (foydalanuvchi so'rovi
+# bo'yicha: har doim eslatma tarzida, barcha uchta summa bilan).
+SERVICE_FEE_NOTE = (
+    "🔧 *Xizmat haqqi* (o'rnatish/almashtirish uslugasi, moy narxiga kirmaydi): "
+    "mashina turiga qarab 150 000 / 200 000 / 300 000 so'm. Aniq summani filialda so'rang."
+)
+
 EUROPEAN_OIL_BRANDS = {
     "LIQUI MOLY", "SHELL", "CASTROL", "MOTUL", "ROWE", "ADDINOL", "DIVINOL",
     "FUCHS", "TOTAL", "FEBI", "MANNOL", "WIOLIN", "GRAUMANN", "VALESCO",

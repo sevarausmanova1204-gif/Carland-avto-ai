@@ -145,6 +145,18 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         return
 
+    if action == "oilsearch":
+        kind = parts[1]
+        car_id = int(parts[2])
+        context.user_data["mode"] = "oilsearch"
+        context.user_data["oilsearch_kind"] = kind
+        context.user_data["oilsearch_car_id"] = car_id
+        await query.edit_message_text(
+            "🔎 Moy nomini yoki brendini yozing (masalan: Valvoline, Castrol, Mobil):",
+            reply_markup=keyboards.back_button(f"oilprice:{kind}:{car_id}"),
+        )
+        return
+
 
 async def _render_browse(query, slug, offset):
     label, category = config.CATEGORY_LABELS[slug]
@@ -258,20 +270,31 @@ async def _render_oil_price(query, kind, car_id):
         text = fmt.oil_products_text(f"🛢 Motor moyi — {car['model']}", liters, products, filter_price) if liters else \
             "Bu model uchun motor moyi hajmi bazada ko'rsatilmagan."
     else:
-        # Karobka va reduktor har xil hajm/moy turiga ega bo'lishi mumkin
-        # (masalan ba'zi EV/gibrid mashinalarda faqat reduktor bor, karobka
-        # yo'q; ba'zilarida ikkalasi ham bor va turlari boshqa-boshqa) —
-        # shu sabab ikkalasini alohida-alohida hisoblab, kerak bo'lsa
-        # ikkalasini ham ko'rsatamiz.
+        # Karobka (ATF, avtomat/robotlashtirilgan quti) va reduktor (differensial)
+        # har xil qism va har xil hajm/moy turiga ega — bittasi mavjud bo'lib,
+        # ikkinchisi bazada ko'rsatilmagan bo'lishi mumkin (masalan ba'zi
+        # elektromobillarda karobka umuman yo'q). Shu sabab ikkalasini
+        # alohida-alohida tekshirib, faqat bazada MA'LUMOTI bor qismi uchun
+        # hisoblaymiz, aks holda buni aniq tushuntiramiz — noto'g'ri/taxminiy
+        # summa bermaymiz.
         parts = []
         if car["gearbox_liters"]:
             products = db.get_oil_products(car["gearbox_oil_types"], "gearbox")
             parts.append(fmt.oil_products_text(f"⚙️ Karobka moyi — {car['model']}", car["gearbox_liters"], products))
+        else:
+            parts.append("⚙️ *Karobka moyi*: bu mashina rusumida karobka (ATF) qismi mavjud emas yoki bazada ma'lumot yo'q.")
+
         if car["reductor_liters"]:
             products = db.get_oil_products(car["reductor_oil_types"], "gearbox")
             parts.append(fmt.oil_products_text(f"🛞 Reduktor moyi — {car['model']}", car["reductor_liters"], products))
-        text = "\n\n---\n\n".join(parts) if parts else "Bu model uchun karobka/reduktor moyi hajmi bazada ko'rsatilmagan."
+        else:
+            parts.append("🛞 *Reduktor moyi*: bu mashina rusumida reduktor qismi mavjud emas yoki bazada ma'lumot yo'q.")
 
+        parts.append(config.SERVICE_FEE_NOTE)
+        text = "\n\n---\n\n".join(parts)
+
+    kb_rows = [[InlineKeyboardButton("🔎 Moy nomi bo'yicha qidirish", callback_data=f"oilsearch:{kind}:{car_id}")]]
+    kb_rows.append([InlineKeyboardButton("⬅️ Orqaga", callback_data=f"car:oilcalc:{car_id}")])
     await query.edit_message_text(
-        text, reply_markup=keyboards.back_button(f"car:oilcalc:{car_id}"), parse_mode="Markdown"
+        text, reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown"
     )
