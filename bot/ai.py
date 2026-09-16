@@ -88,37 +88,36 @@ def _compute_target_calc(car: dict, target: str, origin: str | None, tier: str |
         liters = car.get("gearbox_liters") or car.get("reductor_liters")
         viscosities = car.get("gearbox_oil_types") or car.get("reductor_oil_types") or []
         category = "gearbox"
-        label = "⚙️ Karobka/Reduktor moyi"
+        label = "⚙️ Karobka moyi"
 
     if not liters or not viscosities:
-        return f"{label}: bazada hajm yoki moy turi ko'rsatilmagan, aniq hisoblab bo'lmadi."
+        return f"{label}: bazada hajm/moy turi yo'q, hisoblab bo'lmadi."
 
     products = db.get_oil_products(viscosities, category)
     origin_note = ""
     if origin:
         products = db.filter_oils_by_origin(products, origin)
-        origin_note = " (Yevropa brendlari orasidan)" if origin == "europe" else " (Yevropadan tashqari brendlar orasidan)"
+        origin_note = ", Yevropa" if origin == "europe" else ", boshqa davlat"
 
     if not products:
-        return f"{label} — {liters} litr kerak, lekin bazada mos moy{origin_note} topilmadi."
+        return f"{label} ({liters} L{origin_note}) — mos moy topilmadi."
 
+    # Matn juda uzun/chalkash bo'lib ketmasligi uchun: aniq tier so'ralganda
+    # (arzon/qimmat) FAQAT bitta variant, aks holda ham 3 tadan oshmasin —
+    # har biri qisqa, bitta qatorli yozuv sifatida.
     if tier == "cheap":
-        chosen, note = [products[0]], "eng arzon (budjetniy) variant"
+        chosen, tier_note = [products[0]], ", eng arzon"
     elif tier == "expensive":
-        chosen, note = [products[-1]], "eng qimmat (premium) variant"
+        chosen, tier_note = [products[-1]], ", eng yaxshi"
     else:
-        chosen, note = products[:6], None
+        chosen, tier_note = products[:3], ""
 
-    header = f"{label} — kerakli hajm: {liters} litr{origin_note}"
-    if note:
-        header += f", {note}"
-    lines = [header + ":"]
-    if not tier and len(products) > len(chosen):
-        lines.append(f"_(jami {len(products)} xil variant topildi, {len(chosen)} tasi namuna sifatida ko'rsatilmoqda)_")
+    lines = [f"{label} — {liters} L{origin_note}{tier_note}:"]
     for p in chosen:
         total = p["price"] * liters
-        pack = f" ({p['pack_size']})" if p.get("pack_size") else ""
-        lines.append(f"• {p['name']}{pack} — {fmt.money(p['price'])}/litr × {liters} litr = *{fmt.money(total)}*")
+        lines.append(f"• {p['name']} — {fmt.money(p['price'])}/l × {liters} = {fmt.money(total)}")
+    if not tier and len(products) > len(chosen):
+        lines.append(f"  (yana {len(products) - len(chosen)} ta variant — \"Mahsulotlar\" bo'limida)")
     return "\n".join(lines)
 
 
@@ -133,23 +132,23 @@ def _try_deterministic_calc(user_text: str) -> str | None:
     if not car:
         return None
 
-    blocks = [f"🚗 *{car['model']}* — so'ralgan hisob-kitob:", ""]
+    blocks = [f"🚗 *{car['model']}*", ""]
     for target in ("engine", "gearbox"):
         if target not in targets:
             continue
         mods = targets[target]
         blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier")))
         blocks.append("")
-    blocks.append(
-        "_(Narxlar Carland bazasidagi joriy narxlar asosida hisoblandi. "
-        "Sotib olishdan oldin filialda mavjudligini tasdiqlang.)_"
-    )
+    blocks.append("_Narxlar joriy narxlar asosida, filialda tasdiqlang._")
     return "\n".join(blocks).strip()
 
 
 def _build_context(user_text: str) -> str:
     parts = []
-    words = [w for w in user_text.replace(",", " ").split() if len(w) >= 3]
+    words = [
+        w for w in user_text.replace(",", " ").split()
+        if len(w) >= 3 and db.normalize_word(w) not in db.GENERIC_WORD_STOPLIST
+    ]
     seen_cars = set()
     for w in words:
         matches = db.search_cars(w, limit=3)

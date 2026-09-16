@@ -45,6 +45,7 @@ def search_cars(query: str, limit: int = 30):
 
 
 _NORMALIZE_RE = re.compile(r"[^\w'ʻʼ]+", re.UNICODE)
+_APOSTROPHE_RE = re.compile(r"['ʻʼ’`]")
 
 
 def _normalize(s: str) -> str:
@@ -52,6 +53,41 @@ def _normalize(s: str) -> str:
     yubormaslik uchun (masalan 'Captiva 2 va 3, 2.4L' vs bazadagi
     'Captiva 2 va 3 2.4L') matnni solishtirish oldidan soddalashtiradi."""
     return re.sub(r"\s+", " ", _NORMALIZE_RE.sub(" ", s.lower())).strip()
+
+
+def normalize_word(w: str) -> str:
+    """So'zni kichik harflarga o'tkazib, turli tutuq belgisi
+    variantlarini ('\\'', 'ʻ', 'ʼ', '’') olib tashlaydi — shu bilan
+    imlo farqidan qat'i nazar bir xil so'zlar bir xil ko'rinishga keladi."""
+    return _APOSTROPHE_RE.sub("", w.lower())
+
+
+# Umumiy avtomobil/moy/bot atamalari — bular ASLIDA mashina nomi EMAS,
+# shu sabab erkin matnda mashina qidirishda (fallback bosqichida)
+# e'tiborga olinmaydi. Aks holda, masalan, foydalanuvchi botning o'zi
+# chiqargan "Avtomat (AKPP)" degan qatorni nusxalab yuborsa-yu, bazada
+# faqat bitta model ("Gentra (Avtomat)") nomida "Avtomat" so'zi uchrasa,
+# bot buni noto'g'ri ravishda "aynan shu mashina so'ralyapti" deb
+# tushunib, butunlay boshqa (so'ralmagan) mashina uchun hisoblab
+# qo'yishi mumkin edi — bu xato haqiqatda sodir bo'lgan.
+GENERIC_WORD_STOPLIST = {
+    "motor", "motorga", "matorga", "matoriga", "motoriga", "dvigatel", "dvigatelga",
+    "moy", "moyi", "moyidan", "moylardan", "moylaridan", "moydan", "moylari",
+    "karobka", "karobkaga", "karobkasiga", "korobka", "korobkaga", "korobkasiga",
+    "transmissiya", "reduktor", "reduktorga", "reduktori",
+    "avtomat", "avtomatik", "mexanika", "akpp", "mkpp",
+    "hajmi", "hajm", "litr", "litri", "litrlik",
+    "tavsiya", "etilgan", "tur", "turi", "turlari",
+    "almashtirish", "oraligi", "vaqti",
+    "hisobla", "hisoblab", "hisoblang", "hisoblansin", "hisoblashi",
+    "yevropa", "evropa", "european", "osiyo", "xitoy", "koreys",
+    "boshqa", "davlat", "davlatlar",
+    "brend", "brenddan", "brendidan", "brendlaridan", "brendlardan", "brendi",
+    "yaxshi", "eng", "arzon", "qimmat", "premium", "budjet", "budjetniy", "budjetli",
+    "variant", "variantdagi", "variantlari",
+    "ozing", "sizning", "uchun", "kerak", "qancha", "necha", "pul",
+    "summa", "summasi", "qiymati", "narxi", "narxlari", "ber", "bering", "beradi",
+}
 
 
 def find_car_by_text(text: str):
@@ -63,8 +99,10 @@ def find_car_by_text(text: str):
     UZUN model nomini tanlaydi — bu, masalan, 'Captiva 2 va 3 2.4L' va
     'Captiva 2 va 3 3.0L' kabi o'xshash nomlar orasida chalkashmaslik uchun
     kerak (qisqa 'Captiva' so'zining o'zi bir nechta modelga to'g'ri kelib
-    qolar edi). Aniq moslik topilmasa, matndagi eng o'ziga xos (uzun) so'z
-    bo'yicha bitta natijaga olib keladigan qidiruvga qaytadi."""
+    qolar edi). Aniq moslik topilmasa, matndagi (GENERIC_WORD_STOPLIST'dan
+    tashqari) eng o'ziga xos (uzun) so'z bo'yicha bitta natijaga olib
+    keladigan qidiruvga qaytadi — umumiy moy/karobka atamalari e'tiborga
+    olinmaydi, chunki ular haqiqiy model nomi emas."""
     norm_text = _normalize(text)
     best = None
     best_len = 0
@@ -77,7 +115,10 @@ def find_car_by_text(text: str):
         return get_car(best["id"])
 
     words = sorted(
-        {w for w in re.split(r"[^\w'ʻʼ]+", text, flags=re.UNICODE) if len(w) >= 3},
+        {
+            w for w in re.split(r"[^\w'ʻʼ]+", text, flags=re.UNICODE)
+            if len(w) >= 3 and normalize_word(w) not in GENERIC_WORD_STOPLIST
+        },
         key=len,
         reverse=True,
     )
@@ -189,7 +230,7 @@ def get_brake_pads_for_model(keyword: str, limit: int = 20):
 
 
 # Manba PDF'da bir nechta bo'lim sarlavhasi noto'g'ri formatlangani sababli
-# (masalan svecha va kolodka ro'yxatlari) ba'zi begona qatorlar "Motor
+# (masalan svecha va kolodka roYXatlari) ba'zi begona qatorlar "Motor
 # oils"/"Transmission oils" kategoriyasiga yopishib qolgan. Moylar
 # ro'yxatida bunday narsalar chiqmasligi uchun filtrlaymiz.
 _NON_OIL_MARKERS = ("SVECHA", "СВЕЧА", "КОЛОДК", "KOLODKA", "NAME SALES PRICE", "ИМЯ")
@@ -258,13 +299,13 @@ def get_tires_for_model(keyword: str):
         return out
 
 
-# Bazada atigi 30 ta akkumulyator bor va ularning "cars" ro'yxati (manba
+# Bazada atigi 30 ta akkumulyator bor va ularning "cars" roYXati (manba
 # PDF'dan) 94 mashinaning hammasini qamrab olmaydi. Shu sabab aniq moslik
 # topilmasa ham (yoki topilgan bo'lsa-da qo'shimcha tanlov sifatida),
 # mashina "klassi"ga (dvigatel hajmi, EV/gibrid yoki yo'qligi) qarab kerakli
 # amper (Ah) ni TAXMINAN baholab, bazadagi eng yaqin amperli
 # akkumulyator(lar)ni tavsiya qilamiz — bu ANIQ artikul mosligi emas, umumiy
-# yo'riqnoma, xodim bilan tasdiqlash tavsiya etiladi.
+# yo$riqnoma, xodim bilan tasdiqlash tavsiya etiladi.
 _BATTERY_AH_OVERRIDES = {
     "STARTER 105D26 L": 90,
 }
