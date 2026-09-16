@@ -44,6 +44,54 @@ def search_cars(query: str, limit: int = 30):
         return [dict(r) for r in rows]
 
 
+_NORMALIZE_RE = re.compile(r"[^\w'ʻʼ]+", re.UNICODE)
+
+
+def _normalize(s: str) -> str:
+    """Tinish belgilari/qavslar farqi tufayli aniq moslik o'tkazib
+    yubormaslik uchun (masalan 'Captiva 2 va 3, 2.4L' vs bazadagi
+    'Captiva 2 va 3 2.4L') matnni solishtirish oldidan soddalashtiradi."""
+    return re.sub(r"\s+", " ", _NORMALIZE_RE.sub(" ", s.lower())).strip()
+
+
+def find_car_by_text(text: str):
+    """Foydalanuvchi erkin matnida (shu jumladan botning o'zi chiqargan
+    mashina kartochkasini nusxalab qo'shgan bo'lsa ham) ANIQ mos keladigan
+    mashina modelini topishga harakat qiladi.
+
+    Avval barcha mashina nomlari orasidan matn ichida to'liq uchraydigan ENG
+    UZUN model nomini tanlaydi — bu, masalan, 'Captiva 2 va 3 2.4L' va
+    'Captiva 2 va 3 3.0L' kabi o'xshash nomlar orasida chalkashmaslik uchun
+    kerak (qisqa 'Captiva' so'zining o'zi bir nechta modelga to'g'ri kelib
+    qolar edi). Aniq moslik topilmasa, matndagi eng o'ziga xos (uzun) so'z
+    bo'yicha bitta natijaga olib keladigan qidiruvga qaytadi."""
+    norm_text = _normalize(text)
+    best = None
+    best_len = 0
+    for c in list_cars():
+        norm_model = _normalize(c["model"])
+        if norm_model and norm_model in norm_text and len(norm_model) > best_len:
+            best = c
+            best_len = len(norm_model)
+    if best:
+        return get_car(best["id"])
+
+    words = sorted(
+        {w for w in re.split(r"[^\w'ʻʼ]+", text, flags=re.UNICODE) if len(w) >= 3},
+        key=len,
+        reverse=True,
+    )
+    for w in words:
+        matches = search_cars(w, limit=5)
+        if len(matches) == 1:
+            return get_car(matches[0]["id"])
+    for w in words:
+        matches = search_cars(w, limit=5)
+        if matches:
+            return get_car(matches[0]["id"])
+    return None
+
+
 _PACK_SUFFIX_RE = re.compile(r"\s*\(?\b\d+\s*/\s*1\s*L\)?\s*$|\s*\(?\b\d+\s*L\)?\s*$|\s*\(?\b\d+\s*л\)?\s*$", re.IGNORECASE)
 
 
@@ -91,6 +139,29 @@ def get_oil_products(viscosities: list[str], category: str):
     return deduped
 
 
+def _is_european_brand(name: str) -> bool:
+    """Nomda taniqli Yevropa brendi mavjudligini so'z chegarasi bilan
+    tekshiradi. Faqat nomning BIRINCHI so'ziga qarash yetarli emas: ba'zi
+    yozuvlar brendni '...МОТОРНОЕ МАСЛО CASTROL...' yoki 'BREND CASTROL...'
+    kabi o'rtada keltiradi, va 'LIQUI MOLY' kabi ikki so'zli brend nomi ham
+    to'g'ri aniqlanishi kerak — shu sabab butun nom bo'ylab qidiramiz."""
+    from . import config
+
+    name_up = name.upper()
+    for brand in config.EUROPEAN_OIL_BRANDS:
+        if re.search(r"\b" + re.escape(brand) + r"\b", name_up):
+            return True
+    return False
+
+
+def filter_oils_by_origin(products: list[dict], origin: str) -> list[dict]:
+    """origin: 'europe' yoki 'other'. get_oil_products() natijasini (allaqachon
+    narx bo'yicha saralangan) brend kelib chiqishi bo'yicha filtrlaydi —
+    tartibni (narx o'sish tartibi) buzmaydi."""
+    want_euro = origin == "europe"
+    return [p for p in products if _is_european_brand(p["name"]) == want_euro]
+
+
 def search_products_by_keyword(keyword: str, category: str, limit: int = 20):
     with get_conn() as conn:
         rows = conn.execute(
@@ -125,19 +196,13 @@ _NON_OIL_MARKERS = ("SVECHA", "СВЕЧА", "КОЛОДК", "KOLODKA", "NAME SAL
 
 
 def browse_oils_by_origin(categories: tuple[str, ...], origin: str, offset: int = 0, limit: int = 6):
-    """origin: 'europe' yoki 'other'. Brend nomi european_brands ro'yxatida
-    bo'lsa 'europe', aks holda 'other' toifasiga tushadi."""
-    from . import config
-
+    """origin: 'europe' yoki 'other'. Nomda european_brands ro'yxatidagi
+    biror brend uchrasa 'europe', aks holda 'other' toifasiga tushadi."""
     with get_conn() as conn:
         cat_ph = ",".join("?" * len(categories))
         all_rows = conn.execute(
             f"SELECT name, price FROM products WHERE category IN ({cat_ph}) ORDER BY name", categories
         ).fetchall()
-
-    def brand_of(name: str) -> str:
-        first = name.upper().split()[0] if name.split() else ""
-        return first
 
     filtered = []
     seen = set()
@@ -149,8 +214,7 @@ def browse_oils_by_origin(categories: tuple[str, ...], origin: str, offset: int 
         if key in seen:
             continue
         seen.add(key)
-        brand = brand_of(r["name"])
-        is_euro = brand in config.EUROPEAN_OIL_BRANDS
+        is_euro = _is_european_brand(r["name"])
         if (origin == "europe") == is_euro:
             filtered.append(dict(r))
 
