@@ -15,7 +15,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         kind = context.user_data.get("oilsearch_kind", "motor")
         car_id = context.user_data.get("oilsearch_car_id")
         results = db.search_oil_by_name(text, kind)
-        reply_text = fmt.oil_search_results_text(text, results)
+        reply_text = fmt.oil_search_results_text(text, results, lang)
         kb = keyboards.back_button(f"oilprice:{kind}:{car_id}" if car_id else "menu:main", lang=lang)
         await update.message.reply_text(reply_text, reply_markup=kb, parse_mode="Markdown")
         return

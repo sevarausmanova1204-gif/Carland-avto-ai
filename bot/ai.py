@@ -14,13 +14,19 @@ hisoblanadi (_try_deterministic_calc) — shunda javob 100% aniq bo'ladi, AI
 hech qanday raqamni "o'ylab topmaydi" va javob tezroq/bepul chiqadi. Bunday
 so'rov aniqlanmasa (mashina yoki hisoblash so'zlari topilmasa), oldingi
 xatti-harakat — erkin AI suhbati — davom etadi.
-"""
+
+TIL: bu fayldagi barcha deterministik (bazadan to'g'ridan-to'g'ri hisoblab
+chiqarilgan) javoblar `lang` parametriga qarab o'zbek yoki rus tilida
+qaytariladi — `context.user_data['lang']` orqali (agar `context` berilgan
+bo'lsa). Avval bu bo'lim FAQAT o'zbek tilida qattiq yozilgan edi, shuning
+uchun foydalanuvchi rus tilini tanlagan taqdirda ham AI chatning javoblari
+o'zbekcha chiqib qolardi."""
 import re
 
 from . import config, db, matching
 from . import format as fmt
 
-SYSTEM_PROMPT = """Sen "Carland" avtomobil moylari va ehtiyot qismlar do'konining Telegram botidagi AI yordamchisisan.
+SYSTEM_PROMPT_UZ = """Sen "Carland" avtomobil moylari va ehtiyot qismlar do'konining Telegram botidagi AI yordamchisisan.
 Faqat o'zbek tilida, do'stona va qisqa javob ber.
 
 QOIDALAR:
@@ -32,6 +38,32 @@ QOIDALAR:
    o'z biliming asosida qisqa va foydali javob berishing mumkin.
 3. Javobing 6-8 gapdan oshmasin.
 """
+
+SYSTEM_PROMPT_RU = """Ты AI-помощник в Telegram-боте магазина автомасел и запчастей "Carland".
+Отвечай ТОЛЬКО на русском языке, дружелюбно и кратко.
+
+ПРАВИЛА:
+1. Точные цифры — объём масла, цену, адрес — называй ТОЛЬКО на основе данных из раздела
+   "ДАННЫЕ ИЗ БАЗЫ" ниже. Если нужных данных нет, НЕ ПРИДУМЫВАЙ их — вместо этого направь
+   пользователя выбрать точную модель автомобиля в разделе "🛢 Расчёт масла" или "🔧 Товары".
+2. На общие вопросы об автомобилях/маслах (например "чем отличается синтетика от полусинтетики")
+   можешь отвечать кратко и полезно на основе своих знаний.
+3. Ответ не должен превышать 6-8 предложений.
+"""
+
+
+def _system_prompt(lang: str) -> str:
+    return SYSTEM_PROMPT_RU if lang == "ru" else SYSTEM_PROMPT_UZ
+
+
+def _L(lang: str, uz: str, ru: str) -> str:
+    return ru if lang == "ru" else uz
+
+
+def _lang(context=None) -> str:
+    if context is not None:
+        return context.user_data.get("lang", "uz")
+    return "uz"
 
 
 # --- Erkin matnda aniq hisob-kitob so'ralganini aniqlash va bazadan hisoblash ---
@@ -130,18 +162,18 @@ def _parse_calc_targets(text: str) -> dict:
 
 
 def _compute_target_calc(
-    car: dict, target: str, origin: str | None, tier: str | None, brand_keyword: str | None = None
+    car: dict, target: str, origin: str | None, tier: str | None, brand_keyword: str | None = None, lang: str = "uz"
 ) -> str:
     if target == "engine":
         liters = car.get("engine_oil_liters")
         viscosities = car.get("engine_oil_types") or []
         category = "motor"
-        label = "🔧 Motor moyi"
+        label = _L(lang, "🔧 Motor moyi", "🔧 Моторное масло")
     elif target == "reductor":
         liters = car.get("reductor_liters")
         viscosities = car.get("reductor_oil_types") or []
         category = "gearbox"
-        label = "🛞 Reduktor moyi"
+        label = _L(lang, "🛞 Reduktor moyi", "🛞 Масло редуктора")
     else:  # "gearbox" — karobka (mashinaning o'zida qanday quti bo'lsa, shuning moyi)
         liters = car.get("gearbox_liters")
         viscosities = car.get("gearbox_oil_types") or []
@@ -152,7 +184,7 @@ def _compute_target_calc(
         # mashinalarda, mijoz nega 75W90 (mexanika moyi) chiqqanini
         # tushunmay qolishi mumkin edi.
         kind_label = f" ({car['gearbox_kind']})" if car.get("gearbox_kind") else ""
-        label = f"⚙️ Karobka moyi{kind_label}"
+        label = _L(lang, f"⚙️ Karobka moyi{kind_label}", f"⚙️ Масло КПП{kind_label}")
 
     if not liters or not viscosities:
         # Karobka va reduktor — alohida qism, ikkalasi ham har doim
@@ -160,14 +192,22 @@ def _compute_target_calc(
         # yo'q). Noto'g'ri/taxminiy summa bermaslik uchun, faqat bazada
         # ANIQ ma'lumoti bor qism hisoblanadi — bo'lmasa shu aniq aytiladi.
         if target in ("gearbox", "reductor"):
-            return f"{label}: bu mashina rusumida bu qism mavjud emas yoki bazada ma'lumot yo'q."
-        return f"{label}: bazada hajm/moy turi yo'q, hisoblab bo'lmadi."
+            return f"{label}: " + _L(
+                lang,
+                "bu mashina rusumida bu qism mavjud emas yoki bazada ma'lumot yo'q.",
+                "у этой модели нет данной части, либо данных в базе нет.",
+            )
+        return f"{label}: " + _L(
+            lang,
+            "bazada hajm/moy turi yo'q, hisoblab bo'lmadi.",
+            "в базе нет объёма/типа масла, расчёт невозможен.",
+        )
 
     products = db.get_oil_products(viscosities, category)
     origin_note = ""
     if origin:
         products = db.filter_oils_by_origin(products, origin)
-        origin_note = ", Yevropa" if origin == "europe" else ", boshqa davlat"
+        origin_note = _L(lang, ", Yevropa", ", Европа") if origin == "europe" else _L(lang, ", boshqa davlat", ", другая страна")
 
     # Foydalanuvchi aniq brend/mahsulot nomini aytgan bo'lsa (masalan
     # "aveno moyidan ... hisoblab ber"), hisob-kitob FAQAT o'sha brendga
@@ -183,7 +223,7 @@ def _compute_target_calc(
             brand_note = f", {brand_keyword.upper()}"
 
     if not products:
-        return f"{label} ({liters} L{origin_note}{brand_note}) — mos moy topilmadi."
+        return f"{label} ({liters} L{origin_note}{brand_note}) — " + _L(lang, "mos moy topilmadi.", "подходящее масло не найдено.")
 
     if brand_note:
         # Brend aniq so'ralgan va topilgan — sun'iy 3 segmentga
@@ -192,22 +232,27 @@ def _compute_target_calc(
         chosen = products
         tier_note = ""
     elif tier == "cheap":
-        chosen, tier_note = [products[0]], ", eng arzon"
+        chosen, tier_note = [products[0]], _L(lang, ", eng arzon", ", самое дешёвое")
     elif tier == "expensive":
-        chosen, tier_note = [products[-1]], ", eng yaxshi"
+        chosen, tier_note = [products[-1]], _L(lang, ", eng yaxshi", ", лучшее")
     else:
         # Aniq tier so'ralganda (arzon/qimmat) FAQAT bitta variant, aks
         # holda 3 ta narx segmentidan (Arzon/Standart/Premium) bittadan —
         # har biri qisqa, bitta qatorli yozuv sifatida.
-        chosen = [p for _, p in fmt.three_segment_picks(products)]
+        chosen = [p for _, p in fmt.three_segment_picks(products, lang)]
         tier_note = ""
 
+    unit = _L(lang, "l", "л")
     lines = [f"{label} — {liters} L{origin_note}{brand_note}{tier_note}:"]
     for p in chosen:
         total = p["price"] * liters
-        lines.append(f"• {p['name']} — {fmt.money(p['price'])}/l × {liters} = {fmt.money(total)}")
+        lines.append(f"• {p['name']} — {fmt.money(p['price'], lang)}/{unit} × {liters} = {fmt.money(total, lang)}")
     if not tier and not brand_note and len(products) > len(chosen):
-        lines.append(f"  (yana {len(products) - len(chosen)} ta variant — \"Mahsulotlar\" bo'limida)")
+        lines.append("  " + _L(
+            lang,
+            f"(yana {len(products) - len(chosen)} ta variant — \"Mahsulotlar\" bo'limida)",
+            f"(ещё {len(products) - len(chosen)} вариантов — в разделе \"Товары\")",
+        ))
     return "\n".join(lines)
 
 
@@ -221,6 +266,7 @@ def _try_deterministic_calc(user_text: str, context=None) -> str | None:
     car = _resolve_car(user_text, context)
     if not car:
         return None
+    lang = _lang(context)
 
     # Foydalanuvchi matnda aniq brend/mahsulot nomini ham aytgan bo'lsa
     # (masalan "aveno moyidan cobaltga hisoblab ber matoriga"), shu
@@ -240,12 +286,12 @@ def _try_deterministic_calc(user_text: str, context=None) -> str | None:
             needs_service_fee = True
         mods = targets[target]
         brand_kw = brand_motor if target == "engine" else brand_gearbox
-        blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier"), brand_kw))
+        blocks.append(_compute_target_calc(car, target, mods.get("origin"), mods.get("tier"), brand_kw, lang))
         blocks.append("")
     if needs_service_fee:
-        blocks.append(config.SERVICE_FEE_NOTE)
+        blocks.append(config.service_fee_note(lang))
         blocks.append("")
-    blocks.append("_Narxlar joriy narxlar asosida, filialda tasdiqlang._")
+    blocks.append(_L(lang, "_Narxlar joriy narxlar asosida, filialda tasdiqlang._", "_Цены актуальны на данный момент, уточните в филиале._"))
     return "\n".join(blocks).strip()
 
 
@@ -268,7 +314,7 @@ def _car_keyword_for(car: dict | None) -> str | None:
     return matching.extract_keyword(car["model"]) if car else None
 
 
-def _try_branch_answer(user_text: str) -> str | None:
+def _try_branch_answer(user_text: str, lang: str = "uz") -> str | None:
     """AI erkin-matn chatida "filiallar qayerda?", "do'koningiz qayerda?",
     "manzillaringiz nima?" kabi savollarga LLM'ga umuman yubormasdan,
     bazadagi BARCHA filiallar ro'yxatini (hech birini tushirib
@@ -287,15 +333,19 @@ def _try_branch_answer(user_text: str) -> str | None:
     if not branches:
         return None
 
-    lines = [f"📍 Carland filiallari (jami {len(branches)} ta):", ""]
+    lines = [_L(lang, f"📍 Carland filiallari (jami {len(branches)} ta):", f"📍 Филиалы Carland (всего {len(branches)}):"), ""]
     for b in branches:
         lines.append(f"• *{b['name']}* ({b['city']}) — {b['address']}")
     lines.append("")
-    lines.append(
+    lines.append(_L(
+        lang,
         "Aniq joylashuvni (GPS lokatsiya) olish uchun bosh menyudagi "
         "\"📍 Filiallar\" tugmasini bosing va kerakli filialni tanlang — "
-        "shu yerda joylashuvni to'g'ridan-to'g'ri yubora olaman."
-    )
+        "shu yerda joylashuvni to'g'ridan-to'g'ri yubora olaman.",
+        "Чтобы получить точное местоположение (GPS), нажмите кнопку "
+        "\"📍 Филиалы\" в главном меню и выберите нужный филиал — "
+        "там я смогу сразу отправить локацию.",
+    ))
     return "\n".join(lines)
 
 
@@ -316,61 +366,89 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
     latin_text = db.transliterate_cyrillic(user_text)
     low = latin_text.lower()
     car = _resolve_car(user_text, context)
+    lang = _lang(context)
 
     if any(k in low for k in _TIRE_KW):
         size = db.parse_tire_size(latin_text)
         if size:
             rows = db.search_tires_by_size(size)
             if rows:
-                lines = [f"🛞 *{size}* o'lchamdagi shinalar:", ""]
+                lines = [_L(lang, f"🛞 *{size}* o'lchamdagi shinalar:", f"🛞 Шины размера *{size}*:"), ""]
                 for r in rows:
-                    lines.append(f"• {r['name']} — {fmt.money(r['price'])}")
+                    lines.append(f"• {r['name']} — {fmt.money(r['price'], lang)}")
                 return "\n".join(lines)
             if not car:
-                return (
+                return _L(
+                    lang,
                     f"🛞 *{size}* o'lchamdagi shina bazada topilmadi. "
-                    "Boshqa o'lcham bilan urinib ko'ring yoki mashina rusumini yozing."
+                    "Boshqa o'lcham bilan urinib ko'ring yoki mashina rusumini yozing.",
+                    f"🛞 Шины размера *{size}* не найдены в базе. "
+                    "Попробуйте другой размер или напишите модель автомобиля.",
                 )
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_tires_for_model(kw)
             if rows:
-                return f"🚗 *{car['model']}*\n\n" + fmt.tires_text(rows)
-            return f"🚗 *{car['model']}* uchun bazada shina o'lchami topilmadi. Aniq o'lchamni (masalan 195/65 R15) yozing."
-        return "🛞 Shina uchun aniq o'lchamni (masalan 195/65 R15) yoki mashina rusumini yozing — shunda mos variantlarni topib beraman."
+                return f"🚗 *{car['model']}*\n\n" + fmt.tires_text(rows, lang)
+            return _L(
+                lang,
+                f"🚗 *{car['model']}* uchun bazada shina o'lchami topilmadi. Aniq o'lchamni (masalan 195/65 R15) yozing.",
+                f"🚗 Размер шин для *{car['model']}* не найден в базе. Напишите точный размер (например 195/65 R15).",
+            )
+        return _L(
+            lang,
+            "🛞 Shina uchun aniq o'lchamni (masalan 195/65 R15) yoki mashina rusumini yozing — shunda mos variantlarni topib beraman.",
+            "🛞 Напишите точный размер шины (например 195/65 R15) или модель автомобиля — тогда я найду подходящие варианты.",
+        )
 
     if any(k in low for k in _SPARK_KW):
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_spark_plug_for_model(kw)
             product_rows = db.get_spark_plug_products_for_model(kw)
-            text = fmt.spark_text(rows, product_rows)
+            text = fmt.spark_text(rows, product_rows, lang)
             return f"🚗 *{car['model']}*\n\n{text}"
-        return "🔌 Svecha uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+        return _L(
+            lang,
+            "🔌 Svecha uchun mashina rusumini yozing — shunda mos variantlarni topib beraman.",
+            "🔌 Напишите модель автомобиля для свечей — тогда я найду подходящие варианты.",
+        )
 
     if any(k in low for k in _BATTERY_KW):
         kw = _car_keyword_for(car)
         if kw:
             data = db.get_batteries_for_model(car["model"], kw, car.get("engine_oil_liters"))
-            text = fmt.batteries_text(data)
+            text = fmt.batteries_text(data, lang)
             return f"🚗 *{car['model']}*\n\n{text}"
-        return "🔋 Akkumulyator uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+        return _L(
+            lang,
+            "🔋 Akkumulyator uchun mashina rusumini yozing — shunda mos variantlarni topib beraman.",
+            "🔋 Напишите модель автомобиля для аккумулятора — тогда я найду подходящие варианты.",
+        )
 
     if any(k in low for k in _ANTIFREEZE_KW):
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_antifreeze_for_model(kw)
-            text = fmt.antifreeze_text(rows)
+            text = fmt.antifreeze_text(rows, lang)
             return f"🚗 *{car['model']}*\n\n{text}"
-        return "❄️ Antifriz uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+        return _L(
+            lang,
+            "❄️ Antifriz uchun mashina rusumini yozing — shunda mos variantlarni topib beraman.",
+            "❄️ Напишите модель автомобиля для антифриза — тогда я найду подходящие варианты.",
+        )
 
     if any(k in low for k in _BRAKE_KW):
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_brake_pads_for_model(kw)
-            text = fmt.brake_pads_text(rows)
+            text = fmt.brake_pads_text(rows, lang)
             return f"🚗 *{car['model']}*\n\n{text}"
-        return "🔩 Tormoz kolodkasi uchun mashina rusumini yozing — shunda mos variantlarni topib beraman."
+        return _L(
+            lang,
+            "🔩 Tormoz kolodkasi uchun mashina rusumini yozing — shunda mos variantlarni topib beraman.",
+            "🔩 Напишите модель автомобиля для тормозных колодок — тогда я найду подходящие варианты.",
+        )
 
     return None
 
@@ -399,6 +477,7 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
 
     Hech qanday mahsulot/brend so'zi aniqlanmasa, None qaytaradi — bu holda
     chaqiruvchi kod odatdagidek umumiy AI/LLM suhbatiga o'tadi."""
+    lang = _lang(context)
     latin_text = db.transliterate_cyrillic(user_text)
     # "ATF 6", "ATF-6", "ATF VI" kabi bo'sh joy bilan ajratilgan
     # spetsifikatsiyalarni bitta "ATF6" so'ziga birlashtiramiz — aks holda
@@ -434,16 +513,17 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
 
     products = list(found.values())
     car = _resolve_car(user_text, context)
+    unit = _L(lang, "litr", "л")
 
     if not car:
         ranked = sorted(
             products,
             key=lambda p: (-match_counts[(p["_cat"], p["name"])], p["price"]),
         )
-        lines = ["🔎 Bazada topilgan mos mahsulotlar:", ""]
+        lines = [_L(lang, "🔎 Bazada topilgan mos mahsulotlar:", "🔎 Найденные в базе подходящие товары:"), ""]
         for p in ranked[:10]:
             pack = f" ({p['pack_size']})" if p.get("pack_size") else ""
-            lines.append(f"• {p['name']}{pack} — {fmt.money(p['price'])}/litr")
+            lines.append(f"• {p['name']}{pack} — {fmt.money(p['price'], lang)}/{unit}")
         return "\n".join(lines)
 
     engine_specs = {_norm_visc(v) for v in (car.get("engine_oil_types") or [])}
@@ -471,7 +551,7 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
     gearbox_matches = [p for p in products if check_gearbox and p["_cat"] == "gearbox" and _norm_visc(p.get("viscosity")) in gearbox_specs]
     reductor_matches = [p for p in products if check_reductor and p["_cat"] == "gearbox" and _norm_visc(p.get("viscosity")) in reductor_specs]
 
-    lines = [f"🚗 *{car['model']}* uchun:"]
+    lines = [_L(lang, f"🚗 *{car['model']}* uchun:", f"🚗 Для *{car['model']}*:")]
     any_match = bool(engine_matches or gearbox_matches or reductor_matches)
 
     # Mijoz ko'pincha brend/mahsulot nomi bilan BIRGA "hisoblab ber" kabi
@@ -481,8 +561,8 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
     def _line(p: dict, liters) -> str:
         if liters:
             total = p["price"] * liters
-            return f"• {p['name']} — {fmt.money(p['price'])}/litr × {liters} = {fmt.money(total)}"
-        return f"• {p['name']} — {fmt.money(p['price'])}/litr"
+            return f"• {p['name']} — {fmt.money(p['price'], lang)}/{unit} × {liters} = {fmt.money(total, lang)}"
+        return f"• {p['name']} — {fmt.money(p['price'], lang)}/{unit}"
 
     # Eng ko'p KALIT SO'ZGA mos kelgan mahsulot (masalan mijoz aynan
     # "AVENO ECO 10W40..." deb to'liq nom yozgan bo'lsa) ro'yxat boshida
@@ -495,28 +575,28 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
         return (-match_counts[(p["_cat"], p["name"])], p["price"])
 
     if engine_matches:
-        lines += ["", "✅ *Motor moyi* uchun mos keladi:"]
+        lines += ["", _L(lang, "✅ *Motor moyi* uchun mos keladi:", "✅ Подходит для *моторного масла*:")]
         for p in sorted(engine_matches, key=_rank)[:5]:
             lines.append(_line(p, car.get("engine_oil_liters")))
     if gearbox_matches:
         kind_label = f" ({car['gearbox_kind']})" if car.get("gearbox_kind") else ""
-        lines += ["", f"✅ *Karobka moyi{kind_label}* uchun mos keladi:"]
+        lines += ["", _L(lang, f"✅ *Karobka moyi{kind_label}* uchun mos keladi:", f"✅ Подходит для *масла КПП{kind_label}*:")]
         for p in sorted(gearbox_matches, key=_rank)[:5]:
             lines.append(_line(p, car.get("gearbox_liters")))
     if reductor_matches:
-        lines += ["", "✅ *Reduktor moyi* uchun mos keladi:"]
+        lines += ["", _L(lang, "✅ *Reduktor moyi* uchun mos keladi:", "✅ Подходит для *масла редуктора*:")]
         for p in sorted(reductor_matches, key=_rank)[:5]:
             lines.append(_line(p, car.get("reductor_liters")))
 
     if not any_match:
         req_parts = []
         if check_engine and engine_specs:
-            req_parts.append(f"motorga — {', '.join(sorted(s for s in engine_specs if s))}")
+            req_parts.append(_L(lang, "motorga", "для двигателя") + f" — {', '.join(sorted(s for s in engine_specs if s))}")
         if check_gearbox and gearbox_specs:
-            req_parts.append(f"karobkaga — {', '.join(sorted(s for s in gearbox_specs if s))}")
+            req_parts.append(_L(lang, "karobkaga", "для КПП") + f" — {', '.join(sorted(s for s in gearbox_specs if s))}")
         if check_reductor and reductor_specs:
-            req_parts.append(f"reduktorga — {', '.join(sorted(s for s in reductor_specs if s))}")
-        req_text = "; ".join(req_parts) if req_parts else "bazada ko'rsatilmagan"
+            req_parts.append(_L(lang, "reduktorga", "для редуктора") + f" — {', '.join(sorted(s for s in reductor_specs if s))}")
+        req_text = "; ".join(req_parts) if req_parts else _L(lang, "bazada ko'rsatilmagan", "не указано в базе")
         # Faqat so'ralgan qismga tegishli toifadagi topilgan mahsulotlarni
         # "boshqa variantlar" sifatida ko'rsatamiz (masalan faqat karobka
         # so'ralgan bo'lsa, motor moylarini bu yerda aralashtirib
@@ -528,15 +608,19 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
         ] or products
         lines += [
             "",
-            "❌ Topilgan mahsulot(lar) orasida bu mashinaga aniq mos keladigan tur yo'q.",
-            f"Bu mashina uchun bazada yozilgan talab qilingan tur: {req_text}.",
+            _L(
+                lang,
+                "❌ Topilgan mahsulot(lar) orasida bu mashinaga aniq mos keladigan tur yo'q.",
+                "❌ Среди найденных товаров нет точно подходящего для этого автомобиля типа.",
+            ),
+            _L(lang, f"Bu mashina uchun bazada yozilgan talab qilingan tur: {req_text}.", f"Требуемый тип для этого автомобиля по базе: {req_text}."),
             "",
-            "Topilgan boshqa variantlar (turi ko'rsatilgan, filialda tekshiring):",
+            _L(lang, "Topilgan boshqa variantlar (turi ko'rsatilgan, filialda tekshiring):", "Другие найденные варианты (тип указан, уточните в филиале):"),
         ]
         for p in sorted(relevant_products, key=_rank)[:5]:
-            lines.append(f"• {p['name']} ({p.get('viscosity') or '?'}) — {fmt.money(p['price'])}/litr")
+            lines.append(f"• {p['name']} ({p.get('viscosity') or '?'}) — {fmt.money(p['price'], lang)}/{unit}")
     elif gearbox_matches or reductor_matches:
-        lines += ["", config.SERVICE_FEE_NOTE]
+        lines += ["", config.service_fee_note(lang)]
 
     return "\n".join(lines).strip()
 
@@ -583,15 +667,20 @@ async def ask_ai(user_text: str, context=None) -> str:
     # foydalanuvchining OLDINGI xabarida so'ragan mashinasi session
     # xotirasida saqlanadi va keyingi, mashina nomini takrorlamaydigan
     # davomli savollarda ("AVENO ECO 10W40 ... shunisidan hisobla" kabi)
-    # ham ishlatiladi (_resolve_car orqali).
+    # ham ishlatiladi (_resolve_car orqali). `context.user_data['lang']`
+    # orqali javob tili ham aniqlanadi (_lang) — quyidagi deterministik
+    # (bazadan to'g'ridan-to'g'ri hisoblangan) javoblarning barchasi shu
+    # tilda qaytariladi.
     calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
         return calc_answer
 
+    lang = _lang(context)
+
     # Filial/manzil so'ralganda — bazadagi HAQIQIY va TO'LIQ ro'yxatni
     # ko'rsatish uchun, LLM'ning o'zidan "to'qib" chiqargan noto'liq
     # javobidan qochish maqsadida — bu ham eng oldin tekshiriladi.
-    branch_answer = _try_branch_answer(user_text)
+    branch_answer = _try_branch_answer(user_text, lang)
     if branch_answer:
         return branch_answer
 
@@ -616,28 +705,36 @@ async def ask_ai(user_text: str, context=None) -> str:
     full_prompt = f"{context_block}\n\nFOYDALANUVCHI SAVOLI: {user_text}"
 
     if config.AI_PROVIDER == "openai":
-        return await _ask_openai(full_prompt)
-    return await _ask_anthropic(full_prompt)
+        return await _ask_openai(full_prompt, lang)
+    return await _ask_anthropic(full_prompt, lang)
 
 
-async def _ask_anthropic(prompt: str) -> str:
+async def _ask_anthropic(prompt: str, lang: str = "uz") -> str:
     if not config.ANTHROPIC_API_KEY:
-        return "AI yordamchi hozircha sozlanmagan (ANTHROPIC_API_KEY yo'q). Iltimos, .env faylni to'ldiring."
+        return _L(
+            lang,
+            "AI yordamchi hozircha sozlanmagan (ANTHROPIC_API_KEY yo'q). Iltimos, .env faylni to'ldiring.",
+            "AI-помощник пока не настроен (нет ANTHROPIC_API_KEY). Пожалуйста, заполните файл .env.",
+        )
     import anthropic
 
     client = anthropic.AsyncAnthropic(api_key=config.ANTHROPIC_API_KEY)
     resp = await client.messages.create(
         model=config.CLAUDE_MODEL,
         max_tokens=600,
-        system=SYSTEM_PROMPT,
+        system=_system_prompt(lang),
         messages=[{"role": "user", "content": prompt}],
     )
     return "".join(block.text for block in resp.content if block.type == "text").strip()
 
 
-async def _ask_openai(prompt: str) -> str:
+async def _ask_openai(prompt: str, lang: str = "uz") -> str:
     if not config.OPENAI_API_KEY:
-        return "AI yordamchi hozircha sozlanmagan (OPENAI_API_KEY yo'q). Iltimos, .env faylni to'ldiring."
+        return _L(
+            lang,
+            "AI yordamchi hozircha sozlanmagan (OPENAI_API_KEY yo'q). Iltimos, .env faylni to'ldiring.",
+            "AI-помощник пока не настроен (нет OPENAI_API_KEY). Пожалуйста, заполните файл .env.",
+        )
     from openai import AsyncOpenAI
 
     client = AsyncOpenAI(api_key=config.OPENAI_API_KEY)
@@ -645,7 +742,7 @@ async def _ask_openai(prompt: str) -> str:
         model=config.OPENAI_MODEL,
         max_tokens=600,
         messages=[
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": _system_prompt(lang)},
             {"role": "user", "content": prompt},
         ],
     )

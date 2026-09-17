@@ -79,22 +79,21 @@ def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra:
 
 def products_category_menu(lang: str = "uz"):
     rows = []
-    for slug, (label, _cats) in config.OIL_BROWSE_CATEGORIES.items():
-        rows.append([InlineKeyboardButton(label, callback_data=f"oilcat:{slug}")])
-    for slug, (label, _cat) in config.CATEGORY_LABELS.items():
-        rows.append([InlineKeyboardButton(label, callback_data=f"cat:{slug}:0")])
-    for slug, label in config.SPECIAL_CATEGORIES.items():
-        rows.append([InlineKeyboardButton(label, callback_data=f"special:{slug}")])
+    for slug in config.OIL_BROWSE_CATEGORIES:
+        rows.append([InlineKeyboardButton(config.oil_browse_label(slug, lang), callback_data=f"oilcat:{slug}")])
+    for slug in config.CATEGORY_LABELS:
+        rows.append([InlineKeyboardButton(config.category_label(slug, lang), callback_data=f"cat:{slug}:0")])
+    for slug in config.SPECIAL_CATEGORIES:
+        rows.append([InlineKeyboardButton(config.special_category_label(slug, lang), callback_data=f"special:{slug}")])
     rows.append([InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
 
 
-def oil_origin_menu(slug: str):
-    label, _cats = config.OIL_BROWSE_CATEGORIES[slug]
+def oil_origin_menu(slug: str, lang: str = "uz"):
     rows = [
-        [InlineKeyboardButton("🇪🇺 Yevropa brendlari", callback_data=f"oilorigin:{slug}:europe:0")],
-        [InlineKeyboardButton("🌏 Boshqa davlatlar", callback_data=f"oilorigin:{slug}:other:0")],
-        [InlineKeyboardButton("⬅️ Mahsulotlar menyusi", callback_data="menu:products")],
+        [InlineKeyboardButton(t("europe_brands_btn", lang), callback_data=f"oilorigin:{slug}:europe:0")],
+        [InlineKeyboardButton(t("other_countries_btn", lang), callback_data=f"oilorigin:{slug}:other:0")],
+        [InlineKeyboardButton(t("back_products_menu_btn", lang), callback_data="menu:products")],
     ]
     return InlineKeyboardMarkup(rows)
 

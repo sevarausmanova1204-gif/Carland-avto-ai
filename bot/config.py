@@ -43,33 +43,77 @@ SERVICE_INTERVALS = {
     "gearbox": "35 000 – 40 000 km",
     "reductor": "15 000 – 20 000 km",
 }
+SERVICE_INTERVALS_RU = {
+    "motor": "7 000 – 8 000 км",
+    "gearbox": "35 000 – 40 000 км",
+    "reductor": "15 000 – 20 000 км",
+}
 
+
+def service_interval_ru(part: str) -> str:
+    return SERVICE_INTERVALS_RU.get(part, SERVICE_INTERVALS.get(part, ""))
+
+
+# Har bir yozuv: (slug -> {"uz": ..., "ru": ..., "category": bazadagi haqiqiy
+# category nomi}). "category" ustuni tarjima QILINMAYDI — bu SQL so'rovda
+# ishlatiladigan haqiqiy ustun qiymati (products.category), faqat "uz"/"ru"
+# ko'rsatiladigan tugma matnidir.
 CATEGORY_LABELS = {
-    "air": ("🌬 Havo filtri", "Air filters"),
-    "oilf": ("🛢 Moy filtri", "Oils filters"),
-    "cabin": ("❄️ Salon filtri", "Lounge filter"),
-    "fuel": ("⛽ Yoqilg'i filtri", "Fuel filter"),
-    "chem": ("🧴 Avtokimyo", "Autochemistry and autocosmetics"),
-    "spare": ("⚙️ Ehtiyot qismlar", "SPARE PART"),
-    "acc": ("🎒 Aksessuarlar", "Accessories"),
+    "air": {"uz": "🌬 Havo filtri", "ru": "🌬 Воздушный фильтр", "category": "Air filters"},
+    "oilf": {"uz": "🛢 Moy filtri", "ru": "🛢 Масляный фильтр", "category": "Oils filters"},
+    "cabin": {"uz": "❄️ Salon filtri", "ru": "❄️ Салонный фильтр", "category": "Lounge filter"},
+    "fuel": {"uz": "⛽ Yoqilg'i filtri", "ru": "⛽ Топливный фильтр", "category": "Fuel filter"},
+    "chem": {"uz": "🧴 Avtokimyo", "ru": "🧴 Автохимия", "category": "Autochemistry and autocosmetics"},
+    "spare": {"uz": "⚙️ Ehtiyot qismlar", "ru": "⚙️ Запчасти", "category": "SPARE PART"},
+    "acc": {"uz": "🎒 Aksessuarlar", "ru": "🎒 Аксессуары", "category": "Accessories"},
 }
 
 # Bu jadvallar alohida (products'dan boshqa) manbadan olinadi, yoki
 # products ichida maxsus filtr bilan qidiriladi
 SPECIAL_CATEGORIES = {
-    "battery": "🔋 Akkumulyator",
-    "antifreeze": "❄️ Antifriz",
-    "spark": "🔌 Svecha",
-    "tire": "🛞 Shina (balon)",
-    "brake": "🔩 Tormoz kolodkalari",
+    "battery": {"uz": "🔋 Akkumulyator", "ru": "🔋 Аккумулятор"},
+    "antifreeze": {"uz": "❄️ Antifriz", "ru": "❄️ Антифриз"},
+    "spark": {"uz": "🔌 Svecha", "ru": "🔌 Свечи"},
+    "tire": {"uz": "🛞 Shina (balon)", "ru": "🛞 Шины"},
+    "brake": {"uz": "🔩 Tormoz kolodkalari", "ru": "🔩 Тормозные колодки"},
 }
 
 # "Mahsulotlar" menyusida moylarni alohida (mashina tanlamasdan, davlat/brend
 # kelib chiqishi bo'yicha) ko'rish uchun
 OIL_BROWSE_CATEGORIES = {
-    "motoroil": ("🛢 Motor moylari", ("Motor oils",)),
-    "gearoil": ("⚙️ Transmissiya moylari", ("Transmission oils", "Transmission fluid")),
+    "motoroil": {"uz": "🛢 Motor moylari", "ru": "🛢 Моторные масла", "cats": ("Motor oils",)},
+    "gearoil": {
+        "uz": "⚙️ Transmissiya moylari",
+        "ru": "⚙️ Трансмиссионные масла",
+        "cats": ("Transmission oils", "Transmission fluid"),
+    },
 }
+
+
+def category_label(slug: str, lang: str = "uz") -> str:
+    entry = CATEGORY_LABELS.get(slug, {})
+    return entry.get(lang, entry.get("uz", slug))
+
+
+def special_category_label(slug: str, lang: str = "uz") -> str:
+    entry = SPECIAL_CATEGORIES.get(slug, {})
+    return entry.get(lang, entry.get("uz", slug))
+
+
+def oil_browse_label(slug: str, lang: str = "uz") -> str:
+    entry = OIL_BROWSE_CATEGORIES.get(slug, {})
+    return entry.get(lang, entry.get("uz", slug))
+
+
+def category_db(slug: str) -> str:
+    """products.category ustunidagi HAQIQIY (tarjima qilinmaydigan) qiymat."""
+    return CATEGORY_LABELS.get(slug, {}).get("category", "")
+
+
+def oil_browse_cats(slug: str) -> tuple:
+    """Haqiqiy (tarjima qilinmaydigan) products.category qiymatlari to'plami."""
+    return OIL_BROWSE_CATEGORIES.get(slug, {}).get("cats", ())
+
 
 # Karobka/reduktor moyi hisoblanganda har doim ko'rsatiladigan eslatma —
 # aniq mashina toifasiga bog'lamasdan, uchala narx oralig'ini ham ko'rsatib,
@@ -79,6 +123,14 @@ SERVICE_FEE_NOTE = (
     "🔧 *Xizmat haqqi* (o'rnatish/almashtirish uslugasi, moy narxiga kirmaydi): "
     "mashina turiga qarab 150 000 / 200 000 / 300 000 so'm. Aniq summani filialda so'rang."
 )
+SERVICE_FEE_NOTE_RU = (
+    "🔧 *Стоимость услуги* (установка/замена, не включает цену масла): "
+    "150 000 / 200 000 / 300 000 сум в зависимости от типа автомобиля. Точную сумму уточните в филиале."
+)
+
+
+def service_fee_note(lang: str = "uz") -> str:
+    return SERVICE_FEE_NOTE_RU if lang == "ru" else SERVICE_FEE_NOTE
 
 EUROPEAN_OIL_BRANDS = {
     "LIQUI MOLY", "SHELL", "CASTROL", "MOTUL", "ROWE", "ADDINOL", "DIVINOL",

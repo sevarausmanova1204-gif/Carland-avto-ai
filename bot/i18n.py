@@ -98,6 +98,14 @@ TEXT = {
     "send_location_btn": {"uz": "📍 Lokatsiyani yuborish", "ru": "📍 Отправить локацию"},
     "open_yandex_maps_btn": {"uz": "🗺 Yandex Xaritada ochish", "ru": "🗺 Открыть в Яндекс Картах"},
     "back_to_branches_list_btn": {"uz": "⬅️ Filiallar", "ru": "⬅️ Филиалы"},
+    "europe_brands_btn": {"uz": "🇪🇺 Yevropa brendlari", "ru": "🇪🇺 Европейские бренды"},
+    "other_countries_btn": {"uz": "🌏 Boshqa davlatlar", "ru": "🌏 Другие страны"},
+    "select_origin_suffix": {"uz": "davlat kelib chiqishini tanlang:", "ru": "выберите страну происхождения:"},
+    "origin_europe_label": {"uz": "Yevropa", "ru": "Европа"},
+    "origin_other_label": {"uz": "Boshqa davlatlar", "ru": "Другие страны"},
+    "motor_oil_title": {"uz": "🛢 Motor moyi", "ru": "🛢 Моторное масло"},
+    "gearbox_oil_title": {"uz": "⚙️ Karobka moyi", "ru": "⚙️ Масло КПП"},
+    "reductor_oil_title": {"uz": "🛞 Reduktor moyi", "ru": "🛞 Масло редуктора"},
 }
 
 
