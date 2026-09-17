@@ -8,6 +8,22 @@ load_dotenv(BASE_DIR / ".env")
 
 DB_PATH = BASE_DIR / "data" / "carland.db"
 
+# Foydalanuvchi sozlamalari (til, oxirgi tanlangan mashina va h.k.) shu
+# papkaga saqlanadi. MUHIM: bu "data/" papkasidan ATAYLAB alohida — "data/"
+# git repozitoriyga tegishli (carland.db shu yerda, git push orqali
+# yangilanadi), agar foydalanuvchi sozlamalari ham o'sha papkaga yozilsa,
+# keyingi git-deploy paytida ular carland.db bilan birga qayta yozilib
+# ketishi yoki, aksincha, git-committed carland.db'ni eskirtirib qo'yishi
+# mumkin edi. Shu sababli Railway'da bu papka alohida persistent volume'ga
+# ulanadi (PERSIST_DIR muhit o'zgaruvchisi orqali) — shunda bot qayta
+# deploy/restart bo'lganda ham foydalanuvchining til tanlovi va h.k.
+# YO'QOLMAYDI (avval har bir deploy'da hammaning tili "uz"ga qaytib
+# ketardi, chunki bular faqat operativ xotirada — context.user_data'da —
+# saqlanardi).
+PERSIST_DIR = Path(os.getenv("PERSIST_DIR", str(BASE_DIR / "persist")))
+PERSIST_DIR.mkdir(parents=True, exist_ok=True)
+PERSISTENCE_PATH = PERSIST_DIR / "bot_persistence.pickle"
+
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 
 AI_PROVIDER = os.getenv("AI_PROVIDER", "anthropic").strip().lower()

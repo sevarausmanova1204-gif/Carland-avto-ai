@@ -1,6 +1,13 @@
 import logging
 
-from telegram.ext import Application, CallbackQueryHandler, CommandHandler, MessageHandler, filters
+from telegram.ext import (
+    Application,
+    CallbackQueryHandler,
+    CommandHandler,
+    MessageHandler,
+    PicklePersistence,
+    filters,
+)
 
 from bot import config
 from bot.handlers.callbacks import route
@@ -16,7 +23,15 @@ def main():
     if not config.TELEGRAM_BOT_TOKEN:
         raise SystemExit("TELEGRAM_BOT_TOKEN topilmadi. .env faylni to'ldiring (.env.example ga qarang).")
 
-    app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).build()
+    # PicklePersistence: foydalanuvchi tili va suhbat konteksti (masalan
+    # oxirgi so'ralgan mashina) endi diskka yoziladi va bot qayta ishga
+    # tushganda (deploy/restart) qayta o'qib olinadi — shu bilan "til
+    # rus tiliga o'tkazilgandan keyin ba'zi ekranlar yana o'zbekchada
+    # chiqib qolishi" muammosi (sabab: bot qayta ishga tushganda hamma
+    # foydalanuvchining tili operativ xotiradan o'chib, standart "uz"ga
+    # qaytib ketardi) butunlay bartaraf etiladi.
+    persistence = PicklePersistence(filepath=str(config.PERSISTENCE_PATH))
+    app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).persistence(persistence).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(route))
