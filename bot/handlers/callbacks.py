@@ -112,13 +112,12 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if action == "branch":
         branch = db.get_branch(int(parts[1]))
-        back_label = t("back_btn", lang) + " " + t("menu_branches", lang).split(" ", 1)[-1]
         kb_rows = []
         if branch.get("latitude") and branch.get("longitude"):
-            kb_rows.append([InlineKeyboardButton("📍 Lokatsiyani yuborish" if lang == "uz" else "📍 Отправить локацию", callback_data=f"branchloc:{branch['id']}")])
+            kb_rows.append([InlineKeyboardButton(t("send_location_btn", lang), callback_data=f"branchloc:{branch['id']}")])
         url = branch_maps_url(branch)
-        kb_rows.append([InlineKeyboardButton("🗺 Yandex Xaritada ochish" if lang == "uz" else "🗺 Открыть в Яндекс Картах", url=url)])
-        kb_rows.append([InlineKeyboardButton(back_label, callback_data="menu:branches")])
+        kb_rows.append([InlineKeyboardButton(t("open_yandex_maps_btn", lang), url=url)])
+        kb_rows.append([InlineKeyboardButton(t("back_to_branches_list_btn", lang), callback_data="menu:branches")])
         await query.edit_message_text(fmt.branch_text(branch), reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown")
         return
 

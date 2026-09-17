@@ -95,6 +95,9 @@ TEXT = {
     "search_results_title": {"uz": "Topilgan natijalar:", "ru": "Найденные результаты:"},
     "ai_thinking": {"uz": "💭 O'ylayapman...", "ru": "💭 Думаю..."},
     "ai_error": {"uz": "AI xizmatida xatolik yuz berdi: {e}", "ru": "Ошибка в работе AI: {e}"},
+    "send_location_btn": {"uz": "📍 Lokatsiyani yuborish", "ru": "📍 Отправить локацию"},
+    "open_yandex_maps_btn": {"uz": "🗺 Yandex Xaritada ochish", "ru": "🗺 Открыть в Яндекс Картах"},
+    "back_to_branches_list_btn": {"uz": "⬅️ Filiallar", "ru": "⬅️ Филиалы"},
 }
 
 
