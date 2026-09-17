@@ -40,6 +40,61 @@ TEXT = {
     "menu_lang": {"uz": "🌐 Til / Язык", "ru": "🌐 Til / Язык"},
     "lang_pick": {"uz": "Tilni tanlang:", "ru": "Выберите язык:"},
     "lang_saved": {"uz": "✅ Til o'zbekchaga o'rnatildi.", "ru": "✅ Язык изменён на русский."},
+    # Navigatsiya ekranlari (marka/mashina tanlash, orqaga/bosh menyu tugmalari)
+    "oilcalc_pick_brand": {
+        "uz": "🛢 Moy hisoblash — avval mashina markasini tanlang:",
+        "ru": "🛢 Расчёт масла — сначала выберите марку автомобиля:",
+    },
+    "info_pick_brand": {
+        "uz": "🖼 Infografika — avval mashina markasini tanlang:",
+        "ru": "🖼 Инфографика — сначала выберите марку автомобиля:",
+    },
+    "promo_pick_brand": {
+        "uz": "🎉 Aksiya — avval mashina markasini tanlang:",
+        "ru": "🎉 Акция — сначала выберите марку автомобиля:",
+    },
+    "pick_brand": {"uz": "Avval mashina markasini tanlang:", "ru": "Сначала выберите марку автомобиля:"},
+    "choose_car_suffix": {"uz": "mashinani tanlang:", "ru": "выберите автомобиль:"},
+    "products_menu_title": {"uz": "Qaysi mahsulot turi kerak?", "ru": "Какой тип товара нужен?"},
+    "branches_pick_title": {"uz": "Filiallardan birini tanlang:", "ru": "Выберите один из филиалов:"},
+    "ai_mode_on": {
+        "uz": "💬 AI yordamchi rejimi yoqildi.\nSavolingizni yozing (masalan: \"Cobalt uchun qaysi moy yaxshiroq?\").",
+        "ru": "💬 Режим AI-помощника включён.\nНапишите ваш вопрос (например: \"Какое масло лучше для Cobalt?\").",
+    },
+    "search_car_name_prompt": {
+        "uz": "🔎 Mashina nomini yozing (masalan: Cobalt, Sorento, Nexia 3):",
+        "ru": "🔎 Напишите название автомобиля (например: Cobalt, Sorento, Nexia 3):",
+    },
+    "search_oil_name_prompt": {
+        "uz": "🔎 Moy nomini yoki brendini yozing (masalan: Valvoline, Castrol, Mobil):",
+        "ru": "🔎 Напишите название или бренд масла (например: Valvoline, Castrol, Mobil):",
+    },
+    "car_not_found": {"uz": "Mashina topilmadi.", "ru": "Автомобиль не найден."},
+    "search_by_name_btn": {"uz": "🔎 Nomi bo'yicha qidirish", "ru": "🔎 Поиск по названию"},
+    "back_home_btn": {"uz": "⬅️ Bosh menyu", "ru": "⬅️ Главное меню"},
+    "home_btn": {"uz": "🏠 Bosh menyu", "ru": "🏠 Главное меню"},
+    "back_to_brands_btn": {"uz": "⬅️ Markalar", "ru": "⬅️ Марки"},
+    "back_btn": {"uz": "⬅️ Orqaga", "ru": "⬅️ Назад"},
+    "back_products_menu_btn": {"uz": "⬅️ Mahsulotlar menyusi", "ru": "⬅️ Меню товаров"},
+    "home_products_menu_btn": {"uz": "🏠 Mahsulotlar menyusi", "ru": "🏠 Меню товаров"},
+    "back_country_select_btn": {"uz": "⬅️ Davlat tanlash", "ru": "⬅️ Выбор страны"},
+    "motor_oil_prices_btn": {"uz": "🛢 Motor moyi narxlari", "ru": "🛢 Цены на моторное масло"},
+    "gearbox_oil_prices_btn": {"uz": "⚙️ Karobka/reduktor moyi narxlari", "ru": "⚙️ Цены на масло КПП/редуктора"},
+    "back_to_list_btn": {"uz": "⬅️ Ro'yxatga qaytish", "ru": "⬅️ Вернуться к списку"},
+    "search_oil_by_name_btn": {"uz": "🔎 Moy nomi bo'yicha qidirish", "ru": "🔎 Поиск масла по названию"},
+    "unknown_category": {"uz": "Noma'lum kategoriya.", "ru": "Неизвестная категория."},
+    "infographic_preparing": {"uz": "🖼 {model} uchun infografika tayyorlanmoqda...", "ru": "🖼 Готовим инфографику для {model}..."},
+    "infographic_caption": {"uz": "🚗 {model} — motor / karobka / reduktor sxemasi", "ru": "🚗 {model} — схема двигателя / КПП / редуктора"},
+    "no_engine_liters": {"uz": "Bu model uchun motor moyi hajmi bazada ko'rsatilmagan.", "ru": "Объём моторного масла для этой модели не указан в базе."},
+    "no_gearbox_data": {"uz": "⚙️ *Karobka moyi*: bu mashina rusumida karobka qismi mavjud emas yoki bazada ma'lumot yo'q.", "ru": "⚙️ *Масло КПП*: у этой модели нет КПП, либо данных в базе нет."},
+    "no_reductor_data": {"uz": "🛞 *Reduktor moyi*: bu mashina rusumida reduktor qismi mavjud emas yoki bazada ma'lumot yo'q.", "ru": "🛞 *Масло редуктора*: у этой модели нет редуктора, либо данных в базе нет."},
+    "search_no_results": {
+        "uz": "Hech narsa topilmadi. Qayta urinib ko'ring yoki menyudan tanlang.",
+        "ru": "Ничего не найдено. Попробуйте ещё раз или выберите из меню.",
+    },
+    "search_results_title": {"uz": "Topilgan natijalar:", "ru": "Найденные результаты:"},
+    "ai_thinking": {"uz": "💭 O'ylayapman...", "ru": "💭 Думаю..."},
+    "ai_error": {"uz": "AI xizmatida xatolik yuz berdi: {e}", "ru": "Ошибка в работе AI: {e}"},
 }
 
 

@@ -38,30 +38,30 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
             await query.edit_message_text(t("lang_pick", lang), reply_markup=keyboards.language_menu())
             return
         if sub == "products":
-            await query.edit_message_text("Qaysi mahsulot turi kerak?", reply_markup=keyboards.products_category_menu())
+            await query.edit_message_text(t("products_menu_title", lang), reply_markup=keyboards.products_category_menu(lang))
             return
         if sub == "branches":
-            await query.edit_message_text("Filiallardan birini tanlang:", reply_markup=keyboards.branches_menu())
+            await query.edit_message_text(t("branches_pick_title", lang), reply_markup=keyboards.branches_menu(lang))
             return
         if sub == "ai":
             context.user_data["mode"] = "ai"
             await query.edit_message_text(
-                "💬 AI yordamchi rejimi yoqildi.\nSavolingizni yozing (masalan: \"Cobalt uchun qaysi moy yaxshiroq?\").",
-                reply_markup=keyboards.back_button(),
+                t("ai_mode_on", lang),
+                reply_markup=keyboards.back_button(lang=lang),
             )
             return
         if sub in ("oilcalc", "info", "promo"):
-            title = {
-                "oilcalc": "🛢 Moy hisoblash — avval mashina markasini tanlang:",
-                "info": "🖼 Infografika — avval mashina markasini tanlang:",
-                "promo": "🎉 Aksiya — avval mashina markasini tanlang:",
+            title_key = {
+                "oilcalc": "oilcalc_pick_brand",
+                "info": "info_pick_brand",
+                "promo": "promo_pick_brand",
             }[sub]
-            await query.edit_message_text(title, reply_markup=keyboards.brand_grid(sub))
+            await query.edit_message_text(t(title_key, lang), reply_markup=keyboards.brand_grid(sub, lang=lang))
             return
         if sub in ("catcar", "specialcar"):
             slug = parts[3] if len(parts) > 3 else parts[2]
             await query.edit_message_text(
-                "Avval mashina markasini tanlang:", reply_markup=keyboards.brand_grid(sub, extra=slug)
+                t("pick_brand", lang), reply_markup=keyboards.brand_grid(sub, extra=slug, lang=lang)
             )
             return
 
@@ -69,8 +69,8 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         purpose, slug, page = parts[1], parts[2], int(parts[3])
         extra = parts[4] if len(parts) > 4 else ""
         await query.edit_message_text(
-            f"*{brands.BRAND_LABELS[slug]}* — mashinani tanlang:",
-            reply_markup=keyboards.brand_car_list_keyboard(purpose, slug, page, extra=extra),
+            f"*{brands.BRAND_LABELS[slug]}* — {t('choose_car_suffix', lang)}",
+            reply_markup=keyboards.brand_car_list_keyboard(purpose, slug, page, extra=extra, lang=lang),
             parse_mode="Markdown",
         )
         return
@@ -78,23 +78,23 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if action == "cat":
         slug = parts[1]
         if slug in ("chem", "acc"):
-            await _render_browse(query, slug, 0)
+            await _render_browse(query, slug, 0, lang=lang)
             return
         await query.edit_message_text(
-            "Avval mashina markasini tanlang:", reply_markup=keyboards.brand_grid("catcar", extra=slug)
+            t("pick_brand", lang), reply_markup=keyboards.brand_grid("catcar", extra=slug, lang=lang)
         )
         return
 
     if action == "special":
         slug = parts[1]
         await query.edit_message_text(
-            "Avval mashina markasini tanlang:", reply_markup=keyboards.brand_grid("specialcar", extra=slug)
+            t("pick_brand", lang), reply_markup=keyboards.brand_grid("specialcar", extra=slug, lang=lang)
         )
         return
 
     if action == "browse":
         slug, offset = parts[1], int(parts[2])
-        await _render_browse(query, slug, offset)
+        await _render_browse(query, slug, offset, lang=lang)
         return
 
     if action == "oilcat":
@@ -107,17 +107,25 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if action == "oilorigin":
         slug, origin, offset = parts[1], parts[2], int(parts[3])
-        await _render_oil_browse(query, slug, origin, offset)
+        await _render_oil_browse(query, slug, origin, offset, lang=lang)
         return
 
     if action == "branch":
         branch = db.get_branch(int(parts[1]))
+        back_label = t("back_btn", lang) + " " + t("menu_branches", lang).split(" ", 1)[-1]
+        kb_rows = []
+        if branch.get("latitude") and branch.get("longitude"):
+            kb_rows.append([InlineKeyboardButton("📍 Lokatsiyani yuborish" if lang == "uz" else "📍 Отправить локацию", callback_data=f"branchloc:{branch['id']}")])
         url = branch_maps_url(branch)
-        kb = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🗺 Yandex Xaritada ochish", url=url)],
-            [InlineKeyboardButton("⬅️ Filiallar", callback_data="menu:branches")],
-        ])
-        await query.edit_message_text(fmt.branch_text(branch), reply_markup=kb, parse_mode="Markdown")
+        kb_rows.append([InlineKeyboardButton("🗺 Yandex Xaritada ochish" if lang == "uz" else "🗺 Открыть в Яндекс Картах", url=url)])
+        kb_rows.append([InlineKeyboardButton(back_label, callback_data="menu:branches")])
+        await query.edit_message_text(fmt.branch_text(branch), reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown")
+        return
+
+    if action == "branchloc":
+        branch = db.get_branch(int(parts[1]))
+        if branch.get("latitude") and branch.get("longitude"):
+            await query.message.reply_location(latitude=branch["latitude"], longitude=branch["longitude"])
         return
 
     if action == "car":
@@ -130,7 +138,7 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if action == "oilprice":
         kind = parts[1]
         car_id = int(parts[2])
-        await _render_oil_price(query, kind, car_id)
+        await _render_oil_price(query, kind, car_id, lang=lang)
         return
 
     if action == "search":
@@ -140,8 +148,8 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["search_purpose"] = purpose
         context.user_data["search_extra"] = extra
         await query.edit_message_text(
-            "🔎 Mashina nomini yozing (masalan: Cobalt, Sorento, Nexia 3):",
-            reply_markup=keyboards.back_button(),
+            t("search_car_name_prompt", lang),
+            reply_markup=keyboards.back_button(lang=lang),
         )
         return
 
@@ -152,13 +160,13 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         context.user_data["oilsearch_kind"] = kind
         context.user_data["oilsearch_car_id"] = car_id
         await query.edit_message_text(
-            "🔎 Moy nomini yoki brendini yozing (masalan: Valvoline, Castrol, Mobil):",
-            reply_markup=keyboards.back_button(f"oilprice:{kind}:{car_id}"),
+            t("search_oil_name_prompt", lang),
+            reply_markup=keyboards.back_button(f"oilprice:{kind}:{car_id}", lang=lang),
         )
         return
 
 
-async def _render_browse(query, slug, offset):
+async def _render_browse(query, slug, offset, lang: str = "uz"):
     label, category = config.CATEGORY_LABELS[slug]
     items, total = db.browse_category(category, offset=offset, limit=config.PRODUCTS_PER_PAGE)
     lines = [f"*{label}* ({offset + 1}-{offset + len(items)} / {total})", ""]
@@ -170,13 +178,16 @@ async def _render_browse(query, slug, offset):
     if offset + config.PRODUCTS_PER_PAGE < total:
         nav.append(InlineKeyboardButton("➡️", callback_data=f"browse:{slug}:{offset + config.PRODUCTS_PER_PAGE}"))
     rows = [nav] if nav else []
-    rows.append([InlineKeyboardButton("⬅️ Mahsulotlar menyusi", callback_data="menu:products")])
+    rows.append([InlineKeyboardButton(t("back_products_menu_btn", lang), callback_data="menu:products")])
     await query.edit_message_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(rows), parse_mode="Markdown")
 
 
-async def _render_oil_browse(query, slug, origin, offset):
+async def _render_oil_browse(query, slug, origin, offset, lang: str = "uz"):
     label, categories = config.OIL_BROWSE_CATEGORIES[slug]
-    origin_label = "Yevropa" if origin == "europe" else "Boshqa davlatlar"
+    if lang == "ru":
+        origin_label = "Европа" if origin == "europe" else "Другие страны"
+    else:
+        origin_label = "Yevropa" if origin == "europe" else "Boshqa davlatlar"
     items, total = db.browse_oils_by_origin(categories, origin, offset=offset, limit=config.PRODUCTS_PER_PAGE)
     lines = [f"*{label} — {origin_label}* ({offset + 1}-{offset + len(items)} / {total})", ""]
     for it in items:
@@ -187,35 +198,36 @@ async def _render_oil_browse(query, slug, origin, offset):
     if offset + config.PRODUCTS_PER_PAGE < total:
         nav.append(InlineKeyboardButton("➡️", callback_data=f"oilorigin:{slug}:{origin}:{offset + config.PRODUCTS_PER_PAGE}"))
     rows = [nav] if nav else []
-    rows.append([InlineKeyboardButton("⬅️ Davlat tanlash", callback_data=f"oilcat:{slug}")])
-    rows.append([InlineKeyboardButton("🏠 Mahsulotlar menyusi", callback_data="menu:products")])
+    rows.append([InlineKeyboardButton(t("back_country_select_btn", lang), callback_data=f"oilcat:{slug}")])
+    rows.append([InlineKeyboardButton(t("home_products_menu_btn", lang), callback_data="menu:products")])
     await query.edit_message_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(rows), parse_mode="Markdown")
 
 
 async def _render_car_action(query, purpose, car_id, extra, context):
+    lang = context.user_data.get("lang", "uz")
     car = db.get_car(car_id)
     if not car:
-        await query.edit_message_text("Mashina topilmadi.", reply_markup=keyboards.back_button())
+        await query.edit_message_text(t("car_not_found", lang), reply_markup=keyboards.back_button(lang=lang))
         return
     keyword = extract_keyword(car["model"])
 
     if purpose == "oilcalc":
         kb = InlineKeyboardMarkup([
-            [InlineKeyboardButton("🛢 Motor moyi narxlari", callback_data=f"oilprice:motor:{car_id}")],
-            [InlineKeyboardButton("⚙️ Karobka/reduktor moyi narxlari", callback_data=f"oilprice:gearbox:{car_id}")],
-            [InlineKeyboardButton("⬅️ Ro'yxatga qaytish", callback_data="menu:oilcalc:0")],
-            [InlineKeyboardButton("🏠 Bosh menyu", callback_data="menu:main")],
+            [InlineKeyboardButton(t("motor_oil_prices_btn", lang), callback_data=f"oilprice:motor:{car_id}")],
+            [InlineKeyboardButton(t("gearbox_oil_prices_btn", lang), callback_data=f"oilprice:gearbox:{car_id}")],
+            [InlineKeyboardButton(t("back_to_list_btn", lang), callback_data="menu:oilcalc:0")],
+            [InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")],
         ])
         await query.edit_message_text(fmt.oil_calc_text(car), reply_markup=kb, parse_mode="Markdown")
         return
 
     if purpose == "info":
-        await query.edit_message_text(f"🖼 {car['model']} uchun infografika tayyorlanmoqda...")
+        await query.edit_message_text(t("infographic_preparing", lang).format(model=car["model"]))
         png = generate_car_infographic(car)
         await query.message.reply_photo(
             photo=png,
-            caption=f"🚗 {car['model']} — motor / karobka / reduktor sxemasi",
-            reply_markup=keyboards.back_button("menu:info:0"),
+            caption=t("infographic_caption", lang).format(model=car["model"]),
+            reply_markup=keyboards.back_button("menu:info:0", lang=lang),
         )
         return
 
@@ -223,7 +235,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         label, category = config.CATEGORY_LABELS[extra]
         products = db.search_products_by_keyword(keyword, category)
         text = fmt.filter_products_text(f"{label} — {car['model']}", products)
-        await query.edit_message_text(text, reply_markup=keyboards.back_button(f"cat:{extra}:0"), parse_mode="Markdown")
+        await query.edit_message_text(text, reply_markup=keyboards.back_button(f"cat:{extra}:0", lang=lang), parse_mode="Markdown")
         return
 
     if purpose == "specialcar":
@@ -244,9 +256,9 @@ async def _render_car_action(query, purpose, car_id, extra, context):
             rows = db.get_brake_pads_for_model(keyword)
             text = fmt.brake_pads_text(rows)
         else:
-            text = "Noma'lum kategoriya."
+            text = t("unknown_category", lang)
         await query.edit_message_text(
-            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:products"), parse_mode="Markdown"
+            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:products", lang=lang), parse_mode="Markdown"
         )
         return
 
@@ -254,12 +266,12 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         rows = db.get_promotions_for_model(keyword)
         text = fmt.promo_text(rows)
         await query.edit_message_text(
-            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:main"), parse_mode="Markdown"
+            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:main", lang=lang), parse_mode="Markdown"
         )
         return
 
 
-async def _render_oil_price(query, kind, car_id):
+async def _render_oil_price(query, kind, car_id, lang: str = "uz"):
     car = db.get_car(car_id)
     if kind == "motor":
         liters = car["engine_oil_liters"]
@@ -268,7 +280,7 @@ async def _render_oil_price(query, kind, car_id):
         filter_matches = db.search_products_by_keyword(extract_keyword(car["model"]), "Oils filters", limit=1)
         filter_price = filter_matches[0]["price"] if filter_matches else None
         text = fmt.oil_products_text(f"🛢 Motor moyi — {car['model']}", liters, products, filter_price) if liters else \
-            "Bu model uchun motor moyi hajmi bazada ko'rsatilmagan."
+            t("no_engine_liters", lang)
     else:
         # Karobka (ATF, avtomat/robotlashtirilgan quti) va reduktor (differensial)
         # har xil qism va har xil hajm/moy turiga ega — bittasi mavjud bo'lib,
@@ -288,19 +300,19 @@ async def _render_oil_price(query, kind, car_id):
             products = db.get_oil_products(car["gearbox_oil_types"], "gearbox")
             parts.append(fmt.oil_products_text(f"⚙️ Karobka moyi{kind_label} — {car['model']}", car["gearbox_liters"], products))
         else:
-            parts.append("⚙️ *Karobka moyi*: bu mashina rusumida karobka qismi mavjud emas yoki bazada ma'lumot yo'q.")
+            parts.append(t("no_gearbox_data", lang))
 
         if car["reductor_liters"]:
             products = db.get_oil_products(car["reductor_oil_types"], "gearbox")
             parts.append(fmt.oil_products_text(f"🛞 Reduktor moyi — {car['model']}", car["reductor_liters"], products))
         else:
-            parts.append("🛞 *Reduktor moyi*: bu mashina rusumida reduktor qismi mavjud emas yoki bazada ma'lumot yo'q.")
+            parts.append(t("no_reductor_data", lang))
 
         parts.append(config.SERVICE_FEE_NOTE)
         text = "\n\n---\n\n".join(parts)
 
-    kb_rows = [[InlineKeyboardButton("🔎 Moy nomi bo'yicha qidirish", callback_data=f"oilsearch:{kind}:{car_id}")]]
-    kb_rows.append([InlineKeyboardButton("⬅️ Orqaga", callback_data=f"car:oilcalc:{car_id}")])
+    kb_rows = [[InlineKeyboardButton(t("search_oil_by_name_btn", lang), callback_data=f"oilsearch:{kind}:{car_id}")]]
+    kb_rows.append([InlineKeyboardButton(t("back_btn", lang), callback_data=f"car:oilcalc:{car_id}")])
     await query.edit_message_text(
         text, reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown"
     )

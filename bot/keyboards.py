@@ -29,15 +29,15 @@ def language_menu():
     return InlineKeyboardMarkup(rows)
 
 
-def back_button(target="menu:main"):
-    return InlineKeyboardMarkup([[InlineKeyboardButton("⬅️ Orqaga", callback_data=target)]])
+def back_button(target="menu:main", lang: str = "uz"):
+    return InlineKeyboardMarkup([[InlineKeyboardButton(t("back_btn", lang), callback_data=target)]])
 
 
 def _suffix(extra: str) -> str:
     return f":{extra}" if extra else ""
 
 
-def brand_grid(purpose: str, extra: str = ""):
+def brand_grid(purpose: str, extra: str = "", lang: str = "uz"):
     """Mashina markalarini 2 ustunli katakchalar shaklida ko'rsatadi (Chevrolet, Kia, ...)."""
     items = brands.brands_with_counts()
     rows = []
@@ -47,12 +47,12 @@ def brand_grid(purpose: str, extra: str = ""):
             cb = f"brand:{purpose}:{slug}:0{_suffix(extra)}"
             row.append(InlineKeyboardButton(f"{label} ({count})", callback_data=cb))
         rows.append(row)
-    rows.append([InlineKeyboardButton("🔎 Nomi bo'yicha qidirish", callback_data=f"search:{purpose}{_suffix(extra)}")])
-    rows.append([InlineKeyboardButton("⬅️ Bosh menyu", callback_data="menu:main")])
+    rows.append([InlineKeyboardButton(t("search_by_name_btn", lang), callback_data=f"search:{purpose}{_suffix(extra)}")])
+    rows.append([InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
 
 
-def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra: str = ""):
+def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra: str = "", lang: str = "uz"):
     """Tanlangan marka ichidagi mashinalar ro'yxati (sahifalangan)."""
     cars = brands.cars_for_brand(brand_slug)
     per_page = config.CARS_PER_PAGE
@@ -72,12 +72,12 @@ def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra:
     if nav:
         rows.append(nav)
 
-    rows.append([InlineKeyboardButton("⬅️ Markalar", callback_data=f"menu:{purpose}:0{_suffix(extra)}")])
-    rows.append([InlineKeyboardButton("🏠 Bosh menyu", callback_data="menu:main")])
+    rows.append([InlineKeyboardButton(t("back_to_brands_btn", lang), callback_data=f"menu:{purpose}:0{_suffix(extra)}")])
+    rows.append([InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
 
 
-def products_category_menu():
+def products_category_menu(lang: str = "uz"):
     rows = []
     for slug, (label, _cats) in config.OIL_BROWSE_CATEGORIES.items():
         rows.append([InlineKeyboardButton(label, callback_data=f"oilcat:{slug}")])
@@ -85,7 +85,7 @@ def products_category_menu():
         rows.append([InlineKeyboardButton(label, callback_data=f"cat:{slug}:0")])
     for slug, label in config.SPECIAL_CATEGORIES.items():
         rows.append([InlineKeyboardButton(label, callback_data=f"special:{slug}")])
-    rows.append([InlineKeyboardButton("⬅️ Bosh menyu", callback_data="menu:main")])
+    rows.append([InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
 
 
@@ -99,9 +99,9 @@ def oil_origin_menu(slug: str):
     return InlineKeyboardMarkup(rows)
 
 
-def branches_menu():
+def branches_menu(lang: str = "uz"):
     rows = []
     for b in db.list_branches():
         rows.append([InlineKeyboardButton(f"{b['name']} ({b['city']})", callback_data=f"branch:{b['id']}")])
-    rows.append([InlineKeyboardButton("⬅️ Bosh menyu", callback_data="menu:main")])
+    rows.append([InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
