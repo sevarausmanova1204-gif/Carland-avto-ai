@@ -257,10 +257,46 @@ _BATTERY_KW = ("akkumulyator", "akkumlyator", "batareya", "akkum")
 _ANTIFREEZE_KW = ("antifriz", "tosol")
 _SPARK_KW = ("svecha",)
 _BRAKE_KW = ("kolodka", "tormoz")
+_BRANCH_KW = (
+    "filial", "filiallar", "filialingiz", "do'kon", "dokon", "manzil",
+    "manzillar", "qayerda", "qayerdasiz", "joylash", "joylashgan",
+    "address", "addres", "adres",
+)
 
 
 def _car_keyword_for(car: dict | None) -> str | None:
     return matching.extract_keyword(car["model"]) if car else None
+
+
+def _try_branch_answer(user_text: str) -> str | None:
+    """AI erkin-matn chatida "filiallar qayerda?", "do'koningiz qayerda?",
+    "manzillaringiz nima?" kabi savollarga LLM'ga umuman yubormasdan,
+    bazadagi BARCHA filiallar ro'yxatini (hech birini tushirib
+    qoldirmasdan) to'g'ridan-to'g'ri qaytaradi.
+
+    MUHIM: avval bu so'rov LLM'ga yuborilar edi va model haqiqiy bazadan
+    emas, o'zicha "to'qib" faqat bir nechta (masalan 3 ta) filial manzilini
+    aytib qo'yardi — bu bazadagi haqiqiy filiallar sonidan (hozircha 15 ta)
+    ancha kam va noaniq edi. Endi javob to'liq va aniq bazadan olinadi."""
+    latin_text = db.transliterate_cyrillic(user_text)
+    low = latin_text.lower()
+    if not any(k in low for k in _BRANCH_KW):
+        return None
+
+    branches = db.list_branches_full()
+    if not branches:
+        return None
+
+    lines = [f"📍 Carland filiallari (jami {len(branches)} ta):", ""]
+    for b in branches:
+        lines.append(f"• *{b['name']}* ({b['city']}) — {b['address']}")
+    lines.append("")
+    lines.append(
+        "Aniq joylashuvni (GPS lokatsiya) olish uchun bosh menyudagi "
+        "\"📍 Filiallar\" tugmasini bosing va kerakli filialni tanlang — "
+        "shu yerda joylashuvni to'g'ridan-to'g'ri yubora olaman."
+    )
+    return "\n".join(lines)
 
 
 def _try_other_category_answer(user_text: str, context=None) -> str | None:
@@ -551,6 +587,13 @@ async def ask_ai(user_text: str, context=None) -> str:
     calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
         return calc_answer
+
+    # Filial/manzil so'ralganda — bazadagi HAQIQIY va TO'LIQ ro'yxatni
+    # ko'rsatish uchun, LLM'ning o'zidan "to'qib" chiqargan noto'liq
+    # javobidan qochish maqsadida — bu ham eng oldin tekshiriladi.
+    branch_answer = _try_branch_answer(user_text)
+    if branch_answer:
+        return branch_answer
 
     # Moy bilan bog'liq bo'lmagan boshqa mahsulotlar (shina/balon,
     # akkumulyator, antifriz, svecha, tormoz kolodkasi) — bu tekshiruv

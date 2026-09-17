@@ -674,6 +674,17 @@ def list_branches():
         return [dict(r) for r in rows]
 
 
+def list_branches_full():
+    """AI erkin-matn chatida "filiallar qayerda?" kabi savollarga TO'LIQ
+    (manzil bilan birga) javob berish uchun — barcha filiallarni, hech
+    birini tushirib qoldirmasdan, bazadan qaytaradi."""
+    with get_conn() as conn:
+        rows = conn.execute(
+            "SELECT id, name, city, address, latitude, longitude FROM branches ORDER BY id"
+        ).fetchall()
+        return [dict(r) for r in rows]
+
+
 def get_branch(branch_id: int):
     with get_conn() as conn:
         row = conn.execute("SELECT * FROM branches WHERE id=?", (branch_id,)).fetchone()
