@@ -1,6 +1,6 @@
 import logging
 
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardRemove, Update
 from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
@@ -10,11 +10,78 @@ from ..i18n import t
 
 logger = logging.getLogger(__name__)
 
+# Botning ANCHA ESKI (aiogram'ga asoslangan, 16-sentabrgacha bo'lgan)
+# versiyasi doimiy pastki klaviatura (ReplyKeyboardMarkup) yuborar edi.
+# Telegram bunday klaviaturani bot maxsus ReplyKeyboardRemove yubormaguncha
+# foydalanuvchi ekranida CHEKSIZ saqlab turadi — shu sabab hozirgi (inline
+# tugmali) versiyaga o'tilgandan keyin ham, o'sha paytda botdan foydalangan
+# odamlarning ilovasida bu eski tugmalar hali ko'rinib turishi mumkin edi.
+# Bosilsa, matn oddiy xabar sifatida kelib, hech qanday rejimga to'g'ri
+# kelmagani uchun AI chatga tushib, mavzuga aloqasi bo'lmagan javob
+# qaytarardi (masalan "Biz haqimizda & Aloqa" so'zidagi "Biz" BIZOL moy
+# brendiga tasodifan mos kelib ketgani kabi). Shu lug'at orqali bunday eski
+# tugma matnini aniqlab, hozirgi ekvivalent bo'limga yo'naltiramiz va bir
+# yo'la eski klaviaturani butunlay olib tashlaymiz.
+_LEGACY_KEYBOARD_ACTIONS = {
+    "🧮 Moy hisoblash": "oilcalc", "🧮 Подбор масла": "oilcalc", "🧮 Oil Calculator": "oilcalc",
+    "📍 Carland filiallari": "branches", "📍 Филиалы Carland": "branches", "📍 Carland Branches": "branches",
+    "🎁 Sentabr Aksiyalari": "promo", "🎁 Сентябрьские акции": "promo", "🎁 September Promos": "promo",
+    "⚡ Tezkor narxlar": "products", "⚡ Экспресс цены": "products", "⚡ Quick Prices": "products",
+    "💬 AI Maslahatchi": "ai", "💬 AI Консультант": "ai", "💬 AI Consultant": "ai",
+    "📞 Biz haqimizda & Aloqa": "about", "📞 О нас и Контакты": "about", "📞 About & Contacts": "about",
+    "🌐 Tilni o'zgartirish": "lang", "🌐 Сменить язык": "lang", "🌐 Change Language": "lang",
+    "🧹 Suhbatni tozalash": "clear", "🧹 Очистить диалог": "clear", "🧹 Clear Chat": "clear",
+}
+
+
+async def _handle_legacy_button(update: Update, context: ContextTypes.DEFAULT_TYPE, action: str, lang: str):
+    # Birinchi xabar HAR DOIM ReplyKeyboardRemove bilan yuboriladi — shu
+    # bitta xabar eski klaviaturani doimiy olib tashlaydi (Telegram
+    # tomonidan), qolgan barcha keyingi harakatlar esa hozirgi inline
+    # menyu orqali davom etadi.
+    await update.message.reply_text(t("legacy_keyboard_note", lang), reply_markup=ReplyKeyboardRemove())
+
+    if action == "oilcalc":
+        await update.message.reply_text(t("oilcalc_pick_brand", lang), reply_markup=keyboards.brand_grid("oilcalc", lang=lang))
+    elif action == "branches":
+        await update.message.reply_text(t("branches_pick_title", lang), reply_markup=keyboards.branches_menu(lang))
+    elif action == "promo":
+        await update.message.reply_text(t("promo_pick_brand", lang), reply_markup=keyboards.brand_grid("promo", lang=lang))
+    elif action == "products":
+        await update.message.reply_text(t("products_menu_title", lang), reply_markup=keyboards.products_category_menu(lang))
+    elif action == "ai":
+        context.user_data["mode"] = "ai"
+        await update.message.reply_text(t("ai_mode_on", lang), reply_markup=keyboards.back_button(lang=lang))
+    elif action == "about":
+        kb = InlineKeyboardMarkup([
+            [InlineKeyboardButton(t("menu_admin", lang), url=f"https://t.me/{keyboards.ADMIN_USERNAME}")],
+            [InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")],
+        ])
+        await update.message.reply_text(t("about_text", lang), reply_markup=kb, parse_mode="Markdown")
+    elif action == "lang":
+        await update.message.reply_text(t("lang_pick", lang), reply_markup=keyboards.language_menu())
+    elif action == "clear":
+        recent_cars = context.user_data.get("recent_cars")
+        context.user_data.clear()
+        context.user_data["lang"] = lang
+        if recent_cars:
+            context.user_data["recent_cars"] = recent_cars
+        await update.message.reply_text(
+            t("cleared_text", lang),
+            reply_markup=keyboards.main_menu(lang, has_recent=bool(recent_cars)),
+        )
+
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     mode = context.user_data.get("mode")
     text = update.message.text.strip()
     lang = context.user_data.get("lang", "uz")
+
+    legacy_action = _LEGACY_KEYBOARD_ACTIONS.get(text)
+    if legacy_action:
+        analytics.log_event(update.effective_user, lang, "legacy_keyboard", legacy_action)
+        await _handle_legacy_button(update, context, legacy_action, lang)
+        return
 
     if mode == "oilsearch":
         kind = context.user_data.get("oilsearch_kind", "motor")

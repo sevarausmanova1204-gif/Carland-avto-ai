@@ -115,6 +115,18 @@ TEXT = {
     "motor_oil_title": {"uz": "🛢 Motor moyi", "ru": "🛢 Моторное масло"},
     "gearbox_oil_title": {"uz": "⚙️ Karobka moyi", "ru": "⚙️ Масло КПП"},
     "reductor_oil_title": {"uz": "🛞 Reduktor moyi", "ru": "🛞 Масло редуктора"},
+    "legacy_keyboard_note": {
+        "uz": "✅ Menyu yangilandi — endi shu tugmalardan foydalaning:",
+        "ru": "✅ Меню обновлено — используйте эти кнопки:",
+    },
+    "about_text": {
+        "uz": "🏢 *Carland* — avtomobil moylari, filtrlari va ehtiyot qismlari do'koni.\n\nSavol yoki taklifingiz bo'lsa, administrator bilan bog'laning:",
+        "ru": "🏢 *Carland* — магазин автомасел, фильтров и запчастей.\n\nЕсли у вас есть вопрос или предложение, свяжитесь с администратором:",
+    },
+    "cleared_text": {
+        "uz": "🧹 Suhbat tarixi tozalandi. Yangidan boshlashingiz mumkin.",
+        "ru": "🧹 История диалога очищена. Можете начать заново.",
+    },
 }
 
 
