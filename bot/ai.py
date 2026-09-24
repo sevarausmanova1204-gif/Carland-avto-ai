@@ -131,7 +131,14 @@ def _parse_calc_targets(text: str) -> dict:
     borligini va unga qo'shilgan modifikatorlarni (davlat kelib chiqishi,
     narx darajasi) aniqlaydi. Bir xil maqsad (masalan "motor") bir necha
     qatorda uchrasa, ma'lumotlar birlashtiriladi."""
-    chunks = [c for c in re.split(r"[\n.;]+", text) if c.strip()] or [text]
+    # Vergul HAM ajratuvchi bo'lishi kerak — foydalanuvchi ko'pincha bitta
+    # gapda ikkala so'rovni vergul bilan ajratib yozadi (masalan "motoriga
+    # yevropa moylaridan hisoblab ber, karobkasiga budjetniy variantdagi
+    # moydan hisoblab ber"). Vergulsiz bu butun matn BITTA bo'lak sifatida
+    # qolib, faqat birinchi topilgan maqsadga (masalan "motor") tegishli
+    # deb hisoblanardi va karobka so'rovi/uning modifikatori butunlay
+    # yo'qolib ketardi.
+    chunks = [c for c in re.split(r"[\n.;,]+", text) if c.strip()] or [text]
     targets: dict[str, dict] = {}
     for chunk in chunks:
         low = chunk.lower()
@@ -646,12 +653,24 @@ def _build_context(user_text: str) -> str:
             no_type = "turi ko'rsatilmagan"
             no_km = "ko'rsatilmagan"
             engine_types = ', '.join(car['engine_oil_types']) or no_type
-            gearbox_types = ', '.join(car['gearbox_oil_types']) or no_type
+            # Karobka va reduktor har xil qism (va har xil moy turi) —
+            # hajm ustuni gearbox bo'lmasa reductor'ga tushadi, shu sabab
+            # moy TURI ham xuddi shu qismnikidan olinishi kerak, aks holda
+            # (masalan faqat reduktori bor mashinada) reduktor hajmi bilan
+            # birga karobkaning (unga tegishli bo'lmagan) moy turi ko'rsatilib,
+            # AI'ga noto'g'ri turi/hajmi juftligi "aniq baza ma'lumoti"
+            # sifatida uzatilib qolardi.
+            if car['gearbox_liters']:
+                gearbox_or_reductor_liters = car['gearbox_liters']
+                gearbox_types = ', '.join(car['gearbox_oil_types']) or no_type
+            else:
+                gearbox_or_reductor_liters = car['reductor_liters'] or '?'
+                gearbox_types = ', '.join(car['reductor_oil_types']) or no_type
             change_km = car['change_interval_km'] or no_km
             parts.append(
                 f"- {car['model']}: motor moyi {car['engine_oil_liters']} L "
                 f"({engine_types}), "
-                f"karobka/reduktor {car['gearbox_liters'] or car['reductor_liters'] or '?'} L "
+                f"karobka/reduktor {gearbox_or_reductor_liters} L "
                 f"({gearbox_types}), "
                 f"almashtirish oralig'i: {change_km} km."
             )

@@ -26,6 +26,12 @@ PERSISTENCE_PATH = PERSIST_DIR / "bot_persistence.pickle"
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
 
+# /stats (foydalanuvchilar faolligi statistikasi) buyrug'iga kirish huquqi
+# shu Telegram ID'larga cheklangan — vergul bilan ajratilgan holda .env'da
+# beriladi (masalan "123456789,987654321"). Bo'sh bo'lsa, /stats hech kimga
+# javob bermaydi (buyruq borligi ham bildirilmaydi).
+ADMIN_IDS = {int(x) for x in os.getenv("ADMIN_TELEGRAM_IDS", "").split(",") if x.strip().isdigit()}
+
 AI_PROVIDER = os.getenv("AI_PROVIDER", "anthropic").strip().lower()
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
 CLAUDE_MODEL = os.getenv("CLAUDE_MODEL", "claude-sonnet-5")

@@ -1,7 +1,7 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ContextTypes
 
-from .. import ai, db, keyboards
+from .. import ai, analytics, db, keyboards
 from .. import format as fmt
 from ..i18n import t
 
@@ -14,6 +14,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if mode == "oilsearch":
         kind = context.user_data.get("oilsearch_kind", "motor")
         car_id = context.user_data.get("oilsearch_car_id")
+        analytics.log_event(update.effective_user, lang, "oil_search_query", text)
         results = db.search_oil_by_name(text, kind)
         reply_text = fmt.oil_search_results_text(text, results, lang)
         kb = keyboards.back_button(f"oilprice:{kind}:{car_id}" if car_id else "menu:main", lang=lang)
@@ -23,6 +24,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if mode == "search":
         purpose = context.user_data.get("search_purpose", "oilcalc")
         extra = context.user_data.get("search_extra")
+        analytics.log_event(update.effective_user, lang, "search_query", text)
         results = db.search_cars(text, limit=10)
         if not results:
             await update.message.reply_text(
@@ -41,6 +43,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Boshqa hech qanday rejim tanlanmagan bo'lsa ham, foydalanuvchi shunchaki
     # savol yozgan bo'lishi mumkin — shu sabab har doim AI orqali javob
     # beramiz (faqat "search" rejimi alohida ushlab qolinadi, yuqorida).
+    analytics.log_event(update.effective_user, lang, "ai_chat", text)
     thinking = await update.message.reply_text(t("ai_thinking", lang))
     try:
         answer = await ai.ask_ai(text, context)

@@ -1,7 +1,7 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import ContextTypes
 
-from .. import brands, config, db, format as fmt, keyboards
+from .. import analytics, brands, config, db, format as fmt, keyboards
 from ..i18n import t
 from ..infographic import generate_car_infographic
 from ..maps import branch_maps_url
@@ -26,6 +26,7 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if action == "lang":
         new_lang = parts[1]
         context.user_data["lang"] = new_lang
+        analytics.log_event(query.from_user, new_lang, "lang", new_lang)
         await query.edit_message_text(
             f"{t('lang_saved', new_lang)}\n\n{t('main_menu_title', new_lang)}",
             reply_markup=keyboards.main_menu(new_lang),
@@ -34,6 +35,7 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if action == "menu":
         sub = parts[1]
+        analytics.log_event(query.from_user, lang, "menu", sub)
         if sub == "lang":
             await query.edit_message_text(t("lang_pick", lang), reply_markup=keyboards.language_menu())
             return
@@ -114,6 +116,7 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     if action == "branch":
         branch = db.get_branch(int(parts[1]))
+        analytics.log_event(query.from_user, lang, "branch_view", branch.get("name", ""))
         kb_rows = []
         if branch.get("latitude") and branch.get("longitude"):
             kb_rows.append([InlineKeyboardButton(t("send_location_btn", lang), callback_data=f"branchloc:{branch['id']}")])
@@ -210,6 +213,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
     if not car:
         await query.edit_message_text(t("car_not_found", lang), reply_markup=keyboards.back_button(lang=lang))
         return
+    analytics.log_event(query.from_user, lang, "car_view", f"{purpose}:{car['model']}")
     keyword = extract_keyword(car["model"])
 
     if purpose == "oilcalc":
@@ -224,7 +228,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
 
     if purpose == "info":
         await query.edit_message_text(t("infographic_preparing", lang).format(model=car["model"]))
-        png = generate_car_infographic(car)
+        png = generate_car_infographic(car, lang)
         await query.message.reply_photo(
             photo=png,
             caption=t("infographic_caption", lang).format(model=car["model"]),
@@ -275,6 +279,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
 
 async def _render_oil_price(query, kind, car_id, lang: str = "uz"):
     car = db.get_car(car_id)
+    analytics.log_event(query.from_user, lang, "oil_price_view", f"{kind}:{car['model']}")
     motor_title = t("motor_oil_title", lang)
     gearbox_title = t("gearbox_oil_title", lang)
     reductor_title = t("reductor_oil_title", lang)

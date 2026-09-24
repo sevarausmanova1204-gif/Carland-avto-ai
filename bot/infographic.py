@@ -31,6 +31,29 @@ RED = (255, 99, 99)
 GREEN = (86, 214, 150)
 
 
+def _L(lang: str, uz: str, ru: str) -> str:
+    return ru if lang == "ru" else uz
+
+
+# Bazadagi `gearbox_kind` ustuni faqat o'zbekcha saqlangan (masalan
+# "Avtomat", "Mexanika", "Variator", "Robotlashtirilgan") — rus tilidagi
+# foydalanuvchiga infografikada shu so'z tarjima qilinmasdan chiqib
+# qolmasligi uchun bu yerda kichik lug'at bilan almashtiramiz.
+_GEARBOX_KIND_RU = {
+    "avtomat": "Автомат",
+    "avtomatik": "Автомат",
+    "mexanika": "Механика",
+    "variator": "Вариатор",
+    "robotlashtirilgan": "Роботизированная",
+}
+
+
+def _gearbox_kind_label(gearbox_kind: str, lang: str) -> str:
+    if lang != "ru" or not gearbox_kind:
+        return gearbox_kind
+    return _GEARBOX_KIND_RU.get(gearbox_kind.strip().lower(), gearbox_kind)
+
+
 def _font(name: str, size: int) -> ImageFont.FreeTypeFont:
     path = ASSETS / name
     if path.exists():
@@ -271,7 +294,7 @@ def stat_card(draw, x, y, w, h, color, title, lines):
         ty += 36
 
 
-def generate_car_infographic(car: dict) -> bytes:
+def generate_car_infographic(car: dict, lang: str = "uz") -> bytes:
     from . import config
 
     is_ev = not car.get("engine_oil_liters") and not car.get("engine_oil_types")
@@ -291,9 +314,14 @@ def generate_car_infographic(car: dict) -> bytes:
 
     # sarlavha
     draw.text((56, 40), "CARLAND", font=F_TITLE(38), fill=ACCENT_2)
-    draw.text((W - 56, 44), "AVTOMATIK TEXNIK SXEMA", font=F_REG(20), fill=TEXT_MUTED, anchor="ra")
+    draw.text((W - 56, 44), _L(lang, "AVTOMATIK TEXNIK SXEMA", "АВТОМАТИЧЕСКАЯ ТЕХНИЧЕСКАЯ СХЕМА"), font=F_REG(20), fill=TEXT_MUTED, anchor="ra")
     draw.text((56, 92), car["model"], font=F_BOLD(48), fill=TEXT_MAIN)
-    draw.text((56, 150), "Motor • Uzatmalar qutisi • Reduktor — moy ma'lumotlari", font=F_REG(22), fill=TEXT_MUTED)
+    draw.text(
+        (56, 150),
+        _L(lang, "Motor • Uzatmalar qutisi • Reduktor — moy ma'lumotlari", "Двигатель • КПП • Редуктор — данные по маслу"),
+        font=F_REG(22),
+        fill=TEXT_MUTED,
+    )
     draw.line([56, 195, W - 56, 195], fill=PANEL_BORDER, width=2)
 
     gearbox_kind = car.get("gearbox_kind") or ""
@@ -303,28 +331,28 @@ def generate_car_infographic(car: dict) -> bytes:
 
     f_label = F_REG(23)
     if is_ev:
-        leader_label(draw, anchors["electric"], 500, "Elektr dvigateli (motor moyi talab qilinmaydi)", f_label, side="left")
+        leader_label(draw, anchors["electric"], 500, _L(lang, "Elektr dvigateli (motor moyi talab qilinmaydi)", "Электродвигатель (моторное масло не требуется)"), f_label, side="left")
     else:
-        leader_label(draw, anchors["cylinders"], 300, "Silindrlar bloki", f_label, side="left")
-        leader_label(draw, anchors["camshaft"], 360, "Gaz taqsimlash tizimi", f_label, side="left")
-        leader_label(draw, anchors["crankshaft"], 700, "Krivoshipli-shatun mexanizmi", f_label, side="left")
-        leader_label(draw, anchors["oilpan"], 760, "Moy nasosi va moy karteri", f_label, side="left")
+        leader_label(draw, anchors["cylinders"], 300, _L(lang, "Silindrlar bloki", "Блок цилиндров"), f_label, side="left")
+        leader_label(draw, anchors["camshaft"], 360, _L(lang, "Gaz taqsimlash tizimi", "Газораспределительный механизм"), f_label, side="left")
+        leader_label(draw, anchors["crankshaft"], 700, _L(lang, "Krivoshipli-shatun mexanizmi", "Кривошипно-шатунный механизм"), f_label, side="left")
+        leader_label(draw, anchors["oilpan"], 760, _L(lang, "Moy nasosi va moy karteri", "Масляный насос и картер"), f_label, side="left")
 
-    kind_label = gearbox_kind or "Uzatmalar qutisi"
+    kind_label = _gearbox_kind_label(gearbox_kind, lang) or _L(lang, "Uzatmalar qutisi", "Коробка передач")
     leader_label(draw, anchors["gearbox"], 330, kind_label, f_label, side="right")
     if "torque_conv" in anchors:
         low = gearbox_kind.lower()
         if "avtomat" in low:
-            tc_name = "Gidrotransformator"
+            tc_name = _L(lang, "Gidrotransformator", "Гидротрансформатор")
         elif "variator" in low or "cvt" in low:
-            tc_name = "Variator shkivlari (CVT)"
+            tc_name = _L(lang, "Variator shkivlari (CVT)", "Шкивы вариатора (CVT)")
         elif "elektromotor" in low:
-            tc_name = "Tortish motori uzeli"
+            tc_name = _L(lang, "Tortish motori uzeli", "Узел тягового двигателя")
         else:
-            tc_name = "Uzatish richagi"
+            tc_name = _L(lang, "Uzatish richagi", "Рычаг переключения передач")
         leader_label(draw, anchors["torque_conv"], 400, tc_name, f_label, side="right")
     if has_reductor and "reductor" in anchors:
-        leader_label(draw, anchors["reductor"], 760, "Reduktor (differensial)", f_label, side="right")
+        leader_label(draw, anchors["reductor"], 760, _L(lang, "Reduktor (differensial)", "Редуктор (дифференциал)"), f_label, side="right")
 
     draw.line([56, 900, W - 56, 900], fill=PANEL_BORDER, width=2)
 
@@ -332,47 +360,54 @@ def generate_car_infographic(car: dict) -> bytes:
     card_y = 930
     card_w = (W - 56 * 2 - 24) // 2 if has_reductor else (W - 112)
 
+    interval = config.SERVICE_INTERVALS_RU if lang == "ru" else config.SERVICE_INTERVALS
+
     engine_liters = car.get("engine_oil_liters")
     engine_types = car.get("engine_oil_types") or []
     if is_ev:
-        lines = ["Elektr dvigateli — an'anaviy motor moyi talab qilinmaydi"]
+        lines = [_L(lang, "Elektr dvigateli — an'anaviy motor moyi talab qilinmaydi", "Электродвигатель — обычное моторное масло не требуется")]
     else:
         lines = [
-            f"Hajmi: {engine_liters} litr" if engine_liters else "Hajmi: ma'lumot yo'q",
-            f"Moy turi: {', '.join(engine_types)}" if engine_types else "Moy turi: ko'rsatilmagan",
-            f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['motor']}",
+            _L(lang, f"Hajmi: {engine_liters} litr", f"Объём: {engine_liters} л") if engine_liters else _L(lang, "Hajmi: ma'lumot yo'q", "Объём: нет данных"),
+            _L(lang, f"Moy turi: {', '.join(engine_types)}", f"Тип масла: {', '.join(engine_types)}") if engine_types else _L(lang, "Moy turi: ko'rsatilmagan", "Тип масла: не указан"),
+            _L(lang, f"Almashtirish oralig'i: {interval['motor']}", f"Интервал замены: {interval['motor']}"),
         ]
-    stat_card(draw, 56, card_y, W - 112, 34 * len(lines) + 90, RED, "MOTOR MOYI", lines)
+    stat_card(draw, 56, card_y, W - 112, 34 * len(lines) + 90, RED, _L(lang, "MOTOR MOYI", "МОТОРНОЕ МАСЛО"), lines)
     y2 = card_y + 34 * len(lines) + 90 + 24
 
     gb_liters = car.get("gearbox_liters")
     gb_types = car.get("gearbox_oil_types") or []
     lines = [
-        gearbox_kind or "Turi ko'rsatilmagan",
-        f"Hajmi: {gb_liters} litr" if gb_liters else "Hajmi: ma'lumot yo'q",
-        f"Moy turi: {', '.join(gb_types)}" if gb_types else "Moy turi: ko'rsatilmagan",
+        _gearbox_kind_label(gearbox_kind, lang) or _L(lang, "Turi ko'rsatilmagan", "Тип не указан"),
+        _L(lang, f"Hajmi: {gb_liters} litr", f"Объём: {gb_liters} л") if gb_liters else _L(lang, "Hajmi: ma'lumot yo'q", "Объём: нет данных"),
+        _L(lang, f"Moy turi: {', '.join(gb_types)}", f"Тип масла: {', '.join(gb_types)}") if gb_types else _L(lang, "Moy turi: ko'rsatilmagan", "Тип масла: не указан"),
     ]
     if gb_liters:
-        lines.append(f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['gearbox']}")
+        lines.append(_L(lang, f"Almashtirish oralig'i: {interval['gearbox']}", f"Интервал замены: {interval['gearbox']}"))
     gb_h = 34 * len(lines) + 90
     red_liters = car.get("reductor_liters")
 
     if red_liters:
-        stat_card(draw, 56, y2, card_w, gb_h, ACCENT, "KAROBKA", lines)
+        stat_card(draw, 56, y2, card_w, gb_h, ACCENT, _L(lang, "KAROBKA", "КОРОБКА"), lines)
         red_types = car.get("reductor_oil_types") or []
+        red_types_joined = ", ".join(red_types)
         red_lines = [
-            f"Hajmi: {red_liters} litr",
-            f"Moy turi: {', '.join(red_types) if red_types else 'ko\'rsatilmagan'}",
-            f"Almashtirish oralig'i: {config.SERVICE_INTERVALS['reductor']}",
+            _L(lang, f"Hajmi: {red_liters} litr", f"Объём: {red_liters} л"),
+            _L(lang, f"Moy turi: {red_types_joined}", f"Тип масла: {red_types_joined}") if red_types else _L(lang, "Moy turi: ko'rsatilmagan", "Тип масла: не указан"),
+            _L(lang, f"Almashtirish oralig'i: {interval['reductor']}", f"Интервал замены: {interval['reductor']}"),
         ]
         red_h = 34 * len(red_lines) + 90
-        stat_card(draw, 56 + card_w + 24, y2, card_w, max(gb_h, red_h), GREEN, "REDUKTOR", red_lines)
+        stat_card(draw, 56 + card_w + 24, y2, card_w, max(gb_h, red_h), GREEN, _L(lang, "REDUKTOR", "РЕДУКТОР"), red_lines)
     else:
-        stat_card(draw, 56, y2, card_w, gb_h, ACCENT, "KAROBKA / TRANSMISSIYA", lines)
+        stat_card(draw, 56, y2, card_w, gb_h, ACCENT, _L(lang, "KAROBKA / TRANSMISSIYA", "КОРОБКА / ТРАНСМИССИЯ"), lines)
 
     footer_y = dynamic_h - 60
     draw.line([56, footer_y - 20, W - 56, footer_y - 20], fill=PANEL_BORDER, width=2)
-    note = "Vektor-chizma texnik sxema — umumiy dvigatel tuzilmasi, aynan shu modelning haqiqiy tashqi ko'rinishi emas. Raqamlar Carland bazasidan."
+    note = _L(
+        lang,
+        "Vektor-chizma texnik sxema — umumiy dvigatel tuzilmasi, aynan shu modelning haqiqiy tashqi ko'rinishi emas. Raqamlar Carland bazasidan.",
+        "Векторная техническая схема — общая структура двигателя, а не реальный внешний вид этой модели. Цифры взяты из базы Carland.",
+    )
     for i, line in enumerate(_wrap(draw, note, F_REG(19), W - 112)):
         draw.text((56, footer_y + i * 26), line, font=F_REG(19), fill=TEXT_MUTED)
 

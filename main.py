@@ -12,6 +12,7 @@ from telegram.ext import (
 from bot import config
 from bot.handlers.callbacks import route
 from bot.handlers.start import start
+from bot.handlers.stats import stats_command
 from bot.handlers.text import handle_text
 
 logging.basicConfig(
@@ -34,6 +35,7 @@ def main():
     app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).persistence(persistence).build()
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("stats", stats_command))
     app.add_handler(CallbackQueryHandler(route))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
 
