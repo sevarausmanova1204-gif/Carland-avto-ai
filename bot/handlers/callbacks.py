@@ -2,7 +2,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
-from .. import analytics, brands, config, db, format as fmt, keyboards
+from .. import analytics, brands, car_photos, config, db, format as fmt, keyboards
 from ..i18n import t
 from ..infographic import generate_car_infographic
 from ..maps import branch_maps_url
@@ -255,6 +255,19 @@ async def _render_car_action(query, purpose, car_id, extra, context):
     if purpose == "info":
         await query.edit_message_text(t("infographic_preparing", lang).format(model=car["model"]))
         await query.message.chat.send_action(ChatAction.UPLOAD_PHOTO)
+        # Agar shu mashina uchun HAQIQIY rasm (assets/car_photos/) mavjud
+        # bo'lsa, avtomatik chiziladigan sxematik diagramma o'rniga aynan
+        # o'sha rasm ko'rsatiladi — rasm topilmagan mashinalar uchun
+        # avvalgidek avtomatik sxema davom etadi.
+        real_photo = car_photos.get_car_photo_path(car["model"])
+        if real_photo:
+            with open(real_photo, "rb") as f:
+                await query.message.reply_photo(
+                    photo=f,
+                    caption=t("infographic_caption", lang).format(model=car["model"]),
+                    reply_markup=keyboards.back_button("menu:info:0", lang=lang),
+                )
+            return
         png = generate_car_infographic(car, lang)
         await query.message.reply_photo(
             photo=png,
