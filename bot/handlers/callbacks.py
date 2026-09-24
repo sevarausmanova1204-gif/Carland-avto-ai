@@ -69,7 +69,19 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 "info": "info_pick_brand",
                 "promo": "promo_pick_brand",
             }[sub]
-            await query.edit_message_text(t(title_key, lang), reply_markup=keyboards.brand_grid(sub, lang=lang))
+            text = t(title_key, lang)
+            kb = keyboards.brand_grid(sub, lang=lang)
+            # "🖼 Infografika" natijasi rasm sifatida yuboriladi (real foto
+            # yoki avtomatik sxema) — Telegram rasmli xabarni matnga
+            # edit_message_text bilan o'zgartirishga YO'L QO'YMAYDI (faqat
+            # matnli xabarlarda ishlaydi). Shu sabab "⬅️ Orqaga" tugmasi
+            # rasm ostida bosilsa, mavjud xabarni tahrirlash o'rniga YANGI
+            # xabar yuboramiz — aks holda tugma "ishlamay qoladi" (Telegram
+            # xatoni jim yutib, hech narsa qaytmaydi).
+            if query.message.photo:
+                await query.message.reply_text(text, reply_markup=kb)
+            else:
+                await query.edit_message_text(text, reply_markup=kb)
             return
         if sub in ("catcar", "specialcar"):
             slug = parts[3] if len(parts) > 3 else parts[2]
