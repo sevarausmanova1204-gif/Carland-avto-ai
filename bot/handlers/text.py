@@ -51,13 +51,32 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     analytics.log_event(update.effective_user, lang, "ai_chat", text)
     await update.message.chat.send_action(ChatAction.TYPING)
     thinking = await update.message.reply_text(t("ai_thinking", lang))
+    keyboard_kind = None
     try:
-        answer = await ai.ask_ai(text, context)
+        answer, keyboard_kind = await ai.ask_ai(text, context)
     except Exception:  # noqa: BLE001
         # Xato tafsilotini (API kaliti, provayder xatoligi va h.k.) mijozga
         # ko'rsatmaymiz — faqat serverga log qilamiz, mijozga umumiy va
         # xavfsiz xabar beriladi.
         logger.exception("AI so'roviga javob berishda xatolik (matn: %r)", text)
         answer = t("ai_error", lang)
-    has_recent = bool(context.user_data.get("recent_cars"))
-    await thinking.edit_text(answer, reply_markup=keyboards.main_menu(lang, has_recent=has_recent))
+
+    if keyboard_kind == "branches":
+        # Filial/manzil so'ralganda javob ostida to'g'ridan-to'g'ri TANLASH
+        # mumkin bo'lgan filiallar ro'yxati chiqadi — foydalanuvchi "bosh
+        # menyudan qidiring" deb alohida yo'naltirilmasdan, shu yerning
+        # o'zida filialni bosib, lokatsiyasini (GPS) olishi mumkin.
+        reply_markup = keyboards.branches_menu(lang)
+    else:
+        has_recent = bool(context.user_data.get("recent_cars"))
+        reply_markup = keyboards.main_menu(lang, has_recent=has_recent)
+
+    try:
+        await thinking.edit_text(answer, reply_markup=reply_markup, parse_mode="Markdown")
+    except Exception:  # noqa: BLE001
+        # Erkin AI (LLM) javobi ba'zan Telegram Markdown qoidalariga mos
+        # kelmaydigan belgilar (masalan juftlanmagan * yoki _) qaytarishi
+        # mumkin — bunday holda Markdown butunlay rad etilib, foydalanuvchi
+        # HECH QANDAY javob olmasdan qolib ketmasligi uchun oddiy matn
+        # sifatida qayta yuboramiz.
+        await thinking.edit_text(answer, reply_markup=reply_markup)

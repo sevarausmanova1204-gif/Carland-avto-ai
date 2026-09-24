@@ -681,7 +681,7 @@ def _build_context(user_text: str) -> str:
     return "MA'LUMOTLAR BAZASIDAN:\n" + "\n".join(parts)
 
 
-async def ask_ai(user_text: str, context=None) -> str:
+async def ask_ai(user_text: str, context=None) -> tuple[str, str | None]:
     # `context` — Telegram ContextTypes.DEFAULT_TYPE (ixtiyoriy): berilsa,
     # foydalanuvchining OLDINGI xabarida so'ragan mashinasi session
     # xotirasida saqlanadi va keyingi, mashina nomini takrorlamaydigan
@@ -690,9 +690,18 @@ async def ask_ai(user_text: str, context=None) -> str:
     # orqali javob tili ham aniqlanadi (_lang) — quyidagi deterministik
     # (bazadan to'g'ridan-to'g'ri hisoblangan) javoblarning barchasi shu
     # tilda qaytariladi.
+    #
+    # Qaytariladigan qiymat (javob_matni, klaviatura_turi) — ikkinchi
+    # element odatda None (chaqiruvchi tomon standart bosh menyuni
+    # ko'rsatadi), lekin filial javobida "branches" bo'ladi: shunda
+    # chaqiruvchi (handlers/text.py) javob ostiga filiallarni TANLASH
+    # mumkin bo'lgan haqiqiy tugmalar ro'yxatini (keyboards.branches_menu)
+    # biriktiradi — foydalanuvchi "endi bosh menyudan qidiring" deb
+    # yo'naltirilmasdan, to'g'ridan-to'g'ri shu yerda filialni bosib,
+    # lokatsiyasini olishi mumkin.
     calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
-        return calc_answer
+        return calc_answer, None
 
     lang = _lang(context)
 
@@ -701,7 +710,7 @@ async def ask_ai(user_text: str, context=None) -> str:
     # javobidan qochish maqsadida — bu ham eng oldin tekshiriladi.
     branch_answer = _try_branch_answer(user_text, lang)
     if branch_answer:
-        return branch_answer
+        return branch_answer, "branches"
 
     # Moy bilan bog'liq bo'lmagan boshqa mahsulotlar (shina/balon,
     # akkumulyator, antifriz, svecha, tormoz kolodkasi) — bu tekshiruv
@@ -710,7 +719,7 @@ async def ask_ai(user_text: str, context=None) -> str:
     # mumkin edi.
     other_answer = _try_other_category_answer(user_text, context)
     if other_answer:
-        return other_answer
+        return other_answer, None
 
     # Erkin chatda "bu brend/mahsulot mos keladimi?" yoki "shu moy bormi?"
     # kabi savollar — bazadan TO'G'RIDAN-TO'G'RI, LLM'ga yubormasdan javob
@@ -718,14 +727,14 @@ async def ask_ai(user_text: str, context=None) -> str:
     # va o'zbekcha qo'shimchalar bilan yozilgan bo'lsa ham).
     product_answer = _try_product_answer(user_text, context)
     if product_answer:
-        return product_answer
+        return product_answer, None
 
     context_block = _build_context(user_text)
     full_prompt = f"{context_block}\n\nFOYDALANUVCHI SAVOLI: {user_text}"
 
     if config.AI_PROVIDER == "openai":
-        return await _ask_openai(full_prompt, lang)
-    return await _ask_anthropic(full_prompt, lang)
+        return await _ask_openai(full_prompt, lang), None
+    return await _ask_anthropic(full_prompt, lang), None
 
 
 async def _ask_anthropic(prompt: str, lang: str = "uz") -> str:
