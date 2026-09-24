@@ -745,5 +745,23 @@
     "change_interval_km_raw": "",
     "engine_oil_type_raw": "",
     "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Deepal SL03",
+    "engine_oil_volume_raw": "4L",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "1,5L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "0w20",
+    "gearbox_oil_type_raw": ""
+  },
+  {
+    "model": "Chery Aiqar eQ7",
+    "engine_oil_volume_raw": "",
+    "gearbox_volume_raw": "",
+    "reductor_volume_raw": "2L EV",
+    "change_interval_km_raw": "",
+    "engine_oil_type_raw": "",
+    "gearbox_oil_type_raw": ""
   }
 ]
