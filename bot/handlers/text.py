@@ -1,9 +1,14 @@
+import logging
+
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
 from .. import ai, analytics, db, keyboards
 from .. import format as fmt
 from ..i18n import t
+
+logger = logging.getLogger(__name__)
 
 
 async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -44,9 +49,15 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # savol yozgan bo'lishi mumkin — shu sabab har doim AI orqali javob
     # beramiz (faqat "search" rejimi alohida ushlab qolinadi, yuqorida).
     analytics.log_event(update.effective_user, lang, "ai_chat", text)
+    await update.message.chat.send_action(ChatAction.TYPING)
     thinking = await update.message.reply_text(t("ai_thinking", lang))
     try:
         answer = await ai.ask_ai(text, context)
-    except Exception as e:  # noqa: BLE001
-        answer = t("ai_error", lang).format(e=e)
-    await thinking.edit_text(answer, reply_markup=keyboards.main_menu(lang))
+    except Exception:  # noqa: BLE001
+        # Xato tafsilotini (API kaliti, provayder xatoligi va h.k.) mijozga
+        # ko'rsatmaymiz — faqat serverga log qilamiz, mijozga umumiy va
+        # xavfsiz xabar beriladi.
+        logger.exception("AI so'roviga javob berishda xatolik (matn: %r)", text)
+        answer = t("ai_error", lang)
+    has_recent = bool(context.user_data.get("recent_cars"))
+    await thinking.edit_text(answer, reply_markup=keyboards.main_menu(lang, has_recent=has_recent))

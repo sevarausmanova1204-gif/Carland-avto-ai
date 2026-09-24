@@ -1,4 +1,5 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
 from .. import analytics, brands, config, db, format as fmt, keyboards
@@ -17,9 +18,11 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
     lang = context.user_data.get("lang", "uz")
     context.user_data.pop("mode", None)  # istalgan menyu bosilsa erkin matn rejimi bekor bo'ladi
 
+    has_recent = bool(context.user_data.get("recent_cars"))
+
     if data == "menu:main":
         await query.edit_message_text(
-            t("main_menu_title", lang), reply_markup=keyboards.main_menu(lang)
+            t("main_menu_title", lang), reply_markup=keyboards.main_menu(lang, has_recent=has_recent)
         )
         return
 
@@ -29,7 +32,7 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         analytics.log_event(query.from_user, new_lang, "lang", new_lang)
         await query.edit_message_text(
             f"{t('lang_saved', new_lang)}\n\n{t('main_menu_title', new_lang)}",
-            reply_markup=keyboards.main_menu(new_lang),
+            reply_markup=keyboards.main_menu(new_lang, has_recent=has_recent),
         )
         return
 
@@ -44,6 +47,14 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
             return
         if sub == "branches":
             await query.edit_message_text(t("branches_pick_title", lang), reply_markup=keyboards.branches_menu(lang))
+            return
+        if sub == "recent":
+            recent_ids = context.user_data.get("recent_cars", [])
+            cars = [c for c in (db.get_car(cid) for cid in recent_ids) if c]
+            if not cars:
+                await query.edit_message_text(t("recent_empty", lang), reply_markup=keyboards.back_button(lang=lang))
+                return
+            await query.edit_message_text(t("recent_title", lang), reply_markup=keyboards.recent_cars_menu(cars, lang))
             return
         if sub == "ai":
             context.user_data["mode"] = "ai"
@@ -207,6 +218,20 @@ async def _render_oil_browse(query, slug, origin, offset, lang: str = "uz"):
     await query.edit_message_text("\n".join(lines), reply_markup=InlineKeyboardMarkup(rows), parse_mode="Markdown")
 
 
+_MAX_RECENT_CARS = 5
+
+
+def _remember_recent_car(context, car_id: int):
+    """Foydalanuvchi ko'rgan mashinani "so'nggi ko'rilganlar" ro'yxatining
+    boshiga qo'yadi (allaqachon bor bo'lsa avval olib tashlanadi — takroriy
+    ko'rish uni eng tepaga ko'taradi), ro'yxatni `_MAX_RECENT_CARS` bilan
+    cheklaydi. `context.user_data` disk persistensiyasi tufayli bu bot
+    qayta ishga tushgandan keyin ham saqlanib qoladi."""
+    recent = [cid for cid in context.user_data.get("recent_cars", []) if cid != car_id]
+    recent.insert(0, car_id)
+    context.user_data["recent_cars"] = recent[:_MAX_RECENT_CARS]
+
+
 async def _render_car_action(query, purpose, car_id, extra, context):
     lang = context.user_data.get("lang", "uz")
     car = db.get_car(car_id)
@@ -214,6 +239,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         await query.edit_message_text(t("car_not_found", lang), reply_markup=keyboards.back_button(lang=lang))
         return
     analytics.log_event(query.from_user, lang, "car_view", f"{purpose}:{car['model']}")
+    _remember_recent_car(context, car_id)
     keyword = extract_keyword(car["model"])
 
     if purpose == "oilcalc":
@@ -228,6 +254,7 @@ async def _render_car_action(query, purpose, car_id, extra, context):
 
     if purpose == "info":
         await query.edit_message_text(t("infographic_preparing", lang).format(model=car["model"]))
+        await query.message.chat.send_action(ChatAction.UPLOAD_PHOTO)
         png = generate_car_infographic(car, lang)
         await query.message.reply_photo(
             photo=png,
@@ -279,6 +306,9 @@ async def _render_car_action(query, purpose, car_id, extra, context):
 
 async def _render_oil_price(query, kind, car_id, lang: str = "uz"):
     car = db.get_car(car_id)
+    if not car:
+        await query.edit_message_text(t("car_not_found", lang), reply_markup=keyboards.back_button(lang=lang))
+        return
     analytics.log_event(query.from_user, lang, "oil_price_view", f"{kind}:{car['model']}")
     motor_title = t("motor_oil_title", lang)
     gearbox_title = t("gearbox_oil_title", lang)
