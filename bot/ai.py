@@ -732,7 +732,20 @@ async def ask_ai(user_text: str, context=None) -> tuple[str, str | None]:
     context_block = _build_context(user_text)
     full_prompt = f"{context_block}\n\nFOYDALANUVCHI SAVOLI: {user_text}"
 
-    if config.AI_PROVIDER == "openai":
+    # AI_PROVIDER noto'g'ri/eskirgan qiymatda bo'lsa (masalan "gemini" —
+    # bu SDK ulanmagan, yoki umuman bo'sh) yoki tanlangan provayderning
+    # API kaliti sozlanmagan bo'lsa, aslida mavjud bo'lgan boshqa
+    # provayderga avtomatik o'tamiz — aks holda foydalanuvchi hech qanday
+    # xato ko'rmasdan, faqat "AI sozlanmagan" degan javob olaverardi.
+    provider = config.AI_PROVIDER
+    if provider == "anthropic" and not config.ANTHROPIC_API_KEY and config.OPENAI_API_KEY:
+        provider = "openai"
+    elif provider == "openai" and not config.OPENAI_API_KEY and config.ANTHROPIC_API_KEY:
+        provider = "anthropic"
+    elif provider not in ("anthropic", "openai"):
+        provider = "openai" if config.OPENAI_API_KEY else "anthropic"
+
+    if provider == "openai":
         return await _ask_openai(full_prompt, lang), None
     return await _ask_anthropic(full_prompt, lang), None
 

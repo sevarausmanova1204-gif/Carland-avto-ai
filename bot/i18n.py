@@ -1,9 +1,11 @@
 """Oddiy ikki tilli (o'zbek/rus) matnlar lug'ati.
 
-Eslatma: bu botning ASOSIY menyusi va sarlavhalarini tarjima qiladi.
-Mahsulot nomlari (baza — ko'pincha ruscha/inglizcha aralash) va batafsil
-natija matnlari hozircha faqat o'zbek tilida qoladi, chunki ularning
-har birini to'liq tarjima qilish alohida katta ish talab qiladi.
+Eslatma: bu bot ASOSIY menyusi va sarlavhalarini tarjima qiladi.
+Batafsil natija matnlari (moy hisobi, mahsulot ro'yxatlari va h.k.)
+`bot/format.py` ichida alohida, `lang` parametriga qarab tarjima qilinadi.
+Faqat mahsulot nomlari (baza qiymatlari — ko'pincha ruscha/inglizcha
+aralash yozilgan) tarjima qilinmaydi, chunki ular katalogdagi tayyor
+matn sifatida saqlanadi.
 """
 
 TEXT = {
