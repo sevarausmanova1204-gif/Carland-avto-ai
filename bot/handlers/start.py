@@ -12,8 +12,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # tushirgan sayin (masalan chalkashib qolib /start bosganda) tarixi
     # yo'qolib, funksiya deyarli foydasiz bo'lib qolardi.
     recent_cars = context.user_data.get("recent_cars")
+    legacy_cleared = context.user_data.get("legacy_cleared", False)
     context.user_data.clear()
     context.user_data["lang"] = lang
+    context.user_data["legacy_cleared"] = True
     if recent_cars:
         context.user_data["recent_cars"] = recent_cars
     analytics.log_event(update.effective_user, lang, "start")
@@ -25,7 +27,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # reply_markup faqat bitta turdagi klaviaturani ko'rsatishi mumkinligi
     # sabab, buni ALOHIDA (bo'sh) xabar bilan olib tashlaymiz, so'ng asosiy
     # xush kelibsiz xabari o'zining (inline) menyusi bilan yuboriladi.
-    await update.message.reply_text(t("legacy_keyboard_note", lang), reply_markup=ReplyKeyboardRemove())
+    # Bu faqat BIR MARTA (foydalanuvchi tomonidan har /start bosilganda emas)
+    # ko'rsatiladi — aks holda doimiy foydalanuvchi /start'ni suhbatni
+    # tozalash uchun ishlatganda, har safar keraksiz "menyu yangilandi"
+    # xabarini ko'rib, chalkashib qolishi mumkin edi.
+    if not legacy_cleared:
+        await update.message.reply_text(t("legacy_keyboard_note", lang), reply_markup=ReplyKeyboardRemove())
     await update.message.reply_text(
         t("welcome", lang),
         reply_markup=keyboards.main_menu(lang, has_recent=bool(recent_cars)),
