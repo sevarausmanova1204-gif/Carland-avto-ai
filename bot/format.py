@@ -386,8 +386,11 @@ def car_parts_text(part: str, items: list[dict], lang: str = "uz") -> str:
             price = f" — {money(it['price'], lang)}" if it.get("price") else ""
             lines.append(f"• {_plain(it['name'])}{price}")
     elif part == "tire":
-        lines += [_L(lang, "🛞 *Shina (balon)*", "🛞 *Шины*"), ""]
+        lines += [_L(lang, "🛞 *Shina (balon) o'lchamlari*", "🛞 *Размеры шин*"), ""]
+        chart = [it for it in items if it.get("factory") or it.get("city") or it.get("mountain")]
         for it in items:
+            if it in chart:
+                continue
             head = f"*{_plain(it['size'])}*" if it.get("size") else ""
             price = f" — {money(it['price'], lang)}" if it.get("price") else ""
             brand = f" ({_plain(it['brand'])})" if it.get("brand") else ""
@@ -396,6 +399,32 @@ def car_parts_text(part: str, items: list[dict], lang: str = "uz") -> str:
             alts = it.get("alt_sizes") or []
             if alts:
                 lines.append("  " + _L(lang, "Muqobil o'lchamlar: ", "Альтернативные размеры: ") + ", ".join(_plain(a) for a in alts))
+        labels = (
+            ("factory", _L(lang, "🏭 Zavod (salondan chiqqan)", "🏭 Заводской размер")),
+            ("city", _L(lang, "🏙 Shahar / tekis yo'l", "🏙 Город / ровная дорога")),
+            ("mountain", _L(lang, "⛰ Tog' / qiyshiq yo'l", "⛰ Горы / бездорожье")),
+        )
+        price_lines = []
+        for it in chart:
+            if it.get("variant"):
+                lines.append(f"*{_plain(it['variant'])}*")
+            for key, label in labels:
+                sizes = it.get(key) or []
+                if sizes:
+                    lines.append(f"{label}: " + ", ".join(sizes))
+            lines.append("")
+            for sz, opts in (it.get("options") or {}).items():
+                for o in opts:
+                    name = _plain(o["name"])
+                    label = name if name.replace(" ", "").upper().startswith(sz.upper()) else f"{sz}: {name}"
+                    line = f"• {label} — {money(o['price'], lang)}"
+                    if line not in price_lines:
+                        price_lines.append(line)
+        if price_lines:
+            lines.append(_L(lang, "💰 *Bazadagi narxlar:*", "💰 *Цены в базе:*"))
+            lines += price_lines[:10]
+            if len(price_lines) > 10:
+                lines.append(_L(lang, "… va boshqalar — filialda so'rang", "… и другие — уточняйте в филиале"))
     elif part == "antifreeze":
         lines += [_L(lang, "❄️ *Antifriz*", "❄️ *Антифриз*"), ""]
         for it in items:

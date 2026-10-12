@@ -773,6 +773,12 @@ def get_car_parts(car_id: int, part: str) -> list[dict]:
     out = []
     for r in rows:
         out.extend(json.loads(r["items"]))
+    if part == "tire":
+        # Plakatdagi o'lchamlar uchun katalogdagi (narxi bor) shinalarni ham qo'shamiz
+        for it in out:
+            sizes = list(dict.fromkeys((it.get("factory") or []) + (it.get("city") or []) + (it.get("mountain") or [])))
+            if sizes:
+                it["options"] = {sz: search_tires_by_size(sz, limit=2) for sz in sizes}
     return out
 
 

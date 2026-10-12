@@ -1,0 +1,434 @@
+[
+ {
+  "chart_model": "Matiz",
+  "variant": "0.8L / 1L",
+  "factory": [
+   "155/65R13"
+  ],
+  "city": [
+   "165/70R13"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Matiz oddiy 3 slindir",
+   "Matiz best 4 slindir"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Spark",
+  "variant": "1L / 1.25L",
+  "factory": [
+   "155/80R13",
+   "155/70R14"
+  ],
+  "city": [
+   "175/65R14",
+   "185/65R14"
+  ],
+  "mountain": [],
+  "car_models": [],
+  "match": "spark"
+ },
+ {
+  "chart_model": "Damas 3 NEW",
+  "variant": "Damas yangi",
+  "factory": [
+   "165/70R14"
+  ],
+  "city": [
+   "185/70R14"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Damas yangi"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Damas",
+  "variant": "Damas eski",
+  "factory": [
+   "155/80R12C"
+  ],
+  "city": [
+   "175/70R12",
+   "175/70R13"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Damas eski"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Nexia 2",
+  "variant": "1.5L / 1.6L",
+  "factory": [
+   "175/70R13",
+   "185/60R14"
+  ],
+  "city": [
+   "185/65R14",
+   "195/60R15"
+  ],
+  "mountain": [
+   "185/70R14"
+  ],
+  "car_models": [
+   "Nexia 2"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Nexia 3",
+  "variant": "1.5L",
+  "factory": [
+   "185/60R14",
+   "185/55R15"
+  ],
+  "city": [
+   "185/65R14",
+   "195/60R15"
+  ],
+  "mountain": [
+   "185/70R14"
+  ],
+  "car_models": [
+   "Nexia 3 (Mexanika)",
+   "Nexia 3 (Avtomat)"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Cobalt",
+  "variant": "1.5L",
+  "factory": [
+   "185/75R14",
+   "195/65R15"
+  ],
+  "city": [
+   "205/70R14",
+   "205/65R15"
+  ],
+  "mountain": [
+   "205/70R15"
+  ],
+  "car_models": [
+   "Cobalt",
+   "Cobalt MSM"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Gentra / Lacetti",
+  "variant": "Gentra 1.5L, Lacetti 1.8L / 1.6L",
+  "factory": [
+   "195/55R15"
+  ],
+  "city": [
+   "195/60R15"
+  ],
+  "mountain": [
+   "195/65R15"
+  ],
+  "car_models": [
+   "Gentra (Mexanika)",
+   "Gentra (Avtomat)",
+   "Lacetti 1,6",
+   "Lacetti 1,8"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Epica",
+  "variant": "2.4L",
+  "factory": [
+   "205/65R15",
+   "205/60R16",
+   "215/50R17"
+  ],
+  "city": [
+   "215/60R16",
+   "215/55R17"
+  ],
+  "mountain": [],
+  "car_models": [],
+  "match": "epica"
+ },
+ {
+  "chart_model": "Malibu",
+  "variant": "2.4L",
+  "factory": [
+   "225/55R17",
+   "245/45R18"
+  ],
+  "city": [
+   "225/60R17",
+   "235/55R18"
+  ],
+  "mountain": [
+   "245/50R18"
+  ],
+  "car_models": [
+   "Malibu 1"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Malibu 2",
+  "variant": "Turbo 2L / Turbo 1.5L",
+  "factory": [
+   "225/55R17"
+  ],
+  "city": [
+   "235/55R17"
+  ],
+  "mountain": [
+   "225/60R17"
+  ],
+  "car_models": [
+   "Malibu 2"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Orlando",
+  "variant": "1.8L",
+  "factory": [
+   "215/60R16",
+   "225/50R17"
+  ],
+  "city": [
+   "225/60R16",
+   "225/55R17",
+   "235/55R17"
+  ],
+  "mountain": [
+   "225/60R17"
+  ],
+  "car_models": [],
+  "match": "orlando"
+ },
+ {
+  "chart_model": "Captiva",
+  "variant": "3.2L / 3L / 2.4L",
+  "factory": [
+   "235/60R17",
+   "235/55R18"
+  ],
+  "city": [
+   "235/60R18",
+   "235/65R17"
+  ],
+  "mountain": [
+   "245/60R18"
+  ],
+  "car_models": [
+   "Captiva 1",
+   "Captiva 2 va 3 2.4L",
+   "Captiva 2 va 3 3.0L"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Tracker",
+  "variant": "1.8L",
+  "factory": [
+   "205/70R16",
+   "215/55R18"
+  ],
+  "city": [
+   "215/70R16",
+   "225/60R18"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Tracker 1"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Tracker 2",
+  "variant": "Turbo 1L / 1.2L Turbo",
+  "factory": [
+   "215/60R16",
+   "215/55R17"
+  ],
+  "city": [
+   "225/60R16",
+   "225/55R17"
+  ],
+  "mountain": [
+   "225/60R17"
+  ],
+  "car_models": [
+   "Tracker 2"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Onix",
+  "variant": "Turbo 1.2L",
+  "factory": [
+   "185/65R15",
+   "195/55R16"
+  ],
+  "city": [
+   "205/65R15",
+   "205/60R16"
+  ],
+  "mountain": [],
+  "car_models": [],
+  "match": "onix"
+ },
+ {
+  "chart_model": "Monza",
+  "variant": "Turbo 1.3L / 1.5L",
+  "factory": [
+   "195/65R15",
+   "205/55R16"
+  ],
+  "city": [
+   "205/65R15",
+   "215/55R16"
+  ],
+  "mountain": [
+   "205/60R16"
+  ],
+  "car_models": [
+   "Monza 320T",
+   "Monza 330T"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Trailblazer",
+  "variant": "3.6L",
+  "factory": [
+   "265/60R18"
+  ],
+  "city": [
+   "265/60R18",
+   "285/60R18"
+  ],
+  "mountain": [],
+  "car_models": [],
+  "match": "trailblazer"
+ },
+ {
+  "chart_model": "Equinox",
+  "variant": "Turbo 2L",
+  "factory": [
+   "225/60R18",
+   "235/50R19"
+  ],
+  "city": [
+   "235/60R18",
+   "235/55R19"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Equinox"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Equinox",
+  "variant": "New 1.5L Hybrid",
+  "factory": [
+   "235/65R17",
+   "235/55R19"
+  ],
+  "city": [
+   "235/55R19"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Equinox"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Traverse",
+  "variant": "3.6L",
+  "factory": [
+   "255/55R20"
+  ],
+  "city": [
+   "255/60R20"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Traverse"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Traverse",
+  "variant": "3.6L New",
+  "factory": [
+   "265/65R18",
+   "275/45R22"
+  ],
+  "city": [
+   "275/45R22",
+   "285/45R22"
+  ],
+  "mountain": [
+   "265/65R18",
+   "275/65R18"
+  ],
+  "car_models": [
+   "Traverse"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Tahoe",
+  "variant": "6.2L",
+  "factory": [
+   "275/55R20",
+   "285/45R22"
+  ],
+  "city": [
+   "275/50R22"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Tahoe"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Tahoe",
+  "variant": "5.3L",
+  "factory": [
+   "275/50R22"
+  ],
+  "city": [
+   "275/50R22"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Tahoe"
+  ],
+  "match": null
+ },
+ {
+  "chart_model": "Tahoe",
+  "variant": "6.2L New",
+  "factory": [
+   "285/40R24"
+  ],
+  "city": [
+   "285/45R24",
+   "275/50R24"
+  ],
+  "mountain": [],
+  "car_models": [
+   "Tahoe"
+  ],
+  "match": null
+ }
+]

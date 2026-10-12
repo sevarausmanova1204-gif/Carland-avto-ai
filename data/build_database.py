@@ -17,6 +17,7 @@ Qayta ishlatish: manba fayllar yangilansa, shunchaki:
     python3 build_database.py
 """
 import json
+import sys
 import re
 import sqlite3
 from pathlib import Path
@@ -505,6 +506,32 @@ def build():
                 "INSERT INTO car_parts (car_id, part, items) VALUES (?,?,?)",
                 (car[0], row["part"], json.dumps(row["items"], ensure_ascii=False)),
             )
+
+    # ---- balon (shina) o'lchamlari jadvali: zavod / shahar / tog' ----
+    # tires_chart_raw.json — Carland shina o'lchamlari plakatidan. Har bir yozuv
+    # `car_models` (aniq cars.model nomlari) yoki `match` (mashina nomidagi
+    # kalit so'z; mashina keyinroq bazaga qo'shilganda ham o'zi ulanadi) orqali
+    # mashinalarga biriktiriladi.
+    sys.path.insert(0, str(BASE.parent))
+    from bot.db import kw_matches
+
+    all_cars = cur.execute("SELECT id, model FROM cars").fetchall()
+    waiting = 0
+    for row in load("tires_chart_raw.json"):
+        ids = [c[0] for c in all_cars if c[1] in row["car_models"]]
+        if not ids and row.get("match"):
+            ids = [c[0] for c in all_cars if kw_matches(row["match"], c[1])]
+        if not ids:
+            waiting += 1
+            continue
+        item = {"variant": row["variant"], "factory": row["factory"], "city": row["city"], "mountain": row["mountain"]}
+        for cid in ids:
+            cur.execute(
+                "INSERT INTO car_parts (car_id, part, items) VALUES (?,?,?)",
+                (cid, "tire", json.dumps([item], ensure_ascii=False)),
+            )
+    if waiting:
+        print(f"Balon jadvali: {waiting} ta yozuv mashina bazaga qo'shilishini kutmoqda")
 
     # ---- branches ----
     for b in load("branches_structured.json"):
