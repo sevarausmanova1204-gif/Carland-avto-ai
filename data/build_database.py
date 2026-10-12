@@ -348,6 +348,12 @@ def build():
             details TEXT   -- JSON of remaining columns
         );
 
+        CREATE TABLE car_parts (
+            car_id INTEGER NOT NULL,
+            part TEXT NOT NULL,         -- spark | brake | tire | antifreeze
+            items TEXT NOT NULL         -- JSON list
+        );
+
         CREATE TABLE branches (
             id INTEGER PRIMARY KEY,
             name TEXT,
@@ -483,6 +489,23 @@ def build():
                  parse_int_price(oil_price), json.dumps(details, ensure_ascii=False, default=str)),
             )
 
+    # ---- car_parts: har bir mashinaga ANIQ biriktirilgan svecha/kolodka/balon/antifriz ----
+    # car_parts_raw.json — Google Sheets jadvalidan (import_parts_sheet.py orqali)
+    # keladi: [{"model": "<cars.model>", "part": "spark", "items": [...]}, ...].
+    # Mashina modeli nomi bo'yicha ID topiladi, shuning uchun mashinalar
+    # tartibi o'zgarsa ham ma'lumot to'g'ri mashinaga yopishadi.
+    parts_path = BASE / "car_parts_raw.json"
+    if parts_path.exists():
+        for row in load("car_parts_raw.json"):
+            car = cur.execute("SELECT id FROM cars WHERE model=?", (row["model"],)).fetchone()
+            if not car:
+                print(f"OGOHLANTIRISH: car_parts uchun mashina topilmadi: {row['model']!r}")
+                continue
+            cur.execute(
+                "INSERT INTO car_parts (car_id, part, items) VALUES (?,?,?)",
+                (car[0], row["part"], json.dumps(row["items"], ensure_ascii=False)),
+            )
+
     # ---- branches ----
     for b in load("branches_structured.json"):
         cur.execute(
@@ -493,7 +516,7 @@ def build():
     conn.commit()
 
     # qisqacha statistika
-    for t in ["cars", "tires", "batteries", "antifreeze", "spark_plugs", "products", "promotions", "branches"]:
+    for t in ["cars", "tires", "batteries", "antifreeze", "spark_plugs", "products", "promotions", "car_parts", "branches"]:
         n = cur.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0]
         print(f"{t}: {n} ta yozuv")
 

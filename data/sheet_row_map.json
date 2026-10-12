@@ -1,0 +1,1514 @@
+{
+ "1": {
+  "model": "Tico (0.8L)",
+  "brand": "Daewoo",
+  "car_models": []
+ },
+ "2": {
+  "model": "Espero (1.5L / 1.8L / 2.0L)",
+  "brand": "Daewoo",
+  "car_models": []
+ },
+ "3": {
+  "model": "Prince / Leganza / Nubira",
+  "brand": "Daewoo",
+  "car_models": []
+ },
+ "4": {
+  "model": "Spark (1.0L / 1.25L)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "5": {
+  "model": "Onix (1.2L / 1.2T)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "6": {
+  "model": "Epica (2.0L / 2.5L)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "7": {
+  "model": "Cruze (1.6L / 1.8L / 1.4T)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "8": {
+  "model": "Orlando (1.8L)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "9": {
+  "model": "Trailblazer (2.8L Dizel / 3.6L V6)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "10": {
+  "model": "Suburban (5.3L / 6.2L V8)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "11": {
+  "model": "Groove (1.5L)",
+  "brand": "Chevrolet",
+  "car_models": []
+ },
+ "12": {
+  "model": "Seagull (EV)",
+  "brand": "BYD",
+  "car_models": []
+ },
+ "13": {
+  "model": "Tang (EV / DM-i)",
+  "brand": "BYD",
+  "car_models": []
+ },
+ "14": {
+  "model": "Fangchengbao Bao 5 (Leopard 5)",
+  "brand": "BYD",
+  "car_models": []
+ },
+ "15": {
+  "model": "Denza D9 (DM-i / EV)",
+  "brand": "BYD",
+  "car_models": []
+ },
+ "16": {
+  "model": "Arrizo 8",
+  "brand": "Chery",
+  "car_models": []
+ },
+ "17": {
+  "model": "X70 / X70 Plus",
+  "brand": "Jetour",
+  "car_models": []
+ },
+ "18": {
+  "model": "Traveller / T2",
+  "brand": "Jetour",
+  "car_models": []
+ },
+ "19": {
+  "model": "Haval H9",
+  "brand": "Haval / GWM",
+  "car_models": []
+ },
+ "20": {
+  "model": "Haval Dargo",
+  "brand": "Haval / GWM",
+  "car_models": []
+ },
+ "21": {
+  "model": "GWM Poer (Pikap)",
+  "brand": "Haval / GWM",
+  "car_models": []
+ },
+ "22": {
+  "model": "Tank 300",
+  "brand": "Haval / GWM",
+  "car_models": []
+ },
+ "23": {
+  "model": "Tank 500",
+  "brand": "Haval / GWM",
+  "car_models": []
+ },
+ "24": {
+  "model": "Coolray",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "25": {
+  "model": "Cityray",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "26": {
+  "model": "Atlas / Atlas Pro",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "27": {
+  "model": "Monjaro",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "28": {
+  "model": "Tugella",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "29": {
+  "model": "Emgrand",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "30": {
+  "model": "Preface",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "31": {
+  "model": "Okavango",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "32": {
+  "model": "Galaxy L7 / E8",
+  "brand": "Geely",
+  "car_models": []
+ },
+ "33": {
+  "model": "Alsvin (1.5L)",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "34": {
+  "model": "Eado Plus",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "35": {
+  "model": "CS35 Plus",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "36": {
+  "model": "CS55 Plus",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "37": {
+  "model": "CS75 Plus",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "38": {
+  "model": "UNI-V",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "39": {
+  "model": "UNI-T",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "40": {
+  "model": "UNI-K",
+  "brand": "Changan",
+  "car_models": []
+ },
+ "41": {
+  "model": "Deepal S07 (EV / EREV)",
+  "brand": "Deepal",
+  "car_models": []
+ },
+ "42": {
+  "model": "Li Auto One",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "43": {
+  "model": "Li Auto L6",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "44": {
+  "model": "Li Auto L7",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "45": {
+  "model": "Li Auto L8",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "46": {
+  "model": "Li Auto L9",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "47": {
+  "model": "Li Auto MEGA",
+  "brand": "Li Auto",
+  "car_models": []
+ },
+ "48": {
+  "model": "Zeekr 007",
+  "brand": "Zeekr",
+  "car_models": []
+ },
+ "49": {
+  "model": "Zeekr 009",
+  "brand": "Zeekr",
+  "car_models": []
+ },
+ "50": {
+  "model": "Hongqi H5",
+  "brand": "Hongqi",
+  "car_models": []
+ },
+ "51": {
+  "model": "Hongqi H9",
+  "brand": "Hongqi",
+  "car_models": []
+ },
+ "52": {
+  "model": "Hongqi HS5",
+  "brand": "Hongqi",
+  "car_models": []
+ },
+ "53": {
+  "model": "Hongqi E-HS9",
+  "brand": "Hongqi",
+  "car_models": []
+ },
+ "54": {
+  "model": "Dongfeng Fengon (ix5 / 580)",
+  "brand": "Dongfeng",
+  "car_models": []
+ },
+ "55": {
+  "model": "Dongfeng Forthing T5 EVO",
+  "brand": "Dongfeng",
+  "car_models": []
+ },
+ "56": {
+  "model": "Dongfeng M-Hero 917",
+  "brand": "Dongfeng",
+  "car_models": []
+ },
+ "57": {
+  "model": "GAC Empow",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "58": {
+  "model": "GAC GS3 Emzoom",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "59": {
+  "model": "GAC GS8",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "60": {
+  "model": "GAC Emkoo",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "61": {
+  "model": "GAC Aion S",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "62": {
+  "model": "GAC Aion S+",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "63": {
+  "model": "GAC Aion Y",
+  "brand": "GAC",
+  "car_models": []
+ },
+ "64": {
+  "model": "JAC J7",
+  "brand": "JAC",
+  "car_models": []
+ },
+ "65": {
+  "model": "JAC JS4",
+  "brand": "JAC",
+  "car_models": []
+ },
+ "66": {
+  "model": "JAC JS6",
+  "brand": "JAC",
+  "car_models": []
+ },
+ "67": {
+  "model": "JAC T6 / T8 Pro (Pikap)",
+  "brand": "JAC",
+  "car_models": []
+ },
+ "68": {
+  "model": "BAIC X35",
+  "brand": "BAIC / Kaiyi",
+  "car_models": []
+ },
+ "69": {
+  "model": "BAIC X55",
+  "brand": "BAIC / Kaiyi",
+  "car_models": []
+ },
+ "70": {
+  "model": "BAIC BJ40",
+  "brand": "BAIC / Kaiyi",
+  "car_models": []
+ },
+ "71": {
+  "model": "Kaiyi E5",
+  "brand": "BAIC / Kaiyi",
+  "car_models": []
+ },
+ "72": {
+  "model": "Kaiyi X3 Pro",
+  "brand": "BAIC / Kaiyi",
+  "car_models": []
+ },
+ "73": {
+  "model": "Avatr 11",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "74": {
+  "model": "Avatr 12",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "75": {
+  "model": "NIO ES6",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "76": {
+  "model": "NIO ET5",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "77": {
+  "model": "NIO ET7",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "78": {
+  "model": "Xpeng G6",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "79": {
+  "model": "Xpeng G9",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "80": {
+  "model": "Xpeng P7",
+  "brand": "Avatr / NIO / Xpeng",
+  "car_models": []
+ },
+ "81": {
+  "model": "Accent (Solaris)",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "82": {
+  "model": "Sonata (LF / DN8)",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "83": {
+  "model": "Grandeur",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "84": {
+  "model": "Palisade",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "85": {
+  "model": "Custin",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "86": {
+  "model": "Staria",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "87": {
+  "model": "H-100 / Porter",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "88": {
+  "model": "Ioniq 5 / 6",
+  "brand": "Hyundai",
+  "car_models": []
+ },
+ "89": {
+  "model": "Picanto",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "90": {
+  "model": "Rio / Rio X-Line",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "91": {
+  "model": "Pegas",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "92": {
+  "model": "Cerato / K3",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "93": {
+  "model": "K9 / Quoris",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "94": {
+  "model": "Mohave",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "95": {
+  "model": "Carnival",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "96": {
+  "model": "EV6 / EV9",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "97": {
+  "model": "Bongo 3",
+  "brand": "Kia",
+  "car_models": []
+ },
+ "98": {
+  "model": "Genesis G70",
+  "brand": "Genesis",
+  "car_models": []
+ },
+ "99": {
+  "model": "Genesis G80",
+  "brand": "Genesis",
+  "car_models": []
+ },
+ "100": {
+  "model": "Genesis G90",
+  "brand": "Genesis",
+  "car_models": []
+ },
+ "101": {
+  "model": "Genesis GV70",
+  "brand": "Genesis",
+  "car_models": []
+ },
+ "102": {
+  "model": "Genesis GV80",
+  "brand": "Genesis",
+  "car_models": []
+ },
+ "103": {
+  "model": "Corolla",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "104": {
+  "model": "Camry",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "105": {
+  "model": "Avalon",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "106": {
+  "model": "Crown",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "107": {
+  "model": "RAV4",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "108": {
+  "model": "Venza",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "109": {
+  "model": "Highlander",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "110": {
+  "model": "Land Cruiser Prado",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "111": {
+  "model": "Land Cruiser (100/200/300)",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "112": {
+  "model": "Fortuner",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "113": {
+  "model": "Hilux",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "114": {
+  "model": "Hiace",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "115": {
+  "model": "Alphard / Vellfire",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "116": {
+  "model": "bZ4X",
+  "brand": "Toyota",
+  "car_models": []
+ },
+ "117": {
+  "model": "IS",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "118": {
+  "model": "ES",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "119": {
+  "model": "GS",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "120": {
+  "model": "LS",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "121": {
+  "model": "NX",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "122": {
+  "model": "RX",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "123": {
+  "model": "GX",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "124": {
+  "model": "LX",
+  "brand": "Lexus",
+  "car_models": []
+ },
+ "125": {
+  "model": "Sunny / Sentra",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "126": {
+  "model": "Altima / Teana",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "127": {
+  "model": "Qashqai",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "128": {
+  "model": "X-Trail",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "129": {
+  "model": "Murano",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "130": {
+  "model": "Pathfinder",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "131": {
+  "model": "Patrol",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "132": {
+  "model": "Navara",
+  "brand": "Nissan",
+  "car_models": []
+ },
+ "133": {
+  "model": "Civic",
+  "brand": "Honda",
+  "car_models": []
+ },
+ "134": {
+  "model": "Accord",
+  "brand": "Honda",
+  "car_models": []
+ },
+ "135": {
+  "model": "CR-V",
+  "brand": "Honda",
+  "car_models": []
+ },
+ "136": {
+  "model": "e:NP1 / e:NS1",
+  "brand": "Honda",
+  "car_models": []
+ },
+ "137": {
+  "model": "Lancer",
+  "brand": "Mitsubishi",
+  "car_models": []
+ },
+ "138": {
+  "model": "ASX",
+  "brand": "Mitsubishi",
+  "car_models": []
+ },
+ "139": {
+  "model": "Outlander",
+  "brand": "Mitsubishi",
+  "car_models": []
+ },
+ "140": {
+  "model": "Pajero / Pajero Sport",
+  "brand": "Mitsubishi",
+  "car_models": []
+ },
+ "141": {
+  "model": "L200",
+  "brand": "Mitsubishi",
+  "car_models": []
+ },
+ "142": {
+  "model": "A-Class / CLA",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "143": {
+  "model": "C-Class",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "144": {
+  "model": "E-Class",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "145": {
+  "model": "S-Class",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "146": {
+  "model": "CLS / GT 4-Door",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "147": {
+  "model": "GLA / GLB / GLC / GLE / GLS",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "148": {
+  "model": "G-Class",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "149": {
+  "model": "Vito / V-Class / Sprinter",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "150": {
+  "model": "EQE / EQS",
+  "brand": "Mercedes-Benz",
+  "car_models": []
+ },
+ "151": {
+  "model": "3 Series",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "152": {
+  "model": "4 Series",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "153": {
+  "model": "5 Series",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "154": {
+  "model": "7 Series",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "155": {
+  "model": "X1 / X3 / X4",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "156": {
+  "model": "X5",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "157": {
+  "model": "X6",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "158": {
+  "model": "X7",
+  "brand": "BMW",
+  "car_models": []
+ },
+ "159": {
+  "model": "A3 / A4 / A6 / A8",
+  "brand": "Audi",
+  "car_models": []
+ },
+ "160": {
+  "model": "Q3 / Q5 / Q7 / Q8",
+  "brand": "Audi",
+  "car_models": []
+ },
+ "161": {
+  "model": "e-tron / Q8 e-tron",
+  "brand": "Audi",
+  "car_models": []
+ },
+ "162": {
+  "model": "Cayenne",
+  "brand": "Porsche",
+  "car_models": []
+ },
+ "163": {
+  "model": "Macan",
+  "brand": "Porsche",
+  "car_models": []
+ },
+ "164": {
+  "model": "Panamera",
+  "brand": "Porsche",
+  "car_models": []
+ },
+ "165": {
+  "model": "Taycan",
+  "brand": "Porsche",
+  "car_models": []
+ },
+ "166": {
+  "model": "911",
+  "brand": "Porsche",
+  "car_models": []
+ },
+ "167": {
+  "model": "Range Rover",
+  "brand": "Land Rover",
+  "car_models": []
+ },
+ "168": {
+  "model": "Range Rover Sport",
+  "brand": "Land Rover",
+  "car_models": []
+ },
+ "169": {
+  "model": "Range Rover Velar",
+  "brand": "Land Rover",
+  "car_models": []
+ },
+ "170": {
+  "model": "Evoque",
+  "brand": "Land Rover",
+  "car_models": []
+ },
+ "171": {
+  "model": "Defender",
+  "brand": "Land Rover",
+  "car_models": []
+ },
+ "172": {
+  "model": "Polo Sedan",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "173": {
+  "model": "Passat",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "174": {
+  "model": "Tiguan / Teramont",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "175": {
+  "model": "ID.3",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "176": {
+  "model": "ID.4",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "177": {
+  "model": "ID.6",
+  "brand": "Volkswagen",
+  "car_models": []
+ },
+ "178": {
+  "model": "Octavia",
+  "brand": "Skoda",
+  "car_models": []
+ },
+ "179": {
+  "model": "VAZ 2101-2107",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "180": {
+  "model": "VAZ 2108/2109/21099",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "181": {
+  "model": "VAZ 2110-2115",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "182": {
+  "model": "Priora",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "183": {
+  "model": "Kalina",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "184": {
+  "model": "Granta",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "185": {
+  "model": "Largus",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "186": {
+  "model": "XRAY / XRAY Cross",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "187": {
+  "model": "Niva Legend",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "188": {
+  "model": "Niva Travel",
+  "brand": "Lada",
+  "car_models": []
+ },
+ "189": {
+  "model": "Hunter",
+  "brand": "UAZ",
+  "car_models": []
+ },
+ "190": {
+  "model": "Patriot / Pickup",
+  "brand": "UAZ",
+  "car_models": []
+ },
+ "191": {
+  "model": "Bukhanka",
+  "brand": "UAZ",
+  "car_models": []
+ },
+ "192": {
+  "model": "Volga",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "193": {
+  "model": "Gazel 3302",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "194": {
+  "model": "Gazel 2705 / 3221",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "195": {
+  "model": "Gazel Business",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "196": {
+  "model": "Gazel Next / NN",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "197": {
+  "model": "Sobol / Sobol NN",
+  "brand": "GAZ",
+  "car_models": []
+ },
+ "198": {
+  "model": "Damas (eski / yangi)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Damas eski",
+   "Damas yangi"
+  ]
+ },
+ "199": {
+  "model": "Labo (eski / yangi)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Labo"
+  ]
+ },
+ "200": {
+  "model": "Matiz (0.8L, 3 silindr)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Matiz oddiy 3 slindir"
+  ]
+ },
+ "201": {
+  "model": "Matiz Best (1.0L, 4 silindr)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Matiz best 4 slindir"
+  ]
+ },
+ "202": {
+  "model": "Nexia 1 (1.5L SOHC / DOHC)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Nexia 1"
+  ]
+ },
+ "203": {
+  "model": "Nexia 2 (1.5L SOHC / 1.6L DOHC)",
+  "brand": "Daewoo",
+  "car_models": [
+   "Nexia 2"
+  ]
+ },
+ "204": {
+  "model": "Nexia 3 / Ravon R3 (1.5L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Nexia 3 (Mexanika)",
+   "Nexia 3 (Avtomat)"
+  ]
+ },
+ "205": {
+  "model": "Cobalt / Ravon R4 (1.5L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Cobalt",
+   "Cobalt MSM"
+  ]
+ },
+ "206": {
+  "model": "Lacetti (1.6L / 1.8L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Lacetti 1,6",
+   "Lacetti 1,8"
+  ]
+ },
+ "207": {
+  "model": "Gentra (Lacetti 1.5L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Gentra (Mexanika)",
+   "Gentra (Avtomat)"
+  ]
+ },
+ "208": {
+  "model": "Monza 320T / 330T",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Monza 320T",
+   "Monza 330T"
+  ]
+ },
+ "209": {
+  "model": "Malibu 1 (2.4L / 2.0L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Malibu 1"
+  ]
+ },
+ "210": {
+  "model": "Malibu 2 (1.5T / 2.0T / Gibrid)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Malibu 2"
+  ]
+ },
+ "211": {
+  "model": "Tracker 1 (1.8L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Tracker 1"
+  ]
+ },
+ "212": {
+  "model": "Tracker 2 (1.0T / 1.2T)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Tracker 2"
+  ]
+ },
+ "213": {
+  "model": "Captiva 1 / 2 / 3 (2.4L / 3.0L / 3.2L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Captiva 1",
+   "Captiva 2 va 3 2.4L",
+   "Captiva 2 va 3 3.0L"
+  ]
+ },
+ "214": {
+  "model": "Captiva 4 (2.4L)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Captiva 4"
+  ]
+ },
+ "215": {
+  "model": "Captiva 5 (1.5T)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Captiva 5"
+  ]
+ },
+ "216": {
+  "model": "Equinox (2.0T)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Equinox"
+  ]
+ },
+ "217": {
+  "model": "Traverse (3.6L V6)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Traverse"
+  ]
+ },
+ "218": {
+  "model": "Tahoe (5.3L / 6.2L V8)",
+  "brand": "Chevrolet",
+  "car_models": [
+   "Tahoe"
+  ]
+ },
+ "219": {
+  "model": "Chazor (Destroyer 05 / DM-i)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Destroyer 05(Champion)"
+  ]
+ },
+ "220": {
+  "model": "Seal (EV / DM-i)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Seal"
+  ]
+ },
+ "221": {
+  "model": "Han (EV / DM-i)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Han ➤ EV ➤ DM-p (AWD gibrid)"
+  ]
+ },
+ "222": {
+  "model": "Dolphin (EV)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Dolphin"
+  ]
+ },
+ "223": {
+  "model": "e2 (EV)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD E2"
+  ]
+ },
+ "224": {
+  "model": "Yuan Up (EV)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Yuan Up ➤ EV (reduktorli)"
+  ]
+ },
+ "225": {
+  "model": "Yuan Plus / Atto 3 (EV)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Yuan Plus (Atto3) ➤ EV"
+  ]
+ },
+ "226": {
+  "model": "Song Pro (DM-i)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Song Pro ➤ DM-i ➤ ICE (eski)"
+  ]
+ },
+ "227": {
+  "model": "Song Plus (DM-i / EV)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Song Plus ➤ DM-i (gibrid) ➤ EV (elektro)"
+  ]
+ },
+ "228": {
+  "model": "Song L (EV / DM-i)",
+  "brand": "BYD",
+  "car_models": [
+   "BYD Song L ➤ EV ➤ DM-i"
+  ]
+ },
+ "229": {
+  "model": "Arrizo 6 Pro",
+  "brand": "Chery",
+  "car_models": [
+   "Chery ARRIZO 6 PRO"
+  ]
+ },
+ "230": {
+  "model": "Tiggo 2 Pro",
+  "brand": "Chery",
+  "car_models": [
+   "Chery Tiggo 2 Pro"
+  ]
+ },
+ "231": {
+  "model": "Tiggo 4 Pro",
+  "brand": "Chery",
+  "car_models": [
+   "Chery Tiggo 4 Pro"
+  ]
+ },
+ "232": {
+  "model": "Tiggo 7 Pro / Pro Max",
+  "brand": "Chery",
+  "car_models": [
+   "Chery Tiggo 7 Pro"
+  ]
+ },
+ "233": {
+  "model": "Tiggo 8 Pro / Pro Max",
+  "brand": "Chery",
+  "car_models": [
+   "Chery Tiggo 8 Pro"
+  ]
+ },
+ "234": {
+  "model": "Dashing (1.5T / 1.6T)",
+  "brand": "Jetour",
+  "car_models": [
+   "Jetour Dashing"
+  ]
+ },
+ "235": {
+  "model": "X90 Plus",
+  "brand": "Jetour",
+  "car_models": [
+   "Jetour X90"
+  ]
+ },
+ "236": {
+  "model": "Haval M6",
+  "brand": "Haval / GWM",
+  "car_models": [
+   "Haval M6"
+  ]
+ },
+ "237": {
+  "model": "Haval Jolion",
+  "brand": "Haval / GWM",
+  "car_models": [
+   "Haval Jolion"
+  ]
+ },
+ "238": {
+  "model": "Haval H6",
+  "brand": "Haval / GWM",
+  "car_models": [
+   "Haval H6"
+  ]
+ },
+ "239": {
+  "model": "Deepal SL03 (EV / EREV)",
+  "brand": "Deepal",
+  "car_models": [
+   "Deepal SL03"
+  ]
+ },
+ "240": {
+  "model": "Zeekr 001",
+  "brand": "Zeekr",
+  "car_models": [
+   "Zeekr 001"
+  ]
+ },
+ "241": {
+  "model": "Zeekr X",
+  "brand": "Zeekr",
+  "car_models": [
+   "Zeekr X"
+  ]
+ },
+ "242": {
+  "model": "Voyah Free (EREV / EV)",
+  "brand": "Voyah",
+  "car_models": [
+   "Voyah Free ➤ Hybrid (motorli) ➤ Full electric"
+  ]
+ },
+ "243": {
+  "model": "Voyah Dream (Miniven)",
+  "brand": "Voyah",
+  "car_models": [
+   "Voyah Dream"
+  ]
+ },
+ "244": {
+  "model": "Voyah Passion (Sedan)",
+  "brand": "Voyah",
+  "car_models": [
+   "Voyah Passion"
+  ]
+ },
+ "245": {
+  "model": "Leapmotor T03",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor T03"
+  ]
+ },
+ "246": {
+  "model": "Leapmotor C01",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor C01"
+  ]
+ },
+ "247": {
+  "model": "Leapmotor C10",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor C10"
+  ]
+ },
+ "248": {
+  "model": "Leapmotor C11",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor C11"
+  ]
+ },
+ "249": {
+  "model": "Leapmotor B10",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor B10"
+  ]
+ },
+ "250": {
+  "model": "Leapmotor D19",
+  "brand": "Leapmotor",
+  "car_models": [
+   "Leapmotor D19"
+  ]
+ },
+ "251": {
+  "model": "Hongqi EQM5",
+  "brand": "Hongqi",
+  "car_models": [
+   "Hongqi EQM5"
+  ]
+ },
+ "252": {
+  "model": "Dongfeng Aeolus Shine",
+  "brand": "Dongfeng",
+  "car_models": [
+   "Dongfeng Aeolus Shine"
+  ]
+ },
+ "253": {
+  "model": "Dongfeng E5",
+  "brand": "Dongfeng",
+  "car_models": [
+   "Dongfeng E5"
+  ]
+ },
+ "254": {
+  "model": "Dongfeng eπ 007",
+  "brand": "Dongfeng",
+  "car_models": [
+   "Dongfeng Eπ 007"
+  ]
+ },
+ "255": {
+  "model": "GAC Aion V",
+  "brand": "GAC",
+  "car_models": [
+   "GAC Aion V"
+  ]
+ },
+ "256": {
+  "model": "Elantra (AD / CN7)",
+  "brand": "Hyundai",
+  "car_models": [
+   "Hyundai Elantra 1.5L",
+   "Hyundai Elantra 1.6L",
+   "Hyundai Elantra 2.0L"
+  ]
+ },
+ "257": {
+  "model": "i30",
+  "brand": "Hyundai",
+  "car_models": [
+   "Hyundai I 30"
+  ]
+ },
+ "258": {
+  "model": "Creta (1 / 2-avlod)",
+  "brand": "Hyundai",
+  "car_models": [
+   "Hyundai Creta 1.6L",
+   "Hyundai Creta 2.0L"
+  ]
+ },
+ "259": {
+  "model": "Tucson (TL / NX4)",
+  "brand": "Hyundai",
+  "car_models": [
+   "Hyundai Tucson 2.0L",
+   "Hyundai Tucson 2.5L"
+  ]
+ },
+ "260": {
+  "model": "Santa Fe (DM / TM / MX5)",
+  "brand": "Hyundai",
+  "car_models": [
+   "Hyundai santafe 2.4L",
+   "Hyundai santafe 2.5L",
+   "Hyundai santafe 3.5L"
+  ]
+ },
+ "261": {
+  "model": "K5 (DL3)",
+  "brand": "Kia",
+  "car_models": [
+   "Kia k5 2.0L",
+   "Kia k5 2.5L"
+  ]
+ },
+ "262": {
+  "model": "K8",
+  "brand": "Kia",
+  "car_models": [
+   "Kia K8"
+  ]
+ },
+ "263": {
+  "model": "Sonet",
+  "brand": "Kia",
+  "car_models": [
+   "Kia Sonet"
+  ]
+ },
+ "264": {
+  "model": "Seltos",
+  "brand": "Kia",
+  "car_models": [
+   "Kia Seltos"
+  ]
+ },
+ "265": {
+  "model": "Sportage (QL / NQ5)",
+  "brand": "Kia",
+  "car_models": [
+   "Kia Sportage 2L",
+   "Kia Sportage 2.5L"
+  ]
+ },
+ "266": {
+  "model": "Sorento (UM / MQ4)",
+  "brand": "Kia",
+  "car_models": [
+   "Kia Sorento"
+  ]
+ },
+ "267": {
+  "model": "XM / i4 / iX / i7",
+  "brand": "BMW",
+  "car_models": [
+   "BMW i3, i4, i5."
+  ]
+ },
+ "268": {
+  "model": "Caddy",
+  "brand": "Volkswagen",
+  "car_models": [
+   "Volkswagen Caddy"
+  ]
+ },
+ "269": {
+  "model": "Kodiaq",
+  "brand": "Skoda",
+  "car_models": [
+   "Skoda Kodiak"
+  ]
+ },
+ "270": {
+  "model": "Vesta / Vesta Cross / SW Cross",
+  "brand": "Lada",
+  "car_models": [
+   "Lada Vesta Cross"
+  ]
+ }
+}

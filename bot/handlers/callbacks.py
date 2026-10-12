@@ -311,6 +311,17 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         return
 
     if purpose == "specialcar":
+        # Jadvaldan mashinaga ANIQ biriktirilgan ma'lumot bo'lsa — faqat o'sha
+        # ko'rsatiladi (kalit so'z bo'yicha taxminiy qidiruvdan ustun turadi).
+        if extra in ("spark", "brake", "tire", "antifreeze"):
+            sheet_items = db.get_car_parts(car_id, extra)
+            if sheet_items:
+                await query.edit_message_text(
+                    f"🚗 *{car['model']}*\n\n" + fmt.car_parts_text(extra, sheet_items, lang),
+                    reply_markup=keyboards.back_button("menu:products", lang=lang),
+                    parse_mode="Markdown",
+                )
+                return
         if extra == "battery":
             rows = db.get_batteries_for_model(car["model"], keyword, car.get("engine_oil_liters"))
             text = fmt.batteries_text(rows, lang)

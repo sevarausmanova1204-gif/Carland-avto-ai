@@ -305,16 +305,34 @@ def _try_deterministic_calc(user_text: str, context=None) -> str | None:
 # --- Moy bilan bog'liq bo'lmagan boshqa mahsulotlar (shina, akkumulyator,
 # antifriz, svecha, tormoz kolodkasi) haqidagi savollarni aniqlash ---
 
-_TIRE_KW = ("balon", "shina", "guma")
-_BATTERY_KW = ("akkumulyator", "akkumlyator", "batareya", "akkum")
-_ANTIFREEZE_KW = ("antifriz", "tosol")
-_SPARK_KW = ("svecha",)
-_BRAKE_KW = ("kolodka", "tormoz")
+_TIRE_KW = ("balon", "shina", "guma", "rezina", "pokrishka", "pokryshka", "ballon")
+_BATTERY_KW = ("akkumulyator", "akkumlyator", "akumlyator", "batareya", "akkum", "akb")
+_ANTIFREEZE_KW = ("antifriz", "antifris", "tosol", "sovutish suyuq")
+_SPARK_KW = ("svecha", "svechka", "svecka", "sveca")
+_BRAKE_KW = ("kolodka", "kalodka", "kolotka", "kalotka", "kalodga", "kolodga", "tormoz", "brake pad")
 _BRANCH_KW = (
     "filial", "filiallar", "filialingiz", "do'kon", "dokon", "manzil",
     "manzillar", "qayerda", "qayerdasiz", "joylash", "joylashgan",
     "address", "addres", "adres",
 )
+
+
+def _kw_in(low: str, kws) -> bool:
+    """So'z BOSHIDAN mos kelishini tekshiradi (qo'shimchalar mumkin:
+    'shinalar', 'svechasi'). Oddiy `in` tekshiruvi 'mashinasi' ichidagi
+    'shina' ni ham topib, har qanday "mashina" so'zi bor xabarni noto'g'ri
+    shina so'rovi deb hisoblardi."""
+    return any(re.search(r"(?<![a-z0-9'])" + re.escape(k), low) for k in kws)
+
+
+def _sheet_parts_answer(car: dict | None, part: str, lang: str) -> str | None:
+    """Mashinaga jadvaldan ANIQ biriktirilgan mahsulot bo'lsa, tayyor javob."""
+    if not car:
+        return None
+    items = db.get_car_parts(car["id"], part)
+    if not items:
+        return None
+    return f"🚗 *{car['model']}*\n\n" + fmt.car_parts_text(part, items, lang)
 
 
 def _car_keyword_for(car: dict | None) -> str | None:
@@ -375,7 +393,7 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
     car = _resolve_car(user_text, context)
     lang = _lang(context)
 
-    if any(k in low for k in _TIRE_KW):
+    if _kw_in(low, _TIRE_KW):
         size = db.parse_tire_size(latin_text)
         if size:
             rows = db.search_tires_by_size(size)
@@ -392,6 +410,9 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
                     f"🛞 Шины размера *{size}* не найдены в базе. "
                     "Попробуйте другой размер или напишите модель автомобиля.",
                 )
+        sheet = _sheet_parts_answer(car, "tire", lang)
+        if sheet:
+            return sheet
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_tires_for_model(kw)
@@ -408,7 +429,10 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
             "🛞 Напишите точный размер шины (например 195/65 R15) или модель автомобиля — тогда я найду подходящие варианты.",
         )
 
-    if any(k in low for k in _SPARK_KW):
+    if _kw_in(low, _SPARK_KW):
+        sheet = _sheet_parts_answer(car, "spark", lang)
+        if sheet:
+            return sheet
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_spark_plug_for_model(kw)
@@ -421,7 +445,7 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
             "🔌 Напишите модель автомобиля для свечей — тогда я найду подходящие варианты.",
         )
 
-    if any(k in low for k in _BATTERY_KW):
+    if _kw_in(low, _BATTERY_KW):
         kw = _car_keyword_for(car)
         if kw:
             data = db.get_batteries_for_model(car["model"], kw, car.get("engine_oil_liters"))
@@ -433,7 +457,10 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
             "🔋 Напишите модель автомобиля для аккумулятора — тогда я найду подходящие варианты.",
         )
 
-    if any(k in low for k in _ANTIFREEZE_KW):
+    if _kw_in(low, _ANTIFREEZE_KW):
+        sheet = _sheet_parts_answer(car, "antifreeze", lang)
+        if sheet:
+            return sheet
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_antifreeze_for_model(kw)
@@ -445,7 +472,10 @@ def _try_other_category_answer(user_text: str, context=None) -> str | None:
             "❄️ Напишите модель автомобиля для антифриза — тогда я найду подходящие варианты.",
         )
 
-    if any(k in low for k in _BRAKE_KW):
+    if _kw_in(low, _BRAKE_KW):
+        sheet = _sheet_parts_answer(car, "brake", lang)
+        if sheet:
+            return sheet
         kw = _car_keyword_for(car)
         if kw:
             rows = db.get_brake_pads_for_model(kw)

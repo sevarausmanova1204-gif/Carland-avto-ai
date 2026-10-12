@@ -357,6 +357,58 @@ def brake_pads_text(rows: list[dict], lang: str = "uz") -> str:
     return "\n".join(lines)
 
 
+def _plain(text) -> str:
+    return str(text).replace("*", "").replace("_", " ").replace("`", "")
+
+
+def car_parts_text(part: str, items: list[dict], lang: str = "uz") -> str:
+    """Mashinaga ANIQ biriktirilgan (jadvaldan kelgan) mahsulotlarni ko'rsatadi."""
+    unit = _L(lang, "dona", "шт")
+    lines = []
+    if part == "spark":
+        lines += [_L(lang, "🔌 *Svecha*", "🔌 *Свечи*"), ""]
+        for it in items:
+            qty = f" — {it['qty']} {unit}" if it.get("qty") else ""
+            price = f" — {money(it['price'], lang)}" if it.get("price") else ""
+            lines.append(f"• {_plain(it['name'])}{qty}{price}")
+    elif part == "brake":
+        lines += [_L(lang, "🔩 *Tormoz kolodkalari*", "🔩 *Тормозные колодки*"), ""]
+        labels = {"old": _L(lang, "Old", "Передние"), "orqa": _L(lang, "Orqa", "Задние")}
+        for pos in ("old", "orqa"):
+            group = [it for it in items if it.get("position") == pos]
+            if not group:
+                continue
+            lines.append(f"_{labels[pos]}:_")
+            for it in group:
+                price = f" — {money(it['price'], lang)}" if it.get("price") else ""
+                lines.append(f"• {_plain(it['name'])}{price}")
+        for it in (it for it in items if it.get("position") not in ("old", "orqa")):
+            price = f" — {money(it['price'], lang)}" if it.get("price") else ""
+            lines.append(f"• {_plain(it['name'])}{price}")
+    elif part == "tire":
+        lines += [_L(lang, "🛞 *Shina (balon)*", "🛞 *Шины*"), ""]
+        for it in items:
+            head = f"*{_plain(it['size'])}*" if it.get("size") else ""
+            price = f" — {money(it['price'], lang)}" if it.get("price") else ""
+            brand = f" ({_plain(it['brand'])})" if it.get("brand") else ""
+            if head:
+                lines.append(f"• {head}{brand}{price}")
+            alts = it.get("alt_sizes") or []
+            if alts:
+                lines.append("  " + _L(lang, "Muqobil o'lchamlar: ", "Альтернативные размеры: ") + ", ".join(_plain(a) for a in alts))
+    elif part == "antifreeze":
+        lines += [_L(lang, "❄️ *Antifriz*", "❄️ *Антифриз*"), ""]
+        for it in items:
+            bits = [b for b in (_plain(it.get("brand") or ""), _plain(it.get("type") or "")) if b]
+            if it.get("liters"):
+                bits.append(f"{it['liters']:g} L")
+            price = f" — {money(it['price'], lang)}" if it.get("price") else ""
+            lines.append("• " + (", ".join(bits) or "—") + price)
+    lines.append("")
+    lines.append(_L(lang, "_Narx va mosligini filialda tasdiqlang._", "_Цену и совместимость уточняйте в филиале._"))
+    return "\n".join(lines)
+
+
 def promo_text(rows: list[dict], lang: str = "uz") -> str:
     if not rows:
         return _L(lang, "Bu model uchun hozircha faol aksiya topilmadi.", "Активных акций для этой модели пока не найдено.")

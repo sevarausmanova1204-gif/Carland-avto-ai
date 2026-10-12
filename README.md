@@ -121,3 +121,18 @@ carland_bot/
     *_raw.json                   # oraliq (tekshirish/audit uchun saqlangan)
   assets/fonts/                # DejaVu Sans (ochiq litsenziyali shrift)
 ```
+
+## Mashinalarga svecha / kolodka / balon / antifriz kiritish (Google Sheets orqali)
+
+Mashinaga aniq mos mahsulotlar Google Sheets jadvalida to'ldiriladi va botga quyidagicha ulanadi:
+
+```bash
+# 1) Sheets: Fayl -> Yuklab olish -> CSV
+cd data
+python3 import_parts_sheet.py ~/Downloads/jadval.csv   # car_parts_raw.json (+ yangi mashinalar) yangilanadi
+python3 build_database.py                               # carland.db qayta yig'iladi
+```
+
+- Jadvaldagi "№" ustuni `data/sheet_row_map.json` orqali qatorni bazadagi mashinalarga bog'laydi — "№" ustunini o'zgartirmang.
+- Bot avval shu jadval ma'lumotini ko'rsatadi; mashinaga kiritilmagan bo'lsa, eski (nom bo'yicha) qidiruvga qaytadi.
+- Moy hajmi o'zgartirilgan, lekin bazada BOR mashinalar avtomatik yangilanmaydi — `data/import_report.txt` ga yoziladi.

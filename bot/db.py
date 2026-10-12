@@ -90,6 +90,50 @@ def _normalize(s: str) -> str:
     return re.sub(r"\s+", " ", _NORMALIZE_RE.sub(" ", s.lower())).strip()
 
 
+_DECIMAL_RE = re.compile(r"(\d)[.,](\d)")
+_LETTER_DIGIT_RE = re.compile(r"([a-z])(\d)")
+_DIGIT_LETTER_RE = re.compile(r"(\d)([a-z])")
+
+
+def _tokens(text: str) -> list[str]:
+    s = transliterate_cyrillic(text or "").lower()
+    s = _DECIMAL_RE.sub(r"\1.\2", s)  # "2,4" -> "2.4": o'nlik kasr bitta so'z
+    s = _LETTER_DIGIT_RE.sub(r"\1 \2", s)
+    s = _DIGIT_LETTER_RE.sub(r"\1 \2", s)
+    return re.findall(r"[a-z0-9.]+", s)
+
+
+def kw_matches(keyword: str, text: str) -> bool:
+    """Mashina kalit so'zi (masalan 'nexia 2', 'k5', 'han') mahsulot nomida
+    BUTUN SO'Z sifatida (ketma-ket) uchraydimi. Oddiy `LIKE '%han%'` dan farqi:
+    'han' 'CHANGAN' ichida, 'e2' 'TAHOE 2' ichida, 'seal' 'SEALION' ichida
+    topilmaydi — shu sabab boshqa mashinaning mahsuloti noto'g'ri ko'rsatilmaydi.
+    "NEXIA 1 2" kabi ro'yxat ("nexia 1 va 2") ham 'nexia 2' ga mos keladi,
+    "CAPTIVA 2,4" esa 'captiva 4' ga mos KELMAYDI (2,4 — dvigatel hajmi)."""
+    k = _tokens(keyword)
+    if not k or (len(k) == 1 and len(k[0]) < 3):
+        return False
+    t = _tokens(text)
+    n = len(k)
+
+    def same(kt: str, tt: str) -> bool:
+        return kt == tt or (kt.isdigit() and tt.startswith(kt + "."))
+
+    for i in range(len(t) - n + 1):
+        if all(same(k[j], t[i + j]) for j in range(n)):
+            return True
+    if n == 2 and k[1].isdigit():
+        for i, tok in enumerate(t):
+            if tok != k[0]:
+                continue
+            j = i + 1
+            while j < len(t) and t[j].isdigit():
+                if t[j] == k[1]:
+                    return True
+                j += 1
+    return False
+
+
 def normalize_word(w: str) -> str:
     """So'zni kichik harflarga o'tkazib, turli tutuq belgisi
     variantlarini ('\\'', 'ʻ', 'ʼ', '’') olib tashlaydi — shu bilan
@@ -160,6 +204,54 @@ GENERIC_WORD_STOPLIST = {
 }
 
 
+# Kirillcha yozilgan mashina nomlari harfma-harf o'girilganda bazadagi
+# nomga mos kelmaydi ("Нексия" -> "neksiya", bazada "Nexia"). Eng ko'p
+# uchraydigan imlo variantlari shu yerda to'g'rilanadi.
+_CAR_NAME_ALIASES = {
+    "neksiya": "nexia", "neksia": "nexia", "neksiya": "nexia",
+    "kobalt": "cobalt", "kobolt": "cobalt",
+    "lachetti": "lacetti", "lasetti": "lacetti", "lachetty": "lacetti",
+    "jentra": "gentra", "gentra": "gentra",
+    "kaptiva": "captiva", "kaptyva": "captiva",
+    "trekker": "tracker", "treker": "tracker",
+    "kruz": "cruze", "oniks": "onix", "malibu": "malibu",
+    "xyundai": "hyundai", "xendai": "hyundai", "xundai": "hyundai",
+    "tigo": "tiggo", "tiggo": "tiggo",
+}
+
+
+def _apply_car_aliases(text: str) -> str:
+    return " ".join(_CAR_NAME_ALIASES.get(w, w) for w in text.split())
+
+
+def _best_car_by_tokens(text: str):
+    """Matndagi so'zlar (RAQAMLAR bilan) bo'yicha eng mos mashinani topadi:
+    "tiggo 7 svecha" -> 'Chery Tiggo 7 Pro' (faqat 'tiggo' so'zi bo'yicha
+    birinchi (Tiggo 2) ni tanlab yuborish o'rniga). Kamida bitta harfli so'z
+    VA bitta model raqami mos kelishi shart; aks holda None."""
+    low = _apply_car_aliases(transliterate_cyrillic(text).lower())
+    # "k5", "i 30", "m6" kabi 1-2 harfli model belgilari raqam bilan birga
+    # kelgandagina hisobga olinadi (aks holda "2.0 l" dagi 'l' har bir mashinaga mos kelardi).
+    short = {m.group(1) for m in re.finditer(r"(?<![a-z])([a-z]{1,2})\s?\d{1,3}(?![a-z])", low)}
+    q = {t for t in _tokens(low)
+         if t[0].isdigit() or t in short or (len(t) >= 3 and not is_generic_filler_word(t))}
+    if not q:
+        return None
+    best, best_key = None, None
+    for c in list_cars():
+        mt = _tokens(c["model"])
+        matched = [t for t in set(mt)
+                   if t in q or any(t.startswith(x + ".") for x in q if x.isdigit())]
+        words = [t for t in matched if t[0].isalpha() and (len(t) >= 3 or t in short)]
+        digits = [t for t in matched if t[0].isdigit()]
+        if not words or not digits or len(matched) < 2:
+            continue
+        key = (len(matched), -len(mt))
+        if best_key is None or key > best_key:
+            best, best_key = c, key
+    return best
+
+
 def find_car_by_text(text: str):
     """Foydalanuvchi erkin matnida (shu jumladan botning o'zi chiqargan
     mashina kartochkasini nusxalab qo'shgan bo'lsa ham) ANIQ mos keladigan
@@ -184,7 +276,11 @@ def find_car_by_text(text: str):
     if best:
         return get_car(best["id"])
 
-    latin_text = transliterate_cyrillic(text)
+    scored = _best_car_by_tokens(text)
+    if scored:
+        return get_car(scored["id"])
+
+    latin_text = _apply_car_aliases(transliterate_cyrillic(text).lower())
     words = sorted(
         {
             w for w in re.split(r"[^\w'ʻʼ]+", latin_text, flags=re.UNICODE)
@@ -421,10 +517,9 @@ def filter_oils_by_origin(products: list[dict], origin: str) -> list[dict]:
 def search_products_by_keyword(keyword: str, category: str, limit: int = 20):
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT DISTINCT name, price FROM products WHERE category=? AND name LIKE ? ORDER BY price ASC LIMIT ?",
-            (category, f"%{keyword}%", limit),
+            "SELECT DISTINCT name, price FROM products WHERE category=? ORDER BY price ASC", (category,)
         ).fetchall()
-        return [dict(r) for r in rows]
+    return [dict(r) for r in rows if kw_matches(keyword, r["name"])][:limit]
 
 
 def get_brake_pads_for_model(keyword: str, limit: int = 20):
@@ -436,12 +531,11 @@ def get_brake_pads_for_model(keyword: str, limit: int = 20):
     qat'iy nazar to'g'ri ishlaydi."""
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT DISTINCT name, price FROM products WHERE name LIKE ? "
-            "AND (UPPER(name) LIKE '%КОЛОДК%' OR UPPER(name) LIKE '%KOLODKA%' OR UPPER(name) LIKE '%BRAKE PAD%') "
-            "ORDER BY price ASC LIMIT ?",
-            (f"%{keyword}%", limit),
+            "SELECT DISTINCT name, price FROM products WHERE "
+            "(UPPER(name) LIKE '%КОЛОДК%' OR UPPER(name) LIKE '%KOLODKA%' OR UPPER(name) LIKE '%BRAKE PAD%') "
+            "ORDER BY price ASC"
         ).fetchall()
-        return [dict(r) for r in rows]
+    return [dict(r) for r in rows if kw_matches(keyword, r["name"])][:limit]
 
 
 # Manba PDF'da bir nechta bo'lim sarlavhasi noto'g'ri formatlangani sababli
@@ -494,11 +588,11 @@ def get_tires_for_model(keyword: str):
     """Mashina uchun mos shina o'lchamlarini, HAR BIR o'lcham uchun bazadagi
     narxlangan variantlar bilan birga qaytaradi (narxi/litr emas, dona narxi)."""
     with get_conn() as conn:
-        rows = conn.execute(
-            "SELECT model, years, sizes FROM tires WHERE model LIKE ?", (f"%{keyword}%",)
-        ).fetchall()
+        rows = conn.execute("SELECT model, years, sizes FROM tires").fetchall()
         out = []
         for r in rows:
+            if not kw_matches(keyword, r["model"]):
+                continue
             d = dict(r)
             sizes = json.loads(d["sizes"])
             d["sizes"] = []
@@ -610,7 +704,7 @@ def get_batteries_for_model(model: str, keyword: str, engine_liters=None):
         d["cars"] = cars
         d["ah"] = _parse_battery_ah(r["name"])
         all_batteries.append(d)
-        if any(keyword.upper() in c.upper() for c in cars):
+        if any(kw_matches(keyword, c) for c in cars):
             exact.append(d)
 
     exact_names = {b["name"] for b in exact}
@@ -625,18 +719,15 @@ def get_batteries_for_model(model: str, keyword: str, engine_liters=None):
 def get_antifreeze_for_model(keyword: str):
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT brand, model, liters, summa_qizil, summa_kok FROM antifreeze WHERE model LIKE ?",
-            (f"%{keyword}%",),
+            "SELECT brand, model, liters, summa_qizil, summa_kok FROM antifreeze"
         ).fetchall()
-        return [dict(r) for r in rows]
+    return [dict(r) for r in rows if kw_matches(keyword, r["model"])]
 
 
 def get_spark_plug_for_model(keyword: str):
     with get_conn() as conn:
-        rows = conn.execute(
-            "SELECT model, qty, price FROM spark_plugs WHERE model LIKE ?", (f"%{keyword}%",)
-        ).fetchall()
-        return [dict(r) for r in rows]
+        rows = conn.execute("SELECT model, qty, price FROM spark_plugs").fetchall()
+    return [dict(r) for r in rows if kw_matches(keyword, r["model"])]
 
 
 def get_spark_plug_products_for_model(keyword: str, limit: int = 20):
@@ -646,26 +737,43 @@ def get_spark_plug_products_for_model(keyword: str, limit: int = 20):
     Kategoriyaga qaramay, nomi bo'yicha qidiramiz."""
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT DISTINCT name, price FROM products WHERE name LIKE ? "
-            "AND (UPPER(name) LIKE '%SVECHA%' OR UPPER(name) LIKE '%СВЕЧА%') "
-            "ORDER BY price ASC LIMIT ?",
-            (f"%{keyword}%", limit),
+            "SELECT DISTINCT name, price FROM products "
+            "WHERE UPPER(name) LIKE '%SVECHA%' OR UPPER(name) LIKE '%СВЕЧА%' "
+            "ORDER BY price ASC"
         ).fetchall()
-        return [dict(r) for r in rows]
+    return [dict(r) for r in rows if kw_matches(keyword, r["name"])][:limit]
 
 
 def get_promotions_for_model(keyword: str):
     with get_conn() as conn:
         rows = conn.execute(
-            "SELECT package_title, model, oil_liters, oil_price, details FROM promotions WHERE model LIKE ?",
-            (f"%{keyword}%",),
+            "SELECT package_title, model, oil_liters, oil_price, details FROM promotions"
         ).fetchall()
-        out = []
-        for r in rows:
-            d = dict(r)
-            d["details"] = json.loads(d["details"])
-            out.append(d)
-        return out
+    out = []
+    for r in rows:
+        if not kw_matches(keyword, r["model"]):
+            continue
+        d = dict(r)
+        d["details"] = json.loads(d["details"])
+        out.append(d)
+    return out
+
+
+def get_car_parts(car_id: int, part: str) -> list[dict]:
+    """Google Sheets jadvalidan kelgan, mashinaga ANIQ biriktirilgan
+    mahsulotlar (part: 'spark' | 'brake' | 'tire' | 'antifreeze'). Bo'sh
+    ro'yxat qaytarsa — bu mashina uchun jadvalda ma'lumot kiritilmagan."""
+    try:
+        with get_conn() as conn:
+            rows = conn.execute(
+                "SELECT items FROM car_parts WHERE car_id=? AND part=?", (car_id, part)
+            ).fetchall()
+    except sqlite3.OperationalError:
+        return []
+    out = []
+    for r in rows:
+        out.extend(json.loads(r["items"]))
+    return out
 
 
 def list_branches():
