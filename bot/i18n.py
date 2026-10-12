@@ -93,6 +93,7 @@ TEXT = {
     "unknown_category": {"uz": "Noma'lum kategoriya.", "ru": "Неизвестная категория."},
     "infographic_preparing": {"uz": "🖼 {model} uchun infografika tayyorlanmoqda...", "ru": "🖼 Готовим инфографику для {model}..."},
     "infographic_caption": {"uz": "🚗 {model} — motor / karobka / reduktor sxemasi", "ru": "🚗 {model} — схема двигателя / КПП / редуктора"},
+    "infographic_multi_note": {"uz": "⬆️ {model} uchun {n} ta infografika (dvigatel variantlari)", "ru": "⬆️ {n} инфографики для {model} (варианты двигателя)"},
     "no_engine_liters": {"uz": "Bu model uchun motor moyi hajmi bazada ko'rsatilmagan.", "ru": "Объём моторного масла для этой модели не указан в базе."},
     "no_gearbox_data": {"uz": "⚙️ *Karobka moyi*: bu mashina rusumida karobka qismi mavjud emas yoki bazada ma'lumot yo'q.", "ru": "⚙️ *Масло КПП*: у этой модели нет КПП, либо данных в базе нет."},
     "no_reductor_data": {"uz": "🛞 *Reduktor moyi*: bu mashina rusumida reduktor qismi mavjud emas yoki bazada ma'lumot yo'q.", "ru": "🛞 *Масло редуктора*: у этой модели нет редуктора, либо данных в базе нет."},

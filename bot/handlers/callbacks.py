@@ -1,4 +1,4 @@
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
+from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto, Update
 from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
@@ -271,14 +271,28 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         # bo'lsa, avtomatik chiziladigan sxematik diagramma o'rniga aynan
         # o'sha rasm ko'rsatiladi — rasm topilmagan mashinalar uchun
         # avvalgidek avtomatik sxema davom etadi.
-        real_photo = car_photos.get_car_photo_path(car["model"])
-        if real_photo:
-            with open(real_photo, "rb") as f:
-                await query.message.reply_photo(
-                    photo=f,
-                    caption=t("infographic_caption", lang).format(model=car["model"]),
-                    reply_markup=keyboards.back_button("menu:info:0", lang=lang),
-                )
+        real_photos = car_photos.get_car_photo_paths(car["model"])
+        caption = t("infographic_caption", lang).format(model=car["model"])
+        back_kb = keyboards.back_button("menu:info:0", lang=lang)
+        if len(real_photos) == 1:
+            await query.message.reply_photo(
+                photo=real_photos[0].read_bytes(), caption=caption, reply_markup=back_kb
+            )
+            return
+        if real_photos:
+            # Bir mashinaning bir nechta dvigatel varianti uchun rasmlar
+            # bo'lsa, hammasi bitta albom sifatida yuboriladi. Albomga
+            # inline tugma biriktirib bo'lmaydi, shu sabab "Orqaga" tugmasi
+            # alohida xabarda keladi.
+            media = [
+                InputMediaPhoto(media=p.read_bytes(), caption=caption if i == 0 else None)
+                for i, p in enumerate(real_photos)
+            ]
+            await query.message.reply_media_group(media=media)
+            await query.message.reply_text(
+                t("infographic_multi_note", lang).format(model=car["model"], n=len(real_photos)),
+                reply_markup=back_kb,
+            )
             return
         png = generate_car_infographic(car, lang)
         await query.message.reply_photo(

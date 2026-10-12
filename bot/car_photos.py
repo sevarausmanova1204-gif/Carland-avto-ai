@@ -6,10 +6,15 @@ mashina modeliga mos kelishi kerak — katta-kichik harf, bo'sh joy va
 tinish belgilaridagi farqlar muhim emas (masalan "Cobalt.jpg" yoki
 "cobalt-avtomat.png" — "Cobalt (Avtomat)" modeliga ham mos keladi).
 
+Bitta mashina rusumi uchun bir nechta rasm (masalan turli dvigatel
+hajmlari) bo'lishi mumkin — buning uchun fayl nomiga "__" va ixtiyoriy
+belgi qo'shiladi: "Malibu 2__1.jpg", "Malibu 2__2.jpg". Bunday fayllarning
+hammasi fayl nomi tartibida birga yuboriladi.
+
 Agar biror mashina uchun bu yerda rasm topilsa, "🖼 Infografika" bo'limida
 avtomatik chiziladigan SXEMATIK diagramma (bot/infographic.py) o'rniga
-aynan shu haqiqiy rasm ko'rsatiladi (bot/handlers/callbacks.py da). Rasm
-topilmagan mashinalar uchun avvalgidek avtomatik sxema davom etadi.
+aynan shu haqiqiy rasm(lar) ko'rsatiladi (bot/handlers/callbacks.py da).
+Rasm topilmagan mashinalar uchun avvalgidek avtomatik sxema davom etadi.
 """
 import re
 from pathlib import Path
@@ -23,15 +28,16 @@ def _slug(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", text.lower())
 
 
-def get_car_photo_path(model: str) -> Path | None:
+def get_car_photo_paths(model: str) -> list[Path]:
     if not PHOTOS_DIR.exists():
-        return None
+        return []
     target = _slug(model)
     if not target:
-        return None
+        return []
+    found = []
     for path in sorted(PHOTOS_DIR.iterdir()):
         if path.suffix.lower() not in _SUPPORTED_EXT:
             continue
-        if _slug(path.stem) == target:
-            return path
-    return None
+        if _slug(path.stem.split("__", 1)[0]) == target:
+            found.append(path)
+    return found

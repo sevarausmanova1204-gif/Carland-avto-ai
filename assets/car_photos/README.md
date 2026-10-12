@@ -14,3 +14,8 @@ Qo'llab-quvvatlanadigan formatlar: `.jpg`, `.jpeg`, `.png`, `.webp`.
 
 Rasm topilmagan mashinalar uchun avvalgidek avtomatik sxema ishlatiladi
 (o'zgartirish shart emas).
+
+**Bir mashinaga bir nechta rasm:** agar bitta model uchun bir nechta rasm
+bo'lsa (masalan har xil dvigatel hajmi), fayl nomiga `__` va ixtiyoriy
+belgi qo'shing: `Malibu 2__1.jpg`, `Malibu 2__2.jpg`. Hammasi fayl nomi
+tartibida bitta albom sifatida yuboriladi.
