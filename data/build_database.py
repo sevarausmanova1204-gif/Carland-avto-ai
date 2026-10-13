@@ -369,7 +369,9 @@ def build():
             name TEXT,
             city TEXT,
             address TEXT,
-            directions TEXT
+            directions TEXT,
+            latitude REAL,
+            longitude REAL
         );
 
         CREATE VIRTUAL TABLE products_fts USING fts5(name, category, content='products', content_rowid='id');
@@ -545,8 +547,8 @@ def build():
     # ---- branches ----
     for b in load("branches_structured.json"):
         cur.execute(
-            "INSERT INTO branches (id, name, city, address, directions) VALUES (?,?,?,?,?)",
-            (b["id"], b["name"], b["city"], b["address"], b["directions"]),
+            "INSERT INTO branches (id, name, city, address, directions, latitude, longitude) VALUES (?,?,?,?,?,?,?)",
+            (b["id"], b["name"], b["city"], b["address"], b["directions"], b.get("latitude"), b.get("longitude")),
         )
 
     conn.commit()
