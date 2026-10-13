@@ -11,7 +11,7 @@ from telegram.ext import (
 
 from bot import config
 from bot.handlers.callbacks import route
-from bot.handlers.start import start
+from bot.handlers.start import aksiya_command, keshbek_command, start
 from bot.handlers.stats import stats_command
 from bot.handlers.text import handle_text
 
@@ -36,9 +36,26 @@ def main():
     # foydalanuvchining tili operativ xotiradan o'chib, standart "uz"ga
     # qaytib ketardi) butunlay bartaraf etiladi.
     persistence = PicklePersistence(filepath=str(config.PERSISTENCE_PATH))
-    app = Application.builder().token(config.TELEGRAM_BOT_TOKEN).persistence(persistence).build()
+    async def _post_init(application):
+        # Telegram "Menyu" tugmasidagi buyruqlar ro'yxati
+        from telegram import BotCommand
+
+        try:
+            await application.bot.set_my_commands([
+                BotCommand("start", "Boshlash / Главное меню"),
+                BotCommand("keshbek", "5% keshbek — qanday olinadi"),
+                BotCommand("aksiya", "Aksiyalar va sovg'alar"),
+            ])
+        except Exception:  # noqa: BLE001
+            logging.exception("Buyruqlar ro'yxatini o'rnatib bo'lmadi")
+
+    app = (
+        Application.builder().token(config.TELEGRAM_BOT_TOKEN).persistence(persistence).post_init(_post_init).build()
+    )
 
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("keshbek", keshbek_command))
+    app.add_handler(CommandHandler("aksiya", aksiya_command))
     app.add_handler(CommandHandler("stats", stats_command))
     app.add_handler(CallbackQueryHandler(route))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))

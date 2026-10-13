@@ -33,7 +33,7 @@ TEXT = {
             "Начните с меню ниже 👇"
         ),
     },
-    "menu_cashback": {"uz": "💳 Keshbek 5% — qanday olinadi?", "ru": "💳 Кешбэк 5% — как получить?"},
+    "menu_cashback": {"uz": "💳 5% KESHBEK — qanday olinadi?", "ru": "💳 КЕШБЭК 5% — как получить?"},
     "cashback_full": {
         "uz": (
             "💳 *CARLAND KESHBEK — 5%*\n\n"
@@ -73,7 +73,7 @@ TEXT = {
     "menu_products": {"uz": "🔧 Mahsulotlar", "ru": "🔧 Товары"},
     "menu_info": {"uz": "🖼 Infografika (motor/karobka/reduktor)", "ru": "🖼 Инфографика (двигатель/КПП/редуктор)"},
     "menu_branches": {"uz": "📍 Filiallar", "ru": "📍 Филиалы"},
-    "menu_promo": {"uz": "🎉 Aksiyalar", "ru": "🎉 Акции"},
+    "menu_promo": {"uz": "🎁 Aksiyalar va sovg'alar", "ru": "🎁 Акции и подарки"},
     "promo_hub_title": {
         "uz": "🎉 *Aksiyalar* — nimani ko'rmoqchisiz?\n\n💳 *5% keshbek*: Carland ilovasini yuklab oling — birinchi xaridga 5% qaytadi.",
         "ru": "🎉 *Акции* — что показать?\n\n💳 *Кешбэк 5%*: скачайте приложение Carland — на первую покупку вернём 5%.",

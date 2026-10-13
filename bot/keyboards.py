@@ -8,6 +8,9 @@ ADMIN_USERNAME = "carland_01"
 
 def main_menu(lang: str = "uz", has_recent: bool = False):
     rows = [
+        # eng ko'zga tashlanadigan joyda: keshbek va aksiya/sovg'alar
+        [InlineKeyboardButton(t("menu_cashback", lang), callback_data="menu:cashback")],
+        [InlineKeyboardButton(t("menu_promo", lang), callback_data="menu:promohub")],
         [InlineKeyboardButton(t("menu_oilcalc", lang), callback_data="menu:oilcalc:0")],
         [InlineKeyboardButton(t("menu_products", lang), callback_data="menu:products")],
     ]
@@ -19,34 +22,11 @@ def main_menu(lang: str = "uz", has_recent: bool = False):
     rows += [
         [InlineKeyboardButton(t("menu_info", lang), callback_data="menu:info:0")],
         [InlineKeyboardButton(t("menu_branches", lang), callback_data="menu:branches")],
-        [InlineKeyboardButton(t("menu_promo", lang), callback_data="menu:promohub")],
-        [InlineKeyboardButton(t("menu_cashback", lang), callback_data="menu:cashback")],
         [InlineKeyboardButton(t("menu_app_ios", lang), url=config.APP_STORE_URL),
          InlineKeyboardButton(t("menu_app_android", lang), url=config.PLAY_STORE_URL)],
         [InlineKeyboardButton(t("menu_ai", lang), callback_data="menu:ai")],
         [InlineKeyboardButton(t("menu_admin", lang), url=f"https://t.me/{ADMIN_USERNAME}")],
         [InlineKeyboardButton(t("menu_lang", lang), callback_data="menu:lang")],
-    ]
-    return InlineKeyboardMarkup(rows)
-
-
-def cashback_menu(lang: str = "uz"):
-    rows = [
-        [InlineKeyboardButton(t("menu_app_ios", lang), url=config.APP_STORE_URL),
-         InlineKeyboardButton(t("menu_app_android", lang), url=config.PLAY_STORE_URL)],
-        [InlineKeyboardButton(t("menu_admin", lang), url=f"https://t.me/{ADMIN_USERNAME}")],
-        [InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")],
-    ]
-    return InlineKeyboardMarkup(rows)
-
-
-def promo_hub(lang: str = "uz"):
-    rows = [
-        [InlineKeyboardButton(t("promo_posters_btn", lang), callback_data="promo:posters")],
-        [InlineKeyboardButton(t("promo_by_car_btn", lang), callback_data="menu:promo:0")],
-        [InlineKeyboardButton(t("menu_app_ios", lang), url=config.APP_STORE_URL),
-         InlineKeyboardButton(t("menu_app_android", lang), url=config.PLAY_STORE_URL)],
-        [InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")],
     ]
     return InlineKeyboardMarkup(rows)
 

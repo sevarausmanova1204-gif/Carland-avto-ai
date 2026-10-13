@@ -38,3 +38,13 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         reply_markup=keyboards.main_menu(lang, has_recent=bool(recent_cars)),
         parse_mode="Markdown",
     )
+
+
+async def keshbek_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    lang = context.user_data.get("lang", "uz")
+    await update.message.reply_text(t("cashback_full", lang), reply_markup=keyboards.cashback_menu(lang), parse_mode="Markdown")
+
+
+async def aksiya_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    lang = context.user_data.get("lang", "uz")
+    await update.message.reply_text(t("promo_hub_title", lang), reply_markup=keyboards.promo_hub(lang), parse_mode="Markdown")

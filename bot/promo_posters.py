@@ -191,7 +191,7 @@ def render(key: str, pkg: dict) -> Image.Image:
         gifts.append(text)
     gift_cols = 2
     gift_rows_n = (len(gifts) + gift_cols - 1) // gift_cols
-    h_gifts = (24 + 40 + 36 + gift_rows_n * 46 + 24) if gifts else 0
+    h_gifts = (82 + 54 + gift_rows_n * 68 + 20) if gifts else 0
     h_cash = 230
     row_h = 66 if has_codes or is_ev else 60
     head_h = 78 if is_ev else 56
@@ -220,18 +220,33 @@ def render(key: str, pkg: dict) -> Image.Image:
         d.rounded_rectangle([PAD, ty + 14, PAD + bw, ty + 14 + 48], radius=24, outline=AMBER, width=3)
         d.text((PAD + 20, ty + 14 + 11), label, font=f_head, fill=AMBER)
     ty += 90
-    # sovg'alar bloki (alohida, yashil)
+    # sovg'alar bloki (alohida, yashil, ko'zga tashlanadigan)
     if gifts:
-        d.rounded_rectangle([PAD, ty, W - PAD, ty + h_gifts], radius=18, fill=(17, 38, 31), outline=GREEN, width=3)
-        d.text((PAD + 24, ty + 22), "SOVG'ALAR — BEPUL (narxga kiritilgan)", font=_font(True, 30), fill=GREEN)
-        d.text((PAD + 24, ty + 64), "Moy narxi bilan birga beriladi, alohida to'lanmaydi", font=f_small, fill=MUTED)
-        gy = ty + 24 + 40 + 36
+        GREEN_DARK = (17, 38, 31)
+        d.rounded_rectangle([PAD, ty, W - PAD, ty + h_gifts], radius=22, fill=GREEN_DARK, outline=GREEN, width=4)
+        d.rounded_rectangle([PAD, ty, W - PAD, ty + 82], radius=22, fill=GREEN)
+        d.rectangle([PAD, ty + 50, W - PAD, ty + 82], fill=GREEN)
+        # sovg'a quti belgisi
+        gx, gy = PAD + 24, ty + 14
+        d.rounded_rectangle([gx, gy + 18, gx + 56, gy + 54], radius=6, fill=(17, 38, 31))
+        d.rectangle([gx - 4, gy + 10, gx + 60, gy + 24], fill=(17, 38, 31))
+        d.rectangle([gx + 24, gy + 10, gx + 32, gy + 54], fill=GREEN)
+        d.ellipse([gx + 8, gy - 4, gx + 30, gy + 14], outline=(17, 38, 31), width=5)
+        d.ellipse([gx + 26, gy - 4, gx + 48, gy + 14], outline=(17, 38, 31), width=5)
+        d.text((PAD + 104, ty + 17), "SOVG'A — BEPUL BERILADI", font=_font(True, 40), fill=(17, 38, 31))
+        d.text((PAD + 24, ty + 96), "Moy narxiga kiritilgan, alohida to'lanmaydi", font=f_small, fill=MUTED)
+        gy = ty + 82 + 54
         colw = (inner - 48) // gift_cols
         for i, g in enumerate(gifts):
             cx = PAD + 24 + (i % gift_cols) * colw
-            cy = gy + (i // gift_cols) * 46
-            d.text((cx, cy), "✓", font=f_chip, fill=GREEN)
-            d.text((cx + 36, cy), g, font=f_chip, fill=WHITE)
+            cy = gy + (i // gift_cols) * 68
+            d.rounded_rectangle([cx, cy, cx + colw - 14, cy + 56], radius=14, fill=(26, 66, 49), outline=GREEN, width=2)
+            d.text((cx + 16, cy + 12), "✓", font=f_chip, fill=GREEN)
+            gtxt = g
+            gf = _font(True, 26)
+            while d.textlength(gtxt, font=gf) > colw - 14 - 64 and gf.size > 18:
+                gf = _font(True, gf.size - 1)
+            d.text((cx + 52, cy + 14), gtxt, font=gf, fill=WHITE)
         ty += h_gifts + 30
     d.text((PAD, ty), "MOY NARXI (sovg'alar bilan birga)", font=f_head, fill=MUTED)
     ty += 40
