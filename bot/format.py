@@ -1,3 +1,4 @@
+import re
 from . import config
 
 
@@ -393,9 +394,17 @@ def car_parts_text(part: str, items: list[dict], lang: str = "uz") -> str:
                 continue
             head = f"*{_plain(it['size'])}*" if it.get("size") else ""
             price = f" — {money(it['price'], lang)}" if it.get("price") else ""
-            brand = f" ({_plain(it['brand'])})" if it.get("brand") else ""
-            if head:
-                lines.append(f"• {head}{brand}{price}")
+            raw_brand = _plain(it.get("brand") or "")
+            # "CROSS AS8 MAZZINI (215/55R17)" — omborda bor shina BOSHQA (muqobil) o'lchamda:
+            # narx shu o'lchamga tegishli, asosiy o'lcham qatoriga aralashtirib yubormaymiz.
+            alt_m = re.match(r"^(.*?)\s*\((\d{3}/\d{2}\s?R\d{2}C?)\)$", raw_brand)
+            if head and alt_m:
+                lines.append(f"• {head}")
+                lines.append("  " + _L(lang, "Omborda bor: ", "На складе: ") + f"{alt_m.group(2)} {alt_m.group(1)}{price}")
+            else:
+                brand = f" ({raw_brand})" if raw_brand else ""
+                if head:
+                    lines.append(f"• {head}{brand}{price}")
             alts = it.get("alt_sizes") or []
             if alts:
                 lines.append("  " + _L(lang, "Muqobil o'lchamlar: ", "Альтернативные размеры: ") + ", ".join(_plain(a) for a in alts))

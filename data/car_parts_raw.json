@@ -23,6 +23,22 @@
   ]
  },
  {
+  "model": "1.5T (Changan Oshan)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "225/55R18",
+     "225/55R19",
+     "245/50R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
+   }
+  ]
+ },
+ {
   "model": "Aito (Seres) M5",
   "part": "air_filter",
   "items": [
@@ -64,6 +80,20 @@
     "name": "YUNPAR OIL FILTER BYD CHAZOR/SONG, HAVAL H6/M6, AITO M5/M7/M9, GAC GS8 YJ B1 018",
     "price": 70000,
     "qty": 37
+   }
+  ]
+ },
+ {
+  "model": "Aito (Seres) M5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R19",
+    "alt_sizes": [
+     "255/45R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -122,6 +152,22 @@
   ]
  },
  {
+  "model": "Aito (Seres) M7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [
+     "275/50R20",
+     "265/45R21",
+     "285/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Aito M9 (Range extender)",
   "part": "air_filter",
   "items": [
@@ -171,6 +217,22 @@
   ]
  },
  {
+  "model": "Aito M9 (Range extender)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [
+     "285/45R21",
+     "265/40R22",
+     "285/40R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Alfa Romeo Stelvio / Mito",
   "part": "air_filter",
   "items": [
@@ -211,6 +273,28 @@
     "name": "FILTRON OP 545/2 ALFA ROMEO MITO, FIAT",
     "price": 120000,
     "qty": 5
+   }
+  ]
+ },
+ {
+  "model": "Alfa Romeo Stelvio / Mito",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "235/65R17",
+     "235/60R18",
+     "235/55R19",
+     "235/50R20",
+     "255/45R20",
+     "255/40R21",
+     "185/65R15",
+     "195/55R16",
+     "215/45R17"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
    }
   ]
  },
@@ -435,6 +519,43 @@
   ]
  },
  {
+  "model": "Audi A3 / A4 / A6 / A8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "205/50R17",
+     "225/45R17",
+     "225/40R18",
+     "235/35R19",
+     "195/65R16",
+     "205/60R16",
+     "225/50R17",
+     "225/45R18",
+     "245/40R18",
+     "245/35R19",
+     "245/30R20",
+     "255/30R20",
+     "225/60R17",
+     "225/55R18",
+     "245/45R19",
+     "255/40R20",
+     "255/35R21",
+     "235/60R17",
+     "235/55R18",
+     "235/50R19",
+     "255/45R19",
+     "265/40R20",
+     "265/35R21",
+     "275/35R21"
+    ],
+    "brand": "VEEMAXX ECO777 (205/60R16)",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "Audi Q3 / Q5 / Q7 / Q8",
   "part": "air_filter",
   "items": [
@@ -535,12 +656,69 @@
   ]
  },
  {
+  "model": "Audi Q3 / Q5 / Q7 / Q8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R17",
+    "alt_sizes": [
+     "235/55R17",
+     "235/50R18",
+     "235/55R18",
+     "235/50R19",
+     "255/45R19",
+     "255/40R20",
+     "235/65R17",
+     "235/60R18",
+     "235/55R19",
+     "255/50R19",
+     "255/45R20",
+     "255/40R21",
+     "235/65R18",
+     "255/60R18",
+     "255/55R19",
+     "255/50R20",
+     "285/45R20",
+     "285/40R21",
+     "285/35R22",
+     "265/55R19",
+     "265/50R20",
+     "275/50R20",
+     "285/45R21",
+     "285/40R22",
+     "285/35R23"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R17)",
+    "price": 835000
+   }
+  ]
+ },
+ {
   "model": "Audi e-tron / Q8 e-tron",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12evo (VW TL 774-L) — hajmi 7L-10L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Audi e-tron / Q8 e-tron",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "255/50R20",
+     "285/45R20",
+     "265/45R21",
+     "285/40R21",
+     "285/35R22",
+     "265/40R22"
+    ],
     "brand": "",
     "price": null
    }
@@ -575,6 +753,21 @@
   ]
  },
  {
+  "model": "Avatr / NIO / Xpeng NIO ES6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "255/50R20",
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Avatr / NIO / Xpeng NIO ET5",
   "part": "antifreeze",
   "items": [
@@ -598,12 +791,41 @@
   ]
  },
  {
+  "model": "Avatr / NIO / Xpeng NIO ET5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R19",
+    "alt_sizes": [
+     "245/40R20"
+    ],
+    "brand": "LING LONG",
+    "price": 1210000
+   }
+  ]
+ },
+ {
   "model": "Avatr / NIO / Xpeng NIO ET7",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12++ (VW TL 774-G/J; Ravenol LTC C12++)",
     "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng NIO ET7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R19",
+    "alt_sizes": [
+     "245/45R20",
+     "255/40R21"
+    ],
     "brand": "",
     "price": null
    }
@@ -622,12 +844,41 @@
   ]
  },
  {
+  "model": "Avatr / NIO / Xpeng Xpeng G6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Avatr / NIO / Xpeng Xpeng G9",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12evo (VW TL 774-L; Ravenol C12evo)",
     "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng Xpeng G9",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "255/50R20",
+     "255/45R21"
+    ],
     "brand": "",
     "price": null
    }
@@ -642,6 +893,24 @@
     "liters": 10.0,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng Xpeng P7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R18",
+    "alt_sizes": [
+     "245/45R19",
+     "245/40R20",
+     "245/45R20",
+     "275/40R20",
+     "245/40R21"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
    }
   ]
  },
@@ -691,6 +960,21 @@
   ]
  },
  {
+  "model": "Avatr 06 / 07",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/45R20",
+    "alt_sizes": [
+     "255/50R20",
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Avatr 11",
   "part": "antifreeze",
   "items": [
@@ -710,6 +994,20 @@
     "name": "YUNPAR CABIN FILTER AVATR 11, XIAOMI SU7 UGOL YT E6 584F",
     "price": 150000,
     "qty": 6
+   }
+  ]
+ },
+ {
+  "model": "Avatr 11",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [
+     "265/40R22"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -737,12 +1035,40 @@
   ]
  },
  {
+  "model": "Avatr 12",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R20",
+    "alt_sizes": [
+     "265/40R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "BAIC / Kaiyi Kaiyi E5",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil)",
     "liters": 9.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC / Kaiyi Kaiyi E5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "205/50R17"
+    ],
     "brand": "",
     "price": null
    }
@@ -761,12 +1087,44 @@
   ]
  },
  {
+  "model": "BAIC / Kaiyi Kaiyi X3 Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "215/55R18"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "BAIC BJ40",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil); gibrid 1.5T: G12evo (BMW LC-87) — hajmi 7,7L-10L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC BJ40",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/75R16",
+    "alt_sizes": [
+     "245/65R17",
+     "245/70R17",
+     "265/65R17",
+     "265/60R18"
+    ],
     "brand": "",
     "price": null
    }
@@ -785,6 +1143,20 @@
   ]
  },
  {
+  "model": "BAIC X35",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/50R17"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "BAIC X55",
   "part": "antifreeze",
   "items": [
@@ -793,6 +1165,22 @@
     "liters": 6.4,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC X55",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "225/50R18",
+     "225/60R18",
+     "225/55R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
    }
   ]
  },
@@ -831,6 +1219,23 @@
   ]
  },
  {
+  "model": "BAW 212 / M7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/75R15",
+    "alt_sizes": [
+     "215/80R16",
+     "265/70R17",
+     "265/65R18",
+     "215/60R17"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "BMW 1 Series",
   "part": "antifreeze",
   "items": [
@@ -860,6 +1265,24 @@
     "name": "BOSCH OIL FILTER BMW F0264007205 P7205",
     "price": 250000,
     "qty": 6
+   }
+  ]
+ },
+ {
+  "model": "BMW 1 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "205/50R17",
+     "225/45R17",
+     "245/40R17",
+     "225/40R18",
+     "245/35R18"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -999,6 +1422,26 @@
   ]
  },
  {
+  "model": "BMW 3 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "225/50R17",
+     "225/45R18",
+     "255/40R18",
+     "225/40R19",
+     "255/35R19",
+     "225/35R20",
+     "255/30R20"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "BMW 4 Series",
   "part": "antifreeze",
   "items": [
@@ -1029,6 +1472,25 @@
     "name": "YUNPAR OIL FILTER BWM SERIES 3/4/5/7/X3/X4/X5/X6/Z4 TOYOTA SUPRA YJ E2 108Z",
     "price": 120000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "BMW 4 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R17",
+    "alt_sizes": [
+     "225/45R18",
+     "255/40R18",
+     "225/40R19",
+     "255/35R19",
+     "225/35R20",
+     "255/30R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1238,6 +1700,34 @@
   ]
  },
  {
+  "model": "BMW 5 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "245/45R18",
+     "275/40R18",
+     "245/40R19",
+     "275/35R19",
+     "245/35R20",
+     "275/30R20",
+     "225/55R18",
+     "245/45R19",
+     "275/40R19",
+     "245/40R20",
+     "275/35R20",
+     "245/35R21",
+     "255/35R21",
+     "275/30R21",
+     "285/30R21"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
+   }
+  ]
+ },
+ {
   "model": "BMW 6 Series",
   "part": "air_filter",
   "items": [
@@ -1309,6 +1799,24 @@
     "name": "BOSCH OIL FILTER BMW N63/83 F026407158",
     "price": 240000,
     "qty": 7
+   }
+  ]
+ },
+ {
+  "model": "BMW 6 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R18",
+    "alt_sizes": [
+     "275/40R18",
+     "245/40R19",
+     "275/35R19",
+     "245/35R20",
+     "275/30R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1443,6 +1951,33 @@
   ]
  },
  {
+  "model": "BMW 7 Series",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "245/50R18",
+     "245/45R19",
+     "275/40R19",
+     "245/40R20",
+     "275/35R20",
+     "245/35R21",
+     "275/30R21",
+     "245/50R19",
+     "255/45R20",
+     "285/40R20",
+     "255/40R21",
+     "285/35R21",
+     "255/35R22",
+     "285/30R22"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
+   }
+  ]
+ },
+ {
   "model": "BMW M5 / M8",
   "part": "air_filter",
   "items": [
@@ -1460,6 +1995,26 @@
    {
     "type": "HOAT MB 325.0 (ko'k) — hajmi 11,5L-13L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW M5 / M8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/40R19",
+    "alt_sizes": [
+     "285/40R19",
+     "275/35R20",
+     "285/35R20",
+     "265/40R19",
+     "295/35R19",
+     "265/35R20",
+     "295/30R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -2024,6 +2579,21 @@
   ]
  },
  {
+  "model": "BMW i3, i4, i5.",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R18",
+    "alt_sizes": [
+     "245/40R19",
+     "255/40R19"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "BYD Denza D9 (DM-i / EV)",
   "part": "air_filter",
   "items": [
@@ -2054,6 +2624,18 @@
     "name": "YUNPAR CABIN FILTER LEOPARD 5/8, DENZA D9 UGOL YT E6 556F",
     "price": 170000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "BYD Denza D9 (DM-i / EV)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
    }
   ]
  },
@@ -2144,6 +2726,20 @@
     "name": "YUNPAR OIL FILTER BYD CHAZOR/SONG, HAVAL H6/M6, AITO M5/M7/M9, GAC GS8 YJ B1 018",
     "price": 70000,
     "qty": 37
+   }
+  ]
+ },
+ {
+  "model": "BYD Destroyer 05(Champion)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "225/60R16"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -2249,6 +2845,18 @@
   ]
  },
  {
+  "model": "BYD E2",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "BYD Fangchengbao Bao 5 (Leopard 5)",
   "part": "air_filter",
   "items": [
@@ -2295,6 +2903,20 @@
     "name": "YUNPAR OIL FILTER BYD TANG-L DM-I HAN-L DM-L DENZA N8/N9 LEOPARD 5 YANGWANG U8 YJ-D1-197",
     "price": 60000,
     "qty": 6
+   }
+  ]
+ },
+ {
+  "model": "BYD Fangchengbao Bao 5 (Leopard 5)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/65R18",
+    "alt_sizes": [
+     "275/55R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2488,6 +3110,27 @@
   ]
  },
  {
+  "model": "BYD Sea Lion 05 / 06 / 07",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "215/55R18",
+     "235/50R18",
+     "225/60R18",
+     "235/50R19",
+     "255/45R19",
+     "235/55R19",
+     "245/45R20",
+     "245/50R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R19)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "BYD Seagull (EV)",
   "part": "antifreeze",
   "items": [
@@ -2527,6 +3170,21 @@
     "name": "HUARUIYUAN CABIN FILTER BYD Seagull 2025",
     "price": 130000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "BYD Seagull (EV)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/65R15",
+    "alt_sizes": [
+     "175/55R16",
+     "205/60R16"
+    ],
+    "brand": "VEEMAXX ECO777 (205/60R16)",
+    "price": 590000
    }
   ]
  },
@@ -3270,6 +3928,18 @@
   ]
  },
  {
+  "model": "BYD Xia",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "BYD Yangwang U8",
   "part": "air_filter",
   "items": [
@@ -3331,6 +4001,20 @@
     "name": "YUPAR OIL FILTER BYD TANG-L DM-I HAN-L DM-I DENZA N8/N9 LEPARD 5 YANGWANG U8 YJ-D1-197",
     "price": 60000,
     "qty": 5
+   }
+  ]
+ },
+ {
+  "model": "BYD Yangwang U8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/50R22",
+    "alt_sizes": [
+     "285/45R22"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3466,6 +4150,23 @@
   ]
  },
  {
+  "model": "Baojun 730 / 560",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/55R16",
+    "alt_sizes": [
+     "205/55R16",
+     "215/60R17",
+     "215/65R16",
+     "215/55R18"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Bestune B70 / M9 / EQ M5",
   "part": "air_filter",
   "items": [
@@ -3501,6 +4202,22 @@
     "name": "HUA MING CABIN FILTER BESTUNE EQU M5 T137",
     "price": 100000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Bestune B70 / M9 / EQ M5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "245/45R19",
+     "225/50R18",
+     "225/45R19"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
    }
   ]
  },
@@ -3546,6 +4263,25 @@
     "name": "YUNPAR OIL FILTER BUSTUNE T33/T55/T77/T90/T99 YJ-A6-062",
     "price": 60000,
     "qty": 11
+   }
+  ]
+ },
+ {
+  "model": "Bestune T33 / T77",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "215/60R16",
+     "215/50R18",
+     "235/45R18",
+     "215/60R17",
+     "215/55R18",
+     "225/45R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -3610,6 +4346,20 @@
   ]
  },
  {
+  "model": "Bestune T55",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "245/45R19"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
+   }
+  ]
+ },
+ {
   "model": "Bestune T99",
   "part": "air_filter",
   "items": [
@@ -3645,6 +4395,21 @@
     "name": "YUNPAR OIL FILTER BUSTUNE T33/T55/T77/T90/T99 YJ-A6-062",
     "price": 60000,
     "qty": 11
+   }
+  ]
+ },
+ {
+  "model": "Bestune T99",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R20",
+    "alt_sizes": [
+     "245/45R21",
+     "245/55R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -4623,6 +5388,20 @@
   ]
  },
  {
+  "model": "Captiva 4",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/60R17"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Captiva 5",
   "part": "antifreeze",
   "items": [
@@ -4642,6 +5421,20 @@
     "name": "CABIN FILTER CAPTIVA 5",
     "price": 120000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Captiva 5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "225/55R18"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -4677,6 +5470,18 @@
     "name": "YUNPAR CABIN FILTER CHANGAN BENBEN E-STAR YT-C8-094",
     "price": 60000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Changan Benben E-Star",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/60R15",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -4817,6 +5622,21 @@
   ]
  },
  {
+  "model": "Changan CS95",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/60R18",
+    "alt_sizes": [
+     "245/55R19",
+     "255/50R20"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 1310000
+   }
+  ]
+ },
+ {
   "model": "Changan Eado Plus",
   "part": "air_filter",
   "items": [
@@ -4857,6 +5677,20 @@
    {
     "type": "G12+ (qizil, C12+)",
     "liters": 8.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Oushang Z6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R19",
+    "alt_sizes": [
+     "245/50R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -4912,6 +5746,23 @@
   ]
  },
  {
+  "model": "Changan Qiyuan A06 / A05",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "225/45R18",
+     "225/60R17",
+     "225/55R18",
+     "245/45R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "Changan Star Truck / T30 / X30",
   "part": "air_filter",
   "items": [
@@ -4934,6 +5785,20 @@
    {
     "type": "G12+ (qizil, C12+) — hajmi 5,8L-7L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Star Truck / T30 / X30",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/70R14",
+    "alt_sizes": [
+     "165/70R14"
+    ],
     "brand": "",
     "price": null
    }
@@ -5106,6 +5971,18 @@
   ]
  },
  {
+  "model": "Chery ARRIZO 6 PRO",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/50R17",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chery Arrizo 5 / 7",
   "part": "air_filter",
   "items": [
@@ -5147,6 +6024,21 @@
     "name": "YUNPAR OIL FILTER JETOUR X70/X90/X95 CHERY ARRIZO 5/7/8 SOUEAST L6/L7/L9 YJ-C6-075",
     "price": 50000,
     "qty": 10
+   }
+  ]
+ },
+ {
+  "model": "Chery Arrizo 5 / 7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "205/50R17"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
    }
   ]
  },
@@ -5207,6 +6099,22 @@
     "name": "YUNPAR OIL FILTER JETOUR X70/X90/X95 CHERY ARRIZO 5/7/8 SOUEAST L6/L7/L9 YJ-C6-075",
     "price": 50000,
     "qty": 10
+   }
+  ]
+ },
+ {
+  "model": "Chery Arrizo 8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/50R17",
+     "225/45R18",
+     "225/40R19"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
    }
   ]
  },
@@ -5304,6 +6212,20 @@
   ]
  },
  {
+  "model": "Chery Tiggo 2 Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "205/50R17"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chery Tiggo 4 Pro",
   "part": "air_filter",
   "items": [
@@ -5355,6 +6277,24 @@
     "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
     "qty": null,
     "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 4 Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "225/60R17",
+     "215/55R18",
+     "225/60R18",
+     "225/55R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
    }
   ]
  },
@@ -5465,6 +6405,23 @@
   ]
  },
  {
+  "model": "Chery Tiggo 7 Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "225/60R18",
+     "225/55R19",
+     "235/55R18",
+     "225/55R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chery Tiggo 8 Pro",
   "part": "air_filter",
   "items": [
@@ -5571,6 +6528,20 @@
   ]
  },
  {
+  "model": "Chery Tiggo 8 Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/50R19"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chevrolet Aveo (T250 / T300)",
   "part": "antifreeze",
   "items": [
@@ -5656,6 +6627,25 @@
     "name": "FILTRON OIL FILTER OE648/6 ORLANDO CRUZE",
     "price": 60000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Cruze (1.6L / 1.8L / 1.4T)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/65R15",
+    "alt_sizes": [
+     "205/60R16",
+     "215/50R17",
+     "215/60R16",
+     "215/55R17",
+     "225/50R17",
+     "225/45R18"
+    ],
+    "brand": "ECOMAX",
+    "price": 575000
    }
   ]
  },
@@ -5794,6 +6784,20 @@
     "liters": 6.5,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Groove (1.5L)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/55R17"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
    }
   ]
  },
@@ -6343,6 +7347,24 @@
   ]
  },
  {
+  "model": "Chevrolet Suburban (5.3L / 6.2L V8)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/70R17",
+    "alt_sizes": [
+     "265/65R18",
+     "275/55R20",
+     "285/45R22",
+     "275/60R20",
+     "275/50R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chevrolet Trailblazer (2.8L Dizel / 3.6L V6)",
   "part": "air_filter",
   "items": [
@@ -6873,6 +7895,22 @@
   ]
  },
  {
+  "model": "Daewoo Espero (1.5L / 1.8L / 2.0L)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R14",
+    "alt_sizes": [
+     "195/60R14",
+     "185/60R15",
+     "195/55R15"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 420000
+   }
+  ]
+ },
+ {
   "model": "Daewoo Prince / Leganza / Nubira",
   "part": "antifreeze",
   "items": [
@@ -6881,6 +7919,26 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Prince / Leganza / Nubira",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/70R14",
+    "alt_sizes": [
+     "205/60R15",
+     "205/55R16",
+     "215/50R16",
+     "175/70R14",
+     "185/65R14",
+     "195/60R14",
+     "195/55R15"
+    ],
+    "brand": "XTREME ZEREX (185/65R14)",
+    "price": 420000
    }
   ]
  },
@@ -6908,6 +7966,20 @@
   ]
  },
  {
+  "model": "Daewoo Tacuma / Rezzo",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/70R14",
+    "alt_sizes": [
+     "195/60R15"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 410000
+   }
+  ]
+ },
+ {
   "model": "Daewoo Tico (0.8L)",
   "part": "antifreeze",
   "items": [
@@ -6927,6 +7999,24 @@
     "position": "orqa",
     "name": "HI Q Колодки задние DAEWOO MATIZ, TICO SA086",
     "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Tico (0.8L)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "135/80R12",
+    "alt_sizes": [
+     "145/80R12",
+     "155/70R12",
+     "165/65R12",
+     "155/65R13",
+     "165/60R13"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -7237,6 +8327,18 @@
   ]
  },
  {
+  "model": "Deepal L07",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R19",
+    "alt_sizes": [],
+    "brand": "LING LONG",
+    "price": 1210000
+   }
+  ]
+ },
+ {
   "model": "Deepal S05",
   "part": "air_filter",
   "items": [
@@ -7293,6 +8395,20 @@
     "name": "YUNPAR OIL FILTER NETA S AVATR 06/07/11/12 DEEPAL L07/S05/S09/SL03/S7 MAZDA EZ-6 YJ-A2-013",
     "price": 70000,
     "qty": 22
+   }
+  ]
+ },
+ {
+  "model": "Deepal S05",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R18",
+    "alt_sizes": [
+     "245/45R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -7387,6 +8503,21 @@
   ]
  },
  {
+  "model": "Deepal S07 (EV / EREV)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R19",
+    "alt_sizes": [
+     "255/45R20",
+     "255/40R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Deepal S09 (G318)",
   "part": "air_filter",
   "items": [
@@ -7452,6 +8583,23 @@
   ]
  },
  {
+  "model": "Deepal S09 (G318)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [
+     "265/45R21",
+     "255/65R18",
+     "265/60R18",
+     "255/55R20"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Deepal SL03",
   "part": "air_filter",
   "items": [
@@ -7493,6 +8641,18 @@
     "name": "YUNPAR OIL FILTER NETA S AVATR 06/07/11/12 DEEPAL L07/S05/S09/SL03/S7 MAZDA EZ-6 YJ-A2-013",
     "price": 70000,
     "qty": 22
+   }
+  ]
+ },
+ {
+  "model": "Deepal SL03",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R19",
+    "alt_sizes": [],
+    "brand": "LING LONG",
+    "price": 1210000
    }
   ]
  },
@@ -7562,6 +8722,25 @@
   ]
  },
  {
+  "model": "Denza N9 / N8 / Z9 GT",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/45R22",
+    "alt_sizes": [
+     "255/50R20",
+     "265/45R21",
+     "275/45R20",
+     "255/45R20",
+     "255/40R21",
+     "255/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Dongfeng 008",
   "part": "air_filter",
   "items": [
@@ -7623,6 +8802,18 @@
     "name": "YUNPAR OIL FILTER HAVAL H3/H6/H6S, JOLION RAPTOR, DONGFENG 007/008 YJ B6 016",
     "price": 80000,
     "qty": 34
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng 008",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -7694,6 +8885,21 @@
   ]
  },
  {
+  "model": "Dongfeng E5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "225/55R18",
+     "235/50R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
+   }
+  ]
+ },
+ {
   "model": "Dongfeng Eπ 007",
   "part": "air_filter",
   "items": [
@@ -7745,6 +8951,20 @@
     "name": "YUNPAR OIL FILTER HAVAL H3/H6/H6S, JOLION RAPTOR, DONGFENG 007/008 YJ B6 016",
     "price": 80000,
     "qty": 34
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Eπ 007",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/50R18",
+    "alt_sizes": [
+     "235/45R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -7816,6 +9036,20 @@
   ]
  },
  {
+  "model": "Dongfeng Forthing T5 EVO",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Dongfeng Glory / Forthing SX5",
   "part": "air_filter",
   "items": [
@@ -7854,12 +9088,38 @@
   ]
  },
  {
+  "model": "Dongfeng Glory / Forthing SX5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "225/60R17"
+    ],
+    "brand": "CROSS AS8 MAZZINI (225/60R17)",
+    "price": 800000
+   }
+  ]
+ },
+ {
   "model": "Dongfeng M-Hero 917",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil), RAVENOL OTC C12+",
     "liters": 11.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng M-Hero 917",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/65R20",
+    "alt_sizes": [],
     "brand": "",
     "price": null
    }
@@ -8056,6 +9316,22 @@
   ]
  },
  {
+  "model": "Fangchengbao Leopard 3 / 8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "245/50R19",
+     "275/55R20",
+     "275/50R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Ford Focus / Fiesta / Transit",
   "part": "antifreeze",
   "items": [
@@ -8080,6 +9356,29 @@
     "name": "FILTRON OE 673 Fiat Ford C-Max",
     "price": 150000,
     "qty": 7
+   }
+  ]
+ },
+ {
+  "model": "Ford Focus / Fiesta / Transit",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R14",
+    "alt_sizes": [
+     "195/50R15",
+     "195/65R15",
+     "205/55R16",
+     "215/55R16",
+     "215/50R17",
+     "235/40R18",
+     "195/75R16C",
+     "215/65R15C",
+     "215/65R16C",
+     "235/65R16C"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 490000
    }
   ]
  },
@@ -8113,6 +9412,26 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Ford Mondeo",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "215/60R16",
+     "215/55R16",
+     "215/50R17",
+     "235/50R17",
+     "235/45R17",
+     "235/45R18",
+     "235/40R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (215/55R16)",
+    "price": 670000
    }
   ]
  },
@@ -8156,6 +9475,20 @@
   ]
  },
  {
+  "model": "Ford Mustang",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R17",
+    "alt_sizes": [
+     "255/40R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 835000
+   }
+  ]
+ },
+ {
   "model": "Foton Forland / Tunland / V9 (pikap)",
   "part": "antifreeze",
   "items": [
@@ -8189,6 +9522,21 @@
   ]
  },
  {
+  "model": "Foton Forland / Tunland / V9 (pikap)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/70R16",
+    "alt_sizes": [
+     "265/70R16",
+     "265/65R17"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Foton Labo",
   "part": "air_filter",
   "items": [
@@ -8212,6 +9560,20 @@
   ]
  },
  {
+  "model": "Foton Labo",
+  "part": "tire",
+  "items": [
+   {
+    "size": "145/80R12",
+    "alt_sizes": [
+     "155/80R12"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "GAC Aion S",
   "part": "antifreeze",
   "items": [
@@ -8260,6 +9622,20 @@
   ]
  },
  {
+  "model": "GAC Aion S",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "235/45R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "GAC Aion S+",
   "part": "antifreeze",
   "items": [
@@ -8304,6 +9680,20 @@
     "name": "HUARUIYUAN CABIN FILTER DEEPAL S07 Aion S Max, S Plus, Y plus 2024",
     "price": 140000,
     "qty": 2
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion S+",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "235/45R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -8347,6 +9737,20 @@
     "name": "HUARUIYUAN CABIN FILTER Aion V Plus 2024",
     "price": 140000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion V",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R18",
+    "alt_sizes": [
+     "225/45R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -8404,6 +9808,20 @@
   ]
  },
  {
+  "model": "GAC Aion Y",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "215/50R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "GAC Aion i60",
   "part": "air_filter",
   "items": [
@@ -8449,6 +9867,20 @@
   ]
  },
  {
+  "model": "GAC Aion i60",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R18",
+    "alt_sizes": [
+     "225/45R19"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "GAC Emkoo",
   "part": "antifreeze",
   "items": [
@@ -8457,6 +9889,20 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Emkoo",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
    }
   ]
  },
@@ -8473,12 +9919,42 @@
   ]
  },
  {
+  "model": "GAC Empow",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "225/50R17",
+     "225/45R18",
+     "245/35R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
+   }
+  ]
+ },
+ {
   "model": "GAC GS3 Emzoom",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil), RAVENOL OTC C12+",
     "liters": 6.9,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC GS3 Emzoom",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "235/45R19"
+    ],
     "brand": "",
     "price": null
    }
@@ -8535,6 +10011,23 @@
   ]
  },
  {
+  "model": "GAC GS8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "245/55R19",
+     "255/55R19",
+     "255/45R20",
+     "255/50R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "GAC Trumpchi GS4 / GA8 / M8",
   "part": "air_filter",
   "items": [
@@ -8579,6 +10072,26 @@
   ]
  },
  {
+  "model": "GAC Trumpchi GS4 / GA8 / M8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "215/55R18",
+     "225/60R17",
+     "225/55R18",
+     "225/60R18",
+     "235/60R18",
+     "235/55R19",
+     "235/45R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI (225/60R17)",
+    "price": 800000
+   }
+  ]
+ },
+ {
   "model": "GAZ Sobol / Sobol NN",
   "part": "antifreeze",
   "items": [
@@ -8598,6 +10111,21 @@
     "name": "SCT SM 180",
     "price": 40000,
     "qty": 9
+   }
+  ]
+ },
+ {
+  "model": "GAZ Sobol / Sobol NN",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/75R16",
+    "alt_sizes": [
+     "215/65R16",
+     "225/60R16"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
    }
   ]
  },
@@ -8646,6 +10174,23 @@
     "name": "SCT SM 180",
     "price": 40000,
     "qty": 9
+   }
+  ]
+ },
+ {
+  "model": "GAZ Volga",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/70R14",
+    "alt_sizes": [
+     "195/65R15",
+     "205/60R15",
+     "205/65R15",
+     "205/55R16"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
    }
   ]
  },
@@ -8740,6 +10285,21 @@
   ]
  },
  {
+  "model": "Gazel 2705 / 3221",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/80R16C",
+    "alt_sizes": [
+     "185/75R16C",
+     "195/75R16C"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Gazel 3302",
   "part": "air_filter",
   "items": [
@@ -8826,6 +10386,21 @@
     "name": "SCT SM 180",
     "price": 40000,
     "qty": 9
+   }
+  ]
+ },
+ {
+  "model": "Gazel 3302",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/80R16C",
+    "alt_sizes": [
+     "185/75R16C",
+     "195/75R16C"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -8920,6 +10495,20 @@
   ]
  },
  {
+  "model": "Gazel Business",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/75R16C",
+    "alt_sizes": [
+     "195/75R16C"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Gazel Next / NN",
   "part": "air_filter",
   "items": [
@@ -9010,6 +10599,21 @@
   ]
  },
  {
+  "model": "Gazel Next / NN",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/80R16",
+    "alt_sizes": [
+     "185/75R16",
+     "195/75R16"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Geely Atlas / Atlas Pro",
   "part": "antifreeze",
   "items": [
@@ -9033,12 +10637,40 @@
   ]
  },
  {
+  "model": "Geely Atlas / Atlas Pro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R18",
+    "alt_sizes": [
+     "225/55R19"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Geely Cityray",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, OAT)",
     "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Cityray",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "235/45R19"
+    ],
     "brand": "",
     "price": null
    }
@@ -9079,6 +10711,22 @@
   ]
  },
  {
+  "model": "Geely Coolray",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "215/55R18",
+     "235/45R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Geely EX5",
   "part": "antifreeze",
   "items": [
@@ -9098,6 +10746,20 @@
     "name": "YUNPAR CABIN FILTER GEELY EX5 YT-E6-618",
     "price": 60000,
     "qty": 8
+   }
+  ]
+ },
+ {
+  "model": "Geely EX5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "235/50R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -9137,6 +10799,25 @@
     "name": "HUA MING CABIN FILTER Geely Emgrand 1.5T T592F",
     "price": 150000,
     "qty": 2
+   }
+  ]
+ },
+ {
+  "model": "Geely Emgrand",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "195/65R15",
+     "195/55R16",
+     "205/50R17",
+     "215/60R16",
+     "215/55R17"
+    ],
+    "brand": "ECOMAX",
+    "price": 575000
    }
   ]
  },
@@ -9190,6 +10871,24 @@
   ]
  },
  {
+  "model": "Geely Galaxy L6 / L7 / Starship",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "235/55R18",
+     "235/50R19",
+     "245/45R20",
+     "225/55R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
+   }
+  ]
+ },
+ {
   "model": "Geely Galaxy L7 / E8",
   "part": "antifreeze",
   "items": [
@@ -9198,6 +10897,24 @@
     "liters": 6.5,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Galaxy L7 / E8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/50R19",
+     "245/45R20",
+     "235/50R18",
+     "245/45R19",
+     "245/40R20"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
    }
   ]
  },
@@ -9225,12 +10942,43 @@
   ]
  },
  {
+  "model": "Geely Jiaji",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "235/50R18",
+     "235/45R19",
+     "225/55R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Geely Monjaro",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, OAT)",
     "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Monjaro",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/50R19",
+     "245/45R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -9245,6 +10993,21 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Okavango",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "225/55R18",
+     "235/50R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
    }
   ]
  },
@@ -9288,12 +11051,43 @@
   ]
  },
  {
+  "model": "Geely Preface",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "225/45R18",
+     "235/45R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
+   }
+  ]
+ },
+ {
   "model": "Geely Tugella",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, OAT)",
     "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Tugella",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/50R19",
+     "245/45R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -9366,6 +11160,22 @@
     "name": "WIX OIL FILTER HYUNDAI WL7171",
     "price": 110000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Genesis G70",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R17",
+    "alt_sizes": [
+     "225/45R18",
+     "225/40R19",
+     "255/35R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -9445,6 +11255,28 @@
   ]
  },
  {
+  "model": "Genesis G80",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "245/50R18",
+     "245/45R18",
+     "245/45R19",
+     "245/40R19",
+     "275/40R19",
+     "275/35R19",
+     "245/40R20",
+     "275/35R20",
+     "245/35R20"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
+   }
+  ]
+ },
+ {
   "model": "Genesis G90",
   "part": "air_filter",
   "items": [
@@ -9475,6 +11307,26 @@
     "name": "CARSTATION CABIN FILTER 97133-R0100 Kia Carnival/Sedona 3.5L V6-Gaz 2020-, Genesis G70,G80,G90",
     "price": 110000,
     "qty": 11
+   }
+  ]
+ },
+ {
+  "model": "Genesis G90",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R18",
+    "alt_sizes": [
+     "245/45R19",
+     "275/40R19",
+     "245/50R19",
+     "245/45R20",
+     "275/40R20",
+     "245/40R21",
+     "275/35R21"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
    }
   ]
  },
@@ -9523,6 +11375,23 @@
   ]
  },
  {
+  "model": "Genesis GV70",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19",
+     "255/45R20",
+     "265/45R20",
+     "255/40R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Genesis GV80",
   "part": "air_filter",
   "items": [
@@ -9563,6 +11432,22 @@
     "name": "CARSTATION OIL FILTER 26350-2T000 Хyundai Genesis G80 (2021-22),GV70 (2022),GV80",
     "price": 110000,
     "qty": 33
+   }
+  ]
+ },
+ {
+  "model": "Genesis GV80",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/55R19",
+    "alt_sizes": [
+     "265/50R20",
+     "265/45R21",
+     "265/40R22"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -9769,6 +11654,22 @@
   ]
  },
  {
+  "model": "Haval / GWM GWM Poer (Pikap)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/70R17",
+    "alt_sizes": [
+     "265/65R17",
+     "265/60R18",
+     "265/65R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Haval / GWM Tank 300",
   "part": "air_filter",
   "items": [
@@ -9815,6 +11716,24 @@
     "name": "YUNPAR OIL FILTER HAVAL H6/H9/F7, TANK 300/400/500 ELEMENT YJ B1 221Z",
     "price": 100000,
     "qty": 10
+   }
+  ]
+ },
+ {
+  "model": "Haval / GWM Tank 300",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/70R17",
+    "alt_sizes": [
+     "265/65R17",
+     "265/60R18",
+     "265/70R18",
+     "265/55R19",
+     "275/55R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -9870,6 +11789,23 @@
     "name": "YUNPAR OIL FILTER HAVAL H6/H9/F7, TANK 300/400/500 ELEMENT YJ B1 221Z",
     "price": 100000,
     "qty": 10
+   }
+  ]
+ },
+ {
+  "model": "Haval / GWM Tank 500",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/65R17",
+    "alt_sizes": [
+     "265/60R18",
+     "265/55R19",
+     "265/50R20",
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -10377,6 +12313,29 @@
   ]
  },
  {
+  "model": "Honda Accord",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "205/60R16",
+     "205/65R16",
+     "215/60R16",
+     "215/45R17",
+     "215/55R17",
+     "225/50R17",
+     "225/45R18",
+     "235/45R18",
+     "235/40R19"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Honda CR-V",
   "part": "air_filter",
   "items": [
@@ -10407,6 +12366,21 @@
     "name": "AUTOZIP CABIN H-1 Civic CR-V J1344012",
     "price": 110000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Honda CR-V",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "235/60R18",
+     "235/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
    }
   ]
  },
@@ -10446,6 +12420,21 @@
     "name": "AUTOZIP CABIN H-1 Civic CR-V J1344012",
     "price": 110000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Honda Civic",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R16",
+    "alt_sizes": [
+     "215/50R17",
+     "235/40R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 670000
    }
   ]
  },
@@ -10521,6 +12510,23 @@
   ]
  },
  {
+  "model": "Honda Crider",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "215/55R16",
+     "195/65R15",
+     "205/50R17",
+     "215/45R17"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Honda e:NP1 / e:NS1",
   "part": "antifreeze",
   "items": [
@@ -10533,12 +12539,40 @@
   ]
  },
  {
+  "model": "Honda e:NP1 / e:NS1",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "225/50R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hongqi E-HS9",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil), RAVENOL OTC C12+",
     "liters": 18.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi E-HS9",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [
+     "275/40R22"
+    ],
     "brand": "",
     "price": null
    }
@@ -10574,6 +12608,20 @@
     "name": "YUNPAR CABIN FILTER MAZDA 6/3, HONGQI HS5/EQM5 YT A6 137",
     "price": 120000,
     "qty": 7
+   }
+  ]
+ },
+ {
+  "model": "Hongqi EQM5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R18",
+    "alt_sizes": [
+     "235/50R18"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -10661,6 +12709,24 @@
   ]
  },
  {
+  "model": "Hongqi H7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "235/45R18",
+     "245/40R19",
+     "245/50R18",
+     "245/45R19",
+     "245/40R20"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
+   }
+  ]
+ },
+ {
   "model": "Hongqi H9",
   "part": "air_filter",
   "items": [
@@ -10734,6 +12800,26 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi HS3 / HS7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/50R20",
+    "alt_sizes": [
+     "235/55R19",
+     "235/60R18",
+     "235/55R18",
+     "235/55R20",
+     "235/65R18",
+     "255/45R20",
+     "255/50R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R19)",
+    "price": 1000000
    }
   ]
  },
@@ -10863,6 +12949,20 @@
     "name": "ZIMAX OIL FILTER HOWO/SHACMAN1002003545",
     "price": 120000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Howo / Shacman (yuk)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "295/80R22",
+    "alt_sizes": [
+     "315/80R22"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -11052,6 +13152,21 @@
     "name": "WIX OIL FILTER HYUNDAI WL7171",
     "price": 110000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Bayon",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R15",
+    "alt_sizes": [
+     "195/55R16",
+     "205/55R17"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -11386,6 +13501,20 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Custin",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "225/55R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
    }
   ]
  },
@@ -12149,6 +14278,24 @@
   ]
  },
  {
+  "model": "Hyundai Grandeur",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "245/45R18",
+     "225/55R18",
+     "245/40R19",
+     "245/45R19",
+     "245/40R20"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
+   }
+  ]
+ },
+ {
   "model": "Hyundai H-100 / Porter",
   "part": "air_filter",
   "items": [
@@ -12270,6 +14417,20 @@
   ]
  },
  {
+  "model": "Hyundai H-100 / Porter",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/70R15C",
+    "alt_sizes": [
+     "205/70R16C"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hyundai I 30",
   "part": "air_filter",
   "items": [
@@ -12337,6 +14498,23 @@
   ]
  },
  {
+  "model": "Hyundai Ioniq 5 / 6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19",
+     "255/45R20",
+     "225/55R18",
+     "245/40R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Hyundai Kona",
   "part": "antifreeze",
   "items": [
@@ -12367,6 +14545,26 @@
     "name": "WIX OIL FILTER HYUNDAI WL7171",
     "price": 110000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Kona",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "235/45R18",
+     "205/65R16",
+     "215/60R17",
+     "215/55R18",
+     "235/50R18",
+     "235/45R19"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
    }
   ]
  },
@@ -13450,6 +15648,22 @@
   ]
  },
  {
+  "model": "Hyundai santafe 2.4L",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "235/60R18",
+     "235/55R19",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Hyundai santafe 2.5L",
   "part": "air_filter",
   "items": [
@@ -13647,6 +15861,22 @@
   ]
  },
  {
+  "model": "Hyundai santafe 2.5L",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "235/60R18",
+     "235/55R19",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Hyundai santafe 3.5L",
   "part": "air_filter",
   "items": [
@@ -13840,6 +16070,22 @@
     "name": "START VOLT SVECHA VSP 1401 HYUNDAI SANTAFE 2.4 N16 1.6",
     "qty": null,
     "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 3.5L",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "235/60R18",
+     "235/55R19",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
    }
   ]
  },
@@ -13888,6 +16134,18 @@
   ]
  },
  {
+  "model": "Isuzu 10T / FVR (yuk)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "295/80R22",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Isuzu Avtobus / Bogdan",
   "part": "air_filter",
   "items": [
@@ -13915,6 +16173,18 @@
    {
     "type": "G12+ (qizil) 4HK1/4HG1; G11 (yashil-sariq) 4HF1 — hajmi 12L-18,7L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Isuzu Avtobus / Bogdan",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/75R17",
+    "alt_sizes": [],
     "brand": "",
     "price": null
    }
@@ -13966,6 +16236,22 @@
     "name": "Stark MFA 7016 Isuzu D MAX",
     "price": 55000,
     "qty": 5
+   }
+  ]
+ },
+ {
+  "model": "Isuzu D-Max (pikap)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/70R15",
+    "alt_sizes": [
+     "245/70R16",
+     "255/65R17",
+     "255/60R18"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -14035,6 +16321,20 @@
     "name": "WULSGEN OIL FILTER MF 010 ISUZU",
     "price": 100000,
     "qty": 26
+   }
+  ]
+ },
+ {
+  "model": "Isuzu NQR / 5T (yuk)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/70R19",
+    "alt_sizes": [
+     "215/75R17"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -14448,6 +16748,28 @@
   ]
  },
  {
+  "model": "Jaguar F-Pace / E-Pace",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R18",
+    "alt_sizes": [
+     "255/60R18",
+     "255/55R19",
+     "255/50R20",
+     "265/45R21",
+     "235/65R17",
+     "235/60R18",
+     "235/55R19",
+     "245/45R20",
+     "245/40R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Jeep Grand Cherokee",
   "part": "antifreeze",
   "items": [
@@ -14481,6 +16803,22 @@
   ]
  },
  {
+  "model": "Jeep Grand Cherokee",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/70R17",
+    "alt_sizes": [
+     "265/60R18",
+     "265/50R20",
+     "295/45R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Jeep Wrangler",
   "part": "air_filter",
   "items": [
@@ -14498,6 +16836,24 @@
    {
     "type": "G12+ (qizil); JL: G12++; JK 4WD: FL22 — hajmi 9,4L-12L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jeep Wrangler",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/75R16",
+    "alt_sizes": [
+     "245/75R16",
+     "245/75R17",
+     "255/75R17",
+     "255/70R18",
+     "285/70R17"
+    ],
     "brand": "",
     "price": null
    }
@@ -14585,6 +16941,21 @@
   ]
  },
  {
+  "model": "Jetour Dashing",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R19",
+    "alt_sizes": [
+     "235/60R18",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Jetour Shanhai L9 / T1 / T2",
   "part": "air_filter",
   "items": [
@@ -14609,6 +16980,24 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour Shanhai L9 / T1 / T2",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R18",
+    "alt_sizes": [
+     "235/60R19",
+     "255/60R19",
+     "255/55R20",
+     "235/55R19",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R19)",
+    "price": 1000000
    }
   ]
  },
@@ -14641,6 +17030,21 @@
   ]
  },
  {
+  "model": "Jetour Traveller / T2",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R18",
+    "alt_sizes": [
+     "255/60R19",
+     "255/55R20"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Jetour X50",
   "part": "air_filter",
   "items": [
@@ -14658,6 +17062,20 @@
    {
     "type": "G12evo (Si-OAT)",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour X50",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "215/55R18"
+    ],
     "brand": "",
     "price": null
    }
@@ -14786,6 +17204,23 @@
   ]
  },
  {
+  "model": "Jetour X70 / X70 Plus",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "235/65R17",
+     "235/60R18",
+     "255/45R20",
+     "235/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Jetour X90",
   "part": "air_filter",
   "items": [
@@ -14897,6 +17332,21 @@
   ]
  },
  {
+  "model": "Jetour X90",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19",
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Kia Bongo 3",
   "part": "air_filter",
   "items": [
@@ -14987,6 +17437,21 @@
   ]
  },
  {
+  "model": "Kia Bongo 3",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/70R15C",
+    "alt_sizes": [
+     "195/75R16C",
+     "205/70R16C"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Kia Carens",
   "part": "air_filter",
   "items": [
@@ -15022,6 +17487,24 @@
     "name": "WIX OIL FILTER HYUNDAI WL7171",
     "price": 110000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Kia Carens",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "225/45R17",
+     "225/45R18",
+     "205/65R15",
+     "205/60R16",
+     "225/50R17"
+    ],
+    "brand": "ECOMAX (205/65R15)",
+    "price": 575000
    }
   ]
  },
@@ -15354,6 +17837,26 @@
   ]
  },
  {
+  "model": "Kia EV6 / EV9",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19",
+     "255/45R20",
+     "255/40R21",
+     "255/60R19",
+     "255/55R20",
+     "275/50R20",
+     "285/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Kia K8",
   "part": "antifreeze",
   "items": [
@@ -15403,6 +17906,21 @@
   ]
  },
  {
+  "model": "Kia K8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "245/45R18",
+     "245/40R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
+   }
+  ]
+ },
+ {
   "model": "Kia K9 / Quoris",
   "part": "air_filter",
   "items": [
@@ -15426,6 +17944,23 @@
   ]
  },
  {
+  "model": "Kia K9 / Quoris",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R18",
+    "alt_sizes": [
+     "245/45R19",
+     "275/40R19",
+     "245/40R20",
+     "275/35R20"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
+   }
+  ]
+ },
+ {
   "model": "Kia Mohave",
   "part": "antifreeze",
   "items": [
@@ -15444,6 +17979,21 @@
    {
     "type": "G11 (sariq-yashil)",
     "liters": 5.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Pegas",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/70R14",
+    "alt_sizes": [
+     "185/60R15",
+     "195/50R16"
+    ],
     "brand": "",
     "price": null
    }
@@ -15802,6 +18352,21 @@
   ]
  },
  {
+  "model": "Kia Sonet",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "215/60R16",
+     "215/50R17"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Kia Sorento",
   "part": "air_filter",
   "items": [
@@ -16010,6 +18575,21 @@
     "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
     "qty": null,
     "price": 350000
+   }
+  ]
+ },
+ {
+  "model": "Kia Soul",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "235/45R18"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
    }
   ]
  },
@@ -16319,6 +18899,22 @@
     "name": "WIX OIL FILTER HYUNDAI WL7171",
     "price": 110000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Kia Stinger",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R17",
+    "alt_sizes": [
+     "225/45R18",
+     "225/40R19",
+     "255/35R19"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -17266,6 +19862,25 @@
   ]
  },
  {
+  "model": "Lada Granta",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R14",
+    "alt_sizes": [
+     "185/60R14",
+     "185/55R15",
+     "195/50R15",
+     "195/45R16",
+     "195/55R15",
+     "185/60R15"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 490000
+   }
+  ]
+ },
+ {
   "model": "Lada Kalina",
   "part": "antifreeze",
   "items": [
@@ -17306,6 +19921,22 @@
     "name": "WULSGEN OIL FILTER MF 020 KALINA, SAMARA 2",
     "price": 35000,
     "qty": 16
+   }
+  ]
+ },
+ {
+  "model": "Lada Kalina",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R14",
+    "alt_sizes": [
+     "185/60R14",
+     "185/55R15",
+     "195/45R16"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 490000
    }
   ]
  },
@@ -17370,6 +20001,21 @@
   ]
  },
  {
+  "model": "Lada Largus",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R15",
+    "alt_sizes": [
+     "195/55R16",
+     "205/55R16"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lada Niva Legend",
   "part": "air_filter",
   "items": [
@@ -17410,6 +20056,23 @@
     "name": "FILTRON OP 520 T",
     "price": 40000,
     "qty": 2
+   }
+  ]
+ },
+ {
+  "model": "Lada Niva Legend",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/80R16",
+    "alt_sizes": [
+     "185/75R16",
+     "205/70R16",
+     "215/65R16",
+     "215/60R17"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
    }
   ]
  },
@@ -17458,6 +20121,22 @@
   ]
  },
  {
+  "model": "Lada Niva Travel",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/70R15",
+    "alt_sizes": [
+     "205/75R15",
+     "215/65R16",
+     "215/60R17"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Lada Priora",
   "part": "antifreeze",
   "items": [
@@ -17466,6 +20145,22 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Priora",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R14",
+    "alt_sizes": [
+     "185/60R14",
+     "185/55R15",
+     "195/45R16"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 490000
    }
   ]
  },
@@ -17514,6 +20209,25 @@
   ]
  },
  {
+  "model": "Lada VAZ 2101-2107",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/80R13",
+    "alt_sizes": [
+     "165/70R13",
+     "175/70R13",
+     "175/65R14",
+     "185/60R14",
+     "185/55R15",
+     "195/50R15"
+    ],
+    "brand": "BARS TIMEFLEXX (165/70R13)",
+    "price": 370000
+   }
+  ]
+ },
+ {
   "model": "Lada VAZ 2108/2109/21099",
   "part": "antifreeze",
   "items": [
@@ -17526,6 +20240,24 @@
   ]
  },
  {
+  "model": "Lada VAZ 2108/2109/21099",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/70R13",
+    "alt_sizes": [
+     "175/70R13",
+     "175/65R14",
+     "185/60R14",
+     "185/55R15",
+     "195/50R15"
+    ],
+    "brand": "BARS TIMEFLEXX",
+    "price": 370000
+   }
+  ]
+ },
+ {
   "model": "Lada VAZ 2110-2115",
   "part": "antifreeze",
   "items": [
@@ -17534,6 +20266,26 @@
     "liters": 7.8,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada VAZ 2110-2115",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/70R13",
+    "alt_sizes": [
+     "175/70R13",
+     "175/65R14",
+     "175/70R14",
+     "185/60R14",
+     "185/55R15",
+     "195/50R15",
+     "195/60R15"
+    ],
+    "brand": "BARS TIMEFLEXX",
+    "price": 370000
    }
   ]
  },
@@ -17618,6 +20370,23 @@
   ]
  },
  {
+  "model": "Lada Vesta Cross",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/50R17",
+    "alt_sizes": [
+     "215/45R17",
+     "215/40R18",
+     "195/65R15",
+     "205/55R16"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Lada XRAY / XRAY Cross",
   "part": "air_filter",
   "items": [
@@ -17667,6 +20436,23 @@
   ]
  },
  {
+  "model": "Lada XRAY / XRAY Cross",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R15",
+    "alt_sizes": [
+     "195/65R15",
+     "205/55R16",
+     "205/50R17",
+     "215/50R17"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Land Rover Defender",
   "part": "antifreeze",
   "items": [
@@ -17686,6 +20472,22 @@
     "name": "HENGST OIL FILTER JAGUAR/LAND ROVAER DEFENDER D300 E1004HD672",
     "price": 245000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Defender",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/70R18",
+    "alt_sizes": [
+     "255/65R19",
+     "255/60R20",
+     "275/45R22"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -17750,6 +20552,24 @@
   ]
  },
  {
+  "model": "Land Rover Discovery",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "255/50R20",
+     "255/60R19",
+     "255/55R20",
+     "275/45R21",
+     "285/40R22"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Land Rover Evoque",
   "part": "air_filter",
   "items": [
@@ -17769,6 +20589,24 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Evoque",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "235/60R18",
+     "235/55R19",
+     "235/50R20",
+     "245/45R20",
+     "245/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
    }
   ]
  },
@@ -17868,6 +20706,32 @@
   ]
  },
  {
+  "model": "Land Rover Range Rover",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R19",
+    "alt_sizes": [
+     "255/55R20",
+     "275/45R20",
+     "255/50R21",
+     "275/45R21",
+     "285/45R21",
+     "275/40R22",
+     "285/40R22",
+     "255/60R20",
+     "275/55R20",
+     "275/50R21",
+     "285/45R22",
+     "285/40R23",
+     "285/35R24"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Land Rover Range Rover Sport",
   "part": "air_filter",
   "items": [
@@ -17948,6 +20812,32 @@
   ]
  },
  {
+  "model": "Land Rover Range Rover Sport",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R19",
+    "alt_sizes": [
+     "255/55R20",
+     "275/45R21",
+     "275/40R22",
+     "285/40R22",
+     "295/40R22",
+     "255/60R20",
+     "275/55R20",
+     "275/50R21",
+     "285/45R22",
+     "305/40R22",
+     "285/40R23",
+     "305/35R23",
+     "285/35R24"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Land Rover Range Rover Velar",
   "part": "air_filter",
   "items": [
@@ -17965,6 +20855,23 @@
    {
     "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 7,8L-11,2L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Range Rover Velar",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R18",
+    "alt_sizes": [
+     "255/55R19",
+     "255/50R20",
+     "265/45R21",
+     "265/40R22"
+    ],
     "brand": "",
     "price": null
    }
@@ -17990,6 +20897,22 @@
     "name": "YUNPAR CABIN FILTER LEAPMOTOR B10 YT E6 632",
     "price": 90000,
     "qty": 14
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor B10",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R18",
+    "alt_sizes": [
+     "235/50R18",
+     "225/55R18",
+     "235/55R18"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18065,6 +20988,20 @@
     "name": "YUNPAR OIL FILTER LEAPMOTOR HYBRID C01/10/11/16 YJ D4 246",
     "price": 70000,
     "qty": 16
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor C01",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/50R18",
+    "alt_sizes": [
+     "245/40R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18154,6 +21091,21 @@
   ]
  },
  {
+  "model": "Leapmotor C10",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/60R18",
+     "245/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Leapmotor C11",
   "part": "air_filter",
   "items": [
@@ -18219,6 +21171,20 @@
   ]
  },
  {
+  "model": "Leapmotor C11",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "255/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Leapmotor C16",
   "part": "air_filter",
   "items": [
@@ -18268,6 +21234,33 @@
   ]
  },
  {
+  "model": "Leapmotor C16",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R20",
+    "alt_sizes": [
+     "245/45R21",
+     "255/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor D19",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Leapmotor T03",
   "part": "antifreeze",
   "items": [
@@ -18287,6 +21280,20 @@
     "name": "YUNPAR CABIN FILTER LEAPMOTOR T3 YT-C6-154",
     "price": 60000,
     "qty": 12
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor T03",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/65R15",
+    "alt_sizes": [
+     "165/70R14"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18320,6 +21327,29 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus ES",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "225/55R17",
+     "235/50R17",
+     "225/45R18",
+     "235/45R18",
+     "255/40R18",
+     "235/60R18",
+     "235/40R19",
+     "255/35R19",
+     "235/55R19",
+     "235/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -18369,6 +21399,29 @@
     "name": "TOYOTA OIL FILTER LEXUS GS350 04152 31090",
     "price": 120000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Lexus GS",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R17",
+    "alt_sizes": [
+     "245/45R17",
+     "225/45R18",
+     "235/45R18",
+     "245/40R18",
+     "255/40R18",
+     "235/40R19",
+     "245/35R19",
+     "255/35R19",
+     "265/35R19",
+     "245/35R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18438,6 +21491,30 @@
   ]
  },
  {
+  "model": "Lexus GX",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/65R17",
+    "alt_sizes": [
+     "265/60R18",
+     "285/55R18",
+     "265/55R19",
+     "275/55R19",
+     "265/50R20",
+     "285/50R20",
+     "305/45R20",
+     "265/65R18",
+     "265/70R18",
+     "265/55R20",
+     "265/50R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lexus IS",
   "part": "antifreeze",
   "items": [
@@ -18477,6 +21554,30 @@
   ]
  },
  {
+  "model": "Lexus IS",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/55R16",
+    "alt_sizes": [
+     "225/45R17",
+     "225/40R18",
+     "235/45R18",
+     "255/35R18",
+     "225/35R19",
+     "235/35R19",
+     "235/40R19",
+     "245/30R19",
+     "255/30R19",
+     "265/35R19",
+     "235/35R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lexus LS",
   "part": "air_filter",
   "items": [
@@ -18496,6 +21597,28 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus LS",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/50R18",
+    "alt_sizes": [
+     "245/50R19",
+     "245/45R19",
+     "245/45R20",
+     "245/40R20",
+     "265/35R20",
+     "275/40R20",
+     "245/40R21",
+     "255/40R21",
+     "275/35R21"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
    }
   ]
  },
@@ -18566,6 +21689,30 @@
   ]
  },
  {
+  "model": "Lexus LX",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/70R16",
+    "alt_sizes": [
+     "275/65R17",
+     "275/60R18",
+     "285/60R18",
+     "285/55R19",
+     "285/50R20",
+     "275/50R21",
+     "285/45R22",
+     "265/65R18",
+     "265/70R18",
+     "265/55R20",
+     "265/50R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lexus NX",
   "part": "air_filter",
   "items": [
@@ -18590,6 +21737,29 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus NX",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "225/60R18",
+     "235/55R18",
+     "235/60R18",
+     "225/55R19",
+     "235/55R19",
+     "245/45R19",
+     "245/50R19",
+     "235/50R20",
+     "245/40R20",
+     "245/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
    }
   ]
  },
@@ -18675,6 +21845,34 @@
   ]
  },
  {
+  "model": "Lexus RX",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "235/55R18",
+     "235/60R18",
+     "235/65R18",
+     "255/55R18",
+     "235/55R19",
+     "235/60R19",
+     "255/50R19",
+     "255/55R19",
+     "235/55R20",
+     "255/45R20",
+     "255/50R20",
+     "265/45R20",
+     "235/50R21",
+     "255/45R21",
+     "265/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/60R18)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Li Auto L6",
   "part": "air_filter",
   "items": [
@@ -18726,6 +21924,20 @@
     "name": "YUNPAR OIL FILTER LIXIANG 6/7/8/9 YJ E5 198",
     "price": 100000,
     "qty": 33
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18786,6 +21998,20 @@
     "name": "YUNPAR OIL FILTER LIXIANG 6/7/8/9 YJ E5 198",
     "price": 100000,
     "qty": 33
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18861,6 +22087,20 @@
     "name": "YUNPAR OIL FILTER LIXIANG 6/7/8/9 YJ E5 198",
     "price": 100000,
     "qty": 33
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L8",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -18991,6 +22231,21 @@
   ]
  },
  {
+  "model": "Li Auto L9",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/45R21",
+    "alt_sizes": [
+     "285/45R21",
+     "285/40R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Li Auto MEGA",
   "part": "antifreeze",
   "items": [
@@ -18999,6 +22254,18 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Li Auto MEGA",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/60R18",
+    "alt_sizes": [],
+    "brand": "ZINERGEE ECO S5",
+    "price": 1310000
    }
   ]
  },
@@ -19022,6 +22289,18 @@
     "name": "HUA MING CABIN FILTER LIXIANG one T511",
     "price": 100000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Li Auto One",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -19117,6 +22396,35 @@
     "name": "YUNPAR OIL FILTER LYNK&CO VOLVO 2T YJ E4 109Z",
     "price": 205000,
     "qty": 23
+   }
+  ]
+ },
+ {
+  "model": "Lynk & Co 01 / 06 / 07 / 08 / 09 (900)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "215/55R18",
+     "225/45R19",
+     "235/60R17",
+     "235/55R18",
+     "235/50R19",
+     "235/55R19",
+     "235/45R18",
+     "245/40R19",
+     "235/45R20",
+     "255/45R20",
+     "255/50R20",
+     "275/45R20",
+     "275/40R20",
+     "255/40R21",
+     "275/40R21",
+     "275/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -19868,6 +23176,22 @@
   ]
  },
  {
+  "model": "Mazda 3",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "205/55R16",
+     "205/50R17",
+     "215/45R18"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "Mazda 6",
   "part": "air_filter",
   "items": [
@@ -19954,6 +23278,20 @@
     "name": "FILTRON OIL FILTER OP597 MAZDA/ KIA/ SUBARU",
     "price": 100000,
     "qty": 11
+   }
+  ]
+ },
+ {
+  "model": "Mazda 6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R17",
+    "alt_sizes": [
+     "225/45R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 985000
    }
   ]
  },
@@ -21461,12 +24799,40 @@
   ]
  },
  {
+  "model": "Mini Cooper",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R15",
+    "alt_sizes": [
+     "195/55R16",
+     "205/45R17",
+     "205/40R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Mitsubishi ASX",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, OAT) — hajmi 6L-7,5L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi ASX",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [],
     "brand": "",
     "price": null
    }
@@ -21485,6 +24851,27 @@
   ]
  },
  {
+  "model": "Mitsubishi L200",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/80R16",
+    "alt_sizes": [
+     "225/65R16",
+     "245/70R16",
+     "265/70R16",
+     "245/65R17",
+     "265/65R17",
+     "265/70R17",
+     "245/60R18",
+     "265/60R18"
+    ],
+    "brand": "ZINERGEE ECO S5 (245/60R18)",
+    "price": 1310000
+   }
+  ]
+ },
+ {
   "model": "Mitsubishi Lancer",
   "part": "antifreeze",
   "items": [
@@ -21497,12 +24884,48 @@
   ]
  },
  {
+  "model": "Mitsubishi Lancer",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R14",
+    "alt_sizes": [
+     "195/60R15",
+     "195/55R15",
+     "195/50R16",
+     "205/50R16",
+     "205/60R16",
+     "205/55R17",
+     "215/50R17",
+     "215/45R18",
+     "215/40R19"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 420000
+   }
+  ]
+ },
+ {
   "model": "Mitsubishi Outlander",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, OAT) — hajmi 6L-10L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi Outlander",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R18",
+    "alt_sizes": [
+     "215/70R16"
+    ],
     "brand": "",
     "price": null
    }
@@ -21544,6 +24967,28 @@
     "name": "STARK MFA 7026 OIL FILTER SM 124 MITSUBISHI PAJERO",
     "price": 50000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi Pajero / Pajero Sport",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/70R16",
+    "alt_sizes": [
+     "265/65R17",
+     "265/60R18",
+     "275/60R18",
+     "275/55R19",
+     "275/50R19",
+     "265/50R20",
+     "245/70R16",
+     "265/55R19",
+     "275/50R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -21838,6 +25283,21 @@
   ]
  },
  {
+  "model": "NIO ES7 / ES8 / EC6 / EC7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "255/50R20",
+     "265/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Neta S / L / GT",
   "part": "air_filter",
   "items": [
@@ -21879,6 +25339,22 @@
     "name": "YUNPAR OIL FILTER NETA S AVATR 06/07/11/12 DEEPAL L07/S05/S09/SL03/S7 MAZDA EZ-6 YJ-A2-013",
     "price": 70000,
     "qty": 22
+   }
+  ]
+ },
+ {
+  "model": "Neta S / L / GT",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R19",
+    "alt_sizes": [
+     "265/35R21",
+     "225/55R19",
+     "225/60R18"
+    ],
+    "brand": "LING LONG",
+    "price": 1210000
    }
   ]
  },
@@ -22366,6 +25842,24 @@
   ]
  },
  {
+  "model": "Nissan Altima / Teana",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/65R16",
+    "alt_sizes": [
+     "215/60R16",
+     "215/55R17",
+     "225/45R18",
+     "235/45R18",
+     "235/40R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (215/55R17)",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "Nissan Maxima",
   "part": "air_filter",
   "items": [
@@ -22415,6 +25909,22 @@
   ]
  },
  {
+  "model": "Nissan Maxima",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R18",
+    "alt_sizes": [
+     "245/40R19",
+     "215/60R16",
+     "215/55R17"
+    ],
+    "brand": "CROSS AS8 MAZZINI (215/55R17)",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "Nissan Murano",
   "part": "air_filter",
   "items": [
@@ -22438,12 +25948,48 @@
   ]
  },
  {
+  "model": "Nissan Murano",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R18",
+    "alt_sizes": [
+     "235/65R18",
+     "235/55R20",
+     "255/55R20",
+     "255/50R21"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Nissan Navara",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil, D23); FL22 (yashil, D40) — hajmi 10,1L-11,1L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Navara",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/80R16",
+    "alt_sizes": [
+     "235/70R16",
+     "255/70R16",
+     "255/65R17",
+     "265/65R17",
+     "255/60R18",
+     "265/60R18"
+    ],
     "brand": "",
     "price": null
    }
@@ -22467,6 +26013,29 @@
    {
     "type": "Nissan Long Life Antifreeze/Coolant (ko'k) — R52 va R53 uchun OEM — hajmi 9,8L-11,9L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Pathfinder",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/70R16",
+    "alt_sizes": [
+     "255/70R16",
+     "255/65R17",
+     "265/65R17",
+     "235/65R18",
+     "255/60R18",
+     "265/60R18",
+     "235/60R19",
+     "255/55R19",
+     "235/55R20",
+     "255/50R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -22518,6 +26087,25 @@
   ]
  },
  {
+  "model": "Nissan Patrol",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/80R16",
+    "alt_sizes": [
+     "265/70R16",
+     "275/70R16",
+     "275/65R17",
+     "265/70R18",
+     "275/60R20",
+     "275/50R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Nissan Qashqai",
   "part": "antifreeze",
   "items": [
@@ -22526,6 +26114,23 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Qashqai",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "215/55R18",
+     "225/45R19",
+     "235/55R18"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
    }
   ]
  },
@@ -22549,6 +26154,28 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Sunny / Sentra",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/70R14",
+    "alt_sizes": [
+     "185/65R15",
+     "195/65R15",
+     "205/55R16",
+     "205/60R15",
+     "195/60R16",
+     "205/60R16",
+     "205/50R17",
+     "215/50R17",
+     "215/45R18"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
    }
   ]
  },
@@ -22592,6 +26219,18 @@
   ]
  },
  {
+  "model": "Nissan Terrano",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Nissan X-Trail",
   "part": "antifreeze",
   "items": [
@@ -22604,12 +26243,54 @@
   ]
  },
  {
+  "model": "Nissan X-Trail",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "225/60R18",
+     "225/55R19",
+     "215/65R16",
+     "215/60R17"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Porsche 911",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil); 992: G12evo (VW TL 774-L) — hajmi 7L-12L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche 911",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/40R19",
+    "alt_sizes": [
+     "295/35R19",
+     "245/35R20",
+     "255/35R20",
+     "265/35R20",
+     "275/35R20",
+     "295/30R20",
+     "295/35R20",
+     "305/30R20",
+     "245/35R21",
+     "305/30R21",
+     "315/30R21",
+     "335/30R21"
+    ],
     "brand": "",
     "price": null
    }
@@ -22628,6 +26309,39 @@
   ]
  },
  {
+  "model": "Porsche Cayenne",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/55R19",
+    "alt_sizes": [
+     "275/50R19",
+     "275/45R20",
+     "305/40R20",
+     "275/40R21",
+     "285/40R21",
+     "305/35R21",
+     "315/35R21",
+     "285/35R22",
+     "315/30R22",
+     "255/55R20",
+     "295/45R20",
+     "285/45R21",
+     "305/40R21",
+     "315/40R21",
+     "285/40R22",
+     "315/35R22",
+     "255/55R18",
+     "265/50R19",
+     "255/50R20",
+     "295/35R21"
+    ],
+    "brand": "NEXEN NFERA (255/55R20)",
+    "price": 1850000
+   }
+  ]
+ },
+ {
   "model": "Porsche Macan",
   "part": "antifreeze",
   "items": [
@@ -22636,6 +26350,33 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Macan",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "255/55R18",
+     "235/55R19",
+     "255/55R19",
+     "255/50R19",
+     "265/45R20",
+     "295/40R20",
+     "265/40R21",
+     "295/35R21",
+     "235/55R20",
+     "285/45R20",
+     "255/45R21",
+     "295/40R21",
+     "255/40R22",
+     "295/35R22"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
    }
   ]
  },
@@ -22652,12 +26393,60 @@
   ]
  },
  {
+  "model": "Porsche Panamera",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R18",
+    "alt_sizes": [
+     "275/45R18",
+     "255/45R19",
+     "285/40R19",
+     "255/40R20",
+     "285/35R20",
+     "255/35R21",
+     "255/30R22",
+     "265/30R22",
+     "265/45R19",
+     "295/40R19",
+     "275/40R20",
+     "315/35R20",
+     "275/35R21",
+     "315/30R21",
+     "325/30R21",
+     "275/30R22",
+     "315/25R22"
+    ],
+    "brand": "CROSS AS8 MAZZINI (275/40R20)",
+    "price": 1290000
+   }
+  ]
+ },
+ {
   "model": "Porsche Taycan",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12evo (ETC C12evo, VW TL 774-L tur) — hajmi 14L-15L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Taycan",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/55R19",
+    "alt_sizes": [
+     "275/45R19",
+     "245/45R20",
+     "285/40R20",
+     "265/35R21",
+     "305/30R21"
+    ],
     "brand": "",
     "price": null
    }
@@ -22714,6 +26503,21 @@
   ]
  },
  {
+  "model": "Renault Arkana",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "215/55R18"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Renault Clio / Citan / Scenic",
   "part": "antifreeze",
   "items": [
@@ -22754,6 +26558,25 @@
     "name": "FILTRON OP 643/3",
     "price": 55000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Renault Clio / Citan / Scenic",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/65R15",
+    "alt_sizes": [
+     "195/55R16",
+     "205/45R17",
+     "195/65R15",
+     "205/60R16",
+     "205/55R16",
+     "205/55R17"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
    }
   ]
  },
@@ -22813,6 +26636,20 @@
   ]
  },
  {
+  "model": "Renault Duster",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
+   }
+  ]
+ },
+ {
   "model": "Seat Leon / Toledo / Cordoba",
   "part": "air_filter",
   "items": [
@@ -22853,6 +26690,23 @@
     "name": "HENGST OIL FILTER VAG AUDI VOLKSWAGEN SKODA SEAT 1.6-2.0 E115H01D208",
     "price": 120000,
     "qty": 1
+   }
+  ]
+ },
+ {
+  "model": "Seat Leon / Toledo / Cordoba",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/70R14",
+    "alt_sizes": [
+     "195/65R15",
+     "205/55R16",
+     "225/45R17",
+     "225/40R18"
+    ],
+    "brand": "XTREME ZEREX (195/65R15)",
+    "price": 515000
    }
   ]
  },
@@ -22929,6 +26783,23 @@
     "name": "AMD SVECHA SKODA KODIAQ AMD.PL129 06K905601B (4шт в комплекте)",
     "qty": null,
     "price": 400000
+   }
+  ]
+ },
+ {
+  "model": "Skoda Kodiak",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R17",
+    "alt_sizes": [
+     "235/55R18",
+     "235/50R19",
+     "235/45R20",
+     "255/40R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -23013,6 +26884,22 @@
   ]
  },
  {
+  "model": "Skoda Octavia",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "205/50R17",
+     "225/45R17"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "SsangYong Istana",
   "part": "antifreeze",
   "items": [
@@ -23085,6 +26972,22 @@
   ]
  },
  {
+  "model": "SsangYong Tivoli",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "205/65R16",
+     "215/45R18",
+     "215/50R18"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "SsangYong Torres",
   "part": "antifreeze",
   "items": [
@@ -23104,6 +27007,21 @@
     "name": "CARSTATION CABIN FILTER SSANGYONG TORRES 69114 41000",
     "price": 180000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "SsangYong Torres",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R17",
+    "alt_sizes": [
+     "235/55R18",
+     "245/45R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 800000
    }
   ]
  },
@@ -23232,6 +27150,21 @@
   ]
  },
  {
+  "model": "Tank 400 / 700",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/65R18",
+    "alt_sizes": [
+     "275/60R20",
+     "275/50R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Tesla Model 3 / Y / S",
   "part": "antifreeze",
   "items": [
@@ -23270,6 +27203,34 @@
   ]
  },
  {
+  "model": "Tesla Model 3 / Y / S",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/45R18",
+    "alt_sizes": [
+     "235/40R19",
+     "235/35R20",
+     "245/35R20",
+     "275/30R20",
+     "235/55R18",
+     "255/45R19",
+     "255/40R20",
+     "255/35R21",
+     "275/35R21",
+     "245/45R19",
+     "245/35R21",
+     "265/35R21",
+     "285/40R19",
+     "285/35R20",
+     "295/30R21"
+    ],
+    "brand": "LING LONG (245/45R19)",
+    "price": 1210000
+   }
+  ]
+ },
+ {
   "model": "Toyota Alphard / Vellfire",
   "part": "antifreeze",
   "items": [
@@ -23278,6 +27239,25 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Alphard / Vellfire",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "225/60R17",
+     "235/50R18",
+     "225/65R17",
+     "225/60R18",
+     "225/55R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
    }
   ]
  },
@@ -23312,6 +27292,23 @@
     "name": "YUNPAR OIL FILTER AVALON RAV4 LEXUS IS300 YJ A7 127Z",
     "price": 100000,
     "qty": 2
+   }
+  ]
+ },
+ {
+  "model": "Toyota Avalon",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "225/45R18",
+     "235/45R18",
+     "235/40R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
    }
   ]
  },
@@ -23396,6 +27393,24 @@
   ]
  },
  {
+  "model": "Toyota Avensis",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "205/60R16",
+     "215/50R17",
+     "215/55R17",
+     "225/45R18"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Toyota C-HR",
   "part": "air_filter",
   "items": [
@@ -23426,6 +27441,24 @@
     "name": "FILTRON OIL FILTER OE 685/2 Toyota",
     "price": 110000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Toyota C-HR",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "225/50R18",
+     "215/65R16",
+     "225/55R18",
+     "225/50R19",
+     "245/40R20"
+    ],
+    "brand": "ZINERGEE ECO S5 (215/65R16)",
+    "price": 880000
    }
   ]
  },
@@ -23616,6 +27649,24 @@
   ]
  },
  {
+  "model": "Toyota Camry",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/65R16",
+    "alt_sizes": [
+     "215/60R16",
+     "215/55R17",
+     "225/45R18",
+     "235/45R18",
+     "235/40R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (215/55R17)",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "Toyota Corolla",
   "part": "air_filter",
   "items": [
@@ -23767,6 +27818,22 @@
   ]
  },
  {
+  "model": "Toyota Corolla",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "215/45R17",
+     "225/40R18"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Toyota Crown",
   "part": "air_filter",
   "items": [
@@ -23795,6 +27862,30 @@
   ]
  },
  {
+  "model": "Toyota Crown",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "225/50R17",
+     "235/50R17",
+     "225/45R18",
+     "235/45R18",
+     "225/60R18",
+     "225/55R19",
+     "235/55R19",
+     "245/45R20",
+     "225/45R21",
+     "235/45R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
+   }
+  ]
+ },
+ {
   "model": "Toyota Fortuner",
   "part": "air_filter",
   "items": [
@@ -23818,6 +27909,23 @@
   ]
  },
  {
+  "model": "Toyota Fortuner",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/70R16",
+    "alt_sizes": [
+     "265/65R17",
+     "265/60R18",
+     "265/55R19",
+     "265/50R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota Hiace",
   "part": "air_filter",
   "items": [
@@ -23835,6 +27943,25 @@
    {
     "type": "FL22 (yashil) — Ravenol HJC katalogi — hajmi 13,9L-16L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Hiace",
+  "part": "tire",
+  "items": [
+   {
+    "size": "185/75R15",
+    "alt_sizes": [
+     "195/80R15",
+     "195/75R16",
+     "205/70R16",
+     "215/70R16",
+     "235/65R16",
+     "235/60R17"
+    ],
     "brand": "",
     "price": null
    }
@@ -23890,6 +28017,23 @@
   ]
  },
  {
+  "model": "Toyota Highlander",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/65R17",
+    "alt_sizes": [
+     "245/60R18",
+     "235/65R18",
+     "245/55R19",
+     "235/55R20"
+    ],
+    "brand": "ZINERGEE ECO S5 (245/60R18)",
+    "price": 1310000
+   }
+  ]
+ },
+ {
   "model": "Toyota Hilux",
   "part": "air_filter",
   "items": [
@@ -23909,6 +28053,26 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Hilux",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/70R15",
+    "alt_sizes": [
+     "255/70R15",
+     "215/65R16",
+     "225/60R17",
+     "225/70R17",
+     "265/65R17",
+     "265/60R18",
+     "275/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (225/60R17)",
+    "price": 800000
    }
   ]
  },
@@ -24074,6 +28238,26 @@
     "name": "FILTRON OIL FILTER OE 685/6",
     "price": 130000,
     "qty": 13
+   }
+  ]
+ },
+ {
+  "model": "Toyota Land Cruiser (100/200/300)",
+  "part": "tire",
+  "items": [
+   {
+    "size": "275/70R16",
+    "alt_sizes": [
+     "275/65R17",
+     "275/60R18",
+     "285/65R17",
+     "285/60R18",
+     "285/50R20",
+     "265/65R18",
+     "265/55R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -24279,6 +28463,24 @@
   ]
  },
  {
+  "model": "Toyota Land Cruiser Prado",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/65R17",
+    "alt_sizes": [
+     "265/60R18",
+     "265/55R19",
+     "265/50R20",
+     "245/70R17",
+     "285/60R18"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota Prius",
   "part": "air_filter",
   "items": [
@@ -24325,6 +28527,23 @@
     "name": "FILTRON OIL FILTER OE 685/2 Toyota",
     "price": 110000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Toyota Prius",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "215/45R17",
+     "215/50R17",
+     "195/60R17",
+     "195/50R19"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
    }
   ]
  },
@@ -24408,6 +28627,21 @@
   ]
  },
  {
+  "model": "Toyota RAV4",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/65R17",
+    "alt_sizes": [
+     "225/60R18",
+     "235/55R19"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R19)",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Toyota Rush",
   "part": "air_filter",
   "items": [
@@ -24438,6 +28672,21 @@
     "name": "FILTRON OIL FILTER OE 685/2 Toyota",
     "price": 110000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Toyota Rush",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "215/60R17",
+     "235/60R16"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
    }
   ]
  },
@@ -24481,12 +28730,47 @@
   ]
  },
  {
+  "model": "Toyota Sequoia / Tundra",
+  "part": "tire",
+  "items": [
+   {
+    "size": "265/70R18",
+    "alt_sizes": [
+     "285/65R18",
+     "265/60R20",
+     "265/50R22",
+     "255/70R18",
+     "275/65R18",
+     "275/55R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota Venza",
   "part": "antifreeze",
   "items": [
    {
     "type": "G12+ (qizil/pushti) — hajmi 6,7L-7,3L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Venza",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R18",
+    "alt_sizes": [
+     "225/55R19",
+     "245/55R19",
+     "245/50R20"
+    ],
     "brand": "",
     "price": null
    }
@@ -24532,6 +28816,24 @@
   ]
  },
  {
+  "model": "Toyota Yaris",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/65R14",
+    "alt_sizes": [
+     "185/60R15",
+     "195/50R16",
+     "185/65R15",
+     "195/55R16",
+     "205/45R17"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 490000
+   }
+  ]
+ },
+ {
   "model": "Toyota bZ3 / bZ5",
   "part": "antifreeze",
   "items": [
@@ -24555,6 +28857,21 @@
   ]
  },
  {
+  "model": "Toyota bZ3 / bZ5",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/50R18",
+    "alt_sizes": [
+     "225/60R18",
+     "225/45R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota bZ4X",
   "part": "antifreeze",
   "items": [
@@ -24563,6 +28880,20 @@
     "liters": null,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota bZ4X",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/50R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
    }
   ]
  },
@@ -24999,12 +29330,44 @@
   ]
  },
  {
+  "model": "UAZ Bukhanka",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/90R15",
+    "alt_sizes": [
+     "225/75R16",
+     "235/70R16",
+     "245/70R16"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "UAZ Hunter",
   "part": "antifreeze",
   "items": [
    {
     "type": "FL22 (yashil); ba'zi: G11 (sariq-yashil) — hajmi 11,5L-12,5L",
     "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "UAZ Hunter",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/75R16",
+    "alt_sizes": [
+     "235/70R16",
+     "245/70R16",
+     "235/85R16"
+    ],
     "brand": "",
     "price": null
    }
@@ -25019,6 +29382,23 @@
     "liters": 14.0,
     "brand": "",
     "price": null
+   }
+  ]
+ },
+ {
+  "model": "UAZ Patriot / Pickup",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/75R16",
+    "alt_sizes": [
+     "235/70R16",
+     "245/70R16",
+     "245/65R17",
+     "245/60R18"
+    ],
+    "brand": "ZINERGEE ECO S5 (245/60R18)",
+    "price": 1310000
    }
   ]
  },
@@ -25119,6 +29499,22 @@
   ]
  },
  {
+  "model": "Volkswagen Caddy",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "225/45R18",
+     "205/65R15"
+    ],
+    "brand": "VEEMAXX ECO777",
+    "price": 590000
+   }
+  ]
+ },
+ {
   "model": "Volkswagen Golf / Bora",
   "part": "air_filter",
   "items": [
@@ -25152,6 +29548,24 @@
   ]
  },
  {
+  "model": "Volkswagen Golf / Bora",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/60R15",
+     "205/55R16",
+     "205/50R17",
+     "205/45R17",
+     "225/45R17"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
+   }
+  ]
+ },
+ {
   "model": "Volkswagen ID.3",
   "part": "antifreeze",
   "items": [
@@ -25164,6 +29578,21 @@
   ]
  },
  {
+  "model": "Volkswagen ID.3",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R18",
+    "alt_sizes": [
+     "215/50R19",
+     "215/45R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Volkswagen ID.4",
   "part": "antifreeze",
   "items": [
@@ -25197,6 +29626,25 @@
   ]
  },
  {
+  "model": "Volkswagen ID.4",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/60R18",
+    "alt_sizes": [
+     "235/55R19",
+     "255/50R19",
+     "235/50R20",
+     "255/45R20",
+     "235/45R21",
+     "255/40R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
+   }
+  ]
+ },
+ {
   "model": "Volkswagen ID.6",
   "part": "antifreeze",
   "items": [
@@ -25226,6 +29674,24 @@
     "name": "VOLKSWAGEN CABIN FILTER ID4 ID6 1ED 819653",
     "price": 170000,
     "qty": 6
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen ID.6",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R19",
+    "alt_sizes": [
+     "255/50R19",
+     "235/50R20",
+     "255/45R20",
+     "235/45R21",
+     "255/40R21"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 1000000
    }
   ]
  },
@@ -25291,6 +29757,21 @@
     "name": "HUA MING OIL FILTER JETTA TTU 1.6T J221Z",
     "price": 135000,
     "qty": 14
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Jetta",
+  "part": "tire",
+  "items": [
+   {
+    "size": "195/65R15",
+    "alt_sizes": [
+     "205/55R16",
+     "225/45R17"
+    ],
+    "brand": "XTREME ZEREX",
+    "price": 515000
    }
   ]
  },
@@ -25364,6 +29845,24 @@
   ]
  },
  {
+  "model": "Volkswagen Passat",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R16",
+    "alt_sizes": [
+     "215/55R17",
+     "235/50R17",
+     "235/45R18",
+     "235/40R19",
+     "235/35R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 755000
+   }
+  ]
+ },
+ {
   "model": "Volkswagen Polo Sedan",
   "part": "antifreeze",
   "items": [
@@ -25387,6 +29886,24 @@
   ]
  },
  {
+  "model": "Volkswagen Polo Sedan",
+  "part": "tire",
+  "items": [
+   {
+    "size": "175/70R14",
+    "alt_sizes": [
+     "185/60R15",
+     "195/55R15",
+     "195/55R16",
+     "215/45R16",
+     "215/40R17"
+    ],
+    "brand": "XTREME ZEREX (195/55R15)",
+    "price": 470000
+   }
+  ]
+ },
+ {
   "model": "Volkswagen Tharu / VS5 / VS7",
   "part": "antifreeze",
   "items": [
@@ -25406,6 +29923,22 @@
     "name": "YUNPAR CABIN FILTER Volkswagen Tharu XR Jetta VS5/VS7 YT-A1-466",
     "price": 70000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Tharu / VS5 / VS7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "225/60R16",
+    "alt_sizes": [
+     "225/55R17",
+     "225/50R18",
+     "235/45R19"
+    ],
+    "brand": "ZINERGEE ECO S5 (225/55R17)",
+    "price": 985000
    }
   ]
  },
@@ -25440,6 +29973,22 @@
     "name": "OIL FILTER MANN VW Touareg/CC/Teramont HU 8009 Z",
     "price": 345000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Tiguan / Teramont",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/65R16",
+    "alt_sizes": [
+     "235/55R17",
+     "235/50R18",
+     "255/40R19"
+    ],
+    "brand": "ZINERGEE ECO S5",
+    "price": 880000
    }
   ]
  },
@@ -25493,6 +30042,22 @@
   ]
  },
  {
+  "model": "Volkswagen Touareg",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/65R17",
+    "alt_sizes": [
+     "255/55R18",
+     "255/50R19",
+     "275/45R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Volkswagen Transporter / Crafter / Amarok",
   "part": "antifreeze",
   "items": [
@@ -25533,6 +30098,31 @@
     "name": "AUTOZIP Oil Filter VW Transporter T5 COF102101S",
     "price": 215000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Transporter / Crafter / Amarok",
+  "part": "tire",
+  "items": [
+   {
+    "size": "205/65R16",
+    "alt_sizes": [
+     "215/65R16",
+     "235/55R17",
+     "255/45R18",
+     "205/75R16C",
+     "235/65R16C",
+     "245/70R16",
+     "245/65R17",
+     "255/60R18",
+     "255/55R19",
+     "255/50R20",
+     "255/65R18",
+     "255/55R20"
+    ],
+    "brand": "CROSS AS8 MAZZINI (235/55R17)",
+    "price": 835000
    }
   ]
  },
@@ -25582,6 +30172,18 @@
     "name": "CABIN FILTER VOYAH 13356916",
     "price": 140000,
     "qty": 4
+   }
+  ]
+ },
+ {
+  "model": "Voyah Dream",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R20",
+    "alt_sizes": [],
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -25661,6 +30263,21 @@
   ]
  },
  {
+  "model": "Voyah Free ➤ Hybrid (motorli) ➤ Full electric",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/45R20",
+    "alt_sizes": [
+     "255/50R19",
+     "255/40R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Voyah Passion",
   "part": "air_filter",
   "items": [
@@ -25705,6 +30322,20 @@
   ]
  },
  {
+  "model": "Voyah Passion",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/50R19",
+    "alt_sizes": [
+     "245/45R20"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Wuling Bardosh",
   "part": "air_filter",
   "items": [
@@ -25733,6 +30364,18 @@
   ]
  },
  {
+  "model": "Wuling Bardosh",
+  "part": "tire",
+  "items": [
+   {
+    "size": "165/70R13",
+    "alt_sizes": [],
+    "brand": "BARS TIMEFLEXX",
+    "price": 370000
+   }
+  ]
+ },
+ {
   "model": "Wuling Xingchen",
   "part": "air_filter",
   "items": [
@@ -25756,6 +30399,21 @@
   ]
  },
  {
+  "model": "Wuling Xingchen",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/60R17",
+    "alt_sizes": [
+     "215/55R17",
+     "215/55R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI (215/55R17)",
+    "price": 725000
+   }
+  ]
+ },
+ {
   "model": "Xiaomi SU7",
   "part": "antifreeze",
   "items": [
@@ -25775,6 +30433,24 @@
     "name": "YUNPAR CABIN FILTER AVATR 11, XIAOMI SU7 UGOL YT E6 584F",
     "price": 150000,
     "qty": 6
+   }
+  ]
+ },
+ {
+  "model": "Xiaomi SU7",
+  "part": "tire",
+  "items": [
+   {
+    "size": "245/45R19",
+    "alt_sizes": [
+     "265/45R19",
+     "245/40R20",
+     "265/40R20",
+     "245/35R21",
+     "265/35R21"
+    ],
+    "brand": "LING LONG",
+    "price": 1210000
    }
   ]
  },
@@ -25808,6 +30484,20 @@
     "name": "YUNPAR CABIN FILTER BYD SEAL SONG MAX/CHAZOR/QIN+/PRO, XPENG P5 UGOL YT D1 471F",
     "price": 90000,
     "qty": 46
+   }
+  ]
+ },
+ {
+  "model": "Xpeng P5 / G3",
+  "part": "tire",
+  "items": [
+   {
+    "size": "215/55R17",
+    "alt_sizes": [
+     "215/50R18"
+    ],
+    "brand": "CROSS AS8 MAZZINI",
+    "price": 725000
    }
   ]
  },
@@ -25981,6 +30671,21 @@
   ]
  },
  {
+  "model": "Zeekr 7X",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/50R19",
+    "alt_sizes": [
+     "265/45R20",
+     "265/40R21"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Zeekr 9X",
   "part": "air_filter",
   "items": [
@@ -26030,6 +30735,21 @@
   ]
  },
  {
+  "model": "Zeekr 9X",
+  "part": "tire",
+  "items": [
+   {
+    "size": "255/60R20",
+    "alt_sizes": [
+     "275/50R21",
+     "285/45R22"
+    ],
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Zeekr X",
   "part": "antifreeze",
   "items": [
@@ -26054,6 +30774,21 @@
     "name": "YUNPAR CABIN FILTER Zeekr X/007 UGOL YT-C9-470 F",
     "price": 140000,
     "qty": 3
+   }
+  ]
+ },
+ {
+  "model": "Zeekr X",
+  "part": "tire",
+  "items": [
+   {
+    "size": "235/55R18",
+    "alt_sizes": [
+     "235/50R19",
+     "245/45R20"
+    ],
+    "brand": "",
+    "price": null
    }
   ]
  }
