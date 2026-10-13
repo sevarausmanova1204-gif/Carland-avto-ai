@@ -1,1 +1,3897 @@
-[]
+[
+ {
+  "model": "Captiva 1",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k (2.4L)",
+    "price": 435000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil (2.4L)",
+    "price": 533000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k (2.4L)",
+    "price": 500000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "ZITRON qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO ko'k (3.0L)",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX qizil (3.0L)",
+    "price": 573000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX ko'k (3.0L)",
+    "price": 535000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 1",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN Yellow Q колодки передни CAPTIVA 1036",
+    "price": 215000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN PREMIUM CAPTIVA ПЕР FCP2017",
+    "price": 375000
+   },
+   {
+    "position": "old",
+    "name": "CARVILLE КОЛОДКИ ПЕРД. CHEVROLET CAPTIVA КЕРАМИК 517CR",
+    "price": 390000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние CAPTIVA HP1204",
+    "price": 390000
+   },
+   {
+    "position": "orqa",
+    "name": "HARDRON Колодки тормозные задние CAPTIVA HP 1205",
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 1",
+  "part": "spark",
+  "items": [
+   {
+    "name": "GM SVECHA CAPTIVA ORG 12625058 (1шт)",
+    "qty": null,
+    "price": 140000
+   },
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC IR38D147 CAPTIVA/MALIBU1 4SHT",
+    "qty": null,
+    "price": 245000
+   },
+   {
+    "name": "AUTOZIP SVECHA Trailblazer Captiva 3.0 CCH9299 DONAGA",
+    "qty": null,
+    "price": 250000
+   },
+   {
+    "name": "SVECHA TORCH IRRIDIUM CAPTIVA 2.4 QH5RIU13",
+    "qty": null,
+    "price": 340000
+   },
+   {
+    "name": "SVECHA NGK CAPTIVA IRIDIUM COM.",
+    "qty": null,
+    "price": 380000
+   },
+   {
+    "name": "GM SVECHA Captiva 6 ta ORG 92220447",
+    "qty": null,
+    "price": 1150000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 2.4L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k (2.4L)",
+    "price": 435000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil (2.4L)",
+    "price": 533000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k (2.4L)",
+    "price": 500000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "ZITRON qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO ko'k (3.0L)",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX qizil (3.0L)",
+    "price": 573000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX ko'k (3.0L)",
+    "price": 535000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 2.4L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN Yellow Q колодки передни CAPTIVA 1036",
+    "price": 215000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN PREMIUM CAPTIVA ПЕР FCP2017",
+    "price": 375000
+   },
+   {
+    "position": "old",
+    "name": "CARVILLE КОЛОДКИ ПЕРД. CHEVROLET CAPTIVA КЕРАМИК 517CR",
+    "price": 390000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние CAPTIVA HP1204",
+    "price": 390000
+   },
+   {
+    "position": "orqa",
+    "name": "HARDRON Колодки тормозные задние CAPTIVA HP 1205",
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 2.4L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "GM SVECHA CAPTIVA ORG 12625058 (1шт)",
+    "qty": null,
+    "price": 140000
+   },
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC IR38D147 CAPTIVA/MALIBU1 4SHT",
+    "qty": null,
+    "price": 245000
+   },
+   {
+    "name": "AUTOZIP SVECHA Trailblazer Captiva 3.0 CCH9299 DONAGA",
+    "qty": null,
+    "price": 250000
+   },
+   {
+    "name": "SVECHA TORCH IRRIDIUM CAPTIVA 2.4 QH5RIU13",
+    "qty": null,
+    "price": 340000
+   },
+   {
+    "name": "SVECHA NGK CAPTIVA IRIDIUM COM.",
+    "qty": null,
+    "price": 380000
+   },
+   {
+    "name": "GM SVECHA Captiva 6 ta ORG 92220447",
+    "qty": null,
+    "price": 1150000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 3.0L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil (2.4L)",
+    "price": 468000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k (2.4L)",
+    "price": 435000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil (2.4L)",
+    "price": 533000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k (2.4L)",
+    "price": 500000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "ZITRON qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO qizil (3.0L)",
+    "price": 498000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO ko'k (3.0L)",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX qizil (3.0L)",
+    "price": 573000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX ko'k (3.0L)",
+    "price": 535000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 3.0L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN Yellow Q колодки передни CAPTIVA 1036",
+    "price": 215000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN PREMIUM CAPTIVA ПЕР FCP2017",
+    "price": 375000
+   },
+   {
+    "position": "old",
+    "name": "CARVILLE КОЛОДКИ ПЕРД. CHEVROLET CAPTIVA КЕРАМИК 517CR",
+    "price": 390000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние CAPTIVA HP1204",
+    "price": 390000
+   },
+   {
+    "position": "orqa",
+    "name": "HARDRON Колодки тормозные задние CAPTIVA HP 1205",
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 2 va 3 3.0L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "GM SVECHA CAPTIVA ORG 12625058 (1шт)",
+    "qty": null,
+    "price": 140000
+   },
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC IR38D147 CAPTIVA/MALIBU1 4SHT",
+    "qty": null,
+    "price": 245000
+   },
+   {
+    "name": "AUTOZIP SVECHA Trailblazer Captiva 3.0 CCH9299 DONAGA",
+    "qty": null,
+    "price": 250000
+   },
+   {
+    "name": "SVECHA TORCH IRRIDIUM CAPTIVA 2.4 QH5RIU13",
+    "qty": null,
+    "price": 340000
+   },
+   {
+    "name": "SVECHA NGK CAPTIVA IRIDIUM COM.",
+    "qty": null,
+    "price": 380000
+   },
+   {
+    "name": "GM SVECHA Captiva 6 ta ORG 92220447",
+    "qty": null,
+    "price": 1150000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 4",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH IRRIDIUM CAPTIVA 2.4 QH5RIU13",
+    "qty": null,
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Changan CS35 Plus",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "Тормозные колодки пер Changan YC034",
+    "price": 285000
+   }
+  ]
+ },
+ {
+  "model": "Changan CS35 Plus",
+  "part": "spark",
+  "items": [
+   {
+    "name": "TORCH SVECHA OE204 CHANGAN UNI-T, CS35+ (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Changan CS55 Plus",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "Тормозные колодки пер Changan YC034",
+    "price": 285000
+   }
+  ]
+ },
+ {
+  "model": "Changan CS75 Plus",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "Тормозные колодки пер Changan YC034",
+    "price": 285000
+   }
+  ]
+ },
+ {
+  "model": "Changan UNI-T",
+  "part": "spark",
+  "items": [
+   {
+    "name": "TORCH SVECHA OE204 CHANGAN UNI-T, CS35+ (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Chery ARRIZO 6 PRO",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки передние FR CHERY ARIZZO 6 PRO FGY 0578",
+    "price": 330000
+   },
+   {
+    "position": "old",
+    "name": "CHERRY ARRIZO 6 PRO колодки передние TF776 (TB01674QK)",
+    "price": 500000
+   }
+  ]
+ },
+ {
+  "model": "Chery ARRIZO 6 PRO",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 2 Pro",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
+    "qty": null,
+    "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 4 Pro",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
+    "qty": null,
+    "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 7 Pro",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
+    "qty": null,
+    "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 8 Pro",
+  "part": "spark",
+  "items": [
+   {
+    "name": "TORCH IRIDIUM TIGGO 8 MAX PRO 2.0T LDK8RTIP-B",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   },
+   {
+    "name": "TORCH SVECHA CHERY 8PRO MAX 1.6T SQRF4J16 OE208 (4шт в комплекте)",
+    "qty": null,
+    "price": 480000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
+    "qty": null,
+    "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Aveo (T250 / T300)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CARVILLE SVECHA AVEO T250, SPARK M300 (VSP0515)",
+    "qty": null,
+    "price": 55000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Epica (2.0L / 2.5L)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA CHAMPION OE039T10 TRACKER 1.8 ORLANDA EPICA LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 50000
+   },
+   {
+    "name": "SVECHA LASER IRIDIUM EPICA ШТ IFR6E11 6741",
+    "qty": null,
+    "price": 125000
+   },
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC IR75D162 EPICA 4SHT",
+    "qty": null,
+    "price": 245000
+   },
+   {
+    "name": "FOURGREEN IRIDIUM SVECHA EPIKA KAP 6TA i 9331",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA 3 конт. OE077T10 Tracker 1 Epica Lacetti 1.6/1.8 Orlando 1.8 (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "SVECHA TORCH IRIDIUM EPICA 6TA K6RIU",
+    "qty": null,
+    "price": 380000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE146T10 ORLANDO TRACKER 1.8 EPICA (4шт в комплекте)",
+    "qty": null,
+    "price": 590000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Onix (1.2L / 1.2T)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "ZITRON qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO ko'k",
+    "price": 395000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX qizil",
+    "price": 470000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX ko'k",
+    "price": 445000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Onix (1.2L / 1.2T)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q ONIX AVT пр FG1808",
+    "price": 150000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW-Q колодки ONIX TRK UZB пер FGY 1808",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW-Q Колодки FG 1201B ONIX MEXANIKA FR",
+    "price": 225000
+   },
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM DUBLIKAT ONIX TRACKER 2 ПЕР 26312031",
+    "price": 240000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ ONIX TRACKER 2 PER KERAMIKA HP5443",
+    "price": 410000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние ONIX HP2759",
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Onix (1.2L / 1.2T)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA EQUINOX 2 MALIBU 2 1.5T ONIX TRACKER 2 UZB 12683541 (1шт)",
+    "qty": null,
+    "price": 100000
+   },
+   {
+    "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "ACDELCO SVECHA MALIBU2 1.5T ONIX TRACKER2 UZB 55490097 (1шт)",
+    "qty": null,
+    "price": 185000
+   },
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC 9670 ONIX 1.2L 4SHT",
+    "qty": null,
+    "price": 250000
+   },
+   {
+    "name": "ACDELCO SVECHA GM ORG ONIX TRACKER 2 UZB 12706611 (3шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "ACDELCO GM ORG JAPAN SVECHA 1.5 TURBO 12683541 4#41-156 (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Orlando (1.8L)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA CHAMPION OE039T10 TRACKER 1.8 ORLANDA EPICA LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 50000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE089T10 TRACKER 1.8 ORLANDO LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 70000
+   },
+   {
+    "name": "AUTOZIP SVECHA ORLANDO TRACKER 1 SPECIAL OE198T10 (4шт комплект)",
+    "qty": null,
+    "price": 340000
+   },
+   {
+    "name": "AUTOZIP SVECHA 3 конт. OE077T10 Tracker 1 Epica Lacetti 1.6/1.8 Orlando 1.8 (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE146T10 ORLANDO TRACKER 1.8 EPICA (4шт в комплекте)",
+    "qty": null,
+    "price": 590000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Spark (1.0L / 1.25L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "ZITRON qizil (1.0L)",
+    "price": 395000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO qizil (1.0L)",
+    "price": 395000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO ko'k (1.0L)",
+    "price": 375000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX qizil (1.0L)",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX ko'k (1.0L)",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "ZITRON qizil (1.25L)",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO qizil (1.25L)",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO ko'k (1.25L)",
+    "price": 380000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX qizil (1.25L)",
+    "price": 445000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX ko'k (1.25L)",
+    "price": 425000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Spark (1.0L / 1.25L)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGEEN GREEN Q SPARK пер FG 720",
+    "price": 130000
+   },
+   {
+    "position": "old",
+    "name": "PLATINUM SPARK колодки передние DPDW-027",
+    "price": 140000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 SPARK BM1320018 КОЛОДКИ ПЕРЕДНИЕ",
+    "price": 160000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние SPARK HP1392",
+    "price": 325000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ SPARK PER KERAMIKA FCP2023",
+    "price": 370000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Spark (1.0L / 1.25L)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA BOSCH SPARK COBALT NEXIA 3 0242135515",
+    "qty": null,
+    "price": 40000
+   },
+   {
+    "name": "CARVILLE SVECHA AVEO T250, SPARK M300 (VSP0515)",
+    "qty": null,
+    "price": 55000
+   },
+   {
+    "name": "SVECHA TORCH EFFECT SPARK DK7RTCU KOMP",
+    "qty": null,
+    "price": 110000
+   },
+   {
+    "name": "SVECHA TORCH SPARK/COBALT/GENTRA (KOMP 4) DK8RTC",
+    "qty": null,
+    "price": 120000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   },
+   {
+    "name": "NGK SVECHA SPARK 4179 DCPR8E (4шт в комплекте)",
+    "qty": null,
+    "price": 140000
+   },
+   {
+    "name": "GM ORG SVECHA SPARK 96990231 (4шт в комплекте)",
+    "qty": null,
+    "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Trailblazer (2.8L Dizel / 3.6L V6)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "ZITRON qizil",
+    "price": 545000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO qizil",
+    "price": 545000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO ko'k",
+    "price": 510000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX qizil",
+    "price": 620000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX ko'k",
+    "price": 580000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Trailblazer (2.8L Dizel / 3.6L V6)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN RED Q Колодки передние TRAILBLAZER FGR1014",
+    "price": 390000
+   },
+   {
+    "position": "old",
+    "name": "GM Колодки тормозные передние TRAILBLAZER \"52111713\"",
+    "price": 670000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN RED Q Колодки задние TRAILBLAZER FGR1103",
+    "price": 290000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Trailblazer (2.8L Dizel / 3.6L V6)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA Trailblazer Captiva 3.0 CCH9299 DONAGA",
+    "qty": null,
+    "price": 250000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "ZITRON qizil",
+    "price": 410000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO qizil",
+    "price": 410000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO ko'k",
+    "price": 385000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX qizil",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX ko'k",
+    "price": 435000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q COBALT 1-2 пер FG 1411",
+    "price": 150000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 COBALT 3-4 BM1320004 колодки передние",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "JAPANPARTS COBALT 3.4 колодки передние PA-W15AF",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q Колодки передние COBALT FG 1029",
+    "price": 175000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер Cobalt FGR 1029",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q ПЕРЕДНИЕ КОЛОДКИ COBALT 1,2 FGY 1411",
+    "price": 215000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ COBALT 3-4 PER KERAMIKA FCP205286",
+    "price": 350000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние COBALT 1.2 HP1673",
+    "price": 350000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние COBALT 3.4 HP1481",
+    "price": 365000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q колотки задни COBALT 4328",
+    "price": 175000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 COBALT BMS00005 КОЛОДКИ ЗАДНИЙ",
+    "price": 200000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA BOSCH SPARK COBALT NEXIA 3 0242135515",
+    "qty": null,
+    "price": 40000
+   },
+   {
+    "name": "SVECHA TORCH SPARK/COBALT/GENTRA (KOMP 4) DK8RTC",
+    "qty": null,
+    "price": 120000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt MSM",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "ZITRON qizil",
+    "price": 410000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO qizil",
+    "price": 410000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "VALESCO ko'k",
+    "price": 385000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX qizil",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 5.0,
+    "brand": "FELIX ko'k",
+    "price": 435000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt MSM",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q COBALT 1-2 пер FG 1411",
+    "price": 150000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 COBALT 3-4 BM1320004 колодки передние",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "JAPANPARTS COBALT 3.4 колодки передние PA-W15AF",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q Колодки передние COBALT FG 1029",
+    "price": 175000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер Cobalt FGR 1029",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q ПЕРЕДНИЕ КОЛОДКИ COBALT 1,2 FGY 1411",
+    "price": 215000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ COBALT 3-4 PER KERAMIKA FCP205286",
+    "price": 350000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние COBALT 1.2 HP1673",
+    "price": 350000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние COBALT 3.4 HP1481",
+    "price": 365000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q колотки задни COBALT 4328",
+    "price": 175000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 COBALT BMS00005 КОЛОДКИ ЗАДНИЙ",
+    "price": 200000
+   }
+  ]
+ },
+ {
+  "model": "Cobalt MSM",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA BOSCH SPARK COBALT NEXIA 3 0242135515",
+    "qty": null,
+    "price": 40000
+   },
+   {
+    "name": "SVECHA TORCH SPARK/COBALT/GENTRA (KOMP 4) DK8RTC",
+    "qty": null,
+    "price": 120000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Tico (0.8L)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "orqa",
+    "name": "HI Q Колодки задние DAEWOO MATIZ, TICO SA086",
+    "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Damas eski",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "ZITRON qizil",
+    "price": 245000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO qizil",
+    "price": 245000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO ko'k",
+    "price": 225000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX qizil",
+    "price": 290000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX ko'k",
+    "price": 270000
+   }
+  ]
+ },
+ {
+  "model": "Damas eski",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM DAMAS колодки передние DPDW-010",
+    "price": 85000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q ПЕРЕДНИЕ КОЛОДКИ DAMAS FG0156",
+    "price": 120000
+   },
+   {
+    "position": "old",
+    "name": "HAGEN КОЛОДКИ ПЕРЕДНИЕ DAMAS GP1059",
+    "price": 190000
+   }
+  ]
+ },
+ {
+  "model": "Damas eski",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Damas yangi",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "ZITRON qizil",
+    "price": 245000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO qizil",
+    "price": 245000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO ko'k",
+    "price": 225000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX qizil",
+    "price": 290000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX ko'k",
+    "price": 270000
+   }
+  ]
+ },
+ {
+  "model": "Damas yangi",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM DAMAS колодки передние DPDW-010",
+    "price": 85000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q ПЕРЕДНИЕ КОЛОДКИ DAMAS FG0156",
+    "price": 120000
+   },
+   {
+    "position": "old",
+    "name": "HAGEN КОЛОДКИ ПЕРЕДНИЕ DAMAS GP1059",
+    "price": 190000
+   }
+  ]
+ },
+ {
+  "model": "Damas yangi",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Equinox",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "ZITRON qizil",
+    "price": 330000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO qizil",
+    "price": 330000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO ko'k",
+    "price": 295000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX ko'k",
+    "price": 365000
+   }
+  ]
+ },
+ {
+  "model": "Equinox",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN RED Q REDLINE Колодки передние EQUINOX 2 FGR 1743",
+    "price": 360000
+   },
+   {
+    "position": "old",
+    "name": "EQUINOX GM ORG КОЛОДКИ ПЕРЕД. 42790921",
+    "price": 2800000
+   }
+  ]
+ },
+ {
+  "model": "Equinox",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA EQUINOX 2 MALIBU 2 1.5T ONIX TRACKER 2 UZB 12683541 (1шт)",
+    "qty": null,
+    "price": 100000
+   },
+   {
+    "name": "ACDELCO GM ORG JAPAN SVECHA 1.5 TURBO 12683541 4#41-156 (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   },
+   {
+    "name": "ACDELCO SVECHA ORG MALIBU 2 XL EQUINOX 55504354 4#41-103IP (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Ford Mustang",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "STELLOX Колодки передние FORD MUSTANG 262318",
+    "price": 1250000
+   },
+   {
+    "position": "old",
+    "name": "DURALAST Колодки передние FORD MUSTANG GT DE1784",
+    "price": 3200000
+   }
+  ]
+ },
+ {
+  "model": "Geely Atlas / Atlas Pro",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Geely Coolray",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Avtomat)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "ZITRON qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO ko'k",
+    "price": 405000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX qizil",
+    "price": 510000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX ko'k",
+    "price": 475000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Avtomat)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM ORG LACETTI GENTRA 96405129",
+    "price": 470000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Avtomat)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH SPARK/COBALT/GENTRA (KOMP 4) DK8RTC",
+    "qty": null,
+    "price": 120000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Mexanika)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "ZITRON qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO ko'k",
+    "price": 405000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX qizil",
+    "price": 510000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX ko'k",
+    "price": 475000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Mexanika)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM ORG LACETTI GENTRA 96405129",
+    "price": 470000
+   }
+  ]
+ },
+ {
+  "model": "Gentra (Mexanika)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH SPARK/COBALT/GENTRA (KOMP 4) DK8RTC",
+    "qty": null,
+    "price": 120000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Haval Dargo",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Haval H6",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Haval Jolion",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Haval M6",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
+    "qty": null,
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Honda Crider",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA CRIDER OE277 (4шт в комплекте)",
+    "qty": null,
+    "price": 900000
+   }
+  ]
+ },
+ {
+  "model": "Hongqi H5",
+  "part": "spark",
+  "items": [
+   {
+    "name": "NGK SVECHA HONGQI 3707010-27L-A-BP ILZKAR8M7S 1sht",
+    "qty": null,
+    "price": 170000
+   }
+  ]
+ },
+ {
+  "model": "Hongqi H9",
+  "part": "spark",
+  "items": [
+   {
+    "name": "NGK SVECHA HONGQI 3707010-27L-A-BP ILZKAR8M7S 1sht",
+    "qty": null,
+    "price": 170000
+   }
+  ]
+ },
+ {
+  "model": "Hongqi HS5",
+  "part": "spark",
+  "items": [
+   {
+    "name": "NGK SVECHA HONGQI 3707010-27L-A-BP ILZKAR8M7S 1sht",
+    "qty": null,
+    "price": 170000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Creta 1.6L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA KIA K5 HYUNDAI CRETA CCH9023 (1шт)",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Creta 2.0L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA KIA K5 HYUNDAI CRETA CCH9023 (1шт)",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.5L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER ELANTRA-KIA SPORTAGE HP0081",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.6L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER ELANTRA-KIA SPORTAGE HP0081",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.6L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 2.0L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER ELANTRA-KIA SPORTAGE HP0081",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 2.0L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai H-100 / Porter",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "KIA HYUNDAI PORTER II UBP 018 КОЛОДКИ ПЕРЕД.",
+    "price": 420000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai I 30",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Sonata (LF / DN8)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA OE063T10 HYUNDAI SONATA NF 2.0 (4шт в комплекте)",
+    "qty": null,
+    "price": 165000
+   },
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Tucson 2.0L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Tucson 2.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.4L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER SANTAFE-KIA SARENTO HP1064",
+    "price": 415000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.4L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "START VOLT SVECHA VSP 1401 HYUNDAI SANTAFE 2.4 N16 1.6",
+    "qty": null,
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.5L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER SANTAFE-KIA SARENTO HP1064",
+    "price": 415000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "START VOLT SVECHA VSP 1401 HYUNDAI SANTAFE 2.4 N16 1.6",
+    "qty": null,
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 3.5L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER SANTAFE-KIA SARENTO HP1064",
+    "price": 415000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 3.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "START VOLT SVECHA VSP 1401 HYUNDAI SANTAFE 2.4 N16 1.6",
+    "qty": null,
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Jetour Dashing",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки FG 1115 FR JETOUR CHERY EXCEED",
+    "price": 320000
+   }
+  ]
+ },
+ {
+  "model": "Jetour X70 / X70 Plus",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки FG 1115 FR JETOUR CHERY EXCEED",
+    "price": 320000
+   }
+  ]
+ },
+ {
+  "model": "Jetour X70 / X70 Plus",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
+    "qty": null,
+    "price": 150000
+   }
+  ]
+ },
+ {
+  "model": "Jetour X90",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки FG 1115 FR JETOUR CHERY EXCEED",
+    "price": 320000
+   }
+  ]
+ },
+ {
+  "model": "Kia K8",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER KIA K5/K8 HP0078",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Kia Seltos",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA KIA K5 SELTOS KAM OE249 (4шт в комплекте)",
+    "qty": null,
+    "price": 800000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sonet",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN Колодки передние SONET PREMIUM FR 0097",
+    "price": 345000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sonet",
+  "part": "spark",
+  "items": [
+   {
+    "name": "FOURGREEN SVECHA IRIDIUM ISUZU KIA SONET TX11",
+    "qty": null,
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sorento",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER SANTAFE-KIA SARENTO HP1064",
+    "price": 415000
+   }
+  ]
+ },
+ {
+  "model": "Kia Soul",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2.5L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER ELANTRA-KIA SPORTAGE HP0081",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER ELANTRA-KIA SPORTAGE HP0081",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.0L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER KIA K5/K8 HP0078",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.0L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA KIA K5 HYUNDAI CRETA CCH9023 (1шт)",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "AUTOZIP SVECHA KIA K5 SELTOS KAM OE249 (4шт в комплекте)",
+    "qty": null,
+    "price": 800000
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.5L",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ PER KIA K5/K8 HP0078",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.5L",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA KIA K5 HYUNDAI CRETA CCH9023 (1шт)",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA HYUNDAI KIA 18846 - 11070 DUBLIKAT ARZONI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE201T10 CRETA SOUL KIA K5 SONATA (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18846 11070 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   },
+   {
+    "name": "AUTOZIP SVECHA KIA K5 SELTOS KAM OE249 (4шт в комплекте)",
+    "qty": null,
+    "price": 800000
+   }
+  ]
+ },
+ {
+  "model": "Labo",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM DAMAS колодки передние DPDW-010",
+    "price": 85000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q ПЕРЕДНИЕ КОЛОДКИ DAMAS FG0156",
+    "price": 120000
+   },
+   {
+    "position": "old",
+    "name": "HAGEN КОЛОДКИ ПЕРЕДНИЕ DAMAS GP1059",
+    "price": 190000
+   }
+  ]
+ },
+ {
+  "model": "Labo",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "ZITRON qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO ko'k",
+    "price": 405000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX qizil",
+    "price": 510000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX ko'k",
+    "price": 475000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,6",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM LACETTI колодки передние DPDW-008",
+    "price": 120000
+   },
+   {
+    "position": "old",
+    "name": "FOUGREEN GREEN Q LACETTI пер FG 403",
+    "price": 135000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 LACETTI BM1320009 КОЛОДКИ ПЕРЕДНИЕ",
+    "price": 150000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер Laccetti FGR 403",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ LACETTI/NEXIA 3 PER KERAMIKA FCP2012",
+    "price": 300000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние LACETTI HP1918",
+    "price": 325000
+   },
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM ORG LACETTI GENTRA 96405129",
+    "price": 470000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 LACETTI BM1320010 КОЛОДКИ ЗАДНИЙ",
+    "price": 100000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q LACETTI зад FG 0577",
+    "price": 100000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN RED-Q REDLINE колодки зад Lacetti FGR 0577",
+    "price": 140000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN КОЛОДКИ LACETTI ZAD KERAMIKA RR HP2020",
+    "price": 240000
+   },
+   {
+    "position": "orqa",
+    "name": "HARDRON Колодки тормозные задние LACETTI HP1257",
+    "price": 300000
+   },
+   {
+    "position": "orqa",
+    "name": "КОЛОДКИ GM LACETTI ORG задние 96800089",
+    "price": 620000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,6",
+  "part": "spark",
+  "items": [
+   {
+    "name": "BOSCH SVECHA Super plus 3 LACETTI 0241235752",
+    "qty": null,
+    "price": 45000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHAMPION OE039T10 TRACKER 1.8 ORLANDA EPICA LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 50000
+   },
+   {
+    "name": "NGK SVECHA LACETTI 3 KONTAKT BKUR6ETB 6992 (1шт)",
+    "qty": null,
+    "price": 65000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE089T10 TRACKER 1.8 ORLANDO LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 70000
+   },
+   {
+    "name": "IRIZON SVECHA 2KONTAKT PRC IZ79N256 LACETTI 4SHT",
+    "qty": null,
+    "price": 130000
+   },
+   {
+    "name": "AUTOZIP SVECHA NEXIA 1 DONC LACETTI KAM. RC10YC4",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA TORCH EFFECT LACETTI 3 KONTAKT KOMP K7RTJC",
+    "qty": null,
+    "price": 175000
+   },
+   {
+    "name": "NGK SVECHA LACETTI IRIDIUM KOMP KR8BI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE032T10 LACETTI 1.8 3KONTAKT (4шт в комплекте)",
+    "qty": null,
+    "price": 320000
+   },
+   {
+    "name": "AUTOZIP SVECHA 3 конт. OE077T10 Tracker 1 Epica Lacetti 1.6/1.8 Orlando 1.8 (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "ZITRON qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO qizil",
+    "price": 440000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "VALESCO ko'k",
+    "price": 405000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX qizil",
+    "price": 510000
+   },
+   {
+    "type": "",
+    "liters": 7.0,
+    "brand": "FELIX ko'k",
+    "price": 475000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,8",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM LACETTI колодки передние DPDW-008",
+    "price": 120000
+   },
+   {
+    "position": "old",
+    "name": "FOUGREEN GREEN Q LACETTI пер FG 403",
+    "price": 135000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 LACETTI BM1320009 КОЛОДКИ ПЕРЕДНИЕ",
+    "price": 150000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер Laccetti FGR 403",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ LACETTI/NEXIA 3 PER KERAMIKA FCP2012",
+    "price": 300000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние LACETTI HP1918",
+    "price": 325000
+   },
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM ORG LACETTI GENTRA 96405129",
+    "price": 470000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 LACETTI BM1320010 КОЛОДКИ ЗАДНИЙ",
+    "price": 100000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q LACETTI зад FG 0577",
+    "price": 100000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN RED-Q REDLINE колодки зад Lacetti FGR 0577",
+    "price": 140000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN КОЛОДКИ LACETTI ZAD KERAMIKA RR HP2020",
+    "price": 240000
+   },
+   {
+    "position": "orqa",
+    "name": "HARDRON Колодки тормозные задние LACETTI HP1257",
+    "price": 300000
+   },
+   {
+    "position": "orqa",
+    "name": "КОЛОДКИ GM LACETTI ORG задние 96800089",
+    "price": 620000
+   }
+  ]
+ },
+ {
+  "model": "Lacetti 1,8",
+  "part": "spark",
+  "items": [
+   {
+    "name": "BOSCH SVECHA Super plus 3 LACETTI 0241235752",
+    "qty": null,
+    "price": 45000
+   },
+   {
+    "name": "AUTOZIP SVECHA CHAMPION OE039T10 TRACKER 1.8 ORLANDA EPICA LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 50000
+   },
+   {
+    "name": "NGK SVECHA LACETTI 3 KONTAKT BKUR6ETB 6992 (1шт)",
+    "qty": null,
+    "price": 65000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE089T10 TRACKER 1.8 ORLANDO LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 70000
+   },
+   {
+    "name": "IRIZON SVECHA 2KONTAKT PRC IZ79N256 LACETTI 4SHT",
+    "qty": null,
+    "price": 130000
+   },
+   {
+    "name": "AUTOZIP SVECHA NEXIA 1 DONC LACETTI KAM. RC10YC4",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "SVECHA TORCH EFFECT LACETTI 3 KONTAKT KOMP K7RTJC",
+    "qty": null,
+    "price": 175000
+   },
+   {
+    "name": "NGK SVECHA LACETTI IRIDIUM KOMP KR8BI",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE032T10 LACETTI 1.8 3KONTAKT (4шт в комплекте)",
+    "qty": null,
+    "price": 320000
+   },
+   {
+    "name": "AUTOZIP SVECHA 3 конт. OE077T10 Tracker 1 Epica Lacetti 1.6/1.8 Orlando 1.8 (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   }
+  ]
+ },
+ {
+  "model": "Lada VAZ 2101-2107",
+  "part": "spark",
+  "items": [
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Lexus LX",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA LEXSUS LX350 SK20HR11 90919-01191 DONA",
+    "qty": null,
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Lexus RX",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA LEXSUS LX350 SK20HR11 90919-01191 DONA",
+    "qty": null,
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L9",
+  "part": "spark",
+  "items": [
+   {
+    "name": "TORCH SVECHA LIXIANG OE220 4sht KOMPLEKT",
+    "qty": null,
+    "price": 700000
+   },
+   {
+    "name": "SVECHA LIXIANG LI9 KOMP E15M92090001",
+    "qty": null,
+    "price": 950000
+   },
+   {
+    "name": "SVECHA ORIGINAL LI 9 KOMP OE220",
+    "qty": null,
+    "price": 950000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 1",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil",
+    "price": 295000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil",
+    "price": 295000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k",
+    "price": 265000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil",
+    "price": 360000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k",
+    "price": 330000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 1",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "JAPANPARTS MALIBU 1 колодки передние PA-W17AF",
+    "price": 155000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние MALIBU 1 HP1402",
+    "price": 350000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 1",
+  "part": "spark",
+  "items": [
+   {
+    "name": "IRIZON IRIDIUM SVECHA PRC IR38D147 CAPTIVA/MALIBU1 4SHT",
+    "qty": null,
+    "price": 245000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil",
+    "price": 495000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil",
+    "price": 495000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k",
+    "price": 465000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil",
+    "price": 560000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k",
+    "price": 530000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 2",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "JAPANPARTS MALIBU 2 колодки передние PA-W18AF",
+    "price": 185000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MALIBU2 пер FG1508",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "PLATINUM MALIBU 2 колодки передние DPDW-033",
+    "price": 200000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер Malibu 2 FGR 1508",
+    "price": 225000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние MALIBU 2 HP1981",
+    "price": 460000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ MALIBU 2 PER KERAMIKA FCP2029",
+    "price": 470000
+   },
+   {
+    "position": "old",
+    "name": "GM Колодки передние MALIBU ORG 23326280",
+    "price": 1360000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q MALIBU2 задний FG1696",
+    "price": 155000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN RED-Q REDLINE колодки зад Malibu 2 FGR 1696",
+    "price": 175000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN Колодки задние PREMIUM KOREA MALIBU 2 FR FCP2030",
+    "price": 260000
+   },
+   {
+    "position": "orqa",
+    "name": "КОЛОДКИ GM MALIBU 2 ORG задние 07894 DP10",
+    "price": 1200000
+   }
+  ]
+ },
+ {
+  "model": "Malibu 2",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA EQUINOX 2 MALIBU 2 1.5T ONIX TRACKER 2 UZB 12683541 (1шт)",
+    "qty": null,
+    "price": 100000
+   },
+   {
+    "name": "AUTOZIP SVECHA MALIBU V400 2.0 CCH9777 (1шт)",
+    "qty": null,
+    "price": 180000
+   },
+   {
+    "name": "ACDELCO SVECHA MALIBU2 1.5T ONIX TRACKER2 UZB 55490097 (1шт)",
+    "qty": null,
+    "price": 185000
+   },
+   {
+    "name": "BOSCH SVECHA Iridium MALIBU2 2.0T 0242236675 DONAGA",
+    "qty": null,
+    "price": 230000
+   },
+   {
+    "name": "AUTOZIP SVECHA MALIBU 2 2.0L COPPER PLUS CCH570 (4шт в комплекте)",
+    "qty": null,
+    "price": 320000
+   },
+   {
+    "name": "ACDELCO GM ORG JAPAN SVECHA 1.5 TURBO 12683541 4#41-156 (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   },
+   {
+    "name": "ACDELCO SVECHA MALIBU2 2.0T ORG 12681659 4#41-125 (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   },
+   {
+    "name": "ACDELCO SVECHA ORG MALIBU 2 XL EQUINOX 55504354 4#41-103IP (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Matiz best 4 slindir",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "ZITRON qizil",
+    "price": 335000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO qizil",
+    "price": 335000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "VALESCO ko'k",
+    "price": 310000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX qizil",
+    "price": 380000
+   },
+   {
+    "type": "",
+    "liters": 4.5,
+    "brand": "FELIX ko'k",
+    "price": 360000
+   }
+  ]
+ },
+ {
+  "model": "Matiz best 4 slindir",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM MATIZ колодки передние DPDW-004",
+    "price": 105000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MATIZ пер FG031",
+    "price": 110000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 MATIZ BM1320015 КОЛОДКИ ПЕРЕДНИЕ",
+    "price": 135000
+   },
+   {
+    "position": "old",
+    "name": "HAGEN КОЛОДКИ ПЕРЕД. MATIZ GP1086",
+    "price": 200000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q Колодки задние MATIZ FG 8686",
+    "price": 140000
+   },
+   {
+    "position": "orqa",
+    "name": "HI Q Колодки задние DAEWOO MATIZ, TICO SA086",
+    "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Matiz best 4 slindir",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ77N156 NEXIA SONC/MATIZ 4SHT",
+    "qty": null,
+    "price": 105000
+   },
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Matiz oddiy 3 slindir",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 4.0,
+    "brand": "ZITRON qizil",
+    "price": 320000
+   },
+   {
+    "type": "",
+    "liters": 4.0,
+    "brand": "VALESCO qizil",
+    "price": 320000
+   },
+   {
+    "type": "",
+    "liters": 4.0,
+    "brand": "VALESCO ko'k",
+    "price": 300000
+   },
+   {
+    "type": "",
+    "liters": 4.0,
+    "brand": "FELIX qizil",
+    "price": 360000
+   },
+   {
+    "type": "",
+    "liters": 4.0,
+    "brand": "FELIX ko'k",
+    "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Matiz oddiy 3 slindir",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "PLATINUM MATIZ колодки передние DPDW-004",
+    "price": 105000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MATIZ пер FG031",
+    "price": 110000
+   },
+   {
+    "position": "old",
+    "name": "BRAKE MASTER 5 MATIZ BM1320015 КОЛОДКИ ПЕРЕДНИЕ",
+    "price": 135000
+   },
+   {
+    "position": "old",
+    "name": "HAGEN КОЛОДКИ ПЕРЕД. MATIZ GP1086",
+    "price": 200000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q Колодки задние MATIZ FG 8686",
+    "price": 140000
+   },
+   {
+    "position": "orqa",
+    "name": "HI Q Колодки задние DAEWOO MATIZ, TICO SA086",
+    "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Matiz oddiy 3 slindir",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ77N156 NEXIA SONC/MATIZ 4SHT",
+    "qty": null,
+    "price": 105000
+   },
+   {
+    "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Monza 320T",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MONZA + TRK2 CN пер FG1471",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "LPR MONZA/TRACKER 2 CHINA 05P5015-FF L2U КОЛОДКИ ПЕРЕД.",
+    "price": 250000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки TRACKER 2 XITOY MONZA 1471",
+    "price": 265000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 NEW UZB HP4565",
+    "price": 400000
+   },
+   {
+    "position": "old",
+    "name": "GM Колодки тормозные передние TRACKER-2 XITOY MONZA 26369873",
+    "price": 480000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 / MONZA HP4566",
+    "price": 500000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q зад MONZA FG 2141",
+    "price": 155000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN YELLOW Q FG2141 MONZA RR",
+    "price": 180000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 MONZA BM1320049 КОЛОДКИ ЗАДНИЕ",
+    "price": 220000
+   }
+  ]
+ },
+ {
+  "model": "Monza 320T",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA MONZA 1.5L 24105241 (4шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "SVECHA MONZA TURBO 1.3, TRACKER 2 UZB 3 TA KAM 24112548",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA MONZA CCH9407 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Monza 330T",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MONZA + TRK2 CN пер FG1471",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "LPR MONZA/TRACKER 2 CHINA 05P5015-FF L2U КОЛОДКИ ПЕРЕД.",
+    "price": 250000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки TRACKER 2 XITOY MONZA 1471",
+    "price": 265000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 NEW UZB HP4565",
+    "price": 400000
+   },
+   {
+    "position": "old",
+    "name": "GM Колодки тормозные передние TRACKER-2 XITOY MONZA 26369873",
+    "price": 480000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 / MONZA HP4566",
+    "price": 500000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN GREEN Q зад MONZA FG 2141",
+    "price": 155000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN YELLOW Q FG2141 MONZA RR",
+    "price": 180000
+   },
+   {
+    "position": "orqa",
+    "name": "BRAKE MASTER 5 MONZA BM1320049 КОЛОДКИ ЗАДНИЕ",
+    "price": 220000
+   }
+  ]
+ },
+ {
+  "model": "Monza 330T",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA MONZA 1.5L 24105241 (4шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "SVECHA MONZA TURBO 1.3, TRACKER 2 UZB 3 TA KAM 24112548",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA MONZA CCH9407 (4шт в комплекте)",
+    "qty": null,
+    "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 1",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "ZITRON qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO ko'k",
+    "price": 390000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX qizil",
+    "price": 480000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX ko'k",
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 1",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "SVECHA NGK NEXIA SONS BP6E 7529 DONAGA",
+    "qty": null,
+    "price": 25000
+   },
+   {
+    "name": "SVECHA NGK NEXIA DONS BK6E-11 7340",
+    "qty": null,
+    "price": 30000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ77N156 NEXIA SONC/MATIZ 4SHT",
+    "qty": null,
+    "price": 105000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ07N123 DOHC",
+    "qty": null,
+    "price": 110000
+   },
+   {
+    "name": "AUTOZIP SVECHA NEXIA 1 DONC LACETTI KAM. RC10YC4",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "AUTOZIP SVECHA 2KONTAKT DOHC OE019T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "ZITRON qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO qizil",
+    "price": 420000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO ko'k",
+    "price": 390000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX qizil",
+    "price": 480000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX ko'k",
+    "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 2",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA TORCH EFFECT NEXIA SOHC/MATIZ/DAMAS F6TC",
+    "qty": null,
+    "price": 20000
+   },
+   {
+    "name": "SVECHA NGK NEXIA SONS BP6E 7529 DONAGA",
+    "qty": null,
+    "price": 25000
+   },
+   {
+    "name": "SVECHA NGK NEXIA DONS BK6E-11 7340",
+    "qty": null,
+    "price": 30000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE006T10 NEXIA SOHC MATIZ DAMAS (1шт)",
+    "qty": null,
+    "price": 35000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ77N156 NEXIA SONC/MATIZ 4SHT",
+    "qty": null,
+    "price": 105000
+   },
+   {
+    "name": "IRIZON SVECHA PRC IZ07N123 DOHC",
+    "qty": null,
+    "price": 110000
+   },
+   {
+    "name": "AUTOZIP SVECHA 2KONTAKT DOHC OE019T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Avtomat)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "ZITRON qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO ko'k",
+    "price": 370000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX qizil",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX ko'k",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Avtomat)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ LACETTI/NEXIA 3 PER KERAMIKA FCP2012",
+    "price": 300000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Avtomat)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA BOSCH SPARK COBALT NEXIA 3 0242135515",
+    "qty": null,
+    "price": 40000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Mexanika)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "ZITRON qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "VALESCO ko'k",
+    "price": 370000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX qizil",
+    "price": 460000
+   },
+   {
+    "type": "",
+    "liters": 6.0,
+    "brand": "FELIX ko'k",
+    "price": 430000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Mexanika)",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ LACETTI/NEXIA 3 PER KERAMIKA FCP2012",
+    "price": 300000
+   }
+  ]
+ },
+ {
+  "model": "Nexia 3 (Mexanika)",
+  "part": "spark",
+  "items": [
+   {
+    "name": "SVECHA BOSCH SPARK COBALT NEXIA 3 0242135515",
+    "qty": null,
+    "price": 40000
+   },
+   {
+    "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
+    "qty": null,
+    "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Skoda Kodiak",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AMD SVECHA SKODA KODIAQ AMD.PL129 06K905601B (4шт в комплекте)",
+    "qty": null,
+    "price": 400000
+   }
+  ]
+ },
+ {
+  "model": "Tahoe",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN RED-Q REDLINE колодки пер TAHOE 2020 FGR 0934",
+    "price": 300000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN Yellow Q колодки передни TAHOE 2015",
+    "price": 370000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN YELLOW Q TAHOE1 2020 RR FG 1002",
+    "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Toyota Camry",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
+    "qty": null,
+    "price": 150000
+   }
+  ]
+ },
+ {
+  "model": "Toyota Corolla",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
+    "qty": null,
+    "price": 150000
+   }
+  ]
+ },
+ {
+  "model": "Toyota Land Cruiser Prado",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA OE238 LAND CRUISER PRADO 2.7 OE238",
+    "qty": null,
+    "price": 550000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 1",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil",
+    "price": 455000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil",
+    "price": 455000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k",
+    "price": 425000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil",
+    "price": 520000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k",
+    "price": 490000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 1",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "CARVILLE КОЛОДКИ ПЕРД. TRACKER PF2261",
+    "price": 520000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 1",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA CHAMPION OE039T10 TRACKER 1.8 ORLANDA EPICA LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 50000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE089T10 TRACKER 1.8 ORLANDO LACETTI 1.6/1.8 (1шт)",
+    "qty": null,
+    "price": 70000
+   },
+   {
+    "name": "ACDELCO SVECHA TRACKER 1 25193473 (4шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "AUTOZIP SVECHA ORLANDO TRACKER 1 SPECIAL OE198T10 (4шт комплект)",
+    "qty": null,
+    "price": 340000
+   },
+   {
+    "name": "AUTOZIP SVECHA 3 конт. OE077T10 Tracker 1 Epica Lacetti 1.6/1.8 Orlando 1.8 (4шт в комплекте)",
+    "qty": null,
+    "price": 350000
+   },
+   {
+    "name": "AUTOZIP SVECHA OE146T10 ORLANDO TRACKER 1.8 EPICA (4шт в комплекте)",
+    "qty": null,
+    "price": 590000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "ZITRON qizil",
+    "price": 465000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO qizil",
+    "price": 465000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "VALESCO ko'k",
+    "price": 435000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX qizil",
+    "price": 530000
+   },
+   {
+    "type": "",
+    "liters": 6.5,
+    "brand": "FELIX ko'k",
+    "price": 500000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 2",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW-Q колодки ONIX TRK UZB пер FGY 1808",
+    "price": 170000
+   },
+   {
+    "position": "old",
+    "name": "JAPANPARTS TRACKER 2 колодки передние PA-0403AF",
+    "price": 175000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q 2228 FG TRACKER UZB FR",
+    "price": 185000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN GREEN Q MONZA + TRK2 CN пер FG1471",
+    "price": 190000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки 2228 FG TRACKER UZB FR",
+    "price": 210000
+   },
+   {
+    "position": "old",
+    "name": "КОЛОДКИ GM DUBLIKAT ONIX TRACKER 2 ПЕР 26312031",
+    "price": 240000
+   },
+   {
+    "position": "old",
+    "name": "LPR MONZA/TRACKER 2 CHINA 05P5015-FF L2U КОЛОДКИ ПЕРЕД.",
+    "price": 250000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN YELLOW Q Колодки TRACKER 2 XITOY MONZA 1471",
+    "price": 265000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 NEW UZB HP4565",
+    "price": 400000
+   },
+   {
+    "position": "old",
+    "name": "FOURGREEN КОЛОДКИ ONIX TRACKER 2 PER KERAMIKA HP5443",
+    "price": 410000
+   },
+   {
+    "position": "old",
+    "name": "GM Колодки тормозные передние TRACKER-2 XITOY MONZA 26369873",
+    "price": 480000
+   },
+   {
+    "position": "old",
+    "name": "HARDRON Колодки тормозные передние TRACKER 2 / MONZA HP4566",
+    "price": 500000
+   },
+   {
+    "position": "orqa",
+    "name": "FOURGREEN YELLOW Q Колодки TR 2 ChINA RR FG 1719",
+    "price": 190000
+   }
+  ]
+ },
+ {
+  "model": "Tracker 2",
+  "part": "spark",
+  "items": [
+   {
+    "name": "ACDELCO SVECHA EQUINOX 2 MALIBU 2 1.5T ONIX TRACKER 2 UZB 12683541 (1шт)",
+    "qty": null,
+    "price": 100000
+   },
+   {
+    "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
+    "qty": null,
+    "price": 150000
+   },
+   {
+    "name": "ACDELCO SVECHA MALIBU2 1.5T ONIX TRACKER2 UZB 55490097 (1шт)",
+    "qty": null,
+    "price": 185000
+   },
+   {
+    "name": "ACDELCO SVECHA GM ORG ONIX TRACKER 2 UZB 12706611 (3шт в комплекте)",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "SVECHA MONZA TURBO 1.3, TRACKER 2 UZB 3 TA KAM 24112548",
+    "qty": null,
+    "price": 300000
+   },
+   {
+    "name": "ACDELCO SVECHA TRACKER 2 XITOY 24113395 (3шт в комплекте)",
+    "qty": null,
+    "price": 450000
+   },
+   {
+    "name": "ACDELCO GM ORG JAPAN SVECHA 1.5 TURBO 12683541 4#41-156 (4шт в комплекте)",
+    "qty": null,
+    "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Traverse",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "ZITRON qizil",
+    "price": 325000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO qizil",
+    "price": 325000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "VALESCO ko'k",
+    "price": 290000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX qizil",
+    "price": 400000
+   },
+   {
+    "type": "",
+    "liters": 7.5,
+    "brand": "FELIX ko'k",
+    "price": 360000
+   }
+  ]
+ },
+ {
+  "model": "Traverse",
+  "part": "brake",
+  "items": [
+   {
+    "position": "old",
+    "name": "FOURGREEN RED Q REDLINE Колодки передние TRAVERSE 2021 FGR1742",
+    "price": 420000
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Caddy",
+  "part": "spark",
+  "items": [
+   {
+    "name": "AUTOZIP SVECHA CHAMPION VW Caddy 1.6 OE247 (1шт)",
+    "qty": null,
+    "price": 110000
+   }
+  ]
+ }
+]

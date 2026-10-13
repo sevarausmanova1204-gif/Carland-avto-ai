@@ -14,12 +14,14 @@ Nima qiladi:
      jadvalda bo'sh qoldirilgan qismlarga TEGILMAYDI).
   - Bazada YO'Q mashina qatorida biror ma'lumot kiritilgan bo'lsa -> yangi mashina
     oil_table_raw.json oxiriga qo'shiladi (mavjud mashinalar ID'si o'zgarmaydi).
-  - Bazada BOR mashinaning moy hajmi o'zgartirilgan bo'lsa — bu avtomatik
-    qo'llanmaydi, import_report.txt ga "qo'lda ko'rib chiqing" deb yoziladi.
+  - Bazada BOR mashinaning moy ma'lumoti: bazadagi qiymatlar o'zgartirilmaydi,
+    faqat bazada BO'SH bo'lgan maydonlar jadvaldagi qiymat bilan to'ldiriladi;
+    qolganlari import_report.txt ga "qo'lda ko'rib chiqing" deb yoziladi.
 
 "Narx" kataklariga "35 000", "35000" yoki "35,000" yozish mumkin. Svecha/kolodka
 nom katagiga bir nechta variantni ";" bilan va har birining narxini "= narx"
-ko'rinishida yozish mumkin: "NGK ZFR6U = 35000; BOSCH 0242 = 40000".
+ko'rinishida yozish mumkin: "NGK ZFR6U = 35000; BOSCH 0242 = 40000". Antifriz
+"tavsiya brend" katagida ham shu format ishlaydi: "VALESCO qizil = 320 000".
 """
 import csv
 import json
@@ -30,7 +32,7 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent
 
 COL = {
-    "no": "№", "holat": "Holat", "model": "Model",
+    "no": "№", "holat": "Holat", "brand": "Brend", "model": "Model",
     "eng_size": "Dvigatel hajmi/turi", "eng_l": "Motor moyi L", "eng_t": "Motor moyi turi",
     "gb_kind": "Karobka turi", "gb_l": "Karobka moyi L", "gb_t": "Karobka moyi turi",
     "rd_l": "Reduktor moyi L", "rd_t": "Reduktor moyi turi", "km": "Almashtirish km",
@@ -84,8 +86,21 @@ def parts_from_row(g):
         alts = [a.strip() for a in re.split(r"[,;\n]+", g("ti_alt")) if a.strip()]
         parts["tire"] = [{"size": g("ti_size"), "alt_sizes": alts, "brand": g("ti_brand"), "price": to_int(g("ti_price"))}]
     if g("af_type") or g("af_l") or g("af_brand"):
-        parts["antifreeze"] = [{"type": g("af_type"), "liters": to_float(g("af_l")), "brand": g("af_brand"),
-                                "price": to_int(g("af_price"))}]
+        liters = to_float(g("af_l"))
+        # Brend katagida "VALESCO qizil = 320 000" ko'rinishidagi satrlar bo'lsa — har biri alohida
+        # variant (svecha/kolodka bilan bir xil format); narx ustuni bunda hisobga olinmaydi.
+        named = named_items(g("af_brand")) if "=" in g("af_brand") else []
+        if named:
+            items = []
+            for n, p in named:
+                # "ZITRON qizil (3.0L, 7,5 L)" -> hajm shu variantning o'zidan olinadi
+                m = re.search(r",\s*(\d+(?:[.,]\d+)?)\s*L\)", n)
+                lit = to_float(m.group(1)) if m else liters
+                items.append({"type": "", "liters": lit, "brand": re.sub(r",\s*\d+(?:[.,]\d+)?\s*L\)", ")", n), "price": p})
+            parts["antifreeze"] = items
+        else:
+            parts["antifreeze"] = [{"type": g("af_type"), "liters": liters, "brand": g("af_brand"),
+                                    "price": to_int(g("af_price"))}]
     return parts
 
 
@@ -120,11 +135,14 @@ def main(csv_path):
     existing_models = {r["model"] for r in oil_raw}
     index = {(r["model"], r["part"]): r for r in parts_raw}
 
-    report, new_cars, updated = [], 0, 0
+    report, new_cars, updated, updated_oil = [], 0, 0, 0
     with open(csv_path, encoding="utf-8-sig", newline="") as f:
         for row in csv.DictReader(f):
             def g(key, row=row):
-                return (row.get(COL[key]) or "").strip()
+                v = (row.get(COL[key]) or "").strip()
+                # "Bu mashinada ... yo'q" izohi: mashinada bunday qism yo'q (masalan,
+                # elektromobilda dvigatel/karobka) — qiymat emas, shuning uchun bo'sh deb olinadi.
+                return "" if v.upper().replace("’", "'").startswith(("YO'Q", "BU MASHINADA")) else v
 
             no = g("no")
             info = row_map.get(no)
@@ -136,6 +154,11 @@ def main(csv_path):
 
             car_models = list((info or {}).get("car_models") or [])
             if not car_models:
+                # Yangi mashina nomiga marka qo'shiladi ("Yaris" -> "Toyota Yaris"), aks holda
+                # "RX", "T33 / T77", "01 / 06" kabi nomlarni qidiruvda ajratib bo'lmaydi.
+                brand = g("brand") or (info or {}).get("brand", "")
+                if brand and model_name and brand.split()[0].lower() not in model_name.lower():
+                    model_name = f"{brand} {model_name}"
                 # bazada yo'q mashina -> yangi mashina sifatida qo'shiladi
                 if model_name and model_name not in existing_models:
                     oil_raw.append(oil_raw_row(model_name, g))
@@ -143,8 +166,20 @@ def main(csv_path):
                     new_cars += 1
                 car_models = [model_name]
             elif oil_filled:
-                report.append(f"№{no} {model_name}: moy ma'lumoti kiritilgan, lekin mashina bazada BOR — "
-                              f"qo'lda ko'rib chiqing (oil_table_raw.json): {', '.join(car_models)}")
+                # Bazadagi mavjud qiymatlarga TEGILMAYDI; faqat bazada BO'SH bo'lgan maydonlar
+                # jadvaldagi qiymat bilan to'ldiriladi (qolganlari hisobotga yoziladi).
+                sheet_row = oil_raw_row(model_name, g)
+                filled = 0
+                for cm in car_models:
+                    for rec in (r for r in oil_raw if r["model"] == cm):
+                        for key, val in sheet_row.items():
+                            if key != "model" and val and not (rec.get(key) or "").strip():
+                                rec[key] = val
+                                filled += 1
+                report.append(f"№{no} {model_name}: moy ma'lumoti kiritilgan, mashina bazada BOR — "
+                              f"bo'sh maydonlar to'ldirildi: {filled}; qolganlarini qo'lda ko'rib chiqing "
+                              f"(oil_table_raw.json): {', '.join(car_models)}")
+                updated_oil += filled
 
             for cm in car_models:
                 for part, items in parts.items():
@@ -155,7 +190,8 @@ def main(csv_path):
     parts_path.write_text(json.dumps(out, ensure_ascii=False, indent=1), encoding="utf-8")
     oil_path.write_text(json.dumps(oil_raw, ensure_ascii=False, indent=2), encoding="utf-8")
     (BASE / "import_report.txt").write_text("\n".join(report) + ("\n" if report else ""), encoding="utf-8")
-    print(f"Yangi mashinalar: {new_cars} | yozilgan qism yozuvlari: {updated} | qo'lda ko'rish: {len(report)}")
+    print(f"Yangi mashinalar: {new_cars} | yozilgan qism yozuvlari: {updated} | "
+          f"bo'sh moy maydonlari to'ldirildi: {updated_oil} | qo'lda ko'rish: {len(report)}")
     print("Keyingi qadam: python3 build_database.py")
 
 

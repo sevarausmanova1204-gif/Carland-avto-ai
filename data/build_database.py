@@ -31,11 +31,20 @@ def load(name):
         return json.load(f)
 
 
+_UNIT_NUM_RE = re.compile(r"(?<![0-9A-Za-zА-Яа-я.])(\d+(?:\.\d+)?)\s*(?:litr|l|л)(?![0-9A-Za-zА-Яа-я])", re.IGNORECASE)
+
+
 def parse_float(s):
-    """'3,5 litr' -> 3.5 ; '6 - 6,5 litr CVT' -> 6.5 ; '' -> None"""
+    """'3,5 litr' -> 3.5 ; '6 - 6,5 litr CVT' -> 6.5 ; '' -> None
+    Matnda birligi (L / litr) bor sonlar bo'lsa, ulardan eng kattasi olinadi
+    ('4,5L (DM-i 1.5, BYD472QA)' -> 4.5, 'MT 1,6L; AT 8,1L' -> 8.1); aks holda
+    oxirgi son."""
     if not s:
         return None
     s = s.replace(",", ".")
+    unit_nums = _UNIT_NUM_RE.findall(s)
+    if unit_nums:
+        return max(float(n) for n in unit_nums)
     nums = re.findall(r"\d+\.?\d*", s)
     if not nums:
         return None
