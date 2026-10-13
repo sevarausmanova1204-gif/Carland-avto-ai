@@ -222,6 +222,20 @@ _CAR_NAME_ALIASES = {
 }
 
 
+# Markaning boshqa yozilishlari: Li Auto = "Lixiang" / "Li Xiang" / "Лисян". Bazada nom "Li Auto ..." deb turadi.
+_BRAND_PHRASE_RES = (
+    (re.compile(r"(?<![a-z])(?:li[\s\-]?xiang|lixiang|lixyang|lisyan|lisiyan|lysyan|lisan)(?![a-z])", re.I), "Li Auto"),
+    (re.compile(r"(?<![a-z])li\s+(one|mega|[li]\d)(?![a-z0-9])", re.I), r"Li Auto \1"),
+)
+
+
+def fix_brand_phrases(text: str) -> str:
+    t = transliterate_cyrillic(text)
+    for rx, repl in _BRAND_PHRASE_RES:
+        t = rx.sub(repl, t)
+    return t
+
+
 def _apply_car_aliases(text: str) -> str:
     return " ".join(_CAR_NAME_ALIASES.get(w, w) for w in text.split())
 
@@ -267,6 +281,7 @@ def find_car_by_text(text: str):
     tashqari) eng o'ziga xos (uzun) so'z bo'yicha bitta natijaga olib
     keladigan qidiruvga qaytadi — umumiy moy/karobka atamalari e'tiborga
     olinmaydi, chunki ular haqiqiy model nomi emas."""
+    text = fix_brand_phrases(text)
     norm_text = _normalize(text)
     best = None
     best_len = 0
@@ -318,6 +333,7 @@ def find_car_strict(text: str):
     mashina. So'zma-so'z noaniq qidiruvga (masalan faqat "hyundai" so'ziga mos
     birinchi mashina) TUSHMAYDI — shu sabab foydalanuvchi mashina rusumini
     yozmagan oddiy savolga tasodifan boshqa mashina kartochkasi chiqmaydi."""
+    text = fix_brand_phrases(text)
     norm_text = _normalize(text)
     best, best_len = None, 0
     for c in list_cars():
@@ -334,6 +350,7 @@ def search_cars_fuzzy(word: str, limit: int = 5):
     """`_search_cars_with_suffix_stripping`ning tashqi (boshqa modullardan
     chaqirish uchun) ochiq nomi — o'zbekcha qo'shimchali so'zlar bilan ham
     mashina qidiradi (masalan 'sonetge' -> 'Sonet')."""
+    word = fix_brand_phrases(word).strip()
     return _search_cars_with_suffix_stripping(word, limit=limit)
 
 

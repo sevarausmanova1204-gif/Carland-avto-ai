@@ -705,6 +705,15 @@ def _try_filter_answer(user_text: str, context=None) -> str | None:
             if 1 <= len(ms) <= 4:
                 variants = [db.get_car(m["id"]) for m in ms]
                 break
+            if 5 <= len(ms) <= 6:
+                names = "\n".join(f"• {m['model']}" for m in ms)
+                return _L(
+                    lang,
+                    f"🚗 *{w.capitalize()}* bo'yicha bir nechta variant bor:\n{names}\n\n"
+                    "Filtr uchun aniq variantni yozing (masalan: *moy filtri " + ms[0]["model"] + "*).",
+                    f"🚗 По запросу *{w.capitalize()}* есть несколько вариантов:\n{names}\n\n"
+                    "Напишите точный вариант для фильтра (например: *масляный фильтр " + ms[0]["model"] + "*).",
+                )
     if not variants:
         fallback = _resolve_car(user_text, context)
         if fallback:
