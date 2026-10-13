@@ -132,7 +132,8 @@
     "reductor_volume_raw": "Gibrid (1.8 LKN, 5ET50 EVT) 6,6-6,7L Dexron VI; 1.5T/2.0T da reduktor yo'q litr",
     "change_interval_km_raw": "110 000",
     "engine_oil_type_raw": "0w20",
-    "gearbox_oil_type_raw": "ATF6"
+    "gearbox_oil_type_raw": "ATF6",
+    "reductor_oil_type_raw": "ATF Dexron VI (gibrid 5ET50 EVT blokida)"
   },
   {
     "model": "Tracker 1",
@@ -213,7 +214,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 (API SN PLUS/SP, ILSAC GF-6) or 5W-30 (ACEA A5/B5)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF SP-IV (Hyundai/Kia)"
   },
   {
     "model": "Kia Sonet",
@@ -258,7 +259,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5w30",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF SP-IV (AT); 75W GL-4 (MT); 70W (DCT)"
   },
   {
     "model": "Hyundai Tucson",
@@ -312,7 +313,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "7 500",
     "engine_oil_type_raw": "5W-30 / 5W-40 / 10W-40 (API SN+)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "CVT Fluid (Chery 025CHA); DCT: DCT-LV (DCTF-2/VW G 055 529)"
   },
   {
     "model": "Chery Tiggo 8 Pro",
@@ -321,7 +322,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 5W-40 / 0W-20 (API SM+, ACEA C5)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DCT-LV (DCTF-2/VW G 055 529); CVT: CVT Fluid (Chery 025CHA)"
   },
   {
     "model": "Chery Tiggo 9",
@@ -339,7 +340,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 5W-40 (dexos1, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "CVT Fluid (Chery 025CHA/QR025CHA); MT: 75W-90"
   },
   {
     "model": "Tahoe",
@@ -348,7 +349,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 / 5W-30 (dexos1 Gen2/3, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF DEXRON VI (6L80); DEXRON ULV (10L80)"
   },
   {
     "model": "Equinox",
@@ -357,7 +358,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 0W-20 / 5W-20 (dexos1 Gen2/3, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF DEXRON VI"
   },
   {
     "model": "Traverse",
@@ -366,7 +367,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 (GM dexos1 Gen2/3, API SN/SP)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF DEXRON VI"
   },
   {
     "model": "Monza 320T",
@@ -375,7 +376,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 0W-20 (dexos1 Gen2/3, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF Dexron VI (AT 6); 75W MTF-3 GM (DCT 6)"
   },
   {
     "model": "Monza 330T",
@@ -384,7 +385,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 0W-20 (dexos1 Gen2/3, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "ATF Dexron VI (AT 6); 75W MTF-3 GM (DCT 6)"
   },
   {
     "model": "Skoda Kodiak",
@@ -393,7 +394,7 @@
     "reductor_volume_raw": "2,5 litr Castrol-D2",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5w30",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DSG: VW G 055 529 / G 052 529 (DCT-LV/HV)"
   },
   {
     "model": "BYD Song Plus ➤ DM-i (gibrid) ➤ EV (elektro)",
@@ -402,7 +403,8 @@
     "reductor_volume_raw": "2,2-3L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 / 5W-20 (dexos1, API SP)",
-    "gearbox_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (E-TF 70W)"
+    "gearbox_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (E-TF 70W)",
+    "reductor_oil_type_raw": "EV: 75W-90 (0,8L); DM-i AWD orqa: EV-Synto Extra Fluid 70W E-TF"
   },
   {
     "model": "BYD Song Pro ➤ DM-i ➤ ICE (eski)",
@@ -411,7 +413,8 @@
     "reductor_volume_raw": "3L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 / 5W-30 / 0W-30 / 5W-40 (dexos1, API SP)",
-    "gearbox_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (E-TF 70W)"
+    "gearbox_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (E-TF 70W)",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (DM-i); EV: EV-Synto Super Fluid 75W E-TF"
   },
   {
     "model": "BYD Song L ➤ EV ➤ DM-i",
@@ -429,7 +432,8 @@
     "reductor_volume_raw": "1L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto Super Fluid 75W E-TF"
   },
   {
     "model": "BYD Yuan Up ➤ EV (reduktorli)",
@@ -438,7 +442,8 @@
     "reductor_volume_raw": "1L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF"
   },
   {
     "model": "BYD Qin Plus ➤ DM-i ➤ EV",
@@ -456,7 +461,8 @@
     "reductor_volume_raw": "OLDI 1L ORQA 2L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 0W-30 / 5W-40 (dexos1, API SP)",
-    "gearbox_oil_type_raw": "DM-i: EV-Synto Extra Fluid 70W E-TF; DM 2.0T DCT: DCT-LV Fluid"
+    "gearbox_oil_type_raw": "DM-i: EV-Synto Extra Fluid 70W E-TF; DM 2.0T DCT: DCT-LV Fluid",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF; DM 2.0T DCT: DCT-LV Fluid"
   },
   {
     "model": "BYD Dolphin",
@@ -465,7 +471,8 @@
     "reductor_volume_raw": "1L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF"
   },
   {
     "model": "BYD Seal",
@@ -474,7 +481,8 @@
     "reductor_volume_raw": "1L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20",
-    "gearbox_oil_type_raw": "DM-i: E-CVT ATF (Ravenol EV Synto ATF-E); EV: 70W E-TF"
+    "gearbox_oil_type_raw": "DM-i: E-CVT ATF (Ravenol EV Synto ATF-E); EV: 70W E-TF",
+    "reductor_oil_type_raw": "EV: EV-Synto Extra Fluid 70W E-TF; DM-i: EV-Synto ATF E-Transmission"
   },
   {
     "model": "BYD Seal U",
@@ -492,7 +500,8 @@
     "reductor_volume_raw": "1L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF"
   },
   {
     "model": "BYD Destroyer 05(Champion)",
@@ -501,7 +510,8 @@
     "reductor_volume_raw": "2,5 L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20",
-    "gearbox_oil_type_raw": "E-CVT/EV ATF (Ravenol EV Synto ATF-E)"
+    "gearbox_oil_type_raw": "E-CVT/EV ATF (Ravenol EV Synto ATF-E)",
+    "reductor_oil_type_raw": "EV-Synto ATF E-Transmission Fluid (e-CVT blokida)"
   },
   {
     "model": "Voyah Free ➤ Hybrid (motorli) ➤ Full electric",
@@ -510,7 +520,8 @@
     "reductor_volume_raw": "2,5L-3,5L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 / 5W-30 / 0W-30 (API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Voyah Passion",
@@ -519,7 +530,8 @@
     "reductor_volume_raw": "0,85L litr",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-30 (alt. 5W-30)",
-    "gearbox_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
+    "gearbox_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Voyah Dream",
@@ -528,7 +540,8 @@
     "reductor_volume_raw": "0,85L-3,1L litr",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-20 (EREV); 0W-30/5W-30 (PHEV)",
-    "gearbox_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
+    "gearbox_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Leapmotor T03",
@@ -537,7 +550,8 @@
     "reductor_volume_raw": "2,3L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Leapmotor C01",
@@ -546,7 +560,8 @@
     "reductor_volume_raw": "2,3L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV); AWD orqa: 75W E-TF (VW G 055 524)"
   },
   {
     "model": "Leapmotor C11",
@@ -555,7 +570,8 @@
     "reductor_volume_raw": "2,3L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-20 (RAVENOL SFE 5W-20)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2); EV: 75W E-TF (VW G 055 524)"
   },
   {
     "model": "Leapmotor C10",
@@ -564,7 +580,8 @@
     "reductor_volume_raw": "2,3L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-20 (RAVENOL SFE 5W-20; API SP/SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Leapmotor B10",
@@ -573,7 +590,8 @@
     "reductor_volume_raw": "2,3L EV",
     "change_interval_km_raw": "",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 75W E-TF (VW G 055 524)"
   },
   {
     "model": "Leapmotor D19",
@@ -591,7 +609,8 @@
     "reductor_volume_raw": "1,5L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (old) / 75W E-TF VW G 055 524 (orqa)"
   },
   {
     "model": "Dongfeng E5",
@@ -600,7 +619,8 @@
     "reductor_volume_raw": "1,5L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "70W-80 GL-5 (RAVENOL VGL 70W-80), old differensial"
   },
   {
     "model": "Dongfeng 008",
@@ -618,7 +638,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 (API SN/SP); 0W-30 also listed",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DCTF (BMW DCTF-2, Ford WSS-M2C 218-A1; RAVENOL DCT-LV), 4,2L"
   },
   {
     "model": "Zeekr 001",
@@ -627,7 +647,8 @@
     "reductor_volume_raw": "1,2L ORQA 2L OLD ATF6",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "VGL 70W-80 (sintetik gipoid)"
   },
   {
     "model": "Zeekr X",
@@ -636,7 +657,8 @@
     "reductor_volume_raw": "1,2L ORQA 2L OLD ATF6",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Aito M9 ➤ Range extender(gibrid)",
@@ -654,7 +676,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 5W-40 (dexos1, API SN)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DCT-LV (BMW DCTF-2, VW G 055 529, Kunlun DCTF-7S)"
   },
   {
     "model": "Jetour X90",
@@ -663,7 +685,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 (API SN or higher, full synthetic); 2.0T: 0W-20",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DCT-LV (DCTF-2/VW G 055 529); MT: 75W-90; AT 8: ATF T-WS"
   },
   {
     "model": "Haval H6",
@@ -672,7 +694,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-30 / 0W-20 (API SN, API CI-4)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "DCT-LV (BMW DCTF-2, VW G 055 529, Kunlun DCTF-7S)"
   },
   {
     "model": "Haval Jolion",
@@ -681,7 +703,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-30 / 0W-20 (ACEA C2)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "MT: 75W-80; DCT: DCT-LV; HEV: EV-Synto Extra 70W E-TF"
   },
   {
     "model": "Haval M6",
@@ -690,7 +712,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0W-30 (API SN / ACEA A3/B4); 5W-30 also listed",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "MT: MTF-3 75W; DCT: DCT-LV (DCTF-2/VW G 055 529)"
   },
   {
     "model": "Bestune T55",
@@ -708,7 +730,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-40 / 5W-30 (API SM, ACEA A3/B4)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "MT: 75W-85 GL-4/5; CVT: CVTF NS2/J1"
   },
   {
     "model": "Hongqi EQM5",
@@ -717,7 +739,8 @@
     "reductor_volume_raw": "1,5 L ATF6",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "GAC Aion V",
@@ -726,7 +749,8 @@
     "reductor_volume_raw": "0,7 L EV",
     "change_interval_km_raw": "60 000",
     "engine_oil_type_raw": "",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "BMW i3, i4, i5.",
@@ -744,7 +768,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 / 0W-20 (API SN, ACEA C3)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "MT: 75W GL-4; DSG: VW G 052 529 / G 052 512"
   },
   {
     "model": "Deepal SL03",

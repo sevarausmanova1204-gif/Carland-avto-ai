@@ -1,5 +1,725 @@
 [
  {
+  "model": "1.5T (Changan Oshan)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,4L-8,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Aito (Seres) M5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti, Si-OAT) — hajmi 9,2L-13L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Aito (Seres) M7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti, Si-OAT)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Aito M9 (Range extender)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti; Ravenol tavsiyasi)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Alfa Romeo Stelvio / Mito",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (Protect C11) — hajmi 5,2L-9,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Audi A3 / A4 / A6 / A8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / G12evo (VW TL 774-L) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Audi Q3 / Q5 / Q7 / Q8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ / G12++ (qizil/binafsha, VW TL 774-D/G) — hajmi 7L-14,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Audi e-tron / Q8 e-tron",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng NIO ES6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (MB 325.5, Chrysler MS-90032)",
+    "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng NIO ET5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (VW TL 774-G/J; Ravenol LTC C12++)",
+    "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng NIO ET7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (VW TL 774-G/J; Ravenol LTC C12++)",
+    "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng Xpeng G6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L; Ravenol C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng Xpeng G9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L; Ravenol C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr / NIO / Xpeng Xpeng P7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L; Ravenol C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr 06 / 07",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo) — hajmi 10L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr 11",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (BMW LC-87) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Avatr 12",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (BMW LC-87)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC / Kaiyi Kaiyi E5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 9.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC / Kaiyi Kaiyi X3 Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (BMW LC-87)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC BJ40",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); gibrid 1.5T: G12evo (BMW LC-87) — hajmi 7,7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC X35",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAIC X55",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 6.4,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BAW 212 / M7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 1 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "HOAT MB 325.0 (ko'k); ba'zi F20: G11 (sariq-yashil) — hajmi 6L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 3 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 9,8L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 4 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 8L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 5 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 9,9L-11,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 6 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "HOAT MB 325.0 (ko'k); ba'zi 650i: G11 (sariq-yashil) — hajmi 8L-15,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW 7 Series",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 11,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW M5 / M8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "HOAT MB 325.0 (ko'k) — hajmi 11,5L-13L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW X1 / X3 / X4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (MB 325.0 turi); X1 U11: C12evo (BMW LC-87) — hajmi 7L-13,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW X5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 12,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW X6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 12,6L-13L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW X7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT, ko'k (BMW/MB 325.0 turi) — hajmi 12,6L-13,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW Z4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G29: HOAT MB 325.0 (ko'k); E89: G11 (sariq-yashil) — hajmi 8,5L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BMW i3, i4, i5.",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "BMW OEM / MB 325.0 (HTC) — hajmi 10L-25L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Denza D9 (DM-i / EV)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Destroyer 05(Champion)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,0 + 2,8 (batareya)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Dolphin",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD E2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Fangchengbao Bao 5 (Leopard 5)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Han ➤ EV ➤ DM-p (AWD gibrid)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); C12evo (EV AWD) — hajmi 6,0L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Qin Plus (DM-i / EV)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi)",
+    "liters": 9.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Sea Lion 05 / 06 / 07",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / G12evo (Si-OAT) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Seagull (EV)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Seal",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / C12evo — hajmi 7,5L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Seal U",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti; Ravenol tavsiyasi)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Song Plus ➤ DM-i (gibrid) ➤ EV (elektro)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Song Pro ➤ DM-i ➤ ICE (eski)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT); Song Pro II: G12evo — hajmi 9L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Tang (EV / DM-i)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); Tang EV: G12evo — hajmi 6L-13L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Tang L / Han L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / G12evo (Si-OAT) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Xia",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 7.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Yangwang U8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); U8L: G12evo — hajmi 8L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Yuan Plus (Atto3) ➤ EV",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "BYD Yuan Up ➤ EV (reduktorli)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Baojun 730 / 560",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (yashil/sariq)",
+    "liters": 7.6,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Bestune B70 / M9 / EQ M5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+); E-QM5 EV: G12evo — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Bestune T33 / T77",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+); T33: G12evo — hajmi 5,8L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Bestune T55",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Bestune T99",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Captiva 1",
   "part": "antifreeze",
   "items": [
@@ -400,12 +1120,72 @@
  },
  {
   "model": "Captiva 4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 9.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Captiva 4",
   "part": "spark",
   "items": [
    {
     "name": "SVECHA TORCH IRRIDIUM CAPTIVA 2.4 QH5RIU13",
     "qty": null,
     "price": 340000
+   }
+  ]
+ },
+ {
+  "model": "Captiva 5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 7.1,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Alsvin (1.5L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 4,7L-5,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Benben E-Star",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan CS35 Plus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 6L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -433,12 +1213,36 @@
  },
  {
   "model": "Changan CS55 Plus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+)",
+    "liters": 9.3,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan CS55 Plus",
   "part": "brake",
   "items": [
    {
     "position": "old",
     "name": "Тормозные колодки пер Changan YC034",
     "price": 285000
+   }
+  ]
+ },
+ {
+  "model": "Changan CS75 Plus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 7,4L-9,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -454,6 +1258,90 @@
   ]
  },
  {
+  "model": "Changan CS95",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+)",
+    "liters": 7.6,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Eado Plus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 5,9L-6,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Oushang Z6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+)",
+    "liters": 8.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Qiyuan A06 / A05",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "A06: G12evo (C12evo); A05: G12+ (C12+) — hajmi 5,3L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan Star Truck / T30 / X30",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+) — hajmi 5,8L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan UNI-K",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 8,3L-9,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Changan UNI-T",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 9,1L-11,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Changan UNI-T",
   "part": "spark",
   "items": [
@@ -461,6 +1349,30 @@
     "name": "TORCH SVECHA OE204 CHANGAN UNI-T, CS35+ (4шт в комплекте)",
     "qty": null,
     "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Changan UNI-V",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+)",
+    "liters": 8.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chery ARRIZO 6 PRO",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 9.0,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -492,6 +1404,54 @@
   ]
  },
  {
+  "model": "Chery Arrizo 5 / 7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6L-7,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chery Arrizo 8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chery Exeed (TXL / LX / VX)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); VX 1.6: G12evo — hajmi 5L-13,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 2 Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "hajmi 7,5L-9,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Chery Tiggo 2 Pro",
   "part": "spark",
   "items": [
@@ -504,6 +1464,18 @@
     "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
     "qty": null,
     "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 4 Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.5,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -525,6 +1497,18 @@
  },
  {
   "model": "Chery Tiggo 7 Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 4,5L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 7 Pro",
   "part": "spark",
   "items": [
    {
@@ -536,6 +1520,18 @@
     "name": "AUTOZIP SVECHA CHERY TIGGO CCH9417 (4шт в комплекте)",
     "qty": null,
     "price": 1500000
+   }
+  ]
+ },
+ {
+  "model": "Chery Tiggo 8 Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 4,5L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -567,12 +1563,48 @@
  },
  {
   "model": "Chevrolet Aveo (T250 / T300)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / T250 ba'zi: G11 (sariq-yashil) — hajmi 4,2L-6,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Aveo (T250 / T300)",
   "part": "spark",
   "items": [
    {
     "name": "CARVILLE SVECHA AVEO T250, SPARK M300 (VSP0515)",
     "qty": null,
     "price": 55000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Cruze (1.6L / 1.8L / 1.4T)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6,1L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Epica (2.0L / 2.5L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -614,6 +1646,18 @@
     "name": "AUTOZIP SVECHA OE146T10 ORLANDO TRACKER 1.8 EPICA (4шт в комплекте)",
     "qty": null,
     "price": 590000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Groove (1.5L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 6.5,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -722,6 +1766,18 @@
     "name": "ACDELCO GM ORG JAPAN SVECHA 1.5 TURBO 12683541 4#41-156 (4шт в комплекте)",
     "qty": null,
     "price": 750000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Orlando (1.8L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 5.6,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -891,6 +1947,18 @@
     "name": "GM ORG SVECHA SPARK 96990231 (4шт в комплекте)",
     "qty": null,
     "price": 160000
+   }
+  ]
+ },
+ {
+  "model": "Chevrolet Suburban (5.3L / 6.2L V8)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 16,5L-16,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1199,6 +2267,54 @@
   ]
  },
  {
+  "model": "Daewoo Espero (1.5L / 1.8L / 2.0L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 6,1L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Prince / Leganza / Nubira",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); ba'zi Nubira G12+ — hajmi 7L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Tacuma / Rezzo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 7L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Daewoo Tico (0.8L)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 4.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Daewoo Tico (0.8L)",
   "part": "brake",
   "items": [
@@ -1366,6 +2482,174 @@
   ]
  },
  {
+  "model": "Deepal L07",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Deepal S05",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Deepal S07 (EV / EREV)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Ravenol ETC Protect C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Deepal S09 (G318)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ / G12evo (Protect C12+ / C12evo) — hajmi 10L-17,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Deepal SL03",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Denza N9 / N8 / Z9 GT",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT); N8: G12+ (qizil) — hajmi 6L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng 008",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti; Ravenol tavsiyasi) — hajmi 6,3L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Aeolus Shine",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng E5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Eπ 007",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Fengon (ix5 / 580)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); iX5: C12evo, RAVENOL — hajmi 6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Forthing T5 EVO",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+",
+    "liters": 8.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng Glory / Forthing SX5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / G12evo (Si-OAT) — hajmi 6L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Dongfeng M-Hero 917",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+",
+    "liters": 11.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Equinox",
   "part": "antifreeze",
   "items": [
@@ -1439,6 +2723,54 @@
   ]
  },
  {
+  "model": "Fangchengbao Leopard 3 / 8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT) — hajmi 10L-13,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Ford Focus / Fiesta / Transit",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 4,9L-13,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Ford Mondeo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6,2L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Ford Mustang",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ford WSS-M97B44-D) — hajmi 9,0L-12,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Ford Mustang",
   "part": "brake",
   "items": [
@@ -1455,6 +2787,234 @@
   ]
  },
  {
+  "model": "Foton Forland / Tunland / V9 (pikap)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Foton Labo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (yashil/sariq-yashil, Ravenol TTC C11)",
+    "liters": 4.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion S",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion S+",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion V",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ OAT, qizil-binafsha (VW TL 774-F; RAVENOL OTC C12+)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion Y",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Aion i60",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Emkoo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 6,9L-10,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Empow",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 6,5L-10,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC GS3 Emzoom",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+",
+    "liters": 6.9,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC GS8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 10,2L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAC Trumpchi GS4 / GA8 / M8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,9L-10,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAZ Sobol / Sobol NN",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT C12+ (G12+) — hajmi 10L-11,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "GAZ Volga",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Gazel 2705 / 3221",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); Cummins: G12+ (OAT) — hajmi 10,5L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Gazel 3302",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); Cummins/Evotech: G12+ (OAT) — hajmi 10,5L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Gazel Business",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); Evotech/Cummins: G12+ (OAT) — hajmi 10,5L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Gazel Next / NN",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT C12+ (G12+); Cummins: HOAT MB 325.0",
+    "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Atlas / Atlas Pro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Geely Atlas / Atlas Pro",
   "part": "spark",
   "items": [
@@ -1462,6 +3022,30 @@
     "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
     "qty": null,
     "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Geely Cityray",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Coolray",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 5,3L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1477,6 +3061,174 @@
   ]
  },
  {
+  "model": "Geely EX5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Emgrand",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq/yashil)",
+    "liters": 6.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Galaxy L6 / L7 / Starship",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+)",
+    "liters": 6.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Galaxy L7 / E8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "L7: G12+ (qizil); E8: G12evo (Ravenol ETC C12evo)",
+    "liters": 6.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Jiaji",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+) — hajmi 6,5L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Monjaro",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Okavango",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 7L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Preface",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6,5L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Geely Tugella",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Genesis G70",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil, Mazda/JIS tipi) — hajmi 7,4L-10,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Genesis G80",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 9,6L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Genesis G90",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); G90 II 3.5: FL22 (yashil) — hajmi 9L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Genesis GV70",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Genesis GV80",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); 3.0 dizel: FL22 (yashil) — hajmi 9L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Gentra (Avtomat)",
   "part": "antifreeze",
   "items": [
@@ -1599,6 +3351,54 @@
     "name": "AUTOZIP SVECHA Spark Cobalt Nexia 3 Gentra OE199T10 (4шт в комплекте)",
     "qty": null,
     "price": 130000
+   }
+  ]
+ },
+ {
+  "model": "Haval / GWM GWM Poer (Pikap)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.8,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval / GWM Tank 300",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.95,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval / GWM Tank 500",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 11.3,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval Dargo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 10.8,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1614,6 +3414,30 @@
   ]
  },
  {
+  "model": "Haval H5 / H7 / F7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+) — hajmi 7L-11,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval H6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT); H6 IV 1.5T: G12evo — hajmi 7,6L-10,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Haval H6",
   "part": "spark",
   "items": [
@@ -1621,6 +3445,30 @@
     "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
     "qty": null,
     "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Haval H9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq/yashil) — hajmi 10,05L-11,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval Jolion",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6,2L-7,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1637,12 +3485,84 @@
  },
  {
   "model": "Haval M6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 7L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Haval M6",
   "part": "spark",
   "items": [
    {
     "name": "CHAMPION SVECHA HAVAL CHERY GEELY 4sht KOMP RC6WYCBX",
     "qty": null,
     "price": 450000
+   }
+  ]
+ },
+ {
+  "model": "Haval Xiaolong Max / Raptor",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 7,5L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Honda Accord",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT (ko'k, MB 325.0 turi) — hajmi 4,9L-7,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Honda CR-V",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT (ko'k, MB 325.0 turi) — hajmi 5,8L-7,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Honda Civic",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT (ko'k, MB 325.0 turi) — hajmi 4,7L-8,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Honda Crider",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "ko'k (OAT, HTC MB 325.0) — hajmi 4L-5,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1658,6 +3578,54 @@
   ]
  },
  {
+  "model": "Honda e:NP1 / e:NS1",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "Honda OL999-9011 (ko'k, OAT)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi E-HS9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+",
+    "liters": 18.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi EQM5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi H5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 7,1L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hongqi H5",
   "part": "spark",
   "items": [
@@ -1665,6 +3633,30 @@
     "name": "NGK SVECHA HONGQI 3707010-27L-A-BP ILZKAR8M7S 1sht",
     "qty": null,
     "price": 170000
+   }
+  ]
+ },
+ {
+  "model": "Hongqi H7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+)",
+    "liters": 7.1,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi H9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); gibrid: C12evo, RAVENOL — hajmi 9L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1680,6 +3672,30 @@
   ]
  },
  {
+  "model": "Hongqi HS3 / HS7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, C12+) — hajmi 7,1L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hongqi HS5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+",
+    "liters": 7.1,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hongqi HS5",
   "part": "spark",
   "items": [
@@ -1687,6 +3703,54 @@
     "name": "NGK SVECHA HONGQI 3707010-27L-A-BP ILZKAR8M7S 1sht",
     "qty": null,
     "price": 170000
+   }
+  ]
+ },
+ {
+  "model": "Howo / Shacman (yuk)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi) — hajmi 40L-45L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Accent (Solaris)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil, HJC); RB 1.6 GDI: G12+ — hajmi 5,3L-6,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Bayon",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil)",
+    "liters": 5.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Creta 1.6L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 5,6L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1723,6 +3787,18 @@
  },
  {
   "model": "Hyundai Creta 2.0L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 5,6L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Creta 2.0L",
   "part": "spark",
   "items": [
    {
@@ -1753,6 +3829,30 @@
   ]
  },
  {
+  "model": "Hyundai Custin",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil, Ravenol HJC) — hajmi 6,5L-7,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi variantlarda FL22 — hajmi 5,7L-6,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hyundai Elantra 1.5L",
   "part": "brake",
   "items": [
@@ -1781,6 +3881,18 @@
     "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
     "qty": null,
     "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 1.6L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi variantlarda FL22 — hajmi 5,7L-6,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1818,6 +3930,18 @@
  },
  {
   "model": "Hyundai Elantra 2.0L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi variantlarda FL22 — hajmi 5,7L-6,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Elantra 2.0L",
   "part": "brake",
   "items": [
    {
@@ -1845,6 +3969,42 @@
     "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
     "qty": null,
     "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Getz",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 5,1L-6,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Grandeur",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+) — hajmi 6,9L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai H-100 / Porter",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1856,6 +4016,18 @@
     "position": "old",
     "name": "KIA HYUNDAI PORTER II UBP 018 КОЛОДКИ ПЕРЕД.",
     "price": 420000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai I 30",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 5,7L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1877,6 +4049,54 @@
     "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
     "qty": null,
     "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Ioniq 5 / 6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Kona",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) / G12+ (qizil) — hajmi 6,5L-7,1L; EV: 13,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Palisade",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+) — hajmi 9L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Sonata (LF / DN8)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+); LPI: FL22 — hajmi 6,5L-7,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1912,6 +4132,30 @@
   ]
  },
  {
+  "model": "Hyundai Staria",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil, Ravenol HJC) — hajmi 9,6L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Tucson 2.0L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 7L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Hyundai Tucson 2.0L",
   "part": "spark",
   "items": [
@@ -1929,6 +4173,18 @@
     "name": "HYUNDAI MOBIS SVECHA ORG KOREA 18871 11075 (4шт в комплекте)",
     "qty": null,
     "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "Hyundai Tucson 2.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 7L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -1955,6 +4211,18 @@
  },
  {
   "model": "Hyundai santafe 2.4L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi G11/FL22 — hajmi 7,1L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.4L",
   "part": "brake",
   "items": [
    {
@@ -1977,6 +4245,18 @@
  },
  {
   "model": "Hyundai santafe 2.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi G11/FL22 — hajmi 7,1L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 2.5L",
   "part": "brake",
   "items": [
    {
@@ -1999,6 +4279,18 @@
  },
  {
   "model": "Hyundai santafe 3.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); ba'zi G11/FL22 — hajmi 7,1L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Hyundai santafe 3.5L",
   "part": "brake",
   "items": [
    {
@@ -2020,6 +4312,186 @@
   ]
  },
  {
+  "model": "Isuzu Avtobus / Bogdan",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) 4HK1/4HG1; G11 (yashil-sariq) 4HF1 — hajmi 12L-18,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Isuzu D-Max (pikap)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi) — hajmi 9L-10,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Isuzu NQR / 5T (yuk)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi) — hajmi 18,7L-19,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC J7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC JS4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC JS6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 8.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC JS8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol tavsiyasi)",
+    "liters": 8.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC M3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (yashil/sariq-yashil, Ravenol TTC C11) — hajmi 7L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC M4 / Sunray",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (yashil, M4 va Sunray 2022+); G12+ (qizil, Sunray 2010-19) — hajmi 7L-11,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC S5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT)",
+    "liters": 7.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "JAC T6 / T8 Pro (Pikap)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, benzin/4WD); G11 (sariq-yashil, dizel/2.4T) — hajmi 7,5L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jaguar F-Pace / E-Pace",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OAT, Protect C12+) — hajmi 8,7L-11,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jeep Grand Cherokee",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+/G12++ (qizil); 5.7: FL22 (yashil); 3.0: MB 325.0 (ko'k) — hajmi 9,9L-15,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jeep Wrangler",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); JL: G12++; JK 4WD: FL22 — hajmi 9,4L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour Dashing",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 7,5L-9,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Jetour Dashing",
   "part": "brake",
   "items": [
@@ -2027,6 +4499,54 @@
     "position": "old",
     "name": "FOURGREEN YELLOW Q Колодки FG 1115 FR JETOUR CHERY EXCEED",
     "price": 320000
+   }
+  ]
+ },
+ {
+  "model": "Jetour Shanhai L9 / T1 / T2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT); ICE T2: G12+ (qizil) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour Traveller / T2",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 7L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour X50",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour X70 / X70 Plus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 7L-9,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2054,12 +4574,96 @@
  },
  {
   "model": "Jetour X90",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 7L-9,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Jetour X90",
   "part": "brake",
   "items": [
    {
     "position": "old",
     "name": "FOURGREEN YELLOW Q Колодки FG 1115 FR JETOUR CHERY EXCEED",
     "price": 320000
+   }
+  ]
+ },
+ {
+  "model": "Kia Bongo 3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 9.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Carens",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 5,8L-8,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Carnival",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Cerato / K3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 5,7L-7,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia EV6 / EV9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); AWD: FL22 (yashil); EV9: C12evo — hajmi 8L-19,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia K8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 9L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2075,6 +4679,78 @@
   ]
  },
  {
+  "model": "Kia K9 / Quoris",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); 2018+ RJ: FL22 (yashil) — hajmi 8,6L-10,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Mohave",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil)",
+    "liters": 14.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Pegas",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 5.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Picanto",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Ravenol C12+) — hajmi 5L-5,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Rio / Rio X-Line",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / FL22 (yashil), katalog — hajmi 5,5L-5,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Seltos",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 5,2L-5,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Kia Seltos",
   "part": "spark",
   "items": [
@@ -2082,6 +4758,18 @@
     "name": "AUTOZIP SVECHA KIA K5 SELTOS KAM OE249 (4шт в комплекте)",
     "qty": null,
     "price": 800000
+   }
+  ]
+ },
+ {
+  "model": "Kia Sonet",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 5,6L-6,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2109,12 +4797,36 @@
  },
  {
   "model": "Kia Sorento",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC) — hajmi 7,3L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Sorento",
   "part": "brake",
   "items": [
    {
     "position": "old",
     "name": "FOURGREEN КОЛОДКИ PER SANTAFE-KIA SARENTO HP1064",
     "price": 415000
+   }
+  ]
+ },
+ {
+  "model": "Kia Soul",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "PS: G12+ (qizil); SK3: FL22 (yashil) — hajmi 5L-6L; EV: 4,7L (PS) / 10L (SK3)",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2131,6 +4843,18 @@
  },
  {
   "model": "Kia Sportage 2.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); 1.6 CRDi (QL) da FL22 — hajmi 6,8L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2.5L",
   "part": "brake",
   "items": [
    {
@@ -2163,6 +4887,18 @@
  },
  {
   "model": "Kia Sportage 2L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); 1.6 CRDi (QL) da FL22 — hajmi 6,8L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia Sportage 2L",
   "part": "brake",
   "items": [
    {
@@ -2194,6 +4930,30 @@
   ]
  },
  {
+  "model": "Kia Stinger",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); 3.3T AWD: G12+ (qizil) — hajmi 8,8L-11,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.0L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); 2.0T/2.5T da FL22 — hajmi 5,2L-8,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Kia k5 2.0L",
   "part": "brake",
   "items": [
@@ -2242,6 +5002,18 @@
  },
  {
   "model": "Kia k5 2.5L",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OTC); 2.0T/2.5T da FL22 — hajmi 5,2L-8,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Kia k5 2.5L",
   "part": "brake",
   "items": [
    {
@@ -2284,6 +5056,18 @@
     "name": "AUTOZIP SVECHA KIA K5 SELTOS KAM OE249 (4шт в комплекте)",
     "qty": null,
     "price": 800000
+   }
+  ]
+ },
+ {
+  "model": "Labo",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil, C11) — hajmi 4L-5L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2656,6 +5440,90 @@
   ]
  },
  {
+  "model": "Lada Granta",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 7.8,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Kalina",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 5L-7,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Largus",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 / Renault Glaceol RX Type D (ko'k) — hajmi 4,5L-5,45L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Niva Legend",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); ba'zi katalog: G12+ — hajmi 10,6L-10,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Niva Travel",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OAT, qizil-binafsha)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Priora",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); 21126: MB 325.0 (ko'k) — hajmi 7L-7,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada VAZ 2101-2107",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (ko'k/yashil; VW TL 774-C) — hajmi 9,6L-9,85L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lada VAZ 2101-2107",
   "part": "spark",
   "items": [
@@ -2663,6 +5531,270 @@
     "name": "CARVILLE SVECHA MATIZ/DAMAS/LADA 2101-2107 (VSP0004) (4шт в комплекте)",
     "qty": null,
     "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Lada VAZ 2108/2109/21099",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (ko'k/yashil; VW TL 774-C)",
+    "liters": 7.8,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada VAZ 2110-2115",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 7.8,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada Vesta Cross",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (C11, sariq-yashil); ba'zi G12+ — hajmi 6,1L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lada XRAY / XRAY Cross",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OAT; 21129/21179); H4M: G11",
+    "liters": 7.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Defender",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 11,3L-14,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Discovery",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OAT, Protect C12+) — hajmi 9,9L-11,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Evoque",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 5,9L-11,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Range Rover",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 7L-11,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Range Rover Sport",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 10,6L-14,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Land Rover Range Rover Velar",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil; Ford WSS-M97B44-D) — hajmi 7,8L-11,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor B10",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor C01",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo)",
+    "liters": 8.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor C10",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo) — hajmi 8L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor C11",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo) — hajmi 8L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor C16",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT) — hajmi 8L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Leapmotor T03",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L, MB 326.0; RAVENOL ETC C12evo) — hajmi 6L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus ES",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 6,7L-9,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus GS",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 8,4L-11L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus GX",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); GX550: G12evo — hajmi 15,0L-16,0L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus IS",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 7,8L-9,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus LS",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 10,5L-11,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus LX",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); LX600: G12evo — hajmi 15,5L-16,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2678,6 +5810,30 @@
   ]
  },
  {
+  "model": "Lexus NX",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,0L-11,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lexus RX",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); 2.0T (S20A): G12evo — hajmi 8,0L-14,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Lexus RX",
   "part": "spark",
   "items": [
@@ -2685,6 +5841,54 @@
     "name": "SVECHA LEXSUS LX350 SK20HR11 90919-01191 DONA",
     "qty": null,
     "price": 240000
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 15,1 (12 dvigatel + 3,1 akkum.)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 9 (6 dvigatel + 3 akkum.)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L8",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 9 (6 dvigatel + 3 akkum.)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Li Auto L9",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 6,0 (+3,0 batareya)",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -2706,6 +5910,42 @@
     "name": "SVECHA ORIGINAL LI 9 KOMP OE220",
     "qty": null,
     "price": 950000
+   }
+  ]
+ },
+ {
+  "model": "Li Auto MEGA",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil), RAVENOL OTC C12+ — hajmi 6,0 (+3,1 batareya)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Li Auto One",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 8,5 (5,5 dvigatel + 3 akkum.)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Lynk & Co 01 / 06 / 07 / 08 / 09 (900)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); 08/900: G12evo (pushti) — hajmi 6,5L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3112,6 +6352,234 @@
   ]
  },
  {
+  "model": "Mazda 3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — hajmi 5,4L-7,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mazda 6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — hajmi 6,9L-7,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz A-Class / CLA",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha) — hajmi 6,8L-12,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz C-Class",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha) — hajmi 9L-13,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz CLK / SLK",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "HOAT MB 325.0 (ko'k) — hajmi 7,5L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz CLS / GT 4-Door",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha) — hajmi 12L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz E-Class",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++); W214: G12evo (pushti) — hajmi 8L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz EQE / EQS",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha) — hajmi 12L + 13L-15L (yordamchi kontur)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz G-Class",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha) — hajmi 12L-13L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz GLA / GLB / GLC / GLE / GLS",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha); ba'zi dizel MB 325.0 — hajmi 6,8L-18,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz S-Class",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++, binafsha); eski MB 325.0 — hajmi 11,6L-15,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mercedes-Benz Vito / V-Class / Sprinter",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.5 / 326.6 (G12++); OM651 Vito: MB 325.0 (ko'k) — hajmi 9L-13,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mini Cooper",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil); 06.2019 dan HOAT MB 325.0 (ko'k) — hajmi 5,7L-7,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi ASX",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi L200",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT); eski avlod FL22 (yashil) — hajmi 7,7L-8,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi Lancer",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT; Mitsubishi OEM 1350A298) — hajmi 6L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi Outlander",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, OAT) — hajmi 6L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Mitsubishi Pajero / Pajero Sport",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); Pajero Sport III: FL22 (yashil) — hajmi 7L-9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Monza 320T",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT C12+ (G12+) — hajmi 6L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Monza 320T",
   "part": "brake",
   "items": [
@@ -3185,6 +6653,18 @@
  },
  {
   "model": "Monza 330T",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "OAT C12+ (G12+) — hajmi 6L-6,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Monza 330T",
   "part": "brake",
   "items": [
    {
@@ -3252,6 +6732,30 @@
     "name": "AUTOZIP SVECHA MONZA CCH9407 (4шт в комплекте)",
     "qty": null,
     "price": 600000
+   }
+  ]
+ },
+ {
+  "model": "NIO ES7 / ES8 / EC6 / EC7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (Protect C12++)",
+    "liters": 13.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Neta S / L / GT",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3541,6 +7045,246 @@
   ]
  },
  {
+  "model": "Nissan Altima / Teana",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); L34/J33: G12+ (qizil) — hajmi 6,5L-9,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Maxima",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); A36: G12+ (qizil) — hajmi 8,2L-9,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Murano",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); Z51/Z52 3.5: G12+ (qizil) — hajmi 8,7L-9,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Navara",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, D23); FL22 (yashil, D40) — hajmi 10,1L-11,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Pathfinder",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, R52); FL22 (yashil, R53) — hajmi 9,8L-11,9L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Patrol",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — hajmi 9,6L-11,0L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Qashqai",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); 1.3T: G12+ (qizil) — hajmi 5,8L-8,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Sunny / Sentra",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); 1.6T/2.0: G12+ (qizil) — hajmi 6,3L-8,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan Terrano",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil)",
+    "liters": 5.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Nissan X-Trail",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — hajmi 7,4L-8,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche 911",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); 992: G12evo (VW TL 774-L) — hajmi 7L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Cayenne",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OTC C12+, qizil) — hajmi 12,6L-18L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Macan",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OTC C12+, qizil) — hajmi 7L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Panamera",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (OTC C12+, qizil); Turbo 2020+: G12evo — hajmi 12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Porsche Taycan",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (ETC C12evo, VW TL 774-L tur) — hajmi 14L-15L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Renault Arkana",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "1.3 TCe: G11 (sariq-yashil); 1.6: MB 325.0 (ko'k)",
+    "liters": 5.5,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Renault Clio / Citan / Scenic",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 (ko'k) — hajmi 5L-6,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Renault Duster",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 (ko'k) — hajmi 4,5L-5,45L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Seat Leon / Toledo / Cordoba",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ / G12++ (Protect C12+ / C12++); eski G11 — hajmi 5L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Skoda Kodiak",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L) / G12++ — hajmi 7L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Skoda Kodiak",
   "part": "spark",
   "items": [
@@ -3548,6 +7292,66 @@
     "name": "AMD SVECHA SKODA KODIAQ AMD.PL129 06K905601B (4шт в комплекте)",
     "qty": null,
     "price": 400000
+   }
+  ]
+ },
+ {
+  "model": "Skoda Octavia",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (TL 774-G, binafsha); G12+ (TL 774-F); yangi G12evo (TL 774-L) — hajmi 6L-10,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "SsangYong Istana",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 10L-10,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "SsangYong Tivoli",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,5L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "SsangYong Torres",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); EVX: KGM SYC1025 / SYC306E — hajmi 7L; EVX: 4,6L (yurish) + 6,5L (batareya)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Tahoe",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 14,3L-16,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3573,6 +7377,90 @@
   ]
  },
  {
+  "model": "Tank 400 / 700",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 7,95L-10,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Tesla Model 3 / Y / S",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (Model 3/S); G12+ (Model Y) — hajmi 7L-18L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Alphard / Vellfire",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 9,3L-10,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Avalon",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 6,1L-8,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Avensis",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 5,7L-8,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota C-HR",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); yangi HEV: FL22 (yashil); EV: G12evo — hajmi 5,4L-6,7L (EV 10L)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Camry",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); XV80: C12evo — hajmi 5,8L-7,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota Camry",
   "part": "spark",
   "items": [
@@ -3580,6 +7468,18 @@
     "name": "AUTOZIP SVECHA TRACKER ONIX COROLLA CAMRY X70 OE225 1шт",
     "qty": null,
     "price": 150000
+   }
+  ]
+ },
+ {
+  "model": "Toyota Corolla",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) — hajmi 5,4L-6L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3595,6 +7495,90 @@
   ]
  },
  {
+  "model": "Toyota Crown",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — Ravenol HJC katalogi — hajmi 7,7L-10,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Fortuner",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 7,5L-9,6L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Hiace",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil) — Ravenol HJC katalogi — hajmi 13,9L-16L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Highlander",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 9L-12,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Hilux",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 8,1L-9,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Land Cruiser (100/200/300)",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 13,8L-18,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Land Cruiser Prado",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 8,3L-13,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Toyota Land Cruiser Prado",
   "part": "spark",
   "items": [
@@ -3602,6 +7586,102 @@
     "name": "AUTOZIP SVECHA OE238 LAND CRUISER PRADO 2.7 OE238",
     "qty": null,
     "price": 550000
+   }
+  ]
+ },
+ {
+  "model": "Toyota Prius",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil); XW60 2.0: G12evo — hajmi 5,5L-6,1L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota RAV4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 6,7L-7,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Rush",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 5,8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Sequoia / Tundra",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); 5.7 V8: G12+ (qizil) — hajmi 12,4L-14,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Venza",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 6,7L-7,3L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota Yaris",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, Ravenol OTC C12+) — hajmi 4,5L-5,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota bZ3 / bZ5",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil) / G12evo",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Toyota bZ4X",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil/pushti) — hajmi 5,9L-7,4L",
+    "liters": null,
+    "brand": "",
+    "price": null
    }
   ]
  },
@@ -3884,6 +7964,54 @@
   ]
  },
  {
+  "model": "UAZ Bukhanka",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (sariq-yashil) — hajmi 12,5L-13,7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "UAZ Hunter",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); ba'zi: G11 (sariq-yashil) — hajmi 11,5L-12,5L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "UAZ Patriot / Pickup",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "FL22 (yashil); 2.7 PRO: MB 325.0 (ko'k)",
+    "liters": 14.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Caddy",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ / G12evo (VW TL 774-G/L) — hajmi 6L-7L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
   "model": "Volkswagen Caddy",
   "part": "spark",
   "items": [
@@ -3891,6 +8019,294 @@
     "name": "AUTOZIP SVECHA CHAMPION VW Caddy 1.6 OE247 (1шт)",
     "qty": null,
     "price": 110000
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Golf / Bora",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ / G12evo (Protect C12+ / C12evo) — hajmi 6L-7,2L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen ID.3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (qizil, TL 774-D/F); China NEO: G12evo (TL 774-L)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen ID.4",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen ID.6",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (VW TL 774-L)",
+    "liters": 6.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Jetta",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (binafsha, Ravenol LTC C12++) — hajmi 5,4L-8L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Passat",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (TL 774-G, binafsha); G13 (TL 774-J); G12+ (TL 774-F) — hajmi 6,9L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Polo Sedan",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (TL 774-G, binafsha) / G12+ (TL 774-F, qizil)",
+    "liters": 5.7,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Tharu / VS5 / VS7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo) — hajmi 6L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Tiguan / Teramont",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (TL 774-G, binafsha); G12+ (TL 774-F); yangi G12evo (TL 774-L) — hajmi 6L-12L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Touareg",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ (binafsha, 7P); 7L: G12+ (qizil) — hajmi 8L-10L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Volkswagen Transporter / Crafter / Amarok",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12++ / G12evo (Protect C12++ / C12evo) — hajmi 7L-14L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Voyah Dream",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ OAT, qizil-binafsha (VW TL 774-F; RAVENOL OTC C12+) — hajmi 19L-21L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Voyah Free ➤ Hybrid (motorli) ➤ Full electric",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ OAT, qizil-binafsha (VW TL 774-F; RAVENOL OTC C12+) — hajmi 17L-21L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Voyah Passion",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12+ (EV) / G12evo (PHEV); RAVENOL OTC C12+ / ETC C12evo",
+    "liters": 15.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Wuling Bardosh",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 (TTC C11, ko'k/yashil)",
+    "liters": 6.3,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Wuling Xingchen",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (pushti, Si-OAT)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Xiaomi SU7",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Xpeng P5 / G3",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Protect C12evo)",
+    "liters": 10.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr 001",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 (OAT, ko'k) - batareya/motor kontur — hajmi 20L",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr 007",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 (ko'k), RAVENOL HTC",
+    "liters": 16.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr 009",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "MB 325.0 (ko'k), RAVENOL HTC",
+    "liters": 20.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr 7X",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT)",
+    "liters": 16.0,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr 9X",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G12evo (Si-OAT) — hajmi 7,8L (DVS) + 13L (elektr kontur)",
+    "liters": null,
+    "brand": "",
+    "price": null
+   }
+  ]
+ },
+ {
+  "model": "Zeekr X",
+  "part": "antifreeze",
+  "items": [
+   {
+    "type": "G11 ko'k (VW TL 774-C, MB 325.0; RAVENOL HTC)",
+    "liters": 12.0,
+    "brand": "",
+    "price": null
    }
   ]
  }

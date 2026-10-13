@@ -99,7 +99,13 @@ def parts_from_row(g):
                 items.append({"type": "", "liters": lit, "brand": re.sub(r",\s*\d+(?:[.,]\d+)?\s*L\)", ")", n), "price": p})
             parts["antifreeze"] = items
         else:
-            parts["antifreeze"] = [{"type": g("af_type"), "liters": liters, "brand": g("af_brand"),
+            af_type, af_raw_l = g("af_type"), g("af_l")
+            # hajm oddiy son bo'lmasa ("6L-10L", "6,0 (+3,0 batareya)") — matn sifatida saqlanadi,
+            # aks holda faqat birinchi son o'qilib, oraliq noto'g'ri ko'rinardi
+            if af_raw_l and not re.fullmatch(r"\s*\d+(?:[.,]\d+)?\s*", af_raw_l):
+                af_type = f"{af_type} — hajmi {af_raw_l}" if af_type else f"hajmi {af_raw_l}"
+                liters = None
+            parts["antifreeze"] = [{"type": af_type, "liters": liters, "brand": g("af_brand"),
                                     "price": to_int(g("af_price"))}]
     return parts
 
