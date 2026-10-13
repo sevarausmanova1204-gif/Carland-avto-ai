@@ -35,6 +35,61 @@ def get_car(car_id: int):
         return d
 
 
+def search_cars_smart(query: str, limit: int = 10, strict: bool = False):
+    """"🔎 Nomi bo'yicha qidirish" uchun: marka yozilishlari ("Lixiang", "Лисян"), qisqa yozuv ("Li 9"),
+    raqamli model ("malibu 2"), kirill va qo'shimchali so'zlar ("sonetga") hisobga olinadi.
+
+    1) hamma so'z mashina nomidagi so'zning BOSHIga mos kelsa (raqam — so'z yoki harf+raqam: "9" -> "L9");
+    2) bo'lmasa, oddiy LIKE; 3) bo'lmasa, so'zlarni bittalab (suffix kesib) qidiradi."""
+    q = fix_brand_phrases(query or "")
+    q = _apply_car_aliases(q.lower())
+    tokens = [t for t in re.split(r"[^\w']+", q, flags=re.UNICODE) if t]
+    if not tokens:
+        return []
+    cars = list_cars()
+
+    def words_of(model: str) -> list[str]:
+        return [w for w in re.split(r"[^\w']+", model.lower(), flags=re.UNICODE) if w]
+
+    def tok_match(tok: str, words: list[str]) -> bool:
+        if tok.isdigit():
+            return any(w == tok or re.fullmatch(r"[a-z]{1,2}" + re.escape(tok), w) or w.startswith(tok + ".")
+                       for w in words)
+        return any(w.startswith(tok) for w in words)
+
+    out, seen = [], set()
+
+    def add(items):
+        for c in items:
+            if c["id"] not in seen:
+                seen.add(c["id"])
+                out.append(c)
+
+    # 1) barcha so'zlar mos
+    add([c for c in cars if all(tok_match(t, words_of(c["model"])) for t in tokens)])
+    if strict:
+        return out[:limit]
+    # 2) oddiy LIKE (butun matn)
+    if not out:
+        add(search_cars(q.strip(), limit=limit))
+    # 3) so'zlar bo'yicha (kamida bittasi), eng ko'p so'z mos kelgani oldin
+    if not out and len(tokens) > 1:
+        scored = []
+        for c in cars:
+            ws = words_of(c["model"])
+            n = sum(1 for t in tokens if tok_match(t, ws))
+            if n:
+                scored.append((-n, c["model"], c))
+        add([c for _, _, c in sorted(scored, key=lambda x: (x[0], x[1]))])
+    if not out:
+        for t in tokens:
+            if len(t) >= 3:
+                add(_search_cars_with_suffix_stripping(t, limit=limit))
+            if out:
+                break
+    return out[:limit]
+
+
 def search_cars(query: str, limit: int = 30):
     with get_conn() as conn:
         rows = conn.execute(

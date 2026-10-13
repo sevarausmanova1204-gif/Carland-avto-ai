@@ -97,7 +97,7 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         purpose = context.user_data.get("search_purpose", "oilcalc")
         extra = context.user_data.get("search_extra")
         analytics.log_event(update.effective_user, lang, "search_query", text)
-        results = db.search_cars(text, limit=10)
+        results = db.search_cars_smart(text, limit=20)
         if not results:
             await update.message.reply_text(
                 t("search_no_results", lang),

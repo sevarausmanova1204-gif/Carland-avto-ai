@@ -792,6 +792,21 @@ def _try_car_info_answer(user_text: str, context=None) -> str | None:
                     f"🚗 По запросу *{w.capitalize()}* есть несколько вариантов:\n{names}\n\n"
                     "Напишите точный вариант (например, объём двигателя или поколение) — сразу дам информацию.",
                 )
+    if not cars and len(words) <= 3:
+        # "Li 9", "kobalt", "byd han" kabi qisqa yozuvlar: barcha so'z mashina nomidagi so'zlarning boshiga mos kelsa
+        ms = db.search_cars_smart(user_text, limit=11, strict=True)
+        if 1 <= len(ms) <= 4:
+            cars = [db.get_car(m["id"]) for m in ms]
+        elif 5 <= len(ms) <= 10:
+            lang_ = _lang(context)
+            names = "\n".join(f"• {m['model']}" for m in ms)
+            return _L(
+                lang_,
+                f"🚗 *{user_text.strip()}* bo'yicha bir nechta variant bor:\n{names}\n\n"
+                "Aniq variantni yozing (masalan, dvigatel hajmi yoki avlodi) — darhol ma'lumot beraman.",
+                f"🚗 По запросу *{user_text.strip()}* есть несколько вариантов:\n{names}\n\n"
+                "Напишите точный вариант (например, объём двигателя или поколение) — сразу дам информацию.",
+            )
     if not cars:
         return None
     if context is not None:
