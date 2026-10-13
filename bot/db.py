@@ -307,7 +307,7 @@ def find_car_by_text(text: str):
         reverse=True,
     )
     for w in words:
-        matches = _search_cars_with_suffix_stripping(w)
+        matches = _search_cars_with_suffix_stripping(w, limit=80)
         if len(matches) == 1:
             return get_car(matches[0]["id"])
     # Hech bir so'z yagona mashinaga olib kelmadi ("hyundai tucson": "hyundai" 8 ta,
@@ -316,7 +316,7 @@ def find_car_by_text(text: str):
     # natijalari orasidan matndagi boshqa so'zlarga ham mos kelgani.
     best_matches, best_count = None, None
     for w in words:
-        matches = _search_cars_with_suffix_stripping(w)
+        matches = _search_cars_with_suffix_stripping(w, limit=80)
         if matches and (best_count is None or len(matches) < best_count):
             best_matches, best_count = matches, len(matches)
     if best_matches:
@@ -802,8 +802,23 @@ def get_promotions_for_model(keyword: str):
             continue
         d = dict(r)
         d["details"] = json.loads(d["details"])
+        if not _promo_active(d["details"]):
+            continue
         out.append(d)
     return out
+
+
+def _promo_active(details: dict) -> bool:
+    """AKSIYA MUDDATI ("31.10.2026 gacha") o'tib ketgan paket botda ko'rsatilmaydi."""
+    from datetime import date
+
+    m = re.search(r"(\d{1,2})\.(\d{1,2})\.(\d{4})", str((details or {}).get("AKSIYA MUDDATI") or ""))
+    if not m:
+        return True
+    try:
+        return date(int(m.group(3)), int(m.group(2)), int(m.group(1))) >= date.today()
+    except ValueError:
+        return True
 
 
 # Filtr turlari: kalit -> (car_parts'dagi qism nomi, products'dagi kategoriya)

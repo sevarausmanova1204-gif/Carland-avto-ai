@@ -37,6 +37,24 @@ TEXT = {
     "menu_info": {"uz": "🖼 Infografika (motor/karobka/reduktor)", "ru": "🖼 Инфографика (двигатель/КПП/редуктор)"},
     "menu_branches": {"uz": "📍 Filiallar", "ru": "📍 Филиалы"},
     "menu_promo": {"uz": "🎉 Aksiyalar", "ru": "🎉 Акции"},
+    "promo_hub_title": {
+        "uz": "🎉 *Aksiyalar* — nimani ko'rmoqchisiz?",
+        "ru": "🎉 *Акции* — что показать?",
+    },
+    "promo_posters_btn": {"uz": "🗓 Joriy aksiyalar (rasmda)", "ru": "🗓 Текущие акции (картинками)"},
+    "promo_by_car_btn": {"uz": "🚗 Mashina bo'yicha", "ru": "🚗 По автомобилю"},
+    "promo_posters_caption": {
+        "uz": "🎉 *Oktabr aksiyalari* — {n} ta paket, {deadline}.\nMashinangizga mos paketni ko'rish uchun «🚗 Mashina bo'yicha» ni bosing.",
+        "ru": "🎉 *Акции октября* — {n} пакетов, {deadline}.\nЧтобы увидеть пакеты для вашего авто, нажмите «🚗 По автомобилю».",
+    },
+    "promo_none": {
+        "uz": "Hozircha faol aksiya yo'q. Yangi aksiyalar e'lon qilinganda shu yerda chiqadi.",
+        "ru": "Сейчас активных акций нет. Новые акции появятся здесь.",
+    },
+    "promo_car_posters_note": {
+        "uz": "🖼 {model} uchun mos aksiya paketlari rasmda:",
+        "ru": "🖼 Подходящие акционные пакеты для {model}:",
+    },
     "menu_ai": {"uz": "💬 AI yordamchidan so'rash", "ru": "💬 Спросить AI-помощника"},
     "menu_recent": {"uz": "🕐 So'nggi ko'rilgan mashinalar", "ru": "🕐 Недавно просмотренные"},
     "recent_title": {"uz": "🕐 So'nggi ko'rilgan mashinalaringiz:", "ru": "🕐 Недавно просмотренные автомобили:"},

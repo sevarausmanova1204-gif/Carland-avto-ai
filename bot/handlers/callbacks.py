@@ -63,6 +63,13 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 reply_markup=keyboards.back_button(lang=lang),
             )
             return
+        if sub == "promohub":
+            kb = keyboards.promo_hub(lang)
+            if query.message.photo:
+                await query.message.reply_text(t("promo_hub_title", lang), reply_markup=kb, parse_mode="Markdown")
+            else:
+                await query.edit_message_text(t("promo_hub_title", lang), reply_markup=kb, parse_mode="Markdown")
+            return
         if sub in ("oilcalc", "info", "promo"):
             title_key = {
                 "oilcalc": "oilcalc_pick_brand",
@@ -89,6 +96,10 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 t("pick_brand", lang), reply_markup=keyboards.brand_grid(sub, extra=slug, lang=lang)
             )
             return
+
+    if action == "promo" and len(parts) > 1 and parts[1] == "posters":
+        await _send_promo_posters(query, lang)
+        return
 
     if action == "brand":
         purpose, slug, page = parts[1], parts[2], int(parts[3])
@@ -198,6 +209,37 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
             reply_markup=keyboards.back_button(f"oilprice:{kind}:{car_id}", lang=lang),
         )
         return
+
+
+async def _send_promo_posters(query, lang: str = "uz"):
+    """Joriy (muddati o'tmagan) aksiya paketlarining plakatlarini albom sifatida yuboradi."""
+    from .. import promo_posters
+
+    items = promo_posters.active_packages()
+    if not items:
+        await query.edit_message_text(t("promo_none", lang), reply_markup=keyboards.promo_hub(lang))
+        return
+    dates = []
+    pkgs = promo_posters.load_packages()
+    for k, _, _ in items:
+        for r in pkgs[k]["rows"]:
+            d = promo_posters.parse_deadline(r.get("AKSIYA MUDDATI"))
+            if d:
+                dates.append(d)
+    if dates:
+        last = max(dates).strftime("%d.%m.%Y")
+        deadline = f"до {last}" if lang == "ru" else f"{last} gacha"
+    else:
+        deadline = ""
+    caption = t("promo_posters_caption", lang).format(n=len(items), deadline=deadline or "")
+    await query.message.chat.send_action(ChatAction.UPLOAD_PHOTO)
+    batch = items[:10]
+    media = [
+        InputMediaPhoto(media=path.read_bytes(), caption=caption if i == 0 else None, parse_mode="Markdown" if i == 0 else None)
+        for i, (_, _, path) in enumerate(batch)
+    ]
+    await query.message.reply_media_group(media=media)
+    await query.message.reply_text(t("promo_hub_title", lang), reply_markup=keyboards.promo_hub(lang), parse_mode="Markdown")
 
 
 async def _render_browse(query, slug, offset, lang: str = "uz"):
@@ -356,8 +398,27 @@ async def _render_car_action(query, purpose, car_id, extra, context):
         rows = db.get_promotions_for_model(keyword)
         text = fmt.promo_text(rows, lang)
         await query.edit_message_text(
-            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:main", lang=lang), parse_mode="Markdown"
+            f"🚗 *{car['model']}*\n\n{text}", reply_markup=keyboards.back_button("menu:promohub", lang=lang), parse_mode="Markdown"
         )
+        # shu mashinaga mos paketlarning plakatlari (rasmda)
+        try:
+            from .. import promo_posters
+
+            seen, media = set(), []
+            for r in rows:
+                key = promo_posters.package_key_for_title(r["package_title"])
+                if key and key not in seen and promo_posters.poster_path(key).exists():
+                    seen.add(key)
+                    media.append(InputMediaPhoto(media=promo_posters.poster_path(key).read_bytes()))
+            if media:
+                media = media[:10]
+                media[0] = InputMediaPhoto(
+                    media=media[0].media,
+                    caption=t("promo_car_posters_note", lang).format(model=car["model"]),
+                )
+                await query.message.reply_media_group(media=media)
+        except Exception:  # plakat yuborilmasa ham matnli javob allaqachon berilgan
+            pass
         return
 
 
