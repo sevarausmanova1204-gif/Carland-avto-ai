@@ -217,6 +217,8 @@ _CAR_NAME_ALIASES = {
     "kruz": "cruze", "oniks": "onix", "malibu": "malibu",
     "xyundai": "hyundai", "xendai": "hyundai", "xundai": "hyundai",
     "tigo": "tiggo", "tiggo": "tiggo",
+    "epika": "epica", "epiko": "epica", "kobalt": "cobalt",
+    "matiz": "matiz", "spark": "spark", "ispark": "spark",
 }
 
 
@@ -785,6 +787,42 @@ def get_promotions_for_model(keyword: str):
         d["details"] = json.loads(d["details"])
         out.append(d)
     return out
+
+
+# Filtr turlari: kalit -> (car_parts'dagi qism nomi, products'dagi kategoriya)
+FILTER_TYPES = {
+    "air": ("air_filter", "Air filters"),
+    "oil": ("oil_filter", "Oils filters"),
+    "cabin": ("cabin_filter", "Lounge filter"),
+    "fuel": (None, "Fuel filter"),
+}
+
+
+def get_filters_for_car(car: dict, ftype: str, limit: int = 8) -> dict:
+    """Mashinaga mos filtrlar: {"items": [{name, price, qty}], "source": "sheet" | "catalog" | "none"}.
+
+    1) jadvalga mashinaga ANIQ biriktirilgan va omborda bor filtrlar (car_parts);
+    2) topilmasa — katalogdagi (products) nomida mashina modeli yozilgan filtrlar
+       (omborda borligi katalogda ko'rsatilmaydi — "catalog" belgisi bilan qaytadi).
+    Mashina nomi juda umumiy bo'lsa (masalan faqat "Toyota"), katalog bo'yicha
+    qidirilmaydi — aks holda butun markaning filtrlari chiqib ketardi."""
+    from . import matching
+
+    part, category = FILTER_TYPES[ftype]
+    if part:
+        items = get_car_parts(car["id"], part)
+        if items:
+            items = sorted(items, key=lambda it: (it.get("price") is None, it.get("price") or 0))
+            return {"items": items[:limit], "source": "sheet", "total": len(items)}
+    kw = matching.extract_keyword(car["model"])
+    if kw:
+        with get_conn() as conn:
+            names = [r["model"] for r in conn.execute("SELECT model FROM cars")]
+        if sum(1 for n in names if kw_matches(kw, n)) <= 6:
+            rows = search_products_by_keyword(kw, category, limit=60)
+            if rows:
+                return {"items": rows[:limit], "source": "catalog", "total": len(rows)}
+    return {"items": [], "source": "none", "total": 0}
 
 
 def get_car_parts(car_id: int, part: str) -> list[dict]:

@@ -669,6 +669,88 @@ _CAR_INFO_MAX_WORDS = 8
 _CAR_INFO_NOT_MODEL_WORDS = {"yangi", "eski", "oddiy", "avtomat", "mexanika", "best", "slindir", "qutisi", "moyi", "moylar", "hajmi"}
 
 
+_FILT = r"(?:filter|filtr\w*|filtir\w*|filtor\w*)"
+_FILTER_TYPE_RES = {
+    "oil": re.compile(r"(?<![a-z])(?:oil|oyl|moy|moto?r\s?moy\w*|masl\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:oil|moy\w*|masl\w*)"),
+    "air": re.compile(r"(?<![a-z])(?:air|havo\w*|vozd\w*|vazd\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:air|havo\w*|vozd\w*)"),
+    "cabin": re.compile(r"(?<![a-z])(?:cabin|salon\w*|kabin\w*|pollen)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:cabin|salon\w*|kabin\w*)"),
+    "fuel": re.compile(r"(?<![a-z])(?:fuel|yoqilg[\w'ʻʼ`]*|yonilg[\w'ʻʼ`]*|benzin\w*|toplivn\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:fuel|yoqilg[\w'ʻʼ`]*|benzin\w*|toplivn\w*)"),
+}
+_ANY_FILTER_RE = re.compile(r"(?<![a-z])" + _FILT)
+# Moy hisob-kitobi/almashtirish haqidagi savollar (filtr bilan birga so'ralgan) — filtr ro'yxati emas, hisob javobi kerak
+_FILTER_CALC_HINTS = ("hisobla", "almashtir", "to'liq", "toliq", " bilan", "motorga", "matorga", "dvigatel",
+                      "karobka", "korobka", "reduktor", "litr", "zamen", "полн", "заме", "с фильтр")
+
+
+def _try_filter_answer(user_text: str, context=None) -> str | None:
+    """"oil filter epica", "salon filtri nexia 3", "havo filtri" kabi savollar:
+    mashinaga mos filtrlarni (jadvaldan biriktirilgan, omborda bor; bo'lmasa katalogdan)
+    to'g'ridan-to'g'ri bazadan beradi. Tur ko'rsatilmasa ("epica filtr") — havo/moy/salon uchtasi."""
+    low = db.transliterate_cyrillic(user_text).lower()
+    if not _ANY_FILTER_RE.search(low):
+        return None
+    types = [t for t, rx in _FILTER_TYPE_RES.items() if rx.search(low)]
+    if any(h in low for h in _FILTER_CALC_HINTS) or re.search(r"\d+\s?w\s?-?\s?\d+", low):
+        return None
+    lang = _lang(context)
+    car = db.find_car_strict(user_text)
+    variants = [car] if car else []
+    if not car:
+        for w in re.findall(r"[a-z']+", low):
+            if len(w) < 4 or w in _CAR_INFO_NOT_MODEL_WORDS or _FILT and re.fullmatch(_FILT, w):
+                continue
+            if db.normalize_word(w) in db.GENERIC_WORD_STOPLIST or db.is_generic_filler_word(w):
+                continue
+            ms = db.search_cars_fuzzy(w, limit=7)
+            if 1 <= len(ms) <= 4:
+                variants = [db.get_car(m["id"]) for m in ms]
+                break
+    if not variants:
+        fallback = _resolve_car(user_text, context)
+        if fallback:
+            variants = [fallback]
+    if not variants:
+        return _L(
+            lang,
+            "🔧 Filtr uchun mashina rusumini yozing (masalan: *moy filtri Nexia 3*, *havo filtri Cobalt*, "
+            "*salon filtri Tracker*) — mos filtrlarni bazadan topib beraman.",
+            "🔧 Напишите модель автомобиля (например: *масляный фильтр Nexia 3*, *воздушный фильтр Cobalt*, "
+            "*салонный фильтр Tracker*) — найду подходящие фильтры в базе.",
+        )
+    if context is not None:
+        context.user_data["last_car_id"] = variants[0]["id"]
+    wanted = types or ["air", "oil", "cabin"]
+    per_type = 8 if len(wanted) == 1 else 5
+    # Bir xil filtrlar chiqadigan variantlar (masalan "Matiz best" / "Matiz oddiy") bitta blokka birlashtiriladi
+    groups: list[tuple[list[dict], dict]] = []
+    for car in variants:
+        results = {t: db.get_filters_for_car(car, t, limit=per_type) for t in wanted}
+        sig = [(t, tuple(it["name"] for it in r["items"])) for t, r in results.items()]
+        for cars_, res_ in groups:
+            if res_["_sig"] == sig:
+                cars_.append(car)
+                break
+        else:
+            results["_sig"] = sig
+            groups.append(([car], results))
+    blocks = []
+    for cars_, res_ in groups:
+        res_ = {t: r for t, r in res_.items() if t != "_sig"}
+        head = dict(cars_[0])
+        head["model"] = " / ".join(c["model"] for c in cars_)
+        blocks.append(fmt.car_filters_text(head, res_, lang))
+    # Telegram xabari 4096 belgidan oshmasligi uchun: sig'maganlarini qisqartiramiz
+    out = "\n\n".join(blocks)
+    while len(out) > 3800 and len(blocks) > 1:
+        blocks.pop()
+        out = "\n\n".join(blocks) + "\n\n" + _L(lang, "_Boshqa variantlar uchun aniqroq (dvigatel/avlod bilan) yozing._",
+                                                  "_Для других вариантов напишите точнее (двигатель/поколение)._")
+    if not types:
+        out += "\n" + _L(lang, "_Faqat bittasi kerak bo'lsa yozing: moy filtri / havo filtri / salon filtri / yoqilg'i filtri._",
+                          "_Если нужен один: масляный / воздушный / салонный / топливный фильтр._")
+    return out
+
+
 def _try_car_info_answer(user_text: str, context=None) -> str | None:
     words = re.findall(r"[\w']+", user_text, flags=re.UNICODE)
     if not words or len(words) > _CAR_INFO_MAX_WORDS:
@@ -789,6 +871,12 @@ async def ask_ai(user_text: str, context=None) -> tuple[str, str | None]:
     # biriktiradi — foydalanuvchi "endi bosh menyudan qidiring" deb
     # yo'naltirilmasdan, to'g'ridan-to'g'ri shu yerda filialni bosib,
     # lokatsiyasini olishi mumkin.
+    # Filtr so'rovlari ("oil filter epica", "salon filtri nexia 3") — moy hisobidan OLDIN:
+    # aks holda "moy filtri" so'zi moy hisob-kitobiga tushib ketardi.
+    filter_answer = _try_filter_answer(user_text, context)
+    if filter_answer:
+        return filter_answer, None
+
     calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
         return calc_answer, None

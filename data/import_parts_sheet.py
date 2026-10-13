@@ -43,6 +43,13 @@ COL = {
     "ti_brand": "BALON: tavsiya brend/model", "ti_price": "BALON: narxi (dona)",
     "af_type": "ANTIFRIZ: turi (G11/G12/G12+)", "af_l": "ANTIFRIZ: hajmi (L)",
     "af_brand": "ANTIFRIZ: tavsiya brend", "af_price": "ANTIFRIZ: narxi",
+    # omborda bor filtrlar ("NOMI = narx (N dona)" satrlari) + agent katalogdan moslagan qo'shimchalari
+    "air_f": "HAVO FILTRI (omborda bor): model, narx, soni",
+    "air_x": "HAVO FILTRI — qo'shimcha (agent: katalog bo'yicha moslagan)",
+    "oil_f": "MOY FILTRI (omborda bor): model, narx, soni",
+    "oil_x": "MOY FILTRI — qo'shimcha (agent: katalog bo'yicha moslagan)",
+    "cab_f": "SALON (CABIN) FILTRI (omborda bor): model, narx, soni",
+    "cab_x": "SALON FILTRI — qo'shimcha (agent: katalog bo'yicha moslagan)",
 }
 
 
@@ -72,8 +79,33 @@ def named_items(cell, default_price=None):
     return out
 
 
+_STOCK_LINE_RE = re.compile(r"^(?P<name>.+?)\s*=\s*(?P<price>[\d\s]+?)\s*(?:\((?P<qty>\d+)\s*dona\))?\s*$")
+
+
+def stock_items(*cells):
+    """'NOMI = 80 000 (6 dona)' satrlaridan [{name, price, qty}] (takrorlar olib tashlanadi)."""
+    out, seen = [], set()
+    for cell in cells:
+        for line in (cell or "").split("\n"):
+            m = _STOCK_LINE_RE.match(line.strip())
+            if not m:
+                continue
+            name = m.group("name").strip()
+            if name.upper() in seen:
+                continue
+            seen.add(name.upper())
+            out.append({"name": name, "price": to_int(m.group("price")),
+                        "qty": int(m.group("qty")) if m.group("qty") else None})
+    return out
+
+
 def parts_from_row(g):
     parts = {}
+    for part, keys in (("air_filter", ("air_f", "air_x")), ("oil_filter", ("oil_f", "oil_x")),
+                       ("cabin_filter", ("cab_f", "cab_x"))):
+        items = stock_items(*(g(k) for k in keys))
+        if items:
+            parts[part] = items
     sp = [{"name": n, "qty": to_int(g("sp_qty")), "price": p}
           for n, p in named_items(g("sp_name"), to_int(g("sp_price")))]
     if sp:

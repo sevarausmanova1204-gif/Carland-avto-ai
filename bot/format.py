@@ -461,3 +461,47 @@ def branch_text(b: dict, lang: str = "uz") -> str:
         f"{address_label}: {b['address']}\n\n"
         f"{directions_label}: {b['directions']}"
     )
+
+
+_FILTER_TITLES = {
+    "oil": ("🛢 *Moy filtri*", "🛢 *Масляный фильтр*"),
+    "air": ("🌬 *Havo filtri*", "🌬 *Воздушный фильтр*"),
+    "cabin": ("❄️ *Salon filtri*", "❄️ *Салонный фильтр*"),
+    "fuel": ("⛽ *Yoqilg'i filtri*", "⛽ *Топливный фильтр*"),
+}
+
+
+def car_filters_text(car: dict, results: dict, lang: str = "uz") -> str:
+    """results: {"oil": get_filters_for_car(...), "air": ..., ...} — har bir tur uchun alohida blok."""
+    unit = _L(lang, "dona", "шт")
+    lines = [f"🚗 *{_plain(car['model'])}*"]
+    catalog_used = False
+    for ftype, res in results.items():
+        uz_t, ru_t = _FILTER_TITLES[ftype]
+        lines += ["", _L(lang, uz_t, ru_t)]
+        if not res["items"]:
+            if ftype == "oil" and not car.get("engine_oil_liters"):
+                lines.append(_L(lang, "Bu mashinada motor moyi/moy filtri ko'rsatilmagan (elektromobil bo'lishi mumkin).",
+                                "Для этой машины моторное масло/масляный фильтр не указаны (возможно, электромобиль)."))
+            else:
+                lines.append(_L(lang, "Bazada bu mashinaga mos filtr topilmadi — filialdan so'rab ko'ring.",
+                                "Подходящий фильтр в базе не найден — уточните в филиале."))
+            continue
+        for it in res["items"]:
+            qty = f" ({it['qty']} {unit})" if it.get("qty") else ""
+            lines.append(f"• {_plain(it['name'])} — {money(it.get('price'), lang)}{qty}")
+        if res["source"] == "catalog":
+            catalog_used = True
+        if res.get("total", 0) > len(res["items"]):
+            lines.append(_L(lang, f"_...va yana {res['total'] - len(res['items'])} ta variant bor (arzonlari ko'rsatildi)_",
+                            f"_...и ещё {res['total'] - len(res['items'])} вариантов (показаны самые дешёвые)_"))
+    if not any(r["items"] for r in results.values()):
+        return "\n".join(lines)
+    lines.append("")
+    if catalog_used:
+        lines.append(_L(lang, "_Ba'zi filtrlar katalog bo'yicha topildi — omborda borligini filialdan so'rang; nomi mashinangizga mosligini tekshirib tanlang._",
+                        "_Часть фильтров найдена по каталогу — наличие уточняйте в филиале; перед выбором проверьте соответствие названия._"))
+    else:
+        lines.append(_L(lang, "_Ro'yxatda omborda mavjud filtrlar ko'rsatilgan. Nomi mashinangizga mosligini tekshirib tanlang._",
+                        "_Показаны фильтры, имеющиеся на складе. Перед выбором проверьте соответствие названия._"))
+    return "\n".join(lines)

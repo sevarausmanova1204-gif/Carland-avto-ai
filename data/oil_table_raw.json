@@ -295,7 +295,7 @@
     "reductor_volume_raw": "",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "5W-30 or 5W-40 (API SN or higher)",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "MT: 75W-90 GL-4/GL-5 (2L); CVT: CVT Fluid Chery CVTF (4,6L)"
   },
   {
     "model": "Chery Tiggo 4 Pro",
@@ -614,7 +614,7 @@
   },
   {
     "model": "Dongfeng E5",
-    "engine_oil_volume_raw": "",
+    "engine_oil_volume_raw": "3,7L (1.5L DE-i PHEV dvigatel) litr",
     "gearbox_volume_raw": "",
     "reductor_volume_raw": "1,5L EV",
     "change_interval_km_raw": "60 000",
@@ -777,7 +777,8 @@
     "reductor_volume_raw": "1,5L EV",
     "change_interval_km_raw": "10 000",
     "engine_oil_type_raw": "0w20",
-    "gearbox_oil_type_raw": ""
+    "gearbox_oil_type_raw": "",
+    "reductor_oil_type_raw": "EV-Synto Extra Fluid 70W E-TF (BOT 805C EV, VW G 053 013 M2)"
   },
   {
     "model": "Chery Aiqar eQ7",
