@@ -6,7 +6,8 @@
     "address": "Buyuk Ipak Yo'li ko'chasi 268",
     "directions": "Lunacharskiy - Mirzo Ulug'bek rovdadan o'tgandan keyin o'ng qo'lda TTZ dan kelganda avtoritet moykadan o'tgandan keyin tabakani ro'parasida chap qo'lda keladi.",
     "latitude": 41.338367,
-    "longitude": 69.357082
+    "longitude": 69.357081,
+    "yandex_org": "https://yandex.uz/maps/org/carland/14992352781/"
   },
   {
     "id": 2,
@@ -14,8 +15,9 @@
     "city": "Toshkent",
     "address": "Ko'rgazmalar zali, Kichik halqa yo'li 74A",
     "directions": "Malikadan kelganda Taxtapul mostdan o'tgandan o'ng qo'lda, severniy olmazordan kelganda Taxtapul mostga yetmasdan chap qo'lda Turk Market yonida.",
-    "latitude": 41.345347,
-    "longitude": 69.261779
+    "latitude": 41.334602,
+    "longitude": 69.203147,
+    "yandex_org": "https://yandex.uz/maps/org/carland/170132264952/"
   },
   {
     "id": 3,
@@ -23,8 +25,9 @@
     "city": "Toshkent",
     "address": "Kulolqo'rg'on 6-tor ko'chasi",
     "directions": "Uchqahramon krugidan kelganda 271-maktab ro'parasida I WASH moyka oldida chapda. Yunusobod krugdan kelganda BYD servisdan o'tganda keyin I WASH moyka yonida o'ng qo'lda.",
-    "latitude": 41.379626,
-    "longitude": 69.290121
+    "latitude": 41.376906,
+    "longitude": 69.288764,
+    "yandex_org": "https://yandex.uz/maps/org/carland/55976902609/"
   },
   {
     "id": 4,
@@ -32,8 +35,9 @@
     "city": "Toshkent",
     "address": "Qoratosh ko'chasi 5A",
     "directions": "Chorsudan kelishda INTRAN zapravkadan o'tgandan keyin The Chuchvara ro'parasida o'ng qo'lda.",
-    "latitude": 41.316407,
-    "longitude": 69.230994
+    "latitude": 41.31449,
+    "longitude": 69.226709,
+    "yandex_org": "https://yandex.uz/maps/org/carland/210154122098/"
   },
   {
     "id": 5,
@@ -41,8 +45,9 @@
     "city": "Toshkent",
     "address": "Chimboy 2-tor ko'chasi, 48",
     "directions": "Orzu chorrahadan o'tgandan keyin VISOL to'yxonasidan sal pastroqda chap qo'lda.",
-    "latitude": 41.346389,
-    "longitude": 69.22591
+    "latitude": 41.342855,
+    "longitude": 69.219145,
+    "yandex_org": "https://yandex.uz/maps/org/carland/152145913542/"
   },
   {
     "id": 6,
@@ -50,8 +55,9 @@
     "city": "Toshkent",
     "address": "Chig'atoy tumani",
     "directions": "Chig'atoy masjiddan kelganda Tuning House'dan o'tib o'ng qo'lda keladi. Uzgaradok chorrahasidan Chimboyga qarab kelishda VOyah servis yonida chap qo'lda.",
-    "latitude": 41.346944,
-    "longitude": 69.258869
+    "latitude": 41.343272,
+    "longitude": 69.256356,
+    "yandex_org": "https://yandex.uz/maps/org/carland/97347628460/"
   },
   {
     "id": 7,
@@ -59,8 +65,9 @@
     "city": "Toshkent",
     "address": "Do'mbirobod street 162",
     "directions": "Mustang zapravkadan kirganda Grand Hoteldan o'tib chap qo'lda. 16-Balnitsa chorrahasidan kirganda Do'mbirobod haykaldan o'tib, 2-Svetafordan o'ngda.",
-    "latitude": 41.263843,
-    "longitude": 69.207261
+    "latitude": 41.258813,
+    "longitude": 69.204629,
+    "yandex_org": "https://yandex.uz/maps/org/carland/184858715631/"
   },
   {
     "id": 8,
@@ -77,8 +84,9 @@
     "city": "Toshkent",
     "address": "Yangi yo'l massivi",
     "directions": "Zangiotadan kelganda Massivda joylashgan, yangi yo'l tarafdan kelganda taxta ko'prikdan o'tganda o'ng qo'lda keladi.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 41.129221,
+    "longitude": 69.083315,
+    "yandex_org": "https://yandex.uz/maps/org/carland/188980946669/"
   },
   {
     "id": 10,
@@ -86,8 +94,9 @@
     "city": "Samarqand",
     "address": "Kovola Mahalla, 69-uy",
     "directions": "Samarqand shahar, Kovola Mahalla, 69-uy, Seliskiy tomonda, 16-maktab orqasi, Registanskiy ko'chasi bilan ketilganda.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 39.608428,
+    "longitude": 66.948348,
+    "yandex_org": "https://yandex.uz/maps/org/carland/193317439565/"
   },
   {
     "id": 11,
@@ -95,8 +104,9 @@
     "city": "Buxoro",
     "address": "Sanoatchilar ko'chasi 3-dom",
     "directions": "Buxoro shahar, Sanoatchilar 3-dom, Buxoro arxitektura texnikumi to'g'risida, 2-lyukoyil zapravka yonida.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 39.746407,
+    "longitude": 64.456785,
+    "yandex_org": "https://yandex.uz/maps/org/carland/40336740875/"
   },
   {
     "id": 12,
@@ -104,8 +114,9 @@
     "city": "Toshkent",
     "address": "Sergili, Index bozori, Yangihayot, blok C01",
     "directions": "Index bozordan kirishda oxiriga borganda chapga qayrilasiz, Sergili Index bozori.",
-    "latitude": 41.2099,
-    "longitude": 69.231713
+    "latitude": 41.198923,
+    "longitude": 69.2396,
+    "yandex_org": "https://yandex.uz/maps/org/carland/13823961059/"
   },
   {
     "id": 13,
@@ -113,8 +124,9 @@
     "city": "Qarshi",
     "address": "Farangiz do'koni yaqinida",
     "directions": "Orientir: 5-hammom yaqinida, Farangiz do'konining to'g'risida.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 38.855915,
+    "longitude": 65.782784,
+    "yandex_org": "https://yandex.uz/maps/org/carland/152066109408/"
   },
   {
     "id": 14,
@@ -122,8 +134,9 @@
     "city": "Chirchiq",
     "address": "10-mikrorayon, Karvon bozori oldida",
     "directions": "Orientir: Karvon bozori oldida, 10-mikrorayon.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 41.4518,
+    "longitude": 69.538927,
+    "yandex_org": "https://yandex.uz/maps/org/carland/38921344103/"
   },
   {
     "id": 15,
@@ -131,7 +144,8 @@
     "city": "Olmaliq",
     "address": "Olmaliq zavodi yo'nalishi, Hamkorbank ro'parasida",
     "directions": "Orientir: Olmaliq zavodiga ketaverishda Hamkorbank to'g'risida.",
-    "latitude": null,
-    "longitude": null
+    "latitude": 40.849561,
+    "longitude": 69.594192,
+    "yandex_org": "https://yandex.uz/maps/org/carland/115567629994/"
   }
 ]

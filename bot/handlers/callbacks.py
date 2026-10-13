@@ -165,6 +165,12 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         kb_rows.append([InlineKeyboardButton(t("open_yandex_maps_btn", lang), url=url)])
         kb_rows.append([InlineKeyboardButton(t("back_to_branches_list_btn", lang), callback_data="menu:branches")])
         await query.edit_message_text(fmt.branch_text(branch, lang), reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown")
+        # Filial lokatsiyasi (xarita nuqtasi) darhol yuboriladi — alohida tugma bosish shart emas
+        if branch.get("latitude") and branch.get("longitude"):
+            try:
+                await query.message.reply_location(latitude=branch["latitude"], longitude=branch["longitude"])
+            except Exception:
+                pass
         return
 
     if action == "branchloc":
