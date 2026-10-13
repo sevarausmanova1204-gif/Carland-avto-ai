@@ -237,7 +237,7 @@ async def _send_promo_posters(query, lang: str = "uz"):
         deadline = f"до {last}" if lang == "ru" else f"{last} gacha"
     else:
         deadline = ""
-    caption = t("promo_posters_caption", lang).format(n=len(items), deadline=deadline or "")
+    caption = t("promo_posters_caption", lang).format(n=len(items), deadline=deadline or "", app=config.APP_STORE_URL)
     await query.message.chat.send_action(ChatAction.UPLOAD_PHOTO)
     batch = items[:10]
     media = [

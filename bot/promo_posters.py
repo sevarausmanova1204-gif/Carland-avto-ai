@@ -177,34 +177,28 @@ def render(key: str, pkg: dict) -> Image.Image:
     # ---- balandlikni hisoblash ----
     y = 150 + 36
     h_title = len(title_lines) * 58
-    chips = []
+    gifts = []
     for k, label in BONUS_LABELS:
         vals = [r.get(k) for r in rows if r.get(k) not in (None, "")]
-        if not vals or (is_ev and k in ("MOY FILTER", "USLUGA")):
+        if not vals:
+            continue
+        # narxi yozilgan (pulli) qiymatlar sovg'a emas — jadvalda ko'rsatiladi
+        if any(isinstance(v, (int, float)) for v in vals):
             continue
         text = label
-        if k == "USLUGA" and any(str(v).upper() == "BEPUL" for v in vals):
-            text = "Xizmat bepul"
-        chips.append(text)
-    chip_h, chip_gap = 54, 14
-    # chip qatorlarini joylash
-    chip_rows, cur, cur_w = [], [], 0
-    for c in chips:
-        cw = int(probe.textlength("✓ " + c, font=f_chip)) + 44 if False else int(probe.textlength("+ " + c, font=f_chip)) + 44
-        if cur and cur_w + cw + chip_gap > inner:
-            chip_rows.append(cur)
-            cur, cur_w = [], 0
-        cur.append((c, cw))
-        cur_w += cw + chip_gap
-    if cur:
-        chip_rows.append(cur)
-    h_chips = len(chip_rows) * (chip_h + chip_gap) if chip_rows else 0
+        if k == "USLUGA":
+            text = "Almashtirish xizmati — bepul"
+        gifts.append(text)
+    gift_cols = 2
+    gift_rows_n = (len(gifts) + gift_cols - 1) // gift_cols
+    h_gifts = (24 + 40 + 36 + gift_rows_n * 46 + 24) if gifts else 0
+    h_cash = 190
     row_h = 66 if has_codes or is_ev else 60
     head_h = 78 if is_ev else 56
     h_table = head_h + len(rows) * row_h
     note_lines = _wrap(probe, note, f_small, inner - 40) if note else []
     h_note = (len(note_lines) * 30 + 40) if note_lines else 0
-    total = y + h_title + 90 + h_chips + 30 + h_table + 36 + h_note + 150
+    total = y + h_title + 90 + h_gifts + (30 if gifts else 0) + 56 + h_table + 36 + h_note + h_cash + 150
 
     img = Image.new("RGB", (W, total), BG)
     d = ImageDraw.Draw(img)
@@ -226,16 +220,21 @@ def render(key: str, pkg: dict) -> Image.Image:
         d.rounded_rectangle([PAD, ty + 14, PAD + bw, ty + 14 + 48], radius=24, outline=AMBER, width=3)
         d.text((PAD + 20, ty + 14 + 11), label, font=f_head, fill=AMBER)
     ty += 90
-    # sovg'a belgilari
-    for r_ in chip_rows:
-        x = PAD
-        for c, cw in r_:
-            d.rounded_rectangle([x, ty, x + cw, ty + chip_h], radius=14, fill=PANEL_ALT, outline=LINE, width=2)
-            d.text((x + 22, ty + 12), "+", font=f_chip, fill=GREEN)
-            d.text((x + 22 + d.textlength("+ ", font=f_chip), ty + 12), c, font=f_chip, fill=WHITE)
-            x += cw + chip_gap
-        ty += chip_h + chip_gap
-    ty += 30
+    # sovg'alar bloki (alohida, yashil)
+    if gifts:
+        d.rounded_rectangle([PAD, ty, W - PAD, ty + h_gifts], radius=18, fill=(17, 38, 31), outline=GREEN, width=3)
+        d.text((PAD + 24, ty + 22), "SOVG'ALAR — BEPUL (narxga kiritilgan)", font=_font(True, 30), fill=GREEN)
+        d.text((PAD + 24, ty + 64), "Moy narxi bilan birga beriladi, alohida to'lanmaydi", font=f_small, fill=MUTED)
+        gy = ty + 24 + 40 + 36
+        colw = (inner - 48) // gift_cols
+        for i, g in enumerate(gifts):
+            cx = PAD + 24 + (i % gift_cols) * colw
+            cy = gy + (i // gift_cols) * 46
+            d.text((cx, cy), "✓", font=f_chip, fill=GREEN)
+            d.text((cx + 36, cy), g, font=f_chip, fill=WHITE)
+        ty += h_gifts + 30
+    d.text((PAD, ty), "MOY NARXI (sovg'alar bilan birga)", font=f_head, fill=MUTED)
+    ty += 40
 
     # jadval
     d.rounded_rectangle([PAD, ty, W - PAD, ty + h_table], radius=18, fill=PANEL, outline=LINE, width=2)
@@ -297,6 +296,13 @@ def render(key: str, pkg: dict) -> Image.Image:
         for i, ln in enumerate(note_lines):
             d.text((PAD + 20, ty + 20 + i * 30), ln, font=f_small, fill=AMBER)
         ty += h_note
+
+    # keshbek bandi
+    ty += 10
+    d.rounded_rectangle([PAD, ty, W - PAD, ty + 150], radius=20, fill=AMBER)
+    d.text((PAD + 28, ty + 20), "5% KESHBEK", font=_font(True, 46), fill=AMBER_DARK)
+    d.text((PAD + 28, ty + 78), "Carland mobil ilovasini yuklab oling: birinchi xaridingizga", font=_font(True, 25), fill=AMBER_DARK)
+    d.text((PAD + 28, ty + 108), "5% keshbek qaytadi.  App Store: «Carland»", font=_font(True, 25), fill=AMBER_DARK)
 
     # pastki qism
     d.line([PAD, total - 120, W - PAD, total - 120], fill=LINE, width=2)

@@ -12,24 +12,31 @@ TEXT = {
     "welcome": {
         "uz": (
             "👋 *Carland botiga xush kelibsiz!*\n\n"
-            "Bu bot orqali siz:\n"
-            "🛢 Mashinangiz uchun aniq moy hajmi va turini hisoblashingiz,\n"
-            "🔧 Kerakli mahsulotlarni (filtr, akkumulyator, shina va h.k.) topishingiz,\n"
-            "🖼 Motor/karobka/reduktor sxematik infografikasini ko'rishingiz,\n"
-            "📍 Eng yaqin filialni topishingiz,\n"
-            "💬 AI yordamchidan savol so'rashingiz mumkin.\n\n"
+            "Mashina rusumini yozing — bot darhol aytadi:\n"
+            "🛢 qaysi moy va necha litr kerak, narxi qancha\n"
+            "🔧 filtr, antifriz, akkumulyator, shina — mosini topadi\n"
+            "🎁 joriy aksiyalar va bonus sovg'alar\n"
+            "📍 eng yaqin filial va lokatsiya\n\n"
+            "✍️ Masalan yozing: *Cobalt moyi* yoki *moy filtri Nexia 3*\n\n"
+            "💳 *5% KESHBEK*: Carland mobil ilovasini yuklab oling — birinchi xaridingizga 5% keshbek qaytadi.\n\n"
             "Quyidagi menyudan boshlang 👇"
         ),
         "ru": (
             "👋 *Добро пожаловать в бот Carland!*\n\n"
-            "Здесь вы можете:\n"
-            "🛢 Рассчитать точный объём и тип масла для вашего авто,\n"
-            "🔧 Найти нужные товары (фильтры, аккумулятор, шины и т.д.),\n"
-            "🖼 Посмотреть схему двигателя/коробки/редуктора,\n"
-            "📍 Найти ближайший филиал,\n"
-            "💬 Задать вопрос AI-помощнику.\n\n"
+            "Напишите модель автомобиля — бот сразу подскажет:\n"
+            "🛢 какое масло и сколько литров нужно, и цену\n"
+            "🔧 фильтры, антифриз, аккумулятор, шины — подберёт подходящее\n"
+            "🎁 текущие акции и бонусные подарки\n"
+            "📍 ближайший филиал и локацию\n\n"
+            "✍️ Например, напишите: *Cobalt масло* или *масляный фильтр Nexia 3*\n\n"
+            "💳 *КЕШБЭК 5%*: скачайте мобильное приложение Carland — на первую покупку вернём 5% кешбэка.\n\n"
             "Начните с меню ниже 👇"
         ),
+    },
+    "menu_app": {"uz": "📱 Ilovani yuklab olish — 5% keshbek", "ru": "📱 Скачать приложение — кешбэк 5%"},
+    "cashback_note": {
+        "uz": "💳 *5% keshbek*: Carland mobil ilovasini yuklab oling — birinchi xaridingizga 5% keshbek qaytadi.",
+        "ru": "💳 *Кешбэк 5%*: скачайте мобильное приложение Carland — на первую покупку вернём 5%.",
     },
     "main_menu_title": {"uz": "Bosh menyu:", "ru": "Главное меню:"},
     "menu_oilcalc": {"uz": "🛢 Moy hisoblash", "ru": "🛢 Расчёт масла"},
@@ -38,14 +45,14 @@ TEXT = {
     "menu_branches": {"uz": "📍 Filiallar", "ru": "📍 Филиалы"},
     "menu_promo": {"uz": "🎉 Aksiyalar", "ru": "🎉 Акции"},
     "promo_hub_title": {
-        "uz": "🎉 *Aksiyalar* — nimani ko'rmoqchisiz?",
-        "ru": "🎉 *Акции* — что показать?",
+        "uz": "🎉 *Aksiyalar* — nimani ko'rmoqchisiz?\n\n💳 *5% keshbek*: Carland ilovasini yuklab oling — birinchi xaridga 5% qaytadi.",
+        "ru": "🎉 *Акции* — что показать?\n\n💳 *Кешбэк 5%*: скачайте приложение Carland — на первую покупку вернём 5%.",
     },
     "promo_posters_btn": {"uz": "🗓 Joriy aksiyalar (rasmda)", "ru": "🗓 Текущие акции (картинками)"},
     "promo_by_car_btn": {"uz": "🚗 Mashina bo'yicha", "ru": "🚗 По автомобилю"},
     "promo_posters_caption": {
-        "uz": "🎉 *Oktabr aksiyalari* — {n} ta paket, {deadline}.\nMashinangizga mos paketni ko'rish uchun «🚗 Mashina bo'yicha» ni bosing.",
-        "ru": "🎉 *Акции октября* — {n} пакетов, {deadline}.\nЧтобы увидеть пакеты для вашего авто, нажмите «🚗 По автомобилю».",
+        "uz": "🎉 *Oktabr aksiyalari* — {n} ta paket, {deadline}.\n🎁 Har bir rasmda bonus sovg'alar alohida ko'rsatilgan.\n💳 Ilovani yuklab oling — birinchi xaridga *5% keshbek*: {app}\nMashinangizga mos paketni ko'rish uchun «🚗 Mashina bo'yicha» ni bosing.",
+        "ru": "🎉 *Акции октября* — {n} пакетов, {deadline}.\n🎁 Бонусные подарки на каждой картинке показаны отдельно.\n💳 Скачайте приложение — *кешбэк 5%* на первую покупку: {app}\nЧтобы увидеть пакеты для вашего авто, нажмите «🚗 По автомобилю».",
     },
     "promo_none": {
         "uz": "Hozircha faol aksiya yo'q. Yangi aksiyalar e'lon qilinganda shu yerda chiqadi.",

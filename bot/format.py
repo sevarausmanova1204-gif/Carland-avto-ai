@@ -452,13 +452,42 @@ def promo_text(rows: list[dict], lang: str = "uz") -> str:
         return _L(lang, "Bu model uchun hozircha faol aksiya topilmadi.", "Активных акций для этой модели пока не найдено.")
     lines = [_L(lang, "🎉 *Faol aksiya paketlari*", "🎉 *Активные акционные пакеты*"), ""]
     unit = _L(lang, "litr", "л")
+    labels = {
+        "MOY FILTER": _L(lang, "Moy filtri", "Масляный фильтр"),
+        "AIR FILTER": _L(lang, "Havo filtri", "Воздушный фильтр"),
+        "SALON FILTER": _L(lang, "Salon filtri", "Салонный фильтр"),
+        "DELFIN SOCHIQ": _L(lang, "Delfin sochiq", "Дельфин-освежитель"),
+        "OSVIJITEL": _L(lang, "Osvijitel", "Освежитель"),
+        "OYNA SUVI": _L(lang, "Oyna suvi", "Омывайка"),
+        "GETSUN": _L(lang, "Getsun", "Гетсун"),
+        "USLUGA": _L(lang, "Almashtirish xizmati", "Услуга замены"),
+    }
     for r in rows:
-        lines.append(f"*{r['package_title']}*")
-        lines.append(_L(lang, f"Moy: {r['oil_liters']} {unit} — {money(r['oil_price'], lang)}", f"Масло: {r['oil_liters']} {unit} — {money(r['oil_price'], lang)}"))
-        for k, v in r["details"].items():
-            if v not in (None, "", 0):
-                lines.append(f"  {k}: {v}")
+        title = re.sub(r"^\s*(АКЦИЯ|AKSIYA)\s+", "", r["package_title"], flags=re.I)
+        lines.append(f"*{title}*")
+        lines.append(_L(lang, f"🛢 Moy: {r['oil_liters']} {unit} — *{money(r['oil_price'], lang)}*",
+                        f"🛢 Масло: {r['oil_liters']} {unit} — *{money(r['oil_price'], lang)}*"))
+        det = r["details"]
+        gifts = []
+        for k, label in labels.items():
+            v = det.get(k)
+            if v in (None, "", 0):
+                continue
+            if isinstance(v, (int, float)):
+                continue  # narxi bor (pulli) — sovg'a emas
+            code = re.sub(r"\bBONUS\b", "", str(v)).strip()
+            gifts.append(f"{label} {code}".strip() if code and code.upper() != "BEPUL" else label)
+        if gifts:
+            lines.append(_L(lang, "🎁 *Sovg'alar (bepul):* ", "🎁 *Подарки (бесплатно):* ") + ", ".join(gifts))
+        for k, v in det.items():
+            if k in labels or k == "AKSIYA MUDDATI" or v in (None, "", 0):
+                continue
+            lines.append(f"  {k}: {v}")
+        if det.get("AKSIYA MUDDATI"):
+            lines.append(_L(lang, f"📅 {det['AKSIYA MUDDATI']}", f"📅 {str(det['AKSIYA MUDDATI']).replace(' gacha', '')}"))
         lines.append("")
+    lines.append(_L(lang, "💳 *5% keshbek*: Carland mobil ilovasini yuklab oling — birinchi xaridga 5% qaytadi.",
+                    "💳 *Кешбэк 5%*: скачайте приложение Carland — на первую покупку вернём 5%."))
     return "\n".join(lines).strip()
 
 

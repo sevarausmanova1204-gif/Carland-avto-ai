@@ -151,3 +151,8 @@ EUROPEAN_OIL_BRANDS = {
 # (ro'yxat uzun bo'lgani uchun kesib tashlanib qolmasligi kerak).
 PRIORITY_BRANDS = {"VALVOLINE"}
 
+
+
+# Carland mobil ilovasi (App Store) — birinchi xaridga 5% keshbek
+APP_STORE_URL = "https://apps.apple.com/uz/app/carland/id6746539445?l=ru"
+CASHBACK_PERCENT = 5

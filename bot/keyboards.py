@@ -20,6 +20,7 @@ def main_menu(lang: str = "uz", has_recent: bool = False):
         [InlineKeyboardButton(t("menu_info", lang), callback_data="menu:info:0")],
         [InlineKeyboardButton(t("menu_branches", lang), callback_data="menu:branches")],
         [InlineKeyboardButton(t("menu_promo", lang), callback_data="menu:promohub")],
+        [InlineKeyboardButton(t("menu_app", lang), url=config.APP_STORE_URL)],
         [InlineKeyboardButton(t("menu_ai", lang), callback_data="menu:ai")],
         [InlineKeyboardButton(t("menu_admin", lang), url=f"https://t.me/{ADMIN_USERNAME}")],
         [InlineKeyboardButton(t("menu_lang", lang), callback_data="menu:lang")],
@@ -31,6 +32,7 @@ def promo_hub(lang: str = "uz"):
     rows = [
         [InlineKeyboardButton(t("promo_posters_btn", lang), callback_data="promo:posters")],
         [InlineKeyboardButton(t("promo_by_car_btn", lang), callback_data="menu:promo:0")],
+        [InlineKeyboardButton(t("menu_app", lang), url=config.APP_STORE_URL)],
         [InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")],
     ]
     return InlineKeyboardMarkup(rows)
