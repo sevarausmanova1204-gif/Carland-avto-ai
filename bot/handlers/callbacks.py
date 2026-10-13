@@ -93,8 +93,15 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if action == "brand":
         purpose, slug, page = parts[1], parts[2], int(parts[3])
         extra = parts[4] if len(parts) > 4 else ""
+        if slug == "other":
+            await query.edit_message_text(
+                f"*{brands.BRAND_LABELS['other']}* — {t('pick_brand', lang)}",
+                reply_markup=keyboards.other_brand_grid(purpose, page, extra=extra, lang=lang),
+                parse_mode="Markdown",
+            )
+            return
         await query.edit_message_text(
-            f"*{brands.BRAND_LABELS[slug]}* — {t('choose_car_suffix', lang)}",
+            f"*{brands.brand_label(slug)}* — {t('choose_car_suffix', lang)}",
             reply_markup=keyboards.brand_car_list_keyboard(purpose, slug, page, extra=extra, lang=lang),
             parse_mode="Markdown",
         )

@@ -67,6 +67,32 @@ def brand_grid(purpose: str, extra: str = "", lang: str = "uz"):
     return InlineKeyboardMarkup(rows)
 
 
+OTHER_BRANDS_PER_PAGE = 16
+
+
+def other_brand_grid(purpose: str, page: int = 0, extra: str = "", lang: str = "uz"):
+    """"Boshqalar" ichidagi markalar (Toyota, BMW, ...) — asosiy ro'yxat bilan bir xil ko'rinishda, sahifalangan."""
+    items = brands.other_brands_with_counts()
+    start = page * OTHER_BRANDS_PER_PAGE
+    chunk = items[start:start + OTHER_BRANDS_PER_PAGE]
+    rows = []
+    for i in range(0, len(chunk), 2):
+        row = []
+        for slug, label, count in chunk[i:i + 2]:
+            row.append(InlineKeyboardButton(f"{label} ({count})", callback_data=f"brand:{purpose}:{slug}:0{_suffix(extra)}"))
+        rows.append(row)
+    nav = []
+    if page > 0:
+        nav.append(InlineKeyboardButton("⬅️", callback_data=f"brand:{purpose}:other:{page-1}{_suffix(extra)}"))
+    if start + OTHER_BRANDS_PER_PAGE < len(items):
+        nav.append(InlineKeyboardButton("➡️", callback_data=f"brand:{purpose}:other:{page+1}{_suffix(extra)}"))
+    if nav:
+        rows.append(nav)
+    rows.append([InlineKeyboardButton(t("back_to_brands_btn", lang), callback_data=f"menu:{purpose}:0{_suffix(extra)}")])
+    rows.append([InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")])
+    return InlineKeyboardMarkup(rows)
+
+
 def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra: str = "", lang: str = "uz"):
     """Tanlangan marka ichidagi mashinalar ro'yxati (sahifalangan)."""
     cars = brands.cars_for_brand(brand_slug)
@@ -87,7 +113,10 @@ def brand_car_list_keyboard(purpose: str, brand_slug: str, page: int = 0, extra:
     if nav:
         rows.append(nav)
 
-    rows.append([InlineKeyboardButton(t("back_to_brands_btn", lang), callback_data=f"menu:{purpose}:0{_suffix(extra)}")])
+    # "Boshqalar" ichidagi markadan ortga — "Boshqalar" ro'yxatiga, asosiy markalar ro'yxatiga emas
+    back_cb = (f"brand:{purpose}:other:0{_suffix(extra)}" if brand_slug not in brands.BRAND_LABELS
+               else f"menu:{purpose}:0{_suffix(extra)}")
+    rows.append([InlineKeyboardButton(t("back_to_brands_btn", lang), callback_data=back_cb)])
     rows.append([InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")])
     return InlineKeyboardMarkup(rows)
 
