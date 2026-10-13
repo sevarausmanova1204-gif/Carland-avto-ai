@@ -293,10 +293,20 @@ def find_car_by_text(text: str):
         matches = _search_cars_with_suffix_stripping(w)
         if len(matches) == 1:
             return get_car(matches[0]["id"])
+    # Hech bir so'z yagona mashinaga olib kelmadi ("hyundai tucson": "hyundai" 8 ta,
+    # "tucson" 2 ta mashinaga mos). Eng KO'P so'zga mos keladigan mashina tanlanadi:
+    # avval eng kam natija beradigan (eng o'ziga xos) so'z, so'ngra shu so'z
+    # natijalari orasidan matndagi boshqa so'zlarga ham mos kelgani.
+    best_matches, best_count = None, None
     for w in words:
         matches = _search_cars_with_suffix_stripping(w)
-        if matches:
-            return get_car(matches[0]["id"])
+        if matches and (best_count is None or len(matches) < best_count):
+            best_matches, best_count = matches, len(matches)
+    if best_matches:
+        def _score(m):
+            toks = set(_tokens(m["model"]))
+            return sum(1 for w in words if normalize_word(w) in toks or any(t.startswith(normalize_word(w)) for t in toks))
+        return get_car(max(best_matches, key=_score)["id"])
     return None
 
 

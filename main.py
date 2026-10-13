@@ -18,6 +18,10 @@ from bot.handlers.text import handle_text
 logging.basicConfig(
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s", level=logging.INFO
 )
+# httpx har bir so'rovning to'liq URL'ini (ichida bot TOKENI bor) INFO darajada logga
+# yozadi — token Railway loglarida ochiq ko'rinib qolmasligi uchun faqat ogohlantirish va xatolar.
+for _noisy in ("httpx", "httpcore"):
+    logging.getLogger(_noisy).setLevel(logging.WARNING)
 
 
 def main():
