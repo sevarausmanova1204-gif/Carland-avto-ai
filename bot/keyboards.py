@@ -31,6 +31,27 @@ def main_menu(lang: str = "uz", has_recent: bool = False):
     return InlineKeyboardMarkup(rows)
 
 
+def cashback_menu(lang: str = "uz"):
+    rows = [
+        [InlineKeyboardButton(t("menu_app_ios", lang), url=config.APP_STORE_URL),
+         InlineKeyboardButton(t("menu_app_android", lang), url=config.PLAY_STORE_URL)],
+        [InlineKeyboardButton(t("menu_admin", lang), url=f"https://t.me/{ADMIN_USERNAME}")],
+        [InlineKeyboardButton(t("home_btn", lang), callback_data="menu:main")],
+    ]
+    return InlineKeyboardMarkup(rows)
+
+
+def promo_hub(lang: str = "uz"):
+    rows = [
+        [InlineKeyboardButton(t("promo_posters_btn", lang), callback_data="promo:posters")],
+        [InlineKeyboardButton(t("promo_by_car_btn", lang), callback_data="menu:promo:0")],
+        [InlineKeyboardButton(t("menu_app_ios", lang), url=config.APP_STORE_URL),
+         InlineKeyboardButton(t("menu_app_android", lang), url=config.PLAY_STORE_URL)],
+        [InlineKeyboardButton(t("back_home_btn", lang), callback_data="menu:main")],
+    ]
+    return InlineKeyboardMarkup(rows)
+
+
 def recent_cars_menu(cars, lang: str = "uz"):
     """`cars` — {"id", "model"} lug'atlar ro'yxati, eng oxirgi ko'rilgani
     birinchi bo'lib keladi."""
