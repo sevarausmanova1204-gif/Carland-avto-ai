@@ -302,7 +302,7 @@ def render(key: str, pkg: dict) -> Image.Image:
     d.rounded_rectangle([PAD, ty, W - PAD, ty + 150], radius=20, fill=AMBER)
     d.text((PAD + 28, ty + 20), "5% KESHBEK", font=_font(True, 46), fill=AMBER_DARK)
     d.text((PAD + 28, ty + 78), "Carland mobil ilovasini yuklab oling: birinchi xaridingizga", font=_font(True, 25), fill=AMBER_DARK)
-    d.text((PAD + 28, ty + 108), "5% keshbek qaytadi.  App Store: «Carland»", font=_font(True, 25), fill=AMBER_DARK)
+    d.text((PAD + 28, ty + 108), "5% keshbek qaytadi.  App Store va Google Play: «Carland»", font=_font(True, 25), fill=AMBER_DARK)
 
     # pastki qism
     d.line([PAD, total - 120, W - PAD, total - 120], fill=LINE, width=2)

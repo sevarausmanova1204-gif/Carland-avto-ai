@@ -33,7 +33,8 @@ TEXT = {
             "Начните с меню ниже 👇"
         ),
     },
-    "menu_app": {"uz": "📱 Ilovani yuklab olish — 5% keshbek", "ru": "📱 Скачать приложение — кешбэк 5%"},
+    "menu_app_ios": {"uz": "📱 iPhone — 5% keshbek", "ru": "📱 iPhone — кешбэк 5%"},
+    "menu_app_android": {"uz": "🤖 Android — 5% keshbek", "ru": "🤖 Android — кешбэк 5%"},
     "cashback_note": {
         "uz": "💳 *5% keshbek*: Carland mobil ilovasini yuklab oling — birinchi xaridingizga 5% keshbek qaytadi.",
         "ru": "💳 *Кешбэк 5%*: скачайте мобильное приложение Carland — на первую покупку вернём 5%.",
@@ -51,8 +52,8 @@ TEXT = {
     "promo_posters_btn": {"uz": "🗓 Joriy aksiyalar (rasmda)", "ru": "🗓 Текущие акции (картинками)"},
     "promo_by_car_btn": {"uz": "🚗 Mashina bo'yicha", "ru": "🚗 По автомобилю"},
     "promo_posters_caption": {
-        "uz": "🎉 *Oktabr aksiyalari* — {n} ta paket, {deadline}.\n🎁 Har bir rasmda bonus sovg'alar alohida ko'rsatilgan.\n💳 Ilovani yuklab oling — birinchi xaridga *5% keshbek*: {app}\nMashinangizga mos paketni ko'rish uchun «🚗 Mashina bo'yicha» ni bosing.",
-        "ru": "🎉 *Акции октября* — {n} пакетов, {deadline}.\n🎁 Бонусные подарки на каждой картинке показаны отдельно.\n💳 Скачайте приложение — *кешбэк 5%* на первую покупку: {app}\nЧтобы увидеть пакеты для вашего авто, нажмите «🚗 По автомобилю».",
+        "uz": "🎉 *Oktabr aksiyalari* — {n} ta paket, {deadline}.\n🎁 Har bir rasmda bonus sovg'alar alohida ko'rsatilgan.\n💳 Ilovani yuklab oling — birinchi xaridga *5% keshbek*:\n📱 iPhone: {app}\n🤖 Android: {play}\nMashinangizga mos paketni ko'rish uchun «🚗 Mashina bo'yicha» ni bosing.",
+        "ru": "🎉 *Акции октября* — {n} пакетов, {deadline}.\n🎁 Бонусные подарки на каждой картинке показаны отдельно.\n💳 Скачайте приложение — *кешбэк 5%* на первую покупку:\n📱 iPhone: {app}\n🤖 Android: {play}\nЧтобы увидеть пакеты для вашего авто, нажмите «🚗 По автомобилю».",
     },
     "promo_none": {
         "uz": "Hozircha faol aksiya yo'q. Yangi aksiyalar e'lon qilinganda shu yerda chiqadi.",
