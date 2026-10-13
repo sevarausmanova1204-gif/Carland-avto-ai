@@ -662,6 +662,66 @@ def _try_product_answer(user_text: str, context=None) -> str | None:
     return "\n".join(lines).strip()
 
 
+# Foydalanuvchi shunchaki mashina rusumi/nomini yozsa yoki u haqida qisqa savol
+# bersa ("Cobalt", "Nexia 3 moyi qancha?", "gentra ma'lumot") — LLM'ga
+# yubormasdan, bazadagi mashina kartochkasini TO'G'RIDAN-TO'G'RI beramiz.
+_CAR_INFO_MAX_WORDS = 8
+_CAR_INFO_NOT_MODEL_WORDS = {"yangi", "eski", "oddiy", "avtomat", "mexanika", "best", "slindir", "qutisi", "moyi", "moylar", "hajmi"}
+
+
+def _try_car_info_answer(user_text: str, context=None) -> str | None:
+    words = re.findall(r"[\w']+", user_text, flags=re.UNICODE)
+    if not words or len(words) > _CAR_INFO_MAX_WORDS:
+        return None
+    cars = []
+    car = db.find_car_strict(user_text)
+    if car:
+        cars = [car]
+    else:
+        # Model faqat so'z bilan yozilgan (raqamsiz): "gentra", "captiva", "tracker moyi".
+        # 1-4 ta variantga mos kelsa — hammasining kartochkasi beriladi; ko'p variantli
+        # umumiy so'z ("toyota", "hyundai") bo'lsa — hech narsa (oddiy AI chatga o'tadi).
+        latin = db.transliterate_cyrillic(user_text).lower()
+        for w in re.findall(r"[a-z']+", latin):
+            if len(w) < 4 or w in _CAR_INFO_NOT_MODEL_WORDS:
+                continue
+            if db.normalize_word(w) in db.GENERIC_WORD_STOPLIST or db.is_generic_filler_word(w):
+                continue
+            ms = db.search_cars_fuzzy(w, limit=7)
+            if 1 <= len(ms) <= 4:
+                cars = [db.get_car(m["id"]) for m in ms]
+                break
+            if 5 <= len(ms) <= 6:
+                lang_ = _lang(context)
+                names = "\n".join(f"• {m['model']}" for m in ms)
+                return _L(
+                    lang_,
+                    f"🚗 *{w.capitalize()}* bo'yicha bir nechta variant bor:\n{names}\n\n"
+                    "Aniq variantni yozing (masalan, dvigatel hajmi yoki avlodi) — darhol ma'lumot beraman.",
+                    f"🚗 По запросу *{w.capitalize()}* есть несколько вариантов:\n{names}\n\n"
+                    "Напишите точный вариант (например, объём двигателя или поколение) — сразу дам информацию.",
+                )
+    if not cars:
+        return None
+    if context is not None:
+        context.user_data["last_car_id"] = cars[0]["id"]
+    lang = _lang(context)
+    blocks = []
+    for car in cars:
+        blocks.append(fmt.oil_calc_text(car, lang))
+        antifreeze = db.get_car_parts(car["id"], "antifreeze")
+        if antifreeze:
+            blocks.append(fmt.car_parts_text("antifreeze", antifreeze, lang).split("\n\n_", 1)[0])
+    blocks.append(_L(
+        lang,
+        "_Boshqa ma'lumot uchun yozing: antifriz, akkumulyator, balon, svecha, kolodka, aksiya "
+        "yoki aniq hisob (\"qancha bo'ladi\")._",
+        "_Для другой информации напишите: антифриз, аккумулятор, шины, свечи, колодки, акция "
+        "или точный расчёт («сколько будет»)._",
+    ))
+    return "\n\n".join(blocks)
+
+
 def _build_context(user_text: str) -> str:
     parts = []
     # Kirillcha yozuvni ham lotinchaga o'girib olamiz — aks holda bazadagi
@@ -758,6 +818,10 @@ async def ask_ai(user_text: str, context=None) -> tuple[str, str | None]:
     product_answer = _try_product_answer(user_text, context)
     if product_answer:
         return product_answer, None
+
+    car_info = _try_car_info_answer(user_text, context)
+    if car_info:
+        return car_info, None
 
     context_block = _build_context(user_text)
     full_prompt = f"{context_block}\n\nFOYDALANUVCHI SAVOLI: {user_text}"

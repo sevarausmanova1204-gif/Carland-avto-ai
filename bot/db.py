@@ -300,6 +300,24 @@ def find_car_by_text(text: str):
     return None
 
 
+def find_car_strict(text: str):
+    """`find_car_by_text` ning faqat ANIQ bosqichlari: matnda model nomi to'liq
+    uchraydigan eng uzun mashina yoki (so'zlar + model raqami bo'yicha) eng mos
+    mashina. So'zma-so'z noaniq qidiruvga (masalan faqat "hyundai" so'ziga mos
+    birinchi mashina) TUSHMAYDI — shu sabab foydalanuvchi mashina rusumini
+    yozmagan oddiy savolga tasodifan boshqa mashina kartochkasi chiqmaydi."""
+    norm_text = _normalize(text)
+    best, best_len = None, 0
+    for c in list_cars():
+        norm_model = _normalize(c["model"])
+        if norm_model and norm_model in norm_text and len(norm_model) > best_len:
+            best, best_len = c, len(norm_model)
+    if best:
+        return get_car(best["id"])
+    scored = _best_car_by_tokens(text)
+    return get_car(scored["id"]) if scored else None
+
+
 def search_cars_fuzzy(word: str, limit: int = 5):
     """`_search_cars_with_suffix_stripping`ning tashqi (boshqa modullardan
     chaqirish uchun) ochiq nomi — o'zbekcha qo'shimchali so'zlar bilan ham

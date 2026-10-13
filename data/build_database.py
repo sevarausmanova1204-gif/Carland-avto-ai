@@ -483,8 +483,8 @@ def build():
     # ---- promotions ----
     promos = load("promotions_sentabr.json")
     for sheet, payload in promos.items():
-        if sheet in ("AKKUMULATOR", "SVECHA GM"):
-            continue  # boshqa jadvallarda alohida saqlanadi
+        if sheet in ("AKKUMULATOR", "SVECHA GM", "ANTFRIZ UMUMIY"):
+            continue  # boshqa jadvallarda alohida saqlanadi (antifriz — `antifreeze` jadvalida)
         title = payload["title"]
         for row in payload["rows"]:
             model = row.get("AVTO")
