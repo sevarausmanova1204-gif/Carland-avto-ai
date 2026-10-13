@@ -671,7 +671,7 @@ _CAR_INFO_NOT_MODEL_WORDS = {"yangi", "eski", "oddiy", "avtomat", "mexanika", "b
 
 _FILT = r"(?:filter|filtr\w*|filtir\w*|filtor\w*)"
 _FILTER_TYPE_RES = {
-    "oil": re.compile(r"(?<![a-z])(?:oil|oyl|moy|moto?r\s?moy\w*|masl\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:oil|moy\w*|masl\w*)"),
+    "oil": re.compile(r"(?<![a-z])(?:oil|oyl|moy\w*|masl\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:oil|moy\w*|masl\w*)"),
     "air": re.compile(r"(?<![a-z])(?:air|havo\w*|vozd\w*|vazd\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:air|havo\w*|vozd\w*)"),
     "cabin": re.compile(r"(?<![a-z])(?:cabin|salon\w*|kabin\w*|pollen)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:cabin|salon\w*|kabin\w*)"),
     "fuel": re.compile(r"(?<![a-z])(?:fuel|yoqilg[\w'ʻʼ`]*|yonilg[\w'ʻʼ`]*|benzin\w*|toplivn\w*)\W{0,3}" + _FILT + r"|" + _FILT + r"\W{0,3}(?:fuel|yoqilg[\w'ʻʼ`]*|benzin\w*|toplivn\w*)"),
