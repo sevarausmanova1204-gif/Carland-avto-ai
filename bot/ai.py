@@ -701,11 +701,11 @@ def _try_filter_answer(user_text: str, context=None) -> str | None:
                 continue
             if db.normalize_word(w) in db.GENERIC_WORD_STOPLIST or db.is_generic_filler_word(w):
                 continue
-            ms = db.search_cars_fuzzy(w, limit=7)
+            ms = db.search_cars_fuzzy(w, limit=12)
             if 1 <= len(ms) <= 4:
                 variants = [db.get_car(m["id"]) for m in ms]
                 break
-            if 5 <= len(ms) <= 6:
+            if 5 <= len(ms) <= 10:
                 names = "\n".join(f"• {m['model']}" for m in ms)
                 return _L(
                     lang,
@@ -778,11 +778,11 @@ def _try_car_info_answer(user_text: str, context=None) -> str | None:
                 continue
             if db.normalize_word(w) in db.GENERIC_WORD_STOPLIST or db.is_generic_filler_word(w):
                 continue
-            ms = db.search_cars_fuzzy(w, limit=7)
+            ms = db.search_cars_fuzzy(w, limit=12)
             if 1 <= len(ms) <= 4:
                 cars = [db.get_car(m["id"]) for m in ms]
                 break
-            if 5 <= len(ms) <= 6:
+            if 5 <= len(ms) <= 10:
                 lang_ = _lang(context)
                 names = "\n".join(f"• {m['model']}" for m in ms)
                 return _L(
