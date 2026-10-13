@@ -63,6 +63,13 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 reply_markup=keyboards.back_button(lang=lang),
             )
             return
+        if sub == "cashback":
+            kb = keyboards.cashback_menu(lang)
+            if query.message.photo:
+                await query.message.reply_text(t("cashback_full", lang), reply_markup=kb, parse_mode="Markdown")
+            else:
+                await query.edit_message_text(t("cashback_full", lang), reply_markup=kb, parse_mode="Markdown")
+            return
         if sub == "promohub":
             kb = keyboards.promo_hub(lang)
             if query.message.photo:

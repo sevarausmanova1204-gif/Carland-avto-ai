@@ -128,7 +128,9 @@ async def handle_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
         logger.exception("AI so'roviga javob berishda xatolik (matn: %r)", text)
         answer = t("ai_error", lang)
 
-    if keyboard_kind == "branches":
+    if keyboard_kind == "cashback":
+        reply_markup = keyboards.cashback_menu(lang)
+    elif keyboard_kind == "branches":
         # Filial/manzil so'ralganda javob ostida to'g'ridan-to'g'ri TANLASH
         # mumkin bo'lgan filiallar ro'yxati chiqadi — foydalanuvchi "bosh
         # menyudan qidiring" deb alohida yo'naltirilmasdan, shu yerning

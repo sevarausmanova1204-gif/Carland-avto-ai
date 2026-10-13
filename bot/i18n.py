@@ -33,6 +33,35 @@ TEXT = {
             "Начните с меню ниже 👇"
         ),
     },
+    "menu_cashback": {"uz": "💳 Keshbek 5% — qanday olinadi?", "ru": "💳 Кешбэк 5% — как получить?"},
+    "cashback_full": {
+        "uz": (
+            "💳 *CARLAND KESHBEK — 5%*\n\n"
+            "Carland mobil ilovasini yuklab oling — *birinchi xaridingizga 5% keshbek* qaytadi.\n\n"
+            "*Qanday olinadi:*\n"
+            "1️⃣ Ilovani yuklab oling (iPhone yoki Android — pastdagi tugmalar)\n"
+            "2️⃣ Birinchi xaridingizni qiling\n"
+            "3️⃣ Xarid summasining 5% qismi sizga keshbek bo'lib qaytadi\n\n"
+            "*Misol:*\n"
+            "• 200 000 so'mlik xarid → *10 000 so'm* qaytadi\n"
+            "• 500 000 so'mlik xarid → *25 000 so'm* qaytadi\n"
+            "• 1 000 000 so'mlik xarid → *50 000 so'm* qaytadi\n\n"
+            "📌 Keshbek qaysi usulda hisoblanishi va aniq shartlar — filialda yoki admin orqali aniqlashtiring."
+        ),
+        "ru": (
+            "💳 *КЕШБЭК CARLAND — 5%*\n\n"
+            "Скачайте мобильное приложение Carland — на *первую покупку вернём 5% кешбэка*.\n\n"
+            "*Как получить:*\n"
+            "1️⃣ Скачайте приложение (iPhone или Android — кнопки ниже)\n"
+            "2️⃣ Совершите первую покупку\n"
+            "3️⃣ 5% от суммы покупки вернётся вам кешбэком\n\n"
+            "*Пример:*\n"
+            "• покупка на 200 000 сум → вернётся *10 000 сум*\n"
+            "• покупка на 500 000 сум → вернётся *25 000 сум*\n"
+            "• покупка на 1 000 000 сум → вернётся *50 000 сум*\n\n"
+            "📌 Как именно начисляется кешбэк и точные условия — уточняйте в филиале или у администратора."
+        ),
+    },
     "menu_app_ios": {"uz": "📱 iPhone — 5% keshbek", "ru": "📱 iPhone — кешбэк 5%"},
     "menu_app_android": {"uz": "🤖 Android — 5% keshbek", "ru": "🤖 Android — кешбэк 5%"},
     "cashback_note": {

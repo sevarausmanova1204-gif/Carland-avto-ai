@@ -760,6 +760,19 @@ def _try_filter_answer(user_text: str, context=None) -> str | None:
     return out
 
 
+_CASHBACK_RE = re.compile(r"(cash\s?back|keshbek|keshbak|kesbek|кешб[эе]к|кэшб[эе]к|кешбек|кэшбек)", re.I)
+
+
+def _try_cashback_answer(user_text: str, context=None) -> str | None:
+    """"keshbek bormi?", "cashback qanday olinadi" kabi savollar — tayyor tushuntirish."""
+    low = db.transliterate_cyrillic(user_text).lower()
+    if not (_CASHBACK_RE.search(user_text) or _CASHBACK_RE.search(low) or "keshbek" in low or "keshbэk" in low):
+        return None
+    from .i18n import t
+
+    return t("cashback_full", _lang(context))
+
+
 def _try_car_info_answer(user_text: str, context=None) -> str | None:
     words = re.findall(r"[\w']+", user_text, flags=re.UNICODE)
     if not words or len(words) > _CAR_INFO_MAX_WORDS:
@@ -900,6 +913,10 @@ async def ask_ai(user_text: str, context=None) -> tuple[str, str | None]:
     filter_answer = _try_filter_answer(user_text, context)
     if filter_answer:
         return filter_answer, None
+
+    cashback = _try_cashback_answer(user_text, context)
+    if cashback:
+        return cashback, "cashback"
 
     calc_answer = _try_deterministic_calc(user_text, context)
     if calc_answer:
