@@ -2,7 +2,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaPhoto
 from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 
-from .. import analytics, brands, car_photos, config, db, format as fmt, keyboards
+from .. import analytics, branch_photos, brands, car_photos, config, db, format as fmt, keyboards
 from ..i18n import t
 from ..infographic import generate_car_infographic
 from ..maps import branch_maps_url
@@ -172,6 +172,17 @@ async def route(update: Update, context: ContextTypes.DEFAULT_TYPE):
         kb_rows.append([InlineKeyboardButton(t("open_yandex_maps_btn", lang), url=url)])
         kb_rows.append([InlineKeyboardButton(t("back_to_branches_list_btn", lang), callback_data="menu:branches")])
         await query.edit_message_text(fmt.branch_text(branch, lang), reply_markup=InlineKeyboardMarkup(kb_rows), parse_mode="Markdown")
+        # Filialning tashqi ko'rinishi (rasm/albom) — mijoz joyni bino bo'yicha tanib olishi uchun
+        photos = branch_photos.get_branch_photo_paths(branch["id"])
+        try:
+            if len(photos) == 1:
+                await query.message.reply_photo(photo=photos[0].read_bytes(), caption=f"📍 {branch['name']} ({branch['city']})")
+            elif photos:
+                media = [InputMediaPhoto(media=p.read_bytes(), caption=(f"📍 {branch['name']} ({branch['city']})" if i == 0 else None))
+                         for i, p in enumerate(photos[:10])]
+                await query.message.reply_media_group(media=media)
+        except Exception:  # rasm yuborilmasa ham matn va lokatsiya beriladi
+            pass
         # Filial lokatsiyasi (xarita nuqtasi) darhol yuboriladi — alohida tugma bosish shart emas
         if branch.get("latitude") and branch.get("longitude"):
             try:
